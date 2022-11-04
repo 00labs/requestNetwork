@@ -27,6 +27,10 @@ export default class TransactionManager implements TransactionTypes.ITransaction
     this.channelParser = new ChannelParser(decryptionProvider);
   }
 
+  public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
+    return this.dataAccess.tokenizeRequest && this.dataAccess.tokenizeRequest(recipient, requestId);
+  }
+
   /**
    * Persists a transaction and topics in storage. If encryptionParams is given, the transaction will be encrypted
    *

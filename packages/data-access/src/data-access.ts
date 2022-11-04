@@ -170,6 +170,10 @@ export default class DataAccess implements DataAccessTypes.IDataAccess {
     await this.stopAutoSynchronization();
   }
 
+  public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
+    return this.storage.tokenizeRequest && this.storage.tokenizeRequest(recipient, requestId);
+  }
+
   /**
    * Function to persist transaction and topic in storage
    * For now, we create a block for each transaction

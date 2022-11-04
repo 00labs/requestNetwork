@@ -59,6 +59,13 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       hashedTopics,
     );
 
+    if (this.transactionManager.tokenizeRequest) {
+      await this.transactionManager.tokenizeRequest(
+        requestId,
+        JSON.stringify({ payee: requestParameters.payee }),
+      );
+    }
+
     const result = Object.assign(new EventEmitter(), {
       meta: { transactionManagerMeta: resultPersistTx.meta },
       result: { requestId },

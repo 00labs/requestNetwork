@@ -59,9 +59,7 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       hashedTopics,
     );
 
-    console.log('1');
     if (this.transactionManager.tokenizeRequest) {
-      console.log('2');
       await this.transactionManager.tokenizeRequest(
         requestId,
         JSON.stringify({ payee: requestParameters.payee }),

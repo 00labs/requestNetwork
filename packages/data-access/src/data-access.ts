@@ -171,7 +171,6 @@ export default class DataAccess implements DataAccessTypes.IDataAccess {
   }
 
   public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
-    console.log('data access');
     return this.storage.tokenizeRequest && this.storage.tokenizeRequest(recipient, requestId);
   }
 

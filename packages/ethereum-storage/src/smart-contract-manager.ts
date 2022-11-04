@@ -273,7 +273,7 @@ export default class SmartContractManager {
     gasPrice?: BigNumber,
     nonce?: number,
   ): Promise<any> {
-    console.log('mint');
+    this.logger.info(`mint invoice nft`);
     // Get the account for the transaction
     const account = await this.getMainAccount();
 
@@ -310,7 +310,6 @@ export default class SmartContractManager {
         .mintNFT(recipient, tokenURI)
         .send(transactionParameters)
         .on('transactionHash', (hash: any) => {
-          console.log('TXN HASH');
           // Store the transaction hash in case we need it in the future
           transactionHash = hash;
           this.logger.debug(
@@ -322,7 +321,6 @@ export default class SmartContractManager {
         })
         .on('error', async (transactionError: string) => {
           // If failed because of polling timeout, try to resubmit the transaction with more gas
-          console.log('ERR');
           if (
             transactionError.toString().includes(TRANSACTION_POLLING_TIMEOUT) &&
             transactionHash
@@ -367,7 +365,6 @@ export default class SmartContractManager {
         })
         .on('confirmation', (confirmationNumber: number, receiptAfterConfirmation: any) => {
           if (!confirmationResolved) {
-            console.log('CONFIRM');
             this.logger.info(
               `Confirmation nb ${confirmationNumber} for mint NFT: ${receiptAfterConfirmation.transactionHash}`,
             );

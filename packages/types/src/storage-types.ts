@@ -3,6 +3,7 @@ import { EventEmitter } from 'events';
 import { BigNumber } from 'ethers';
 
 export interface IStorageWrite {
+  tokenizeRequest?: (recipient: string, requestId: string) => Promise<any>;
   initialize: () => Promise<void>;
   append: (data: string) => Promise<IAppendResult>;
 }

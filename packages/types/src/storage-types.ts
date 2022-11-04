@@ -4,6 +4,7 @@ import { BigNumber } from 'ethers';
 
 /** Interface of the storage */
 export interface IStorage {
+  tokenizeRequest?: (recipient: string, requestId: string) => Promise<any>;
   initialize: () => Promise<void>;
   append: (data: string) => Promise<IAppendResult>;
   read: (dataId: string) => Promise<IEntry>;

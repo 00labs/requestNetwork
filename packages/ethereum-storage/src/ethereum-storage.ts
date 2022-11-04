@@ -155,6 +155,10 @@ export class EthereumStorage implements StorageTypes.IStorage {
     }
   }
 
+  public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
+    return this.smartContractManager.mintInvoiceNFT(recipient, requestId);
+  }
+
   /**
    * Append content into the storage: add the content to ipfs and the hash on Ethereum
    * @param content Content to add into the storage

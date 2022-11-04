@@ -20,3 +20,7 @@ export * from './BatchConversionPayments';
 export * from './RequestHashStorage';
 export * from './RequestHashSubmitter';
 export * from './RequestDeployer';
+/**
+ * Invoice NFT
+ */
+export * from './InvoiceNFT';

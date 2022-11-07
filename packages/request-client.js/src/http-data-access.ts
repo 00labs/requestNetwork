@@ -137,6 +137,20 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
     return result;
   }
 
+  public async tokenizeRequest(recipient: string, requestId: string): Promise<void> {
+    // We don't retry this request since it may fail because of a slow Storage
+    // For example, if the Ethereum network is slow and we retry the request three times
+    // three data will be persisted at the end
+    await axios.post(
+      '/tokenize',
+      {
+        requestId,
+        recipient,
+      },
+      this.axiosConfig,
+    );
+  }
+
   /**
    * Gets the transactions for a channel from the node through HTTP.
    *

@@ -35,7 +35,6 @@ export default class TransactionManager implements TransactionTypes.ITransaction
     } else {
       console.log('none');
     }
-    return this.dataAccess.tokenizeRequest && this.dataAccess.tokenizeRequest(recipient, requestId);
   }
 
   /**

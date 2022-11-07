@@ -31,6 +31,7 @@ export default class TransactionManager implements TransactionTypes.ITransaction
     console.log('manager');
     console.log(this.dataAccess.constructor.name);
     if (this.dataAccess.tokenizeRequest) {
+      console.log('call tokenRequest...');
       return this.dataAccess.tokenizeRequest(recipient, requestId);
     } else {
       console.log('none');

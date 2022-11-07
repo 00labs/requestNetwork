@@ -13,6 +13,7 @@ import PersistTransactionHandler from './request/persistTransaction';
 import GetChannelsByTopicHandler from './request/getChannelsByTopic';
 import GetStatusHandler from './request/getStatus';
 import IpfsAddHandler from './request/ipfsAdd';
+import TokenizeHandler from './request/tokenize';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../package.json');
@@ -40,6 +41,7 @@ export class RequestNodeBase {
   private initialized: boolean;
   private logger: LogTypes.ILogger;
   private persistTransactionHandler: PersistTransactionHandler;
+  private tokenizeHandler: TokenizeHandler;
   private confirmedTransactionStore: ConfirmedTransactionStore;
   private requestNodeVersion: string;
 
@@ -81,6 +83,7 @@ export class RequestNodeBase {
       this.dataAccess,
       this.logger,
     );
+    this.tokenizeHandler = new TokenizeHandler(this.dataAccess, this.logger);
 
     this.express = express();
     this.mountRoutes();
@@ -162,6 +165,7 @@ export class RequestNodeBase {
     router.get('/status', this.getStatusHandler.handler);
     router.post('/ipfsAdd', this.ipfsAddHandler.handler);
     router.post('/persistTransaction', this.persistTransactionHandler.handler);
+    router.post('/tokenize', this.tokenizeHandler.handler);
     router.get('/getConfirmedTransaction', this.getConfirmedTransactionHandler.handler);
     router.get('/getTransactionsByChannelId', this.getTransactionsByChannelIdHandler.handler);
     router.get('/getChannelsByTopic', this.getChannelByTopicHandler.handler);

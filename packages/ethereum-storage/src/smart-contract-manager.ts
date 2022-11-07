@@ -278,6 +278,11 @@ export default class SmartContractManager {
     // Send transaction to contract
     // TODO(PROT-181): Implement a log manager for the library
     // use it for the different events (error, transactionHash, receipt and confirmation)
+    this.logger.debug(
+      `mintInvoiceNFT transactionCount: ${await this.eth.getTransactionCount(
+        '0x627306090abab3a6e1400e9345bc60c78a8bef57',
+      )}`,
+    );
     return new Promise((resolve, reject) => {
       // This boolean is set to true once the promise has been resolved
       // When set to true, we use it to ignore next confirmation event function call
@@ -287,10 +292,14 @@ export default class SmartContractManager {
       let transactionHash = '';
       const transactionParameters = {
         from: account,
-        gas: '100000',
+        gas: '500000',
         gasPrice: gasPriceToUse,
         nonce,
       };
+
+      this.logger.debug(
+        `mintInvoiceNFT recipient: ${recipient}, tokenURI: ${tokenURI}, gasPrice: ${gasPriceToUse}, nonce: ${nonce}`,
+      );
 
       this.invoiceNFT.methods
         .mintNFT(recipient, tokenURI)
@@ -410,6 +419,11 @@ export default class SmartContractManager {
     // Send transaction to contract
     // TODO(PROT-181): Implement a log manager for the library
     // use it for the different events (error, transactionHash, receipt and confirmation)
+    this.logger.debug(
+      `addHashAndSizeToEthereum transactionCount: ${await this.eth.getTransactionCount(
+        '0x627306090abab3a6e1400e9345bc60c78a8bef57',
+      )}`,
+    );
     return new Promise((resolve, reject) => {
       // This boolean is set to true once the ethereum metadata has been created and the promise has been resolved
       // When set to true, we use it to ignore next confirmation event function call
@@ -424,6 +438,7 @@ export default class SmartContractManager {
         nonce,
         value: fee,
       };
+      this.logger.debug(`addHashAndSizeToEthereum gasPrice: ${gasPriceToUse}, nonce: ${nonce}, `);
       this.requestHashSubmitter.methods
         .submitHash(contentHash, feesParametersAsBytes)
         .send(transactionParameters)

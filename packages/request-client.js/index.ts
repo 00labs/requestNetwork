@@ -7,6 +7,8 @@ import { payRequest, approveErc20IfNeeded } from '@requestnetwork/payment-proces
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 
+import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
+
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
 //#region Local ERC20 Config
@@ -15,6 +17,9 @@ const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Prov
 // this is a local ERC20 token deployed on ganache
 const localToken = '0x9FBDa871d559710256a2502A2517b794B482Db40';
 const erc20 = TestERC20__factory.connect(localToken, provider);
+
+const INVOICE_NFT_ADDR = '0x2e335F247E91caa168c64b63104C4475b2af3942';
+const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
 
 //#endregion
 
@@ -97,6 +102,8 @@ const requestCreateParams = {
 (async () => {
   console.log(await erc20.symbol());
 
+  console.log('payee address: ' + payeeIdentity.value);
+
   // ✏️ Create the request
   const request: RequestNetwork.Request = await requestNetwork.createRequest(requestCreateParams);
   console.log(`request ${request.requestId} created`);
@@ -121,4 +128,7 @@ const requestCreateParams = {
   console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
   console.log('Balance', request.getData().balance?.balance);
+
+  console.log('payee address: ' + payeeIdentity.value);
+  console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
 })();

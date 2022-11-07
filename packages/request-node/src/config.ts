@@ -32,7 +32,7 @@ const defaultValues: any = {
     retryDelay: 1000,
   },
   log: {
-    level: LogTypes.LogLevel.INFO,
+    level: LogTypes.LogLevel.DEBUG,
     mode: modeType.human,
   },
   server: {

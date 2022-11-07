@@ -28,7 +28,13 @@ export default class TransactionManager implements TransactionTypes.ITransaction
   }
 
   public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
-    return this.dataAccess.tokenizeRequest && this.dataAccess.tokenizeRequest(recipient, requestId);
+    console.log('manager');
+    console.log(this.dataAccess.constructor.name);
+    if (this.dataAccess.tokenizeRequest) {
+      return this.dataAccess.tokenizeRequest(recipient, requestId);
+    } else {
+      console.log('none');
+    }
   }
 
   /**

@@ -156,6 +156,7 @@ export class EthereumStorage implements StorageTypes.IStorage {
   }
 
   public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
+    console.log('eth storage');
     return this.smartContractManager.mintInvoiceNFT(recipient, requestId);
   }
 

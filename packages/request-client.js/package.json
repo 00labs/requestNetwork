@@ -40,7 +40,8 @@
     "lint:check": "eslint .",
     "prepare": "yarn run build",
     "test": "jest",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "start": "ts-node index.ts"
   },
   "dependencies": {
     "@requestnetwork/advanced-logic": "0.35.0",
@@ -50,6 +51,7 @@
     "@requestnetwork/epk-signature": "0.5.35",
     "@requestnetwork/multi-format": "0.15.10",
     "@requestnetwork/payment-detection": "0.36.0",
+    "@requestnetwork/payment-processor": "0.38.0",
     "@requestnetwork/request-logic": "0.26.10",
     "@requestnetwork/smart-contracts": "0.29.0",
     "@requestnetwork/transaction-manager": "0.27.0",

@@ -27,12 +27,17 @@ export default class TransactionManager implements TransactionTypes.ITransaction
     this.channelParser = new ChannelParser(decryptionProvider);
   }
 
-  public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
+  public async tokenizeRequest(
+    recipient: string,
+    assetToken: string,
+    tokenId: string,
+    metadata: string,
+  ): Promise<any> {
     console.log('manager');
     console.log(this.dataAccess.constructor.name);
     if (this.dataAccess.tokenizeRequest) {
       console.log('call tokenRequest...');
-      return this.dataAccess.tokenizeRequest(recipient, requestId);
+      return this.dataAccess.tokenizeRequest(recipient, assetToken, tokenId, metadata);
     } else {
       console.log('none');
     }

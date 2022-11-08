@@ -139,7 +139,7 @@ export default class SmartContractManager {
       this.networkName,
     );
 
-    this.invoiceNFTAddress = SmartContracts.invoiceNFT.getAddress(this.networkName);
+    this.invoiceNFTAddress = SmartContracts.invoiceNFTArtifact.getAddress(this.networkName);
 
     // Initialize smart contract instance
     this.requestHashStorage = new this.eth.Contract(
@@ -151,7 +151,7 @@ export default class SmartContractManager {
       this.hashSubmitterAddress,
     );
     this.invoiceNFT = new this.eth.Contract(
-      SmartContracts.invoiceNFT.getContractAbi(),
+      SmartContracts.invoiceNFTArtifact.getContractAbi(),
       this.invoiceNFTAddress,
     );
 
@@ -255,7 +255,9 @@ export default class SmartContractManager {
    */
   public async mintInvoiceNFT(
     recipient: string,
-    tokenURI: string,
+    assetToken: string,
+    tokenId: string,
+    metadata: string,
     gasPrice?: BigNumber,
     nonce?: number,
   ): Promise<any> {
@@ -278,11 +280,6 @@ export default class SmartContractManager {
     // Send transaction to contract
     // TODO(PROT-181): Implement a log manager for the library
     // use it for the different events (error, transactionHash, receipt and confirmation)
-    this.logger.debug(
-      `mintInvoiceNFT transactionCount: ${await this.eth.getTransactionCount(
-        '0x627306090abab3a6e1400e9345bc60c78a8bef57',
-      )}`,
-    );
     return new Promise((resolve, reject) => {
       // This boolean is set to true once the promise has been resolved
       // When set to true, we use it to ignore next confirmation event function call
@@ -298,13 +295,20 @@ export default class SmartContractManager {
       };
 
       this.logger.debug(
-        `mintInvoiceNFT recipient: ${recipient}, tokenURI: ${tokenURI}, gasPrice: ${gasPriceToUse}, nonce: ${nonce}`,
+        `mintInvoiceNFT recipient: ${recipient}, assetToken: ${assetToken}, tokenId: ${tokenId}, metadata: ${metadata}, gasPrice: ${gasPriceToUse}, nonce: ${nonce}`,
       );
 
       this.invoiceNFT.methods
-        .mintNFT(recipient, tokenURI)
+        .mint(recipient, tokenId, assetToken, metadata)
         .send(transactionParameters)
-        .on('transactionHash', (hash: any) => {
+        .on('transactionHash', async (hash: any) => {
+          this.logger.debug(
+            `mintInvoiceNFT transactionCount: ${await this.eth.getTransactionCount(
+              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
+              'pending',
+            )} ts: ${Date.now()}`,
+          );
+
           console.log('TXN HASH');
           // Store the transaction hash in case we need it in the future
           transactionHash = hash;
@@ -316,6 +320,13 @@ export default class SmartContractManager {
           );
         })
         .on('error', async (transactionError: string) => {
+          this.logger.debug(
+            `mintInvoiceNFT transactionCount: ${await this.eth.getTransactionCount(
+              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
+              'pending',
+            )} ts: ${Date.now()}`,
+          );
+
           // If failed because of polling timeout, try to resubmit the transaction with more gas
           console.log('ERR');
           if (
@@ -338,7 +349,16 @@ export default class SmartContractManager {
             if (newGasPrice.gt(gasPriceToUse)) {
               // Retry transaction with the new gas price and propagate back the result
               try {
-                resolve(await this.mintInvoiceNFT(recipient, tokenURI, newGasPrice, nonce));
+                resolve(
+                  await this.mintInvoiceNFT(
+                    recipient,
+                    assetToken,
+                    tokenId,
+                    metadata,
+                    newGasPrice,
+                    nonce,
+                  ),
+                );
               } catch (error) {
                 reject(error);
               }
@@ -351,7 +371,9 @@ export default class SmartContractManager {
           } else {
             const logObject = JSON.stringify({
               recipient,
-              tokenURI,
+              assetToken,
+              tokenId,
+              metadata,
               from: account,
               gasPrice: gasPriceToUse,
               nonce,
@@ -419,11 +441,6 @@ export default class SmartContractManager {
     // Send transaction to contract
     // TODO(PROT-181): Implement a log manager for the library
     // use it for the different events (error, transactionHash, receipt and confirmation)
-    this.logger.debug(
-      `addHashAndSizeToEthereum transactionCount: ${await this.eth.getTransactionCount(
-        '0x627306090abab3a6e1400e9345bc60c78a8bef57',
-      )}`,
-    );
     return new Promise((resolve, reject) => {
       // This boolean is set to true once the ethereum metadata has been created and the promise has been resolved
       // When set to true, we use it to ignore next confirmation event function call
@@ -442,7 +459,14 @@ export default class SmartContractManager {
       this.requestHashSubmitter.methods
         .submitHash(contentHash, feesParametersAsBytes)
         .send(transactionParameters)
-        .on('transactionHash', (hash: any) => {
+        .on('transactionHash', async (hash: any) => {
+          this.logger.debug(
+            `addHashAndSizeToEthereum transactionCount: ${await this.eth.getTransactionCount(
+              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
+              'pending',
+            )}`,
+          );
+
           // Store the transaction hash in case we need it in the future
           transactionHash = hash;
           this.logger.debug(
@@ -453,6 +477,13 @@ export default class SmartContractManager {
           );
         })
         .on('error', async (transactionError: string) => {
+          this.logger.debug(
+            `addHashAndSizeToEthereum transactionCount: ${await this.eth.getTransactionCount(
+              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
+              'pending',
+            )} ts: ${Date.now()}`,
+          );
+
           // If failed because of polling timeout, try to resubmit the transaction with more gas
           if (
             transactionError.toString().includes(TRANSACTION_POLLING_TIMEOUT) &&

@@ -11,6 +11,8 @@ import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
+import MultiFormat from '@requestnetwork/multi-format';
+
 //#region Local ERC20 Config
 const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Provider;
 
@@ -131,4 +133,12 @@ const requestCreateParams = {
 
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
+
+  const reqIdObj = MultiFormat.deserialize(request.requestId);
+  const tokenId = reqIdObj.value;
+
+  console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
+  const metadata = await invoiceNFT.metadata(tokenId);
+  console.log(`${tokenId} metadata: ${metadata}`);
+  console.log(`combined requestId: ${metadata.slice(2)}${tokenId.slice(2)}`);
 })();

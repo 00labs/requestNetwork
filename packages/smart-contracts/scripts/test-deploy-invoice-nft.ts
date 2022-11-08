@@ -9,6 +9,11 @@ export async function deployInvoiceNFT(hre: HardhatRuntimeEnvironment) {
     await invoiceNFT.deployed();
 
     console.log('InvoiceNFT Contract deployed: ' + invoiceNFT.address);
+
+    const mintRole = await invoiceNFT.MINTER_ROLE();
+    await invoiceNFT.grantRole(mintRole, deployer.address);
+
+    console.log(`deployer ${deployer.address} has mint role of InvoiceNFT`);
   } catch (e) {
     console.error(e);
   }

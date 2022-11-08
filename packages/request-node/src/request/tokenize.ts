@@ -33,18 +33,26 @@ export default class TokenizeHandler {
     // clientRequest.body is expected to contain data for data-acces layer:
     // transactionData: data of the transaction
     // topics (optional): arbitrary strings that reference the transaction
-    if (!clientRequest.body || !clientRequest.body.recipient || !clientRequest.body.requestId) {
+    if (
+      !clientRequest.body ||
+      !clientRequest.body.recipient ||
+      !clientRequest.body.assetToken ||
+      !clientRequest.body.tokenId ||
+      !clientRequest.body.metadata
+    ) {
       serverResponse.status(StatusCodes.UNPROCESSABLE_ENTITY).send('Incorrect data');
       return;
     }
 
-    const { recipient, requestId } = clientRequest.body;
+    const { recipient, assetToken, tokenId, metadata } = clientRequest.body;
 
     try {
       this.logger.debug(
         `Tokenize Transaction: ${JSON.stringify({
           recipient,
-          requestId,
+          assetToken,
+          tokenId,
+          metadata,
         })}`,
       );
 
@@ -54,9 +62,11 @@ export default class TokenizeHandler {
           .send('tokenizeRequest function is missing');
         return;
       }
-      await this.dataAccess.tokenizeRequest(recipient, requestId);
+      await this.dataAccess.tokenizeRequest(recipient, assetToken, tokenId, metadata);
 
-      this.logger.info(`Tokenization confirmed: ${recipient}, ${requestId}`);
+      this.logger.info(
+        `Tokenization confirmed: ${recipient}, ${assetToken}, ${tokenId}, ${metadata}`,
+      );
 
       // Log the request time
       const requestEndTime = Date.now();

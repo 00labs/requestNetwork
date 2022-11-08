@@ -21,7 +21,12 @@ export interface IDataRead {
 }
 
 export interface IDataWrite {
-  tokenizeRequest?: (recipient: string, requestId: string) => Promise<any>;
+  tokenizeRequest?: (
+    recipient: string,
+    assetToken: string,
+    tokenId: string,
+    metadata: string,
+  ) => Promise<any>;
   initialize: () => Promise<void>;
   close: () => Promise<void>;
 

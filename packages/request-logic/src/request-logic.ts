@@ -62,7 +62,15 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
     if (this.transactionManager.tokenizeRequest) {
       console.log('2');
       if (requestParameters.payee) {
-        await this.transactionManager.tokenizeRequest(requestParameters.payee.value, requestId);
+        const recipient = requestParameters.payee.value;
+        const assetToken = requestParameters.currency.value;
+        const reqIdObj = MultiFormat.deserialize(requestId);
+        const tokenId = reqIdObj.value;
+        const metadata = `0x${requestId.slice(0, 2)}`;
+        console.log(
+          `call transactionManager.tokenizeRequest(recipient,assetToken,tokenId,metadata): ${recipient}, ${assetToken}, ${tokenId}, ${metadata}`,
+        );
+        await this.transactionManager.tokenizeRequest(recipient, assetToken, tokenId, metadata);
       }
     }
 

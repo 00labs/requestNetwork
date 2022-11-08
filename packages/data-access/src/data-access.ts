@@ -172,9 +172,17 @@ export default class DataAccess implements DataAccessTypes.IDataAccess {
     await this.stopAutoSynchronization();
   }
 
-  public async tokenizeRequest(recipient: string, requestId: string): Promise<any> {
+  public async tokenizeRequest(
+    recipient: string,
+    assetToken: string,
+    tokenId: string,
+    metadata: string,
+  ): Promise<any> {
     console.log('data access');
-    return this.storage.tokenizeRequest && this.storage.tokenizeRequest(recipient, requestId);
+    return (
+      this.storage.tokenizeRequest &&
+      this.storage.tokenizeRequest(recipient, assetToken, tokenId, metadata)
+    );
   }
 
   /**

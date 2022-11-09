@@ -50,8 +50,20 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       topics,
     );
 
+    console.log(
+      `createRequest step1 - action: ${JSON.stringify(action)}, requestId: ${JSON.stringify(
+        requestId,
+      )}, hashedTopics: ${JSON.stringify(hashedTopics)}`,
+    );
+
     // Validate the action, the apply will throw in case of error
     RequestLogicCore.applyActionToRequest(null, action, Date.now(), this.advancedLogic);
+
+    console.log(
+      `createRequest step2 - action: ${JSON.stringify(action)}, requestId: ${JSON.stringify(
+        requestId,
+      )}, hashedTopics: ${JSON.stringify(hashedTopics)}`,
+    );
 
     const resultPersistTx = await this.transactionManager.persistTransaction(
       JSON.stringify(action),

@@ -25,6 +25,7 @@ import { NearConversionNativeTokenPaymentDetector, NearNativeTokenPaymentDetecto
 import { getPaymentNetworkExtension } from './utils';
 import { getTheGraphClient } from './thegraph';
 import { getDefaultProvider } from 'ethers';
+import { ERC20NFTPaymentDetector } from './erc20/nft-contract';
 
 const PN_ID = ExtensionTypes.PAYMENT_NETWORK_ID;
 
@@ -48,6 +49,7 @@ const supportedPaymentNetwork: ISupportedPaymentNetworkByCurrency = {
       [PN_ID.ERC20_ADDRESS_BASED]: ERC20AddressBasedPaymentDetector,
       [PN_ID.ERC20_PROXY_CONTRACT]: ERC20ProxyPaymentDetector,
       [PN_ID.ERC20_FEE_PROXY_CONTRACT]: ERC20FeeProxyPaymentDetector,
+      [PN_ID.ERC20_NFT_CONTRACT]: ERC20NFTPaymentDetector,
     },
   },
   ETH: {

@@ -22,12 +22,13 @@ contract InvoiceNFT is ERC721, AccessControl {
   mapping(uint256 => uint256) private _tokenIdIndexes;
 
   event Payment(
-    address indexed sender,
-    address indexed recipient,
-    uint256 indexed tokenId,
+    address sender,
+    address recipient,
+    uint256 tokenId,
     address assetAddress,
     uint256 amount,
-    uint256 paymentId
+    uint256 paymentId,
+    bytes indexed paymentReference
   );
 
   error zeroAddressProvided(); // 0x5ff75ab0
@@ -48,14 +49,26 @@ contract InvoiceNFT is ERC721, AccessControl {
     return super.supportsInterface(interfaceId);
   }
 
-  function payOwner(uint256 tokenId, uint256 amount) external {
+  function payOwner(
+    uint256 tokenId,
+    uint256 amount,
+    bytes calldata paymentReference
+  ) external {
     if (amount == 0) revert zeroAmountProvided();
     address owner = ownerOf(tokenId);
     _paymentId.increment();
     address assetAddress = assetToken[tokenId];
     IERC20(assetToken[tokenId]).safeTransferFrom(msg.sender, owner, amount);
 
-    emit Payment(msg.sender, owner, tokenId, assetAddress, amount, _paymentId.current());
+    emit Payment(
+      msg.sender,
+      owner,
+      tokenId,
+      assetAddress,
+      amount,
+      _paymentId.current(),
+      paymentReference
+    );
   }
 
   function mint(

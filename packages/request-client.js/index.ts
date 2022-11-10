@@ -4,6 +4,7 @@ import * as RequestNetwork from '.';
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package
 import { payRequest, approveErc20IfNeeded } from '@requestnetwork/payment-processor';
+
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 
@@ -80,9 +81,9 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 //#region Request setup
 // ✏️ Payment network information
 const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
-  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_PROXY_CONTRACT,
+  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT,
   parameters: {
-    paymentAddress: payeePaymentWallet.address,
+    // paymentAddress: payeePaymentWallet.address,
   },
 };
 
@@ -110,7 +111,7 @@ const requestCreateParams = {
   const request: RequestNetwork.Request = await requestNetwork.createRequest(requestCreateParams);
   console.log(`request ${request.requestId} created`);
   await request.waitForConfirmation();
-  console.log(`request ${request.requestId} confirmed`);
+  console.log(`request ${request.requestId} confirmed, ${JSON.stringify(request)}`);
 
   // ✏️ Accept the request
 
@@ -129,7 +130,7 @@ const requestCreateParams = {
 
   console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
-  console.log('Balance', request.getData().balance?.balance);
+  console.log('Balance: ', request.getData().balance?.balance);
 
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
@@ -141,4 +142,12 @@ const requestCreateParams = {
   const metadata = await invoiceNFT.metadata(tokenId);
   console.log(`${tokenId} metadata: ${metadata}`);
   console.log(`combined requestId: ${metadata.slice(2)}${tokenId.slice(2)}`);
+
+  await request.refresh();
+
+  console.log(`request: ${JSON.stringify(request)}`);
+
+  console.log('Balance1: ', request.getData().balance?.balance);
+  await request.refreshBalance();
+  console.log('Balance2: ', request.getData().balance?.balance);
 })();

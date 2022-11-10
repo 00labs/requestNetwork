@@ -20,6 +20,7 @@ import NearNative from './extensions/payment-network/near-native';
 import AnyToErc20Proxy from './extensions/payment-network/any-to-erc20-proxy';
 import AnyToEthProxy from './extensions/payment-network/any-to-eth-proxy';
 import NativeTokenPaymentNetwork from './extensions/payment-network/native-token';
+import NftContractErc20 from './extensions/payment-network/erc20/nft-contract';
 
 /**
  * Module to manage Advanced logic extensions
@@ -41,6 +42,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
     erc777Stream: Erc777Stream;
     feeProxyContractEth: FeeProxyContractEth;
     anyToEthProxy: AnyToEthProxy;
+    nftContractErc20: NftContractErc20;
   };
 
   constructor(currencyManager?: ICurrencyManager) {
@@ -61,6 +63,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
       feeProxyContractEth: new FeeProxyContractEth(),
       anyToEthProxy: new AnyToEthProxy(currencyManager),
       nativeToken: [new NearNative()],
+      nftContractErc20: new NftContractErc20(),
     };
   }
   /**
@@ -115,6 +118,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
       [ExtensionTypes.ID.PAYMENT_NETWORK_ETH_FEE_PROXY_CONTRACT]:
         this.extensions.feeProxyContractEth,
       [ExtensionTypes.ID.PAYMENT_NETWORK_ANY_TO_ETH_PROXY]: this.extensions.anyToEthProxy,
+      [ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT]: this.extensions.nftContractErc20,
     }[id];
 
     if (!extension) {

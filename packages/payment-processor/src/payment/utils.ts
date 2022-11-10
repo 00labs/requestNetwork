@@ -174,6 +174,7 @@ const {
   ERC20_FEE_PROXY_CONTRACT,
   ANY_TO_ERC20_PROXY,
   NATIVE_TOKEN,
+  ERC20_NFT_CONTRACT,
 } = ExtensionTypes.PAYMENT_NETWORK_ID;
 const currenciesMap: any = {
   [ERC777_STREAM]: RequestLogicTypes.CURRENCY.ERC777,
@@ -182,6 +183,7 @@ const currenciesMap: any = {
   [ETH_INPUT_DATA]: RequestLogicTypes.CURRENCY.ETH,
   [ETH_FEE_PROXY_CONTRACT]: RequestLogicTypes.CURRENCY.ETH,
   [NATIVE_TOKEN]: RequestLogicTypes.CURRENCY.ETH,
+  [ERC20_NFT_CONTRACT]: RequestLogicTypes.CURRENCY.ERC20,
 };
 
 /**
@@ -215,8 +217,9 @@ export function validateRequest(
 
   // ERC20 based payment networks are only valid if the request currency has a value
   const validCurrencyValue =
-    ![ERC20_PROXY_CONTRACT, ERC20_FEE_PROXY_CONTRACT, ERC777_STREAM].includes(paymentNetworkId) ||
-    request.currencyInfo.value;
+    ![ERC20_PROXY_CONTRACT, ERC20_FEE_PROXY_CONTRACT, ERC777_STREAM, ERC20_NFT_CONTRACT].includes(
+      paymentNetworkId,
+    ) || request.currencyInfo.value;
 
   // Payment network with fees should have both or none of fee address and fee amount
   const validFeeParams =
@@ -241,7 +244,8 @@ export function validateRequest(
     !validCurrencyType ||
     !validCurrencyValue ||
     !extension?.values?.salt ||
-    !extension?.values?.paymentAddress
+    (paymentNetworkId !== PaymentTypes.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT &&
+      !extension?.values?.paymentAddress)
   ) {
     throw new Error(`request cannot be processed, or is not an ${paymentNetworkId} request`);
   }

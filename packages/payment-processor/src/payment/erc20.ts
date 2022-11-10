@@ -271,6 +271,12 @@ function getProxyAddress(request: ClientTypes.IRequestData): string {
       Erc20PaymentNetwork.ERC20FeeProxyPaymentDetector.getDeploymentInformation,
     );
   }
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+    return genericGetProxyAddress(
+      request,
+      Erc20PaymentNetwork.ERC20NFTPaymentDetector.getDeploymentInformation,
+    );
+  }
 
   throw new Error(`Unsupported payment network: ${id}`);
 }

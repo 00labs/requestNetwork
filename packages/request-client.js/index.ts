@@ -3,7 +3,8 @@ import * as RequestNetwork from '.';
 // The signature provider allows us to sign the request
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package
-// import { payRequest, approveErc20IfNeeded } from '@requestnetwork/payment-processor';
+import { payRequest, approveErc20IfNeeded } from '@requestnetwork/payment-processor';
+payRequest;
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
@@ -121,7 +122,7 @@ const requestCreateParams = {
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
 
   // ✏️ Pay the request
-  // await approveErc20IfNeeded(request.getData(), payerPaymentWallet.address, payerPaymentWallet);
+  await approveErc20IfNeeded(request.getData(), payerPaymentWallet.address, payerPaymentWallet);
 
   // const requestData = request.getData();
   // const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);

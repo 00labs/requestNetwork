@@ -5,16 +5,16 @@ import {
   RequestLogicTypes,
 } from '@requestnetwork/types';
 
-// import { erc20ProxyArtifact } from '@requestnetwork/smart-contracts';
+import { invoiceNFTArtifact } from '@requestnetwork/smart-contracts';
 // import ProxyInfoRetriever from './proxy-info-retriever';
 // import TheGraphInfoRetriever from './thegraph-info-retriever';
 // import { networkSupportsTheGraph } from '../thegraph';
-// import { makeGetDeploymentInformation } from '../utils';
+import { makeGetDeploymentInformation } from '../utils';
 import { ReferenceBasedDetector } from '../reference-based-detector';
 
-// const PROXY_CONTRACT_ADDRESS_MAP = {
-//   ['0.1.0']: '0.1.0',
-// };
+const NFT_CONTRACT_ADDRESS_MAP = {
+  ['0.1.0']: '0.1.0',
+};
 
 /**
  * Handle payment networks with ERC20 proxy contract extension
@@ -99,8 +99,8 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
   /*
    * Returns deployment information for the underlying smart contract for a given payment network version
    */
-  //   public static getDeploymentInformation = makeGetDeploymentInformation(
-  //     erc20ProxyArtifact,
-  //     PROXY_CONTRACT_ADDRESS_MAP,
-  //   );
+  public static getDeploymentInformation = makeGetDeploymentInformation(
+    invoiceNFTArtifact,
+    NFT_CONTRACT_ADDRESS_MAP,
+  );
 }

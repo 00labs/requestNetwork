@@ -543,6 +543,11 @@
           "internalType": "uint256",
           "name": "amount",
           "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "paymentReference",
+          "type": "bytes"
         }
       ],
       "name": "payOwner",

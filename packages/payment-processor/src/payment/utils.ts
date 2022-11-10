@@ -174,7 +174,7 @@ const {
   ERC20_FEE_PROXY_CONTRACT,
   ANY_TO_ERC20_PROXY,
   NATIVE_TOKEN,
-  ERC20_NFT_CONTRACT,
+  PAYMENT_NETWORK_ERC20_NFT_CONTRACT,
 } = ExtensionTypes.PAYMENT_NETWORK_ID;
 const currenciesMap: any = {
   [ERC777_STREAM]: RequestLogicTypes.CURRENCY.ERC777,
@@ -183,7 +183,7 @@ const currenciesMap: any = {
   [ETH_INPUT_DATA]: RequestLogicTypes.CURRENCY.ETH,
   [ETH_FEE_PROXY_CONTRACT]: RequestLogicTypes.CURRENCY.ETH,
   [NATIVE_TOKEN]: RequestLogicTypes.CURRENCY.ETH,
-  [ERC20_NFT_CONTRACT]: RequestLogicTypes.CURRENCY.ERC20,
+  [PAYMENT_NETWORK_ERC20_NFT_CONTRACT]: RequestLogicTypes.CURRENCY.ERC20,
 };
 
 /**

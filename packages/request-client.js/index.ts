@@ -4,17 +4,15 @@ import * as RequestNetwork from '.';
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package
 import { payRequest, approveErc20IfNeeded } from '@requestnetwork/payment-processor';
-payRequest;
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 
-// import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
+import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
 
-import { ethers, Wallet } from 'ethers';
+import { ContractTransaction, ethers, Wallet } from 'ethers';
 
 import MultiFormat from '@requestnetwork/multi-format';
-MultiFormat;
 
 //#region Local ERC20 Config
 const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Provider;
@@ -23,8 +21,8 @@ const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Prov
 const localToken = '0x9FBDa871d559710256a2502A2517b794B482Db40';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
-// const INVOICE_NFT_ADDR = '0x2e335F247E91caa168c64b63104C4475b2af3942';
-// const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
+const INVOICE_NFT_ADDR = '0x2e335F247E91caa168c64b63104C4475b2af3942';
+const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
 
 //#endregion
 
@@ -124,24 +122,32 @@ const requestCreateParams = {
   // ✏️ Pay the request
   await approveErc20IfNeeded(request.getData(), payerPaymentWallet.address, payerPaymentWallet);
 
-  // const requestData = request.getData();
-  // const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);
-  // console.log(`Payment tx: ${tx.hash}`);
-  // await tx.wait(1);
-  // console.log(`After payment`);
+  const requestData = request.getData();
+  const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);
+  console.log(`Payment tx: ${tx.hash}`);
+  await tx.wait(1);
+  console.log(`After payment`);
 
-  // console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
-  // console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
-  // console.log('Balance', request.getData().balance?.balance);
+  console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
+  console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
+  console.log('Balance: ', request.getData().balance?.balance);
 
-  // console.log('payee address: ' + payeeIdentity.value);
-  // console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
+  console.log('payee address: ' + payeeIdentity.value);
+  console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
 
-  // const reqIdObj = MultiFormat.deserialize(request.requestId);
-  // const tokenId = reqIdObj.value;
+  const reqIdObj = MultiFormat.deserialize(request.requestId);
+  const tokenId = reqIdObj.value;
 
-  // console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
-  // const metadata = await invoiceNFT.metadata(tokenId);
-  // console.log(`${tokenId} metadata: ${metadata}`);
-  // console.log(`combined requestId: ${metadata.slice(2)}${tokenId.slice(2)}`);
+  console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
+  const metadata = await invoiceNFT.metadata(tokenId);
+  console.log(`${tokenId} metadata: ${metadata}`);
+  console.log(`combined requestId: ${metadata.slice(2)}${tokenId.slice(2)}`);
+
+  await request.refresh();
+
+  console.log(`request: ${JSON.stringify(request)}`);
+
+  console.log('Balance1: ', request.getData().balance?.balance);
+  await request.refreshBalance();
+  console.log('Balance2: ', request.getData().balance?.balance);
 })();

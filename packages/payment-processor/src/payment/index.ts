@@ -88,6 +88,7 @@ export async function payRequest(
   switch (paymentNetwork) {
     case ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_PROXY_CONTRACT:
     case ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT:
+    case ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT:
       return payErc20Request(request, signer, amount, undefined, overrides);
     case ExtensionTypes.ID.PAYMENT_NETWORK_ERC777_STREAM:
       return payErc777StreamRequest(request, signer);

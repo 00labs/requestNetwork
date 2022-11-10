@@ -115,7 +115,7 @@ describe('contract: InvoiceNFT', () => {
     it('revert with zero amount', async function () {
       const tokenId = 1;
       await nft.mint(await user1.getAddress(), tokenId, testToken.address, '0x01');
-      await expect(nft.payOwner(tokenId, 0)).reverted;
+      await expect(nft.payOwner(tokenId, 0, '0x01')).reverted;
       // 'zeroAmountProvided()'
     });
 
@@ -125,7 +125,7 @@ describe('contract: InvoiceNFT', () => {
       await nft.mint(user1Addr, tokenId, testToken.address, '0x01');
       const amount = BN.from(100).mul(BASE_DECIMAL);
       const beforeBal = await testToken.balanceOf(user1Addr);
-      await nft.payOwner(tokenId, amount);
+      await nft.payOwner(tokenId, amount, '0x02');
       const afterBal = await testToken.balanceOf(user1Addr);
       expect(amount).equals(afterBal.sub(beforeBal));
     });
@@ -139,7 +139,7 @@ describe('contract: InvoiceNFT', () => {
 
       const amount = BN.from(100).mul(BASE_DECIMAL);
       const beforeBal = await testToken.balanceOf(user2Addr);
-      await nft.payOwner(tokenId, amount);
+      await nft.payOwner(tokenId, amount, '0x03');
       const afterBal = await testToken.balanceOf(user2Addr);
       expect(amount).equals(afterBal.sub(beforeBal));
     });

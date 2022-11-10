@@ -7,6 +7,7 @@ import { ClientTypes, ExtensionTypes, PaymentTypes } from '@requestnetwork/types
 import { _getErc20FeeProxyPaymentUrl, payErc20FeeProxyRequest } from './erc20-fee-proxy';
 import { ISwapSettings, swapErc20FeeProxyRequest } from './swap-erc20-fee-proxy';
 import { _getErc20ProxyPaymentUrl, payErc20ProxyRequest } from './erc20-proxy';
+import { _getErc20NFTPaymentUrl, payErc20NFTRequest } from './erc20-nft';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {
@@ -41,6 +42,9 @@ export async function payErc20Request(
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_PROXY_CONTRACT) {
     return payErc20ProxyRequest(request, signerOrProvider, amount, overrides);
+  }
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+    return payErc20NFTRequest(request, signerOrProvider, amount, overrides);
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
     if (swapSettings) {
@@ -243,6 +247,9 @@ export function _getErc20PaymentUrl(
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
     return _getErc20FeeProxyPaymentUrl(request, amount);
+  }
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+    return _getErc20NFTPaymentUrl(request, amount);
   }
   throw new Error('Not a supported ERC20 proxy payment network request');
 }

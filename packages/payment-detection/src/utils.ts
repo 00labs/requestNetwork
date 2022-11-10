@@ -166,7 +166,10 @@ export function getPaymentReference(
   const salt = extension.values.salt;
   if (!salt) return;
 
-  const info = getInfo(extension.values, event);
+  let info = getInfo(extension.values, event);
+  if (extension.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+    info = extension.id;
+  }
   if (!info) return;
 
   return PaymentReferenceCalculator.calculate(requestId, salt, info);

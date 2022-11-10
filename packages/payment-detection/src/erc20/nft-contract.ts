@@ -6,9 +6,8 @@ import {
 } from '@requestnetwork/types';
 
 import { invoiceNFTArtifact } from '@requestnetwork/smart-contracts';
-// import ProxyInfoRetriever from './proxy-info-retriever';
-// import TheGraphInfoRetriever from './thegraph-info-retriever';
-// import { networkSupportsTheGraph } from '../thegraph';
+import TheGraphInfoRetriever from './thegraph-info-retriever';
+import { networkSupportsTheGraph } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';
 import { ReferenceBasedDetector } from '../reference-based-detector';
 
@@ -58,28 +57,29 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
     paymentChain;
     paymentNetwork;
 
-    return {
-      paymentEvents: [],
-    };
+    const { address: proxyContractAddress } = ERC20NFTPaymentDetector.getDeploymentInformation(
+      paymentChain,
+      paymentNetwork.version,
+    );
 
-    // if (!address) {
-    //   return {
-    //     paymentEvents: [],
-    //   };
-    // }
-    // const { address: proxyContractAddress, creationBlockNumber: proxyCreationBlockNumber } =
-    //   ERC20ProxyPaymentDetector.getDeploymentInformation(paymentChain, paymentNetwork.version);
-    // if (networkSupportsTheGraph(paymentChain)) {
-    //   const graphInfoRetriever = new TheGraphInfoRetriever(
-    //     paymentReference,
-    //     proxyContractAddress,
-    //     requestCurrency.value,
-    //     address,
-    //     eventName,
-    //     paymentChain,
-    //   );
-    //   return graphInfoRetriever.getTransferEvents();
-    // } else {
+    if (address == null) {
+      return {
+        paymentEvents: [],
+      };
+    }
+
+    if (networkSupportsTheGraph(paymentChain)) {
+      const graphInfoRetriever = new TheGraphInfoRetriever(
+        paymentReference,
+        proxyContractAddress,
+        requestCurrency.value,
+        address,
+        eventName,
+        paymentChain,
+      );
+      return graphInfoRetriever.getTransferEvents();
+    }
+    // else {
     //   const proxyInfoRetriever = new ProxyInfoRetriever(
     //     paymentReference,
     //     proxyContractAddress,
@@ -94,6 +94,10 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
     //     paymentEvents,
     //   };
     // }
+
+    return {
+      paymentEvents: [],
+    };
   }
 
   /*

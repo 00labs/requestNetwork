@@ -69,15 +69,17 @@ describe('contract: InvoiceNFT', () => {
     it('sucess', async function () {
       const tokenId = BN.from('0x34cc5f0224acb0544a9d325f8f2160c53130ba4671849472f2a96a35c93a78d6');
 
-      await nft.mint(user1Addr, tokenId, testToken.address, '0x01');
+      const metadata = ethers.utils.base64.encode('0x01');
+      console.log('metadata: ' + metadata);
+      await nft.mint(user1Addr, tokenId, testToken.address, metadata);
       const owner = await nft.ownerOf(tokenId);
-      const md = await nft.metadata(tokenId);
+      const md = await nft.tokenURI(tokenId);
       expect(owner).equals(user1Addr);
-      expect(md).equals('0x01');
+      expect(md).equals(metadata);
     });
 
     it('list NFTs', async function () {
-      const metadata = '0x01';
+      const metadata = ethers.utils.base64.encode('0x01');
       await nft.mint(user1Addr, 1, testToken.address, metadata);
       await nft.mint(user1Addr, 2, testToken.address, metadata);
       await nft.mint(user1Addr, 3, testToken.address, metadata);
@@ -114,15 +116,17 @@ describe('contract: InvoiceNFT', () => {
   describe('payOwner', async function () {
     it('revert with zero amount', async function () {
       const tokenId = 1;
-      await nft.mint(await user1.getAddress(), tokenId, testToken.address, '0x01');
+      const metadata = ethers.utils.base64.encode('0x01');
+      await nft.mint(await user1.getAddress(), tokenId, testToken.address, metadata);
       await expect(nft.payOwner(tokenId, 0, '0x01')).reverted;
       // 'zeroAmountProvided()'
     });
 
     it('success for original owner', async function () {
       const tokenId = 1;
+      const metadata = ethers.utils.base64.encode('0x01');
       const user1Addr = await user1.getAddress();
-      await nft.mint(user1Addr, tokenId, testToken.address, '0x01');
+      await nft.mint(user1Addr, tokenId, testToken.address, metadata);
       const amount = BN.from(100).mul(BASE_DECIMAL);
       const beforeBal = await testToken.balanceOf(user1Addr);
       await nft.payOwner(tokenId, amount, '0x02');
@@ -132,14 +136,15 @@ describe('contract: InvoiceNFT', () => {
 
     it('success for new owner', async function () {
       const tokenId = 1;
+      const metadata = ethers.utils.base64.encode('0x01');
       const user1Addr = await user1.getAddress();
       const user2Addr = await user2.getAddress();
-      await nft.mint(user1Addr, tokenId, testToken.address, '0x01');
+      await nft.mint(user1Addr, tokenId, testToken.address, metadata);
       await nft.connect(user1).transferFrom(user1Addr, user2Addr, tokenId);
 
       const amount = BN.from(100).mul(BASE_DECIMAL);
       const beforeBal = await testToken.balanceOf(user2Addr);
-      await nft.payOwner(tokenId, amount, '0x03');
+      await nft.payOwner(tokenId, amount, '0x01');
       const afterBal = await testToken.balanceOf(user2Addr);
       expect(amount).equals(afterBal.sub(beforeBal));
     });

@@ -111,7 +111,7 @@ const requestCreateParams = {
   const request: RequestNetwork.Request = await requestNetwork.createRequest(requestCreateParams);
   console.log(`request ${request.requestId} created`);
   await request.waitForConfirmation();
-  console.log(`request ${request.requestId} confirmed, ${JSON.stringify(request)}`);
+  console.log(`request ${request.requestId} confirmed`);
 
   // ✏️ Accept the request
 
@@ -135,13 +135,15 @@ const requestCreateParams = {
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
 
-  const reqIdObj = MultiFormat.deserialize(request.requestId);
+  let reqIdObj = MultiFormat.deserialize(request.requestId);
   const tokenId = reqIdObj.value;
 
   console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
-  const metadata = await invoiceNFT.metadata(tokenId);
-  console.log(`${tokenId} metadata: ${metadata}`);
-  console.log(`combined requestId: ${metadata.slice(2)}${tokenId.slice(2)}`);
+  const metadataBase64 = await invoiceNFT.tokenURI(tokenId);
+  const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
+  console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
+  reqIdObj = { value: tokenId, type: metadata };
+  console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
 
   await request.refresh();
 

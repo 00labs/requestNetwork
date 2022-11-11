@@ -78,7 +78,7 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
         const assetToken = requestParameters.currency.value;
         const reqIdObj = MultiFormat.deserialize(requestId);
         const tokenId = reqIdObj.value;
-        const metadata = `0x${requestId.slice(0, 2)}`;
+        const metadata = Buffer.from(reqIdObj.type).toString('base64');
         console.log(
           `call transactionManager.tokenizeRequest(recipient,assetToken,tokenId,metadata): ${recipient}, ${assetToken}, ${tokenId}, ${metadata}`,
         );

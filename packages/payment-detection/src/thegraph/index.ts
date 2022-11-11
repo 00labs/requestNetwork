@@ -20,7 +20,7 @@ export type TheGraphClientOptions = {
 };
 
 export const getTheGraphClient = (
-  network: string,
+  _network: string,
   options?: TheGraphClientOptions,
 ): TheGraphClient => {
   // const baseUrl = options?.baseUrl || network === 'private' ? 'http://localhost:8000' : BASE_URL;
@@ -30,6 +30,7 @@ export const getTheGraphClient = (
   //  library each time the subgraph is updated, which isn't ideal
   //  for early testing.
   // const url = `${baseUrl}/subgraphs/name/requestnetwork/request-payments-${network}`;
+  // network;
   const url = 'https://api.studio.thegraph.com/query/35118/requestnetwork-nft/0.0.3';
   return getSdk(new GraphQLClient(url, options));
 };

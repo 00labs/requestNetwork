@@ -10,6 +10,7 @@ import TheGraphInfoRetriever from './thegraph-info-retriever';
 import { networkSupportsTheGraph } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';
 import { ReferenceBasedDetector } from '../reference-based-detector';
+import NftInfoRetriever from './nft-info-retriever';
 
 const NFT_CONTRACT_ADDRESS_MAP = {
   ['0.1.0']: '0.1.0',
@@ -50,17 +51,22 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
     paymentChain: string,
     paymentNetwork: ExtensionTypes.IState<ExtensionTypes.PnReferenceBased.ICreationParameters>,
   ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20PaymentEventParameters>> {
-    eventName;
-    address;
-    paymentReference;
-    requestCurrency;
-    paymentChain;
-    paymentNetwork;
+    console.log(`ERC20NFTPaymentDetector extractEvents...`);
 
-    const { address: proxyContractAddress } = ERC20NFTPaymentDetector.getDeploymentInformation(
-      paymentChain,
-      paymentNetwork.version,
+    console.log(
+      `address: ${address}, paymentReference: ${paymentReference}, requestCurrency: ${JSON.stringify(
+        requestCurrency,
+      )}, paymentNetwork: ${JSON.stringify(paymentNetwork)}, paymentChain: ${paymentChain}`,
     );
+
+    if (!paymentReference) {
+      return {
+        paymentEvents: [],
+      };
+    }
+
+    const { address: nftContractAddress, creationBlockNumber: nftCreationBlockNumber } =
+      ERC20NFTPaymentDetector.getDeploymentInformation(paymentChain, paymentNetwork.version);
 
     if (address == null) {
       return {
@@ -71,33 +77,28 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
     if (networkSupportsTheGraph(paymentChain)) {
       const graphInfoRetriever = new TheGraphInfoRetriever(
         paymentReference,
-        proxyContractAddress,
+        nftContractAddress,
         requestCurrency.value,
         address,
         eventName,
         paymentChain,
       );
       return graphInfoRetriever.getTransferEvents();
+    } else {
+      const nftInfoRetriever = new NftInfoRetriever(
+        paymentReference,
+        nftContractAddress,
+        nftCreationBlockNumber,
+        requestCurrency.value,
+        nftContractAddress,
+        eventName,
+        paymentChain,
+      );
+      const paymentEvents = await nftInfoRetriever.getTransferEvents();
+      return {
+        paymentEvents,
+      };
     }
-    // else {
-    //   const proxyInfoRetriever = new ProxyInfoRetriever(
-    //     paymentReference,
-    //     proxyContractAddress,
-    //     proxyCreationBlockNumber,
-    //     requestCurrency.value,
-    //     address,
-    //     eventName,
-    //     paymentChain,
-    //   );
-    //   const paymentEvents = await proxyInfoRetriever.getTransferEvents();
-    //   return {
-    //     paymentEvents,
-    //   };
-    // }
-
-    return {
-      paymentEvents: [],
-    };
   }
 
   /*

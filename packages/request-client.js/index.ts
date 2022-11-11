@@ -147,7 +147,7 @@ const requestCreateParams = {
 
   await request.refresh();
 
-  console.log(`request: ${JSON.stringify(request)}`);
+  // console.log(`request: ${JSON.stringify(request)}`);
 
   console.log('Balance1: ', request.getData().balance?.balance);
   await request.refreshBalance();

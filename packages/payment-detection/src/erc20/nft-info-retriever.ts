@@ -14,7 +14,7 @@ type PaymentArgs = {
   from: string;
   to: string;
   tokenId: BigNumber;
-  tokenAddress: string;
+  assetAddress: string;
   amount: BigNumber;
   paymentId: BigNumber;
   paymentReference: string;
@@ -82,7 +82,7 @@ export default class NFTERC20InfoRetriever
 
     // Merge both events
     const logs = [...nftLogs];
-    console.log(`logs: ${JSON.stringify(logs)}`);
+    // console.log(`logs: ${JSON.stringify(logs)}`);
 
     // Parses, filters and creates the events from the logs with the payment reference
     const eventPromises = logs
@@ -98,7 +98,7 @@ export default class NFTERC20InfoRetriever
       // Keeps only the log with the right token and the right destination address
       .filter(
         ({ parsedLog }) =>
-          parsedLog.tokenAddress.toLowerCase() === this.tokenContractAddress.toLowerCase(),
+          parsedLog.assetAddress.toLowerCase() === this.tokenContractAddress.toLowerCase(),
       )
       // Creates the balance events
       .map(async ({ parsedLog, blockNumber, transactionHash }) => ({

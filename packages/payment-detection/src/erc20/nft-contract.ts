@@ -53,11 +53,11 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
   ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20PaymentEventParameters>> {
     console.log(`ERC20NFTPaymentDetector extractEvents...`);
 
-    console.log(
-      `address: ${address}, paymentReference: ${paymentReference}, requestCurrency: ${JSON.stringify(
-        requestCurrency,
-      )}, paymentNetwork: ${JSON.stringify(paymentNetwork)}, paymentChain: ${paymentChain}`,
-    );
+    // console.log(
+    //   `address: ${address}, paymentReference: ${paymentReference}, requestCurrency: ${JSON.stringify(
+    //     requestCurrency,
+    //   )}, paymentNetwork: ${JSON.stringify(paymentNetwork)}, paymentChain: ${paymentChain}`,
+    // );
 
     if (!paymentReference) {
       return {
@@ -95,6 +95,7 @@ export class ERC20NFTPaymentDetector extends ReferenceBasedDetector<
         paymentChain,
       );
       const paymentEvents = await nftInfoRetriever.getTransferEvents();
+      // console.log(`paymentEvents: ${JSON.stringify(paymentEvents)}`);
       return {
         paymentEvents,
       };

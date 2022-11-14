@@ -4,6 +4,7 @@ import MultiFormat from '@requestnetwork/multi-format';
 import {
   AdvancedLogicTypes,
   EncryptionTypes,
+  ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
   SignatureProviderTypes,
@@ -50,6 +51,8 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       topics,
     );
 
+    console.log(`createRequest requestParameters: ${JSON.stringify(requestParameters)}`);
+
     console.log(
       `createRequest step1 - action: ${JSON.stringify(action)}, requestId: ${JSON.stringify(
         requestId,
@@ -71,19 +74,20 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       hashedTopics,
     );
 
-    console.log('1');
-    if (this.transactionManager.tokenizeRequest) {
-      console.log('2');
-      if (requestParameters.payee) {
-        const recipient = requestParameters.payee.value;
-        const assetToken = requestParameters.currency.value;
-        const reqIdObj = MultiFormat.deserialize(requestId);
-        const tokenId = reqIdObj.value;
-        const metadata = Buffer.from(reqIdObj.type).toString('base64');
-        console.log(
-          `call transactionManager.tokenizeRequest(recipient,assetToken,tokenId,metadata): ${recipient}, ${assetToken}, ${tokenId}, ${metadata}`,
-        );
-        await this.transactionManager.tokenizeRequest(recipient, assetToken, tokenId, metadata);
+    if (this.transactionManager.tokenizeRequest && requestParameters.extensionsData) {
+      const paymentData = requestParameters.extensionsData[0];
+      if (paymentData.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+        if (requestParameters.payee) {
+          const recipient = requestParameters.payee.value;
+          const assetToken = requestParameters.currency.value;
+          const reqIdObj = MultiFormat.deserialize(requestId);
+          const tokenId = reqIdObj.value;
+          const metadata = Buffer.from(reqIdObj.type).toString('base64');
+          console.log(
+            `call transactionManager.tokenizeRequest(recipient,assetToken,tokenId,metadata): ${recipient}, ${assetToken}, ${tokenId}, ${metadata}`,
+          );
+          await this.transactionManager.tokenizeRequest(recipient, assetToken, tokenId, metadata);
+        }
       }
     }
 

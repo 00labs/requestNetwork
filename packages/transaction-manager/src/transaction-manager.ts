@@ -33,8 +33,8 @@ export default class TransactionManager implements TransactionTypes.ITransaction
     tokenId: string,
     metadata: string,
   ): Promise<any> {
-    console.log('manager');
-    console.log(this.dataAccess.constructor.name);
+    // console.log('manager');
+    // console.log(this.dataAccess.constructor.name);
     if (this.dataAccess.tokenizeRequest) {
       console.log('call tokenRequest...');
       return this.dataAccess.tokenizeRequest(recipient, assetToken, tokenId, metadata);

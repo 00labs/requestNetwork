@@ -4,7 +4,6 @@ import { BalanceError } from './balance-error';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 
 import { DeclarativePaymentDetectorBase } from './declarative';
-import { getPaymentReference } from './utils';
 
 /**
  * Abstract class to extend to get the payment balance of reference based requests
@@ -86,8 +85,6 @@ export abstract class ReferenceBasedDetector<
       TPaymentEventParameters | PaymentTypes.IDeclarativePaymentEventParameters
     >
   > {
-    console.log(`ReferenceBasedDetector getEvents...`);
-
     const paymentExtension = this.getPaymentExtension(request);
     const paymentChain = this.getPaymentChain(request);
 
@@ -101,20 +98,12 @@ export abstract class ReferenceBasedDetector<
       );
     }
     this.checkRequiredParameter(paymentExtension.values.salt, 'salt');
-    let paymentAddress;
-    if (paymentExtension.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-      paymentAddress = paymentExtension.id;
-    } else {
-      paymentAddress = paymentExtension.values.paymentAddress;
-      this.checkRequiredParameter(paymentAddress, 'paymentAddress');
-    }
-    console.log(`paymentAddress: ${paymentAddress}`);
-    console.log(`paymentRef: ${this.getPaymentReference(request)}`);
+    this.checkRequiredParameter(paymentExtension.values.paymentAddress, 'paymentAddress');
 
     const [paymentAndEscrowEvents, refundAndEscrowEvents] = await Promise.all([
       this.extractEvents(
         PaymentTypes.EVENTS_NAMES.PAYMENT,
-        paymentAddress,
+        paymentExtension.values.paymentAddress,
         this.getPaymentReference(request),
         request.currency,
         paymentChain,
@@ -122,7 +111,7 @@ export abstract class ReferenceBasedDetector<
       ),
       this.extractEvents(
         PaymentTypes.EVENTS_NAMES.REFUND,
-        paymentAddress,
+        paymentExtension.values.refundAddress,
         request.requestId,
         request.currency,
         paymentChain,
@@ -176,15 +165,9 @@ export abstract class ReferenceBasedDetector<
   }
 
   protected getPaymentReference(request: RequestLogicTypes.IRequest): string {
-    const extension = this.getPaymentExtension(request);
-    const { paymentAddress, salt } = extension.values;
-    if (extension.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-      const result = getPaymentReference(request);
-      return result ? result : '';
-    } else {
-      this.checkRequiredParameter(paymentAddress, 'paymentAddress');
-      this.checkRequiredParameter(salt, 'salt');
-      return PaymentReferenceCalculator.calculate(request.requestId, salt, paymentAddress);
-    }
+    const { paymentAddress, salt } = this.getPaymentExtension(request).values;
+    this.checkRequiredParameter(paymentAddress, 'paymentAddress');
+    this.checkRequiredParameter(salt, 'salt');
+    return PaymentReferenceCalculator.calculate(request.requestId, salt, paymentAddress);
   }
 }

@@ -37,6 +37,7 @@ const payerPaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/1").con
 
 const payeeIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2");
 const payeePaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/3").connect(provider);
+payeePaymentWallet;
 
 //#endregion
 
@@ -116,7 +117,7 @@ const requestCreateParams = {
   // ✏️ Accept the request
 
   console.log(`Before payment`);
-  console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
+  console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
 
   // ✏️ Pay the request
@@ -128,7 +129,7 @@ const requestCreateParams = {
   await tx.wait(1);
   console.log(`After payment`);
 
-  console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
+  console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
   console.log('Balance: ', request.getData().balance?.balance);
 
@@ -145,11 +146,11 @@ const requestCreateParams = {
   reqIdObj = { value: tokenId, type: metadata };
   console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
 
-  await request.refresh();
+  // await request.refresh();
 
   // console.log(`request: ${JSON.stringify(request)}`);
 
   console.log('Balance1: ', request.getData().balance?.balance);
-  await request.refreshBalance();
+  await request.refresh();
   console.log('Balance2: ', request.getData().balance?.balance);
 })();

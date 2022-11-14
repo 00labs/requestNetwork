@@ -111,15 +111,6 @@ export abstract class ReferenceBasedDetector<
     console.log(`paymentAddress: ${paymentAddress}`);
     console.log(`paymentRef: ${this.getPaymentReference(request)}`);
 
-    // await this.extractEvents(
-    //   PaymentTypes.EVENTS_NAMES.PAYMENT,
-    //   paymentAddress,
-    //   this.getPaymentReference(request),
-    //   request.currency,
-    //   paymentChain,
-    //   paymentExtension,
-    // );
-
     const [paymentAndEscrowEvents, refundAndEscrowEvents] = await Promise.all([
       this.extractEvents(
         PaymentTypes.EVENTS_NAMES.PAYMENT,
@@ -144,7 +135,6 @@ export abstract class ReferenceBasedDetector<
 
     const declaredEvents = this.getDeclarativeEvents(request);
     const allPaymentEvents = [...declaredEvents, ...paymentEvents, ...refundEvents];
-    console.log(`allPaymentEvents: ${JSON.stringify(allPaymentEvents)}`);
     return {
       paymentEvents: allPaymentEvents,
       escrowEvents: escrowEvents,

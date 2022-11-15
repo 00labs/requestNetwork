@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2022-11-15)
+
+### Bug Fixes
+
+- publish dist folder instead of src ([#254](https://github.com/00labs/requestNetwork/issues/254)) ([d6b5bd4](https://github.com/00labs/requestNetwork/commit/d6b5bd4899550ece7e182ee937aaacaea5413842))
+- ts-node configuration ([#138](https://github.com/00labs/requestNetwork/issues/138)) ([e2180d5](https://github.com/00labs/requestNetwork/commit/e2180d507bd87116fdeb3466690b6df0c5187976))
+- typescript lint for test files ([#778](https://github.com/00labs/requestNetwork/issues/778)) ([048e876](https://github.com/00labs/requestNetwork/commit/048e876a905516be0de8a31d446e4572eb74eccb))
+- webpack ts-loader build conf ([#779](https://github.com/00labs/requestNetwork/issues/779)) ([4288234](https://github.com/00labs/requestNetwork/commit/4288234726248ebabdc6d01e0fb3c6222e41f58a))
+
+### Features
+
+- add ECIES Encryption in types and utils packages ([#488](https://github.com/00labs/requestNetwork/issues/488)) ([0252903](https://github.com/00labs/requestNetwork/commit/0252903e31eb6426e80109ed067a511eb5403717))
+- BREAKING CHANGE store the multiformat hash of the topics ([#452](https://github.com/00labs/requestNetwork/issues/452)) ([3173333](https://github.com/00labs/requestNetwork/commit/3173333577d48ad472162fc11a5b0bcbefc359e8))
+
+### BREAKING CHANGES
+
+- Topics are stored as multiformat hashes. Old formats of topics (raw strings) are not compatible.
+
+**Request-client.js**:
+
+- Topics are hashed and follow the multiformat
+- The hashes follow the multiformat
+
+**Utils**:
+
+- Add multiformat to the utils library
+
+**Ethereum-storage**:
+
+- Artifacts are updated to link to new contracts on Rinkeby
+- The hashes follow the multiformat
+
+**Data-access**:
+
+- The hashes follow the multiformat
+- Topics must be hashed and multi-formatted
+
+**Request-logic**:
+
+- The hashes follow the multiformat
+
 # 0.6.0 (2022-11-15)
 
 ### Bug Fixes

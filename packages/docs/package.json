@@ -8,14 +8,6 @@
     "docs",
     "documentation"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/docs#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "engines": {
     "node": ">=16.0.0"
   },

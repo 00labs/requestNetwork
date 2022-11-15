@@ -9,14 +9,6 @@
     "requestnetwork",
     "signature-provider"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/signature-provider#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"

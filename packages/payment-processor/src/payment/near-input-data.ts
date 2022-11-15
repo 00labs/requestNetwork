@@ -1,7 +1,7 @@
 import { BigNumberish } from 'ethers';
 import { WalletConnection } from 'near-api-js';
 
-import { ClientTypes, PaymentTypes } from '@requestnetwork/types';
+import { ClientTypes, PaymentTypes } from '@huma-shan/types';
 
 import {
   getRequestPaymentValues,

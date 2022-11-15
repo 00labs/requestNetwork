@@ -1,4 +1,4 @@
-import { EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
+import { EncryptionTypes, IdentityTypes } from '@huma-shan/types';
 import Encryption from '../src/encryption';
 
 const otherIdRaw = {

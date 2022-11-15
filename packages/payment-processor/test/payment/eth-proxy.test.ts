@@ -6,7 +6,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import {
@@ -15,7 +15,7 @@ import {
   prepareEthProxyPaymentTransaction,
 } from '../../src/payment/eth-proxy';
 import { getRequestPaymentValues } from '../../src/payment/utils';
-import { ethereumProxyArtifact } from '@requestnetwork/smart-contracts';
+import { ethereumProxyArtifact } from '@huma-shan/smart-contracts';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/await-thenable */

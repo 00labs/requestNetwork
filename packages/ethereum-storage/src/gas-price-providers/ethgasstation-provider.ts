@@ -1,6 +1,6 @@
 import EthereumUtils from '../ethereum-utils';
 
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import Axios from 'axios';
 

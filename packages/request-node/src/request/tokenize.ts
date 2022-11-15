@@ -1,4 +1,4 @@
-import { LogTypes, DataAccessTypes } from '@requestnetwork/types';
+import { LogTypes, DataAccessTypes } from '@huma-shan/types';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { getPersistTransactionTimeout } from '../config';

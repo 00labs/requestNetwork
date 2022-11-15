@@ -1,8 +1,8 @@
 import { CurrencyDefinition } from '@requestnetwork/currency';
-import { RequestLogicTypes, PaymentTypes, ExtensionTypes } from '@requestnetwork/types';
+import { RequestLogicTypes, PaymentTypes, ExtensionTypes } from '@huma-shan/types';
 import { BigNumber, BigNumberish, Contract } from 'ethers';
 import { keccak256, LogDescription } from 'ethers/lib/utils';
-import { ContractArtifact, DeploymentInformation } from '@requestnetwork/smart-contracts';
+import { ContractArtifact, DeploymentInformation } from '@huma-shan/smart-contracts';
 import { NetworkNotSupported, VersionNotSupported } from './balance-error';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 

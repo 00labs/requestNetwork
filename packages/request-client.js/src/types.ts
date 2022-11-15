@@ -1,4 +1,4 @@
-export * from '@requestnetwork/types/dist/client-types';
+export * from '@huma-shan/types/dist/client-types';
 
 export {
   AdvancedLogicTypes as AdvancedLogic,
@@ -14,4 +14,4 @@ export {
   StorageTypes as Storage,
   TransactionTypes as Transaction,
   PaymentTypes as Payment,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';

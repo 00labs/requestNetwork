@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { BalanceError } from './balance-error';
 import PaymentReferenceCalculator from './payment-reference-calculator';

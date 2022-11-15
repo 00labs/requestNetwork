@@ -6,7 +6,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import { getBtcPaymentUrl } from '../../src/payment/btc-address-based';
 /* eslint-disable @typescript-eslint/no-unused-expressions */

@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import AddressBasedPaymentNetwork from '../address-based';
 
 const CURRENT_VERSION = '0.1.0';

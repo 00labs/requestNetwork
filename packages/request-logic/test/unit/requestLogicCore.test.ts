@@ -5,7 +5,7 @@ import {
   IdentityTypes,
   RequestLogicTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import Version from '../../src/version';

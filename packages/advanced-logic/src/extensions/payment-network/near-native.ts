@@ -1,4 +1,4 @@
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@huma-shan/types';
 import { UnsupportedNetworkError } from './address-based';
 import NativeTokenPaymentNetwork from './native-token';
 

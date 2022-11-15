@@ -1,6 +1,6 @@
-import { Block } from '@requestnetwork/data-access';
-import { requestHashSubmitterArtifact } from '@requestnetwork/smart-contracts';
-import { ClientTypes, DataAccessTypes, StorageTypes } from '@requestnetwork/types';
+import { Block } from '@huma-shan/data-access';
+import { requestHashSubmitterArtifact } from '@huma-shan/smart-contracts';
+import { ClientTypes, DataAccessTypes, StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import axios, { AxiosRequestConfig } from 'axios';
 import { ethers } from 'ethers';

@@ -1,5 +1,5 @@
 import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import DeclarativePaymentNetwork from './declarative';
 

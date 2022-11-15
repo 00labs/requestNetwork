@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { CurrencyManager } from '@requestnetwork/currency';
 import PaymentNetworkFactory from '../src/payment-network-factory';
 import PaymentReferenceCalculator from '../src/payment-reference-calculator';

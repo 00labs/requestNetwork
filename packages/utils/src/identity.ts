@@ -1,4 +1,4 @@
-import { IdentityTypes } from '@requestnetwork/types';
+import { IdentityTypes } from '@huma-shan/types';
 
 const supportedIdentities: IdentityTypes.TYPE[] = [
   IdentityTypes.TYPE.ETHEREUM_ADDRESS,

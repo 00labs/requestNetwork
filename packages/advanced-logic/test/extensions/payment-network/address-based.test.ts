@@ -1,5 +1,5 @@
 import { UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import AddressBasedPaymentNetwork from '../../../src/extensions/payment-network/address-based';
 
 describe('extensions/payment-network/address-based', () => {

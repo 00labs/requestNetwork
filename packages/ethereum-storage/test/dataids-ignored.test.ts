@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import IgnoredDataIds from '../src/ignored-dataIds';
 
 const entry: StorageTypes.IEthereumEntry = {

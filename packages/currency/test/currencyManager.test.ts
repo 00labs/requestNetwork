@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { CurrencyInput, CurrencyDefinition, CurrencyManager, ERC20Currency } from '../src';
 
 const testCasesPerNetwork: Record<string, Record<string, Partial<CurrencyDefinition>>> = {

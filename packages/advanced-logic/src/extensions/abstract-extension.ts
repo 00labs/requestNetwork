@@ -1,4 +1,4 @@
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 /**

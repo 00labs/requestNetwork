@@ -12,7 +12,7 @@ npm install @requestnetwork/currency
 ## Usage
 
 ```javascript
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { Currency, Token } from '@requestnetwork/currency';
 
 const decimals = new Currency({

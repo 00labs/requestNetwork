@@ -6,7 +6,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import { payBatchProxyRequest, encodePayBatchRequest } from '../../src/payment/batch-proxy';

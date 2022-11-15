@@ -9,7 +9,7 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import RequestLogicCore from './requestLogicCore';
 

@@ -4,7 +4,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { CurrencyManager } from '@requestnetwork/currency';
 import { Erc20PaymentNetwork } from '../../src';
 

@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import { InvalidPaymentAddressError } from './address-based';
 
 import ReferenceBasedPaymentNetwork from './reference-based';

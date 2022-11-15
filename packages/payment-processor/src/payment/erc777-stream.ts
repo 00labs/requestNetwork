@@ -1,7 +1,7 @@
 import { ContractTransaction, Signer, Overrides, providers } from 'ethers';
 
-import { ClientTypes, ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { ClientTypes, ExtensionTypes, PaymentTypes } from '@huma-shan/types';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 import { getProvider, getRequestPaymentValues, validateRequest } from './utils';
 import { Framework } from '@superfluid-finance/sdk-core';

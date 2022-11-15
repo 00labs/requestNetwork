@@ -1,5 +1,5 @@
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { Request, RequestNetwork, Types } from '@requestnetwork/request-client.js';
+import { Request, RequestNetwork, Types } from '@huma-shan/request-client.js';
 import { AxiosRequestConfig } from 'axios';
 
 export default {

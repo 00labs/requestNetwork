@@ -1,15 +1,10 @@
 import { ethers, Signer, providers, BigNumber, BigNumberish, ContractTransaction } from 'ethers';
 
-import { getDefaultProvider, getPaymentReference } from '@requestnetwork/payment-detection';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { getDefaultProvider, getPaymentReference } from '@huma-shan/payment-detection';
+import { ClientTypes, ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { getCurrencyHash } from '@requestnetwork/currency';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 /**
  * Thrown when the library does not support a payment blockchain network.

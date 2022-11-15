@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { TransactionTypes } from '@requestnetwork/types';
+import { TransactionTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 /**

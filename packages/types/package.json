@@ -1,22 +1,11 @@
 {
-  "name": "@requestnetwork/types",
-  "version": "0.35.0",
-  "publishConfig": {
-    "access": "public"
-  },
+  "name": "@huma-shan/types",
+  "version": "0.37.2",
   "description": "Types for Request Network packages.",
   "keywords": [
     "requestnetwork",
     "types"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/types#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"

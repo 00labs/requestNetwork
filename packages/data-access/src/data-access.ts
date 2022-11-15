@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes, LogTypes, StorageTypes } from '@requestnetwork/types';
+import { DataAccessTypes, LogTypes, StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import * as Bluebird from 'bluebird';

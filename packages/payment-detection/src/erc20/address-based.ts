@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { BalanceError } from '../balance-error';
 import Erc20InfoRetriever from './address-based-info-retriever';
 

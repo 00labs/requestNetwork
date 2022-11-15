@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { ICurrencyManager, CurrencyManager } from '@requestnetwork/currency';
 
 import ContentData from './extensions/content-data';

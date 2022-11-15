@@ -1,4 +1,4 @@
-import { DataAccessTypes, StorageTypes } from '@requestnetwork/types';
+import { DataAccessTypes, StorageTypes } from '@huma-shan/types';
 
 type PendingItem = {
   transaction: DataAccessTypes.ITransaction;

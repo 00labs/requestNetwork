@@ -1,10 +1,10 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
+import * as SmartContracts from '@huma-shan/smart-contracts';
 import {
   AdvancedLogicTypes,
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import { ICurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
 

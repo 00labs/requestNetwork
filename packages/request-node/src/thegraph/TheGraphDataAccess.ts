@@ -4,8 +4,8 @@ import TypedEmitter from 'typed-emitter';
 import { BigNumber, Signer } from 'ethers';
 
 import Utils from '@requestnetwork/utils';
-import { Block } from '@requestnetwork/data-access';
-import { DataAccessTypes, LogTypes, StorageTypes } from '@requestnetwork/types';
+import { Block } from '@huma-shan/data-access';
+import { DataAccessTypes, LogTypes, StorageTypes } from '@huma-shan/types';
 
 import { Transaction } from './queries';
 import { SubgraphClient } from './subgraphClient';

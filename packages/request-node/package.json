@@ -1,22 +1,14 @@
 {
   "name": "@requestnetwork/request-node",
-  "version": "0.26.0",
+  "version": "0.28.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Basic node for request network v2.",
   "keywords": [
     "requestnetwork",
     "request-node"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/request-node",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"
@@ -46,8 +38,12 @@
     "@requestnetwork/ethereum-storage": "0.26.0",
     "@requestnetwork/smart-contracts": "0.28.0",
     "@requestnetwork/types": "0.35.0",
-    "@requestnetwork/utils": "0.35.0",
+    "@requestnetwork/utils": "0.37.0",
     "@truffle/hdwallet-provider": "2.1.1",
+    "@huma-shan/data-access": "0.28.2",
+    "@huma-shan/ethereum-storage": "0.28.2",
+    "@huma-shan/smart-contracts": "0.30.2",
+    "@huma-shan/types": "0.37.2",
     "chalk": "4.1.0",
     "cors": "2.8.5",
     "dotenv": "8.2.0",

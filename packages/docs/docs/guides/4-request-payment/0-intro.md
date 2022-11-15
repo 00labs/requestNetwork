@@ -19,7 +19,7 @@ The payment of a request depends on its [payment network](../5-request-client/1-
 - Input data payment networks (ETH only) simply requires you to specify the [Payment Reference](https://github.com/RequestNetwork/requestNetwork/blob/master/packages/advanced-logic/specs/payment-network-eth-input-data-0.2.0.md#description) in the data of the transaction.
 - Proxy payment networks (ETH and ERC20) require you to call a smart contract method that forwards the payment.
 
-To simplify the payment procedures of the various payment networks, you can use the dedicated library, [@requestnetwork/payment-processor](https://www.npmjs.com/package/@requestnetwork/payment-processor).
+To simplify the payment procedures of the various payment networks, you can use the dedicated library, [@huma-shan/payment-processor](https://www.npmjs.com/package/@huma-shan/payment-processor).
 On top of calculating the Payment Reference and handling the transaction for you, it provides a few utilities to ensure the user meets all requirements to pay the request (enough funds for example)
 
 ## About the payment-processor library
@@ -27,9 +27,9 @@ On top of calculating the Payment Reference and handling the transaction for you
 ### Install
 
 ```bash
-npm install @requestnetwork/payment-processor
+npm install @huma-shan/payment-processor
 # or
-yarn add @requestnetwork/payment-processor
+yarn add @huma-shan/payment-processor
 ```
 
 ### Usage
@@ -37,7 +37,7 @@ yarn add @requestnetwork/payment-processor
 #### ETH request
 
 ```typescript
-import { hasSufficientFunds, payRequest } from '@requestnetwork/payment-processor';
+import { hasSufficientFunds, payRequest } from '@huma-shan/payment-processor';
 
 const requestNetwork = new RequestNetwork();
 
@@ -65,7 +65,7 @@ import {
   hasErc20Approval,
   hasSufficientFunds,
   payRequest,
-} from '@requestnetwork/payment-processor';
+} from '@huma-shan/payment-processor';
 
 // usually, the connected account.
 const account = '[WALLET_ADDRESS]';

@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { ERC20AddressBasedPaymentDetector } from '../../src/erc20/address-based';
 
 jest.setTimeout(10000);

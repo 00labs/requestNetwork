@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import AddressBasedPaymentNetwork from './address-based';
 
 // Regex for "at least 16 hexadecimal numbers". Used to validate the salt

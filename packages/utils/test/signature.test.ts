@@ -1,4 +1,4 @@
-import { IdentityTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureTypes } from '@huma-shan/types';
 import Crypto from '../src/crypto';
 import Signature from '../src/signature';
 

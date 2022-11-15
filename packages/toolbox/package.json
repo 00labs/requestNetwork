@@ -1,20 +1,12 @@
 {
   "name": "@requestnetwork/toolbox",
-  "version": "0.5.0",
+  "version": "0.7.0",
   "private": true,
   "description": "Toolbox for Request Network.",
   "keywords": [
     "requestnetwork",
     "toolbox"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/toolbox#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"
@@ -42,13 +34,13 @@
     "referenceCalculator": "yarn cli referenceCalculator"
   },
   "dependencies": {
-    "@requestnetwork/currency": "0.8.0",
-    "@requestnetwork/epk-signature": "0.5.34",
-    "@requestnetwork/payment-detection": "0.35.0",
-    "@requestnetwork/request-client.js": "0.39.0",
-    "@requestnetwork/smart-contracts": "0.28.0",
-    "@requestnetwork/types": "0.35.0",
-    "@requestnetwork/utils": "0.35.0",
+    "@requestnetwork/currency": "0.10.0",
+    "@requestnetwork/epk-signature": "0.7.0",
+    "@huma-shan/payment-detection": "0.37.2",
+    "@huma-shan/request-client.js": "0.41.2",
+    "@huma-shan/smart-contracts": "0.30.2",
+    "@huma-shan/types": "0.37.2",
+    "@requestnetwork/utils": "0.37.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "ethers": "5.5.1",

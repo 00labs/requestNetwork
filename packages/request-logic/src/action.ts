@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import * as Semver from 'semver';
 import Role from './role';

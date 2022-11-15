@@ -4,7 +4,7 @@ import {
   DecryptionProviderTypes,
   EncryptionTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import { EventEmitter } from 'events';

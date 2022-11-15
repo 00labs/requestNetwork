@@ -5,8 +5,8 @@ import {
   hasErc20Approval,
   hasSufficientFunds,
   payRequest,
-} from '@requestnetwork/payment-processor';
-import { RequestNetwork } from '@requestnetwork/request-client.js';
+} from '@huma-shan/payment-processor';
+import { RequestNetwork } from '@huma-shan/request-client.js';
 
 /* eslint-disable @typescript-eslint/no-floating-promises */
 

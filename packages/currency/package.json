@@ -1,8 +1,8 @@
 {
   "name": "@requestnetwork/currency",
-  "version": "0.8.0",
+  "version": "0.10.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Currency tools for Request Network packages.",
   "keywords": [
@@ -10,14 +10,6 @@
     "currency",
     "utils"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/currency#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"
@@ -43,8 +35,8 @@
   },
   "dependencies": {
     "@metamask/contract-metadata": "1.31.0",
-    "@requestnetwork/types": "0.35.0",
-    "@requestnetwork/utils": "0.35.0",
+    "@huma-shan/types": "0.37.2",
+    "@requestnetwork/utils": "0.37.0",
     "multicoin-address-validator": "0.5.2",
     "node-dijkstra": "2.5.0",
     "tslib": "2.3.1"

@@ -1,4 +1,4 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 /**

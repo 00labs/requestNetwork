@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import IpfsManager from '../src/ipfs-manager';
 import { AxiosInstance } from 'axios';
 import MockAdapter from 'axios-mock-adapter';

@@ -2,7 +2,7 @@ import { UnixFS } from 'ipfs-unixfs';
 import * as qs from 'qs';
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
 import Utils from '@requestnetwork/utils';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 
 import { getDefaultIpfs, getIpfsErrorHandlingConfig } from './config';
 import * as FormData from 'form-data';

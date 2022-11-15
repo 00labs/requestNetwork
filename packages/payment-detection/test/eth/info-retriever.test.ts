@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { EthInputDataInfoRetriever } from '../../src/eth/info-retriever';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
 

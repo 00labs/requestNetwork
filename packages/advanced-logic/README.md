@@ -1,12 +1,12 @@
-# @requestnetwork/advanced-logic
+# @huma-shan/advanced-logic
 
-`@requestnetwork/advanced-logic` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/advanced-logic` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is the default implementation of the Advanced Logic layer. This layer hosts the extensions to the protocol, see Implemented Extensions for the list.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/advanced-logic
+npm install @huma-shan/advanced-logic
 ```
 
 ## Specifications

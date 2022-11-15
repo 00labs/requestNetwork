@@ -1,6 +1,6 @@
 import { ContractTransaction, Signer, BigNumberish, providers } from 'ethers';
 
-import { ClientTypes, PaymentTypes } from '@requestnetwork/types';
+import { ClientTypes, PaymentTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {

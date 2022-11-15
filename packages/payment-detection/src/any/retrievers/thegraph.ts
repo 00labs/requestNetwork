@@ -1,5 +1,5 @@
 import { CurrencyDefinition } from '@requestnetwork/currency';
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { utils } from 'ethers';
 import { IPaymentRetriever } from '../../types';
 import { getTheGraphClient, TheGraphClient } from '../../thegraph';

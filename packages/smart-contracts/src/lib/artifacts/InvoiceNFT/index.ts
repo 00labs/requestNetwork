@@ -13,6 +13,10 @@ export const invoiceNFTArtifact = new ContractArtifact<InvoiceNFT>(
           address: '0x2e335F247E91caa168c64b63104C4475b2af3942',
           creationBlockNumber: 0,
         },
+        goerli: {
+          address: '0x9aEBB4B8abf7afC96dC00f707F766499C5EbeDF1',
+          creationBlockNumber: 7956654,
+        },
       },
     },
   },

@@ -1,6 +1,6 @@
 {
   "name": "@requestnetwork/types",
-  "version": "0.35.0",
+  "version": "0.36.0",
   "publishConfig": {
     "registry": "http://localhost:8081/repository/requestnetwork/"
   },

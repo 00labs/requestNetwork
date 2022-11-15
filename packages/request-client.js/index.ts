@@ -37,6 +37,7 @@ const payerPaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/1").con
 
 const payeeIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2");
 const payeePaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/3").connect(provider);
+payeePaymentWallet;
 
 //#endregion
 
@@ -111,12 +112,12 @@ const requestCreateParams = {
   const request: RequestNetwork.Request = await requestNetwork.createRequest(requestCreateParams);
   console.log(`request ${request.requestId} created`);
   await request.waitForConfirmation();
-  console.log(`request ${request.requestId} confirmed, ${JSON.stringify(request)}`);
+  console.log(`request ${request.requestId} confirmed`);
 
   // ✏️ Accept the request
 
   console.log(`Before payment`);
-  console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
+  console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
 
   // ✏️ Pay the request
@@ -128,26 +129,28 @@ const requestCreateParams = {
   await tx.wait(1);
   console.log(`After payment`);
 
-  console.log(`Payee: ${(await erc20.balanceOf(payeePaymentWallet.address)).toString()}`);
+  console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
   console.log('Balance: ', request.getData().balance?.balance);
 
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
 
-  const reqIdObj = MultiFormat.deserialize(request.requestId);
+  let reqIdObj = MultiFormat.deserialize(request.requestId);
   const tokenId = reqIdObj.value;
 
   console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
-  const metadata = await invoiceNFT.metadata(tokenId);
-  console.log(`${tokenId} metadata: ${metadata}`);
-  console.log(`combined requestId: ${metadata.slice(2)}${tokenId.slice(2)}`);
+  const metadataBase64 = await invoiceNFT.tokenURI(tokenId);
+  const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
+  console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
+  reqIdObj = { value: tokenId, type: metadata };
+  console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
 
-  await request.refresh();
+  // await request.refresh();
 
-  console.log(`request: ${JSON.stringify(request)}`);
+  // console.log(`request: ${JSON.stringify(request)}`);
 
   console.log('Balance1: ', request.getData().balance?.balance);
-  await request.refreshBalance();
+  await request.refresh();
   console.log('Balance2: ', request.getData().balance?.balance);
 })();

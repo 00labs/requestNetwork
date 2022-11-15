@@ -2,7 +2,7 @@
   "name": "@requestnetwork/request-node",
   "version": "0.26.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Basic node for request network v2.",
   "keywords": [

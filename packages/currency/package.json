@@ -2,7 +2,7 @@
   "name": "@requestnetwork/currency",
   "version": "0.8.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Currency tools for Request Network packages.",
   "keywords": [

@@ -2,7 +2,7 @@
   "name": "@requestnetwork/types",
   "version": "0.35.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Types for Request Network packages.",
   "keywords": [

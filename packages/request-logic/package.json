@@ -2,7 +2,7 @@
   "name": "@requestnetwork/request-logic",
   "version": "0.26.9",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Main package for the Request Network logic layer.",
   "keywords": [

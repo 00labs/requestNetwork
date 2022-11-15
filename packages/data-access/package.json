@@ -2,7 +2,7 @@
   "name": "@requestnetwork/data-access",
   "version": "0.26.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Main package for the Request Network data access layer.",
   "keywords": [

@@ -2,7 +2,7 @@
   "name": "@requestnetwork/payment-processor",
   "version": "0.37.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Payment processing using ethers.",
   "keywords": [

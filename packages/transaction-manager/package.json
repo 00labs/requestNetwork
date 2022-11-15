@@ -2,7 +2,7 @@
   "name": "@requestnetwork/transaction-manager",
   "version": "0.26.9",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Request Network transaction layer, handle signature and encryption for the transaction.",
   "keywords": [

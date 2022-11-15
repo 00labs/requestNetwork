@@ -2,7 +2,7 @@
   "name": "@requestnetwork/ethereum-storage",
   "version": "0.26.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Request Network storage layer based on ethereum.",
   "keywords": [

@@ -2,7 +2,7 @@
   "name": "@requestnetwork/epk-signature",
   "version": "0.5.34",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Signature provider using ethereum private keys.",
   "keywords": [

@@ -2,7 +2,7 @@
   "name": "@requestnetwork/multi-format",
   "version": "0.15.9",
   "publishConfig": {
-    "access": "public"
+    "registry": "http://localhost:8081/repository/requestnetwork/"
   },
   "description": "Multi-format for Request Network packages.",
   "keywords": [

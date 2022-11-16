@@ -23,7 +23,7 @@ export const requestHashSubmitterArtifact = new ContractArtifact<RequestOpenHash
         },
         goerli: {
           address: '0x2C96132bae414000E267E6A8d4BfFd8bfaa21309',
-          creationBlockNumber: 7956654,
+          creationBlockNumber: 7961086,
         },
         xdai: {
           address: '0x268C146Afb4790902Ee26A6D2d3aff968623Ec80',

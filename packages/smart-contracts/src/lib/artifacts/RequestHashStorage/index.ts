@@ -23,7 +23,7 @@ export const requestHashStorageArtifact = new ContractArtifact<RequestHashStorag
         },
         goerli: {
           address: '0x132D0c7309Ca3286a644668469D3b09dFb81f757',
-          creationBlockNumber: 7961086,
+          creationBlockNumber: 7967610,
         },
         xdai: {
           address: '0x2256938E8225a998C498bf86B43c1768EE14b90B',

@@ -6,7 +6,7 @@ import { BigNumber } from 'ethers';
 const config = {
   ethereum: {
     default: 'private' as const,
-    gasPriceDefault: '100000000000',
+    gasPriceDefault: '200000000000',
     maxRetries: 5,
     nodeUrlDefault: {
       private: {

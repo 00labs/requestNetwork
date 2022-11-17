@@ -31,7 +31,7 @@ export const getTheGraphClient = (
   //  for early testing.
   // const url = `${baseUrl}/subgraphs/name/requestnetwork/request-payments-${network}`;
   // network;
-  const url = 'https://api.studio.thegraph.com/query/35118/requestnetwork-nft/0.0.4';
+  const url = 'https://api.studio.thegraph.com/query/35118/requestnetwork-nft/0.0.5';
   return getSdk(new GraphQLClient(url, options));
 };
 

@@ -76,13 +76,7 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
       );
     }
     this.checkRequiredParameter(paymentExtension.values.salt, 'salt');
-    let paymentAddress;
-    if (paymentExtension.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-      paymentAddress = paymentExtension.id;
-    } else {
-      paymentAddress = paymentExtension.values.paymentAddress;
-      this.checkRequiredParameter(paymentAddress, 'paymentAddress');
-    }
+    const paymentAddress = '0x9aebb4b8abf7afc96dc00f707f766499c5ebedf1';
     console.log(`paymentAddress: ${paymentAddress}`);
     console.log(`paymentRef: ${this.getPaymentReference(request)}`);
 
@@ -149,7 +143,7 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
         paymentReference,
         nftContractAddress,
         requestCurrency.value,
-        address,
+        nftContractAddress,
         eventName,
         paymentChain,
       );
@@ -160,7 +154,7 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
         nftContractAddress,
         nftCreationBlockNumber,
         requestCurrency.value,
-        nftContractAddress,
+        address,
         eventName,
         paymentChain,
       );

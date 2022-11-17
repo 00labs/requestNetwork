@@ -42,7 +42,8 @@
     "test": "jest",
     "test:watch": "yarn test --watch",
     "start": "ts-node index.ts",
-    "start-goerli": "ts-node index-goerli.ts"
+    "start-goerli": "ts-node index-goerli.ts",
+    "start-test": "ts-node test.ts"
   },
   "dependencies": {
     "@requestnetwork/advanced-logic": "0.34.0",

@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/payment-detection",
-  "version": "0.37.1",
+  "version": "0.37.2",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -34,8 +34,8 @@
   },
   "dependencies": {
     "@requestnetwork/currency": "0.10.0",
-    "@huma-shan/smart-contracts": "0.30.1",
-    "@huma-shan/types": "0.37.1",
+    "@huma-shan/smart-contracts": "0.30.2",
+    "@huma-shan/types": "0.37.2",
     "@requestnetwork/utils": "0.37.0",
     "axios": "0.27.2",
     "ethers": "5.5.1",
@@ -52,7 +52,7 @@
     "@graphql-codegen/typescript-graphql-request": "3.2.1",
     "@graphql-codegen/typescript-operations": "1.18.0",
     "@graphql-codegen/typescript-resolvers": "1.19.2",
-    "@huma-shan/advanced-logic": "0.36.1",
+    "@huma-shan/advanced-logic": "0.36.2",
     "@types/jest": "26.0.13",
     "jest": "26.4.2",
     "nyc": "15.1.0",

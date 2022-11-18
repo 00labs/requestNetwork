@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/types",
-  "version": "0.37.1",
+  "version": "0.37.2",
   "description": "Types for Request Network packages.",
   "keywords": [
     "requestnetwork",

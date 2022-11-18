@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/advanced-logic",
-  "version": "0.36.1",
+  "version": "0.36.2",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@requestnetwork/currency": "0.10.0",
-    "@huma-shan/types": "0.37.1",
+    "@huma-shan/types": "0.37.2",
     "@requestnetwork/utils": "0.37.0",
     "@types/node": "14.14.16",
     "lodash": "4.17.21",

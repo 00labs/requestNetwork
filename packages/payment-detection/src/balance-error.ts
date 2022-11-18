@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 
 export class BalanceError extends Error {
   constructor(message: string, public readonly code: PaymentTypes.BALANCE_ERROR_CODE) {

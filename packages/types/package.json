@@ -1,9 +1,6 @@
 {
-  "name": "@requestnetwork/types",
-  "version": "0.37.0",
-  "publishConfig": {
-    "registry": "http://localhost:8081/repository/requestnetwork/"
-  },
+  "name": "@huma-shan/types",
+  "version": "0.37.1",
   "description": "Types for Request Network packages.",
   "keywords": [
     "requestnetwork",

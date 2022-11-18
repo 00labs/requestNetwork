@@ -2,7 +2,7 @@
   "name": "@requestnetwork/request-node",
   "version": "0.28.0",
   "publishConfig": {
-    "registry": "http://localhost:8081/repository/requestnetwork/"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Basic node for request network v2.",
   "keywords": [
@@ -34,10 +34,10 @@
   },
   "dependencies": {
     "@ethersproject/experimental": "5.5.0",
-    "@requestnetwork/data-access": "0.28.0",
-    "@requestnetwork/ethereum-storage": "0.28.0",
-    "@requestnetwork/smart-contracts": "0.30.0",
-    "@requestnetwork/types": "0.37.0",
+    "@huma-shan/data-access": "0.28.1",
+    "@huma-shan/ethereum-storage": "0.28.1",
+    "@huma-shan/smart-contracts": "0.30.1",
+    "@huma-shan/types": "0.37.1",
     "@requestnetwork/utils": "0.37.0",
     "@truffle/hdwallet-provider": "1.2.3",
     "chalk": "4.1.0",

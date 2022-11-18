@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { ERC20ProxyPaymentDetector } from '../../src/erc20/proxy-contract';
 import { GraphQLClient } from 'graphql-request';
 import { mocked } from 'ts-jest/utils';

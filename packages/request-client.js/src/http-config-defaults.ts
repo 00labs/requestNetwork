@@ -1,4 +1,4 @@
-import { ClientTypes } from '@requestnetwork/types';
+import { ClientTypes } from '@huma-shan/types';
 
 const config: ClientTypes.IHttpDataAccessConfig = {
   requestClientVersionHeader: 'X-Request-Network-Client-Version',

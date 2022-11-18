@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events';
 
 import MultiFormat from '@requestnetwork/multi-format';
-import { AdvancedLogicTypes, RequestLogicTypes, TransactionTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, RequestLogicTypes, TransactionTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import { RequestLogic } from '../src/index';

@@ -135,7 +135,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - unify ERC20 payment processing API ([#279](https://github.com/RequestNetwork/requestNetwork/issues/279)) ([8b3756b](https://github.com/RequestNetwork/requestNetwork/commit/8b3756b05bd3afa034e91d72410b5a43cc565541))
 - upgrade near references to 0.2.0 ([#580](https://github.com/RequestNetwork/requestNetwork/issues/580)) ([2f0507d](https://github.com/RequestNetwork/requestNetwork/commit/2f0507df3d98b2ee9e15d21818b0ac639ee4cca3))
 
-# [0.37.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.37.0) (2021-06-22)
+# [0.37.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.37.0) (2021-06-22)
 
 ### Bug Fixes
 
@@ -150,7 +150,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - SAND aggregator support for conversion ([#487](https://github.com/RequestNetwork/requestNetwork/issues/487)) ([46cbe1b](https://github.com/RequestNetwork/requestNetwork/commit/46cbe1bef7b703addb34d7f1d810fea4ff233f5b))
 
-# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.36.0) (2021-05-12)
+# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.36.0) (2021-05-12)
 
 ### Bug Fixes
 
@@ -164,7 +164,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - SAND aggregator support for conversion ([#487](https://github.com/RequestNetwork/requestNetwork/issues/487)) ([46cbe1b](https://github.com/RequestNetwork/requestNetwork/commit/46cbe1bef7b703addb34d7f1d810fea4ff233f5b))
 
-# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.35.0) (2021-04-19)
+# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.35.0) (2021-04-19)
 
 ### Bug Fixes
 
@@ -177,7 +177,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - SAND aggregator support for conversion ([#487](https://github.com/RequestNetwork/requestNetwork/issues/487)) ([46cbe1b](https://github.com/RequestNetwork/requestNetwork/commit/46cbe1bef7b703addb34d7f1d810fea4ff233f5b))
 
-# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.34.0) (2021-03-25)
+# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.34.0) (2021-03-25)
 
 ### Bug Fixes
 
@@ -189,7 +189,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Add payment-processor for any to erc20 payment network ([#433](https://github.com/RequestNetwork/requestNetwork/issues/433)) ([7134310](https://github.com/RequestNetwork/requestNetwork/commit/7134310828f9440bac33f75719c7937872243ab6))
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.33.0) (2021-03-15)
+# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.33.0) (2021-03-15)
 
 ### Bug Fixes
 
@@ -201,7 +201,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Add payment-processor for any to erc20 payment network ([#433](https://github.com/RequestNetwork/requestNetwork/issues/433)) ([7134310](https://github.com/RequestNetwork/requestNetwork/commit/7134310828f9440bac33f75719c7937872243ab6))
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.32.0) (2021-03-03)
+# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.32.0) (2021-03-03)
 
 ### Bug Fixes
 
@@ -211,7 +211,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.31.0) (2021-02-22)
+# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.31.0) (2021-02-22)
 
 ### Bug Fixes
 
@@ -221,13 +221,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-## [0.30.2](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.30.2) (2020-12-22)
+## [0.30.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.30.2) (2020-12-22)
 
-**Note:** Version bump only for package @requestnetwork/payment-processor
+**Note:** Version bump only for package @huma-shan/payment-processor
 
-## [0.30.1](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-processor@0.30.0...@requestnetwork/payment-processor@0.30.1) (2020-12-21)
+## [0.30.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-processor@0.30.0...@huma-shan/payment-processor@0.30.1) (2020-12-21)
 
-**Note:** Version bump only for package @requestnetwork/payment-processor
+**Note:** Version bump only for package @huma-shan/payment-processor
 
 # 0.30.0 (2020-12-02)
 

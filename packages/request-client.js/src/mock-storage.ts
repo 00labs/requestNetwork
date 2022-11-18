@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { EventEmitter } from 'events';
 

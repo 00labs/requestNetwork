@@ -5,7 +5,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { encodeRequestPayment, encodeRequestPaymentWithStream } from '../../src';
 import { getProxyAddress } from '../../src/payment/utils';
 import {
@@ -14,12 +14,9 @@ import {
   Erc20PaymentNetwork,
   EthFeeProxyPaymentDetector,
   EthInputDataPaymentDetector,
-} from '@requestnetwork/payment-detection';
+} from '@huma-shan/payment-detection';
 import { currencyManager } from './shared';
-import {
-  erc20SwapToPayArtifact,
-  erc20SwapConversionArtifact,
-} from '@requestnetwork/smart-contracts';
+import { erc20SwapToPayArtifact, erc20SwapConversionArtifact } from '@huma-shan/smart-contracts';
 import { DAIX_ADDRESS } from './erc777-stream.test';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */

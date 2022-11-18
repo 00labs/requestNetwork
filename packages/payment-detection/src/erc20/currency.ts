@@ -5,8 +5,8 @@ import {
   getCurrencyHash,
   StorageCurrency,
 } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { RequestLogicTypes } from '@huma-shan/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { getDefaultProvider } from '../provider';
 
 export const loadCurrencyFromContract = async (

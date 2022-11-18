@@ -2,11 +2,11 @@ import { EventEmitter } from 'events';
 import { BigNumber, ContractReceipt, PayableOverrides, providers, Signer, utils } from 'ethers';
 import TypedEmitter from 'typed-emitter';
 import Utils from '@requestnetwork/utils';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
-import { requestHashSubmitterArtifact } from '@requestnetwork/smart-contracts';
-import { RequestOpenHashSubmitter } from '@requestnetwork/smart-contracts/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
+import { requestHashSubmitterArtifact } from '@huma-shan/smart-contracts';
+import { RequestOpenHashSubmitter } from '@huma-shan/smart-contracts/types';
 import { suggestFees } from 'eip1559-fee-suggestions-ethers';
-import { GasPriceDefiner } from '@requestnetwork/ethereum-storage';
+import { GasPriceDefiner } from '@huma-shan/ethereum-storage';
 
 type TheGraphStorageProps = {
   network: string;

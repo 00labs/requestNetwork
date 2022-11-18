@@ -1,4 +1,4 @@
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 
 import IntervalTimer from '../src/interval-timer';
 

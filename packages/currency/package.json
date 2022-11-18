@@ -2,7 +2,7 @@
   "name": "@requestnetwork/currency",
   "version": "0.10.0",
   "publishConfig": {
-    "registry": "http://localhost:8081/repository/requestnetwork/"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Currency tools for Request Network packages.",
   "keywords": [
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@metamask/contract-metadata": "1.31.0",
-    "@requestnetwork/types": "0.37.0",
+    "@huma-shan/types": "0.37.1",
     "@requestnetwork/utils": "0.37.0",
     "multicoin-address-validator": "0.5.2",
     "node-dijkstra": "2.5.0",

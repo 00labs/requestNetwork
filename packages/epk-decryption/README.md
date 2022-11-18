@@ -18,7 +18,7 @@ npm install @requestnetwork/epk-decryption
 ## Usage
 
 ```javascript
-import { EncryptionTypes, IdentityTypes } from '@requestnetwork/types'
+import { EncryptionTypes, IdentityTypes } from '@huma-shan/types'
 
 import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption'
 

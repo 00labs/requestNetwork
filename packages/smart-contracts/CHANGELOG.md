@@ -183,7 +183,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **request-client.js:** get balance from request ERC20 with proxy contract ([#94](https://github.com/RequestNetwork/requestNetwork/issues/94)) ([08758ae](https://github.com/RequestNetwork/requestNetwork/commit/08758ae83e3834db06c0f1441e51bc6c2b897669))
 - **smart-contracts:** add the erc20 proxy contract PN's smart contract ([#92](https://github.com/RequestNetwork/requestNetwork/issues/92)) ([30f7937](https://github.com/RequestNetwork/requestNetwork/commit/30f79374a78f1a060a91bc7e53e6dc44c2fbad2c))
 
-# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.28.0) (2021-06-22)
+# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.28.0) (2021-06-22)
 
 ### Bug Fixes
 
@@ -208,7 +208,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.27.0) (2021-05-12)
+# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.27.0) (2021-05-12)
 
 ### Bug Fixes
 
@@ -230,7 +230,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.26.0) (2021-04-19)
+# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.26.0) (2021-04-19)
 
 ### Bug Fixes
 
@@ -250,7 +250,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.25.0) (2021-03-25)
+# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.25.0) (2021-03-25)
 
 ### Features
 
@@ -264,7 +264,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.24.0) (2021-03-15)
+# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.24.0) (2021-03-15)
 
 ### Features
 
@@ -277,25 +277,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.23.0) (2021-03-03)
+# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.23.0) (2021-03-03)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.22.0) (2021-02-22)
+# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.22.0) (2021-02-22)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-## [0.21.2](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.21.2) (2020-12-22)
+## [0.21.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.21.2) (2020-12-22)
 
-**Note:** Version bump only for package @requestnetwork/smart-contracts
+**Note:** Version bump only for package @huma-shan/smart-contracts
 
-## [0.21.1](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/smart-contracts@0.21.0...@requestnetwork/smart-contracts@0.21.1) (2020-12-21)
+## [0.21.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.21.1) (2020-12-21)
 
-**Note:** Version bump only for package @requestnetwork/smart-contracts
+**Note:** Version bump only for package @huma-shan/smart-contracts
 
 # 0.21.0 (2020-12-02)
 

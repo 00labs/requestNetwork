@@ -1,6 +1,6 @@
 import * as Keyv from 'keyv';
 
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 
 /**
  * Interval time between iteration for the retry

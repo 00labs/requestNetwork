@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { SuperFluidPaymentDetector } from '../../src/erc777/superfluid-detector';
 import { genTransferEventsByMonth } from './mocks';
 

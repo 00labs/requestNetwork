@@ -1,5 +1,5 @@
 import { CurrencyDefinition } from '@requestnetwork/currency';
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { BigNumber, ethers } from 'ethers';
 import { getDefaultProvider } from '../../provider';
 import { parseLogArgs, unpadAmountFromChainlink } from '../../utils';

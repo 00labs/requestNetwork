@@ -7,9 +7,9 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { CurrencyManager } from '@requestnetwork/currency';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { AnyToERC20PaymentDetector } from '../../src/any/any-to-erc20-proxy';
 
 jest.mock('graphql-request');

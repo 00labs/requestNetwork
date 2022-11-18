@@ -11,9 +11,9 @@ import { Contract, ContractTransaction, Signer } from 'ethers';
 import {
   encodeApproveErc20,
   encodePayErc20Request,
-} from '@requestnetwork/payment-processor/dist/payment/erc20-proxy';
-import { getRequestPaymentValues } from '@requestnetwork/payment-processor/dist/payment/utils';
-import { ClientTypes } from '@requestnetwork/types';
+} from '@huma-shan/payment-processor/dist/payment/erc20-proxy';
+import { getRequestPaymentValues } from '@huma-shan/payment-processor/dist/payment/utils';
+import { ClientTypes } from '@huma-shan/types';
 
 /**
  * In this example, we will use the [Gnosis multisig](https://github.com/gnosis/MultiSigWallet/blob/master/contracts/MultiSigWallet.sol). here its partial abi:

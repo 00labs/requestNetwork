@@ -8,7 +8,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { ethers } from 'ethers';
 
@@ -21,7 +21,7 @@ import {
   PaymentReferenceCalculator,
   getPaymentReference,
   getPaymentNetworkExtension,
-} from '@requestnetwork/payment-detection';
+} from '@huma-shan/payment-detection';
 import { BigNumber } from 'ethers';
 import EtherscanProviderMock from './etherscan-mock';
 import httpConfigDefaults from '../src/http-config-defaults';

@@ -1,4 +1,4 @@
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@huma-shan/types';
 import RequestDataAccessBlock from '../src/block';
 
 const CURRENT_VERSION = '0.1.0';

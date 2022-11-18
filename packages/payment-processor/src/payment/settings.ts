@@ -1,5 +1,5 @@
 import { ICurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { BigNumberish } from 'ethers';
 import { ITransactionOverrides } from './transaction-overrides';
 

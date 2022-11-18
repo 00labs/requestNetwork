@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import { DataAccessTypes, StorageTypes } from '@requestnetwork/types';
+import { DataAccessTypes, StorageTypes } from '@huma-shan/types';
 
 import RequestDataAccessBlock from '../src/block';
 import DataAccess from '../src/data-access';

@@ -6,7 +6,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { approveErc20, getErc20Balance } from '../../src/payment/erc20';
 import { _getErc20ProxyPaymentUrl, payErc20ProxyRequest } from '../../src/payment/erc20-proxy';

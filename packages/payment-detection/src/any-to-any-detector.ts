@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { FeeReferenceBasedDetector } from './fee-reference-based-detector';
 

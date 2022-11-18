@@ -1,4 +1,4 @@
-import { ClientTypes, DataAccessTypes } from '@requestnetwork/types';
+import { ClientTypes, DataAccessTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import axios, { AxiosRequestConfig } from 'axios';
 

@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import * as Semver from 'semver';
 import Config from './config';
 

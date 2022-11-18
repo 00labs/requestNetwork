@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@huma-shan/types';
 import crypto from '../src/crypto';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */

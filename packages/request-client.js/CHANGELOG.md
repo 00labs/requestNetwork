@@ -299,7 +299,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - The hashes follow the multiformat
 
-# [0.39.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.39.0) (2021-06-22)
+# [0.39.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.39.0) (2021-06-22)
 
 ### Bug Fixes
 
@@ -312,7 +312,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.38.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.38.0) (2021-05-12)
+# [0.38.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.38.0) (2021-05-12)
 
 ### Features
 
@@ -321,7 +321,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.37.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.37.0) (2021-04-19)
+# [0.37.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.37.0) (2021-04-19)
 
 ### Features
 
@@ -330,7 +330,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.36.0) (2021-03-25)
+# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.36.0) (2021-03-25)
 
 ### Features
 
@@ -338,7 +338,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.35.0) (2021-03-15)
+# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.35.0) (2021-03-15)
 
 ### Features
 
@@ -346,7 +346,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.34.0) (2021-03-03)
+# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.34.0) (2021-03-03)
 
 ### Features
 
@@ -354,7 +354,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.33.0) (2021-02-22)
+# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.33.0) (2021-02-22)
 
 ### Features
 
@@ -362,21 +362,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.32.0) (2020-12-22)
+# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.32.0) (2020-12-22)
 
 ### Features
 
 - Add extra support erc20 tokens ([#388](https://github.com/RequestNetwork/requestNetwork/issues/388)) ([6fe92a1](https://github.com/RequestNetwork/requestNetwork/commit/6fe92a155e3ee9c287b5d2ab584a33c8cffb1e6a))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.30.0...@requestnetwork/request-client.js@0.31.0) (2020-12-21)
+# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.30.0...@huma-shan/request-client.js@0.31.0) (2020-12-21)
 
 ### Features
 
 - Add extra support erc20 tokens ([#388](https://github.com/RequestNetwork/requestNetwork/issues/388)) ([6fe92a1](https://github.com/RequestNetwork/requestNetwork/commit/6fe92a155e3ee9c287b5d2ab584a33c8cffb1e6a))
 - update token list ([#384](https://github.com/RequestNetwork/requestNetwork/issues/384)) ([4913626](https://github.com/RequestNetwork/requestNetwork/commit/4913626c74458e17c27b1b21e2a7f4937fe2e841))
 
-# [0.30.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.30.0) (2020-12-02)
+# [0.30.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.30.0) (2020-12-02)
 
 # 0.29.0 (2020-11-10)
 
@@ -462,7 +462,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 - **request-client.js:** add an explanation when request not found ([#609](https://github.com/RequestNetwork/requestNetwork/issues/609)) ([3909958](https://github.com/RequestNetwork/requestNetwork/commit/39099580b65b86282d19a71ffad77f1b89767cca))
 
-# [0.29.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.29.0) (2020-11-12)
+# [0.29.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.29.0) (2020-11-12)
 
 ### Features
 
@@ -546,7 +546,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 - **request-client.js:** add an explanation when request not found ([#609](https://github.com/RequestNetwork/requestNetwork/issues/609)) ([3909958](https://github.com/RequestNetwork/requestNetwork/commit/39099580b65b86282d19a71ffad77f1b89767cca))
 
-# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.28.0) (2020-11-05)
+# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.28.0) (2020-11-05)
 
 # 0.26.0 (2020-10-14)
 
@@ -626,7 +626,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 - **request-client.js:** add an explanation when request not found ([#609](https://github.com/RequestNetwork/requestNetwork/issues/609)) ([3909958](https://github.com/RequestNetwork/requestNetwork/commit/39099580b65b86282d19a71ffad77f1b89767cca))
 
-# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.27.0) (2020-10-21)
+# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.27.0) (2020-10-21)
 
 # 0.26.0 (2020-10-14)
 
@@ -706,7 +706,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.26.0) (2020-10-14)
+# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.26.0) (2020-10-14)
 
 # 0.24.0 (2020-10-09)
 
@@ -784,7 +784,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.25.0) (2020-10-13)
+# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.25.0) (2020-10-13)
 
 # 0.24.0 (2020-10-09)
 
@@ -862,7 +862,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.24.0) (2020-10-09)
+# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.24.0) (2020-10-09)
 
 ### Bug Fixes
 
@@ -938,7 +938,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.23.0) (2020-09-28)
+# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.23.0) (2020-09-28)
 
 ### Bug Fixes
 
@@ -1014,7 +1014,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 - **request-client.js:** add an explanation when request not found ([#609](https://github.com/RequestNetwork/requestNetwork/issues/609)) ([3909958](https://github.com/RequestNetwork/requestNetwork/commit/39099580b65b86282d19a71ffad77f1b89767cca))
 
-# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.22.0) (2020-09-18)
+# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.22.0) (2020-09-18)
 
 ### Bug Fixes
 
@@ -1089,7 +1089,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 - **request-client.js:** add an explanation when request not found ([#609](https://github.com/RequestNetwork/requestNetwork/issues/609)) ([3909958](https://github.com/RequestNetwork/requestNetwork/commit/39099580b65b86282d19a71ffad77f1b89767cca))
 
-# [0.21.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.21.0) (2020-09-01)
+# [0.21.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.21.0) (2020-09-01)
 
 ### Bug Fixes
 
@@ -1164,7 +1164,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.20.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.20.0) (2020-08-27)
+# [0.20.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.20.0) (2020-08-27)
 
 ### Bug Fixes
 
@@ -1239,7 +1239,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.19.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.19.0) (2020-08-13)
+# [0.19.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.19.0) (2020-08-13)
 
 ### Bug Fixes
 
@@ -1314,7 +1314,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.18.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.18.0) (2020-06-29)
+# [0.18.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.18.0) (2020-06-29)
 
 ### Bug Fixes
 
@@ -1389,7 +1389,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.17.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.17.0) (2020-05-04)
+# [0.17.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.17.0) (2020-05-04)
 
 ### Features
 
@@ -1456,7 +1456,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.16.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.16.0) (2020-04-21)
+# [0.16.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.16.0) (2020-04-21)
 
 ### Features
 
@@ -1517,7 +1517,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.15.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.15.0) (2020-04-06)
+# [0.15.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.15.0) (2020-04-06)
 
 ### Bug Fixes
 
@@ -1570,7 +1570,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.14.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.14.0) (2020-03-23)
+# [0.14.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.14.0) (2020-03-23)
 
 ### Bug Fixes
 
@@ -1622,7 +1622,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.13.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.13.0) (2020-02-20)
+# [0.13.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.13.0) (2020-02-20)
 
 ### Bug Fixes
 
@@ -1663,7 +1663,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.12.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.12.0) (2020-01-16)
+# [0.12.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.12.0) (2020-01-16)
 
 ### Bug Fixes
 
@@ -1690,7 +1690,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.11.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.11.0) (2019-12-18)
+# [0.11.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.11.0) (2019-12-18)
 
 ### Bug Fixes
 
@@ -1716,7 +1716,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.10.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.9.0...@requestnetwork/request-client.js@0.10.0) (2019-12-04)
+# [0.10.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.9.0...@huma-shan/request-client.js@0.10.0) (2019-12-04)
 
 ### Bug Fixes
 
@@ -1729,7 +1729,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ETH payment detection in request-client.js ([#626](https://github.com/RequestNetwork/requestNetwork/issues/626)) ([dc3b238](https://github.com/RequestNetwork/requestNetwork/commit/dc3b23827cff7d5466c27d5575515887c461c3b4))
 - exposes currency utilities and list of all supported currencies ([#625](https://github.com/RequestNetwork/requestNetwork/issues/625)) ([eeac838](https://github.com/RequestNetwork/requestNetwork/commit/eeac8385025274fdada39ca3fb2182fc54d470d5))
 
-# [0.9.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.8.0...@requestnetwork/request-client.js@0.9.0) (2019-11-20)
+# [0.9.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.8.0...@huma-shan/request-client.js@0.9.0) (2019-11-20)
 
 ### Bug Fixes
 
@@ -1745,7 +1745,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - validate role for increase & decrease ([#590](https://github.com/RequestNetwork/requestNetwork/issues/590)) ([4793782](https://github.com/RequestNetwork/requestNetwork/commit/47937828a0f42e912eda440be4e277f26aa51bdb))
 - Validation of accept, cancel and add extension data ([#599](https://github.com/RequestNetwork/requestNetwork/issues/599)) ([8f7798e](https://github.com/RequestNetwork/requestNetwork/commit/8f7798e6e71819e5201efaf73678ff5b71b52503))
 
-# [0.8.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.7.0...@requestnetwork/request-client.js@0.8.0) (2019-10-21)
+# [0.8.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.7.0...@huma-shan/request-client.js@0.8.0) (2019-10-21)
 
 ### Features
 
@@ -1753,7 +1753,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - add ERC20 paymentNetwork to request-client ([#569](https://github.com/RequestNetwork/requestNetwork/issues/569)) ([21ebc48](https://github.com/RequestNetwork/requestNetwork/commit/21ebc48))
 - create encrypted request through request-client.js ([#536](https://github.com/RequestNetwork/requestNetwork/issues/536)) ([35678dd](https://github.com/RequestNetwork/requestNetwork/commit/35678dd))
 
-# [0.7.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.6.0...@requestnetwork/request-client.js@0.7.0) (2019-09-16)
+# [0.7.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.6.0...@huma-shan/request-client.js@0.7.0) (2019-09-16)
 
 ### Features
 
@@ -1761,21 +1761,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - **transaction-manager:** add transaction to an existing encrypted channel ([#524](https://github.com/RequestNetwork/requestNetwork/issues/524)) ([027a0f5](https://github.com/RequestNetwork/requestNetwork/commit/027a0f5))
 - get requests by multiple topics or multiple identities ([#530](https://github.com/RequestNetwork/requestNetwork/issues/530)) ([8fe7d30](https://github.com/RequestNetwork/requestNetwork/commit/8fe7d30))
 
-# [0.6.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.5.0...@requestnetwork/request-client.js@0.6.0) (2019-09-05)
+# [0.6.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.5.0...@huma-shan/request-client.js@0.6.0) (2019-09-05)
 
 ### Features
 
 - request logic version 2.0.1: compute the request id takes in account the signature ([#511](https://github.com/RequestNetwork/requestNetwork/issues/511)) ([14643d8](https://github.com/RequestNetwork/requestNetwork/commit/14643d8))
 - Transaction-manager: ignore the wrong transactions of channels ([#514](https://github.com/RequestNetwork/requestNetwork/issues/514)) ([4ec82c6](https://github.com/RequestNetwork/requestNetwork/commit/4ec82c6))
 
-# [0.5.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.4.0...@requestnetwork/request-client.js@0.5.0) (2019-08-19)
+# [0.5.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.4.0...@huma-shan/request-client.js@0.5.0) (2019-08-19)
 
 ### Features
 
 - add an option for the Node to define the timeout when calling persistTransaction ([#485](https://github.com/RequestNetwork/requestNetwork/issues/485)) ([176228c](https://github.com/RequestNetwork/requestNetwork/commit/176228c))
 - Request logic: create encrypted request ([#496](https://github.com/RequestNetwork/requestNetwork/issues/496)) ([9f1ebe6](https://github.com/RequestNetwork/requestNetwork/commit/9f1ebe6))
 
-# [0.3.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.1.1-alpha.4...@requestnetwork/request-client.js@0.3.0) (2019-07-24)
+# [0.3.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.1.1-alpha.4...@huma-shan/request-client.js@0.3.0) (2019-07-24)
 
 ### Bug Fixes
 
@@ -1806,7 +1806,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - faster initialization by factoring stat and read IPFS calls in one call ([#401](https://github.com/RequestNetwork/requestNetwork/issues/401)) ([184c14e](https://github.com/RequestNetwork/requestNetwork/commit/184c14e))
 
-## [0.2.1-alpha.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.1.1-alpha.4...@requestnetwork/request-client.js@0.2.1-alpha.0) (2019-07-22)
+## [0.2.1-alpha.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.1.1-alpha.4...@huma-shan/request-client.js@0.2.1-alpha.0) (2019-07-22)
 
 ### Bug Fixes
 
@@ -1837,7 +1837,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - faster initialization by factoring stat and read IPFS calls in one call ([#401](https://github.com/RequestNetwork/requestNetwork/issues/401)) ([184c14e](https://github.com/RequestNetwork/requestNetwork/commit/184c14e))
 
-# [0.2.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.1.1-alpha.4...@requestnetwork/request-client.js@0.2.0) (2019-06-06)
+# [0.2.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.1.1-alpha.4...@huma-shan/request-client.js@0.2.0) (2019-06-06)
 
 ### Bug Fixes
 
@@ -1862,7 +1862,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - faster initialization by factoring stat and read IPFS calls in one call ([#401](https://github.com/RequestNetwork/requestNetwork/issues/401)) ([184c14e](https://github.com/RequestNetwork/requestNetwork/commit/184c14e))
 
-## [0.1.1-alpha.12](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.1.1-alpha.4...@requestnetwork/request-client.js@0.1.1-alpha.12) (2019-05-21)
+## [0.1.1-alpha.12](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.1.1-alpha.4...@huma-shan/request-client.js@0.1.1-alpha.12) (2019-05-21)
 
 ### Bug Fixes
 
@@ -1879,7 +1879,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Timestamp from storage to client ([#309](https://github.com/RequestNetwork/requestNetwork/issues/309)) ([bb0ac19](https://github.com/RequestNetwork/requestNetwork/commit/bb0ac19))
 - update readme ([#310](https://github.com/RequestNetwork/requestNetwork/issues/310)) ([c6a9ee6](https://github.com/RequestNetwork/requestNetwork/commit/c6a9ee6))
 
-## [0.1.1-alpha.11](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.1.1-alpha.4...@requestnetwork/request-client.js@0.1.1-alpha.11) (2019-05-17)
+## [0.1.1-alpha.11](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.1.1-alpha.4...@huma-shan/request-client.js@0.1.1-alpha.11) (2019-05-17)
 
 ### Bug Fixes
 
@@ -1896,7 +1896,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - Timestamp from storage to client ([#309](https://github.com/RequestNetwork/requestNetwork/issues/309)) ([bb0ac19](https://github.com/RequestNetwork/requestNetwork/commit/bb0ac19))
 - update readme ([#310](https://github.com/RequestNetwork/requestNetwork/issues/310)) ([c6a9ee6](https://github.com/RequestNetwork/requestNetwork/commit/c6a9ee6))
 
-## [0.1.1-alpha.10](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/request-client.js@0.1.1-alpha.4...@requestnetwork/request-client.js@0.1.1-alpha.10) (2019-05-10)
+## [0.1.1-alpha.10](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/request-client.js@0.1.1-alpha.4...@huma-shan/request-client.js@0.1.1-alpha.10) (2019-05-10)
 
 ### Bug Fixes
 

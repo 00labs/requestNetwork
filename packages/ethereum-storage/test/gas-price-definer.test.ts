@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import EthereumUtils from '../src/ethereum-utils';
 
 import * as config from '../src/config';

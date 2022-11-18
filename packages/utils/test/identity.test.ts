@@ -1,4 +1,4 @@
-import { IdentityTypes } from '@requestnetwork/types';
+import { IdentityTypes } from '@huma-shan/types';
 import Identity from '../src/identity';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */

@@ -36,7 +36,7 @@ class mySignaturePackage {
 Your signature provider would look like:
 
 ```typescript
-import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 // Your package
@@ -117,7 +117,7 @@ class mySignaturePackage {
 Your signature provider would look like:
 
 ```typescript
-import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 // Your package

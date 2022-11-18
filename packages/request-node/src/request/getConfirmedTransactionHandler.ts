@@ -1,4 +1,4 @@
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import ConfirmedTransactionStore from './confirmedTransactionStore';

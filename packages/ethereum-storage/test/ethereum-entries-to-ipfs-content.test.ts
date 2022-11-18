@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import ethereumEntriesToIpfsContent from '../src/ethereum-entries-to-ipfs-content';

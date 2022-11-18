@@ -2,7 +2,7 @@ import * as TestDataCreate from './address-based-data-generator';
 
 import * as TestData from '../test-data-generator';
 
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 
 export const arbitraryTimestamp = 1544426030;
 

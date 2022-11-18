@@ -6,9 +6,9 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
-import { batchPaymentsArtifact } from '@requestnetwork/smart-contracts';
+import { batchPaymentsArtifact } from '@huma-shan/smart-contracts';
 
 import { getErc20Balance } from '../../src/payment/erc20';
 import { getRequestPaymentValues } from '../../src/payment/utils';

@@ -1,8 +1,8 @@
 {
-  "name": "@requestnetwork/data-access",
-  "version": "0.28.0",
+  "name": "@huma-shan/data-access",
+  "version": "0.28.1",
   "publishConfig": {
-    "registry": "http://localhost:8081/repository/requestnetwork/"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Main package for the Request Network data access layer.",
   "keywords": [
@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@requestnetwork/multi-format": "0.17.0",
-    "@requestnetwork/types": "0.37.0",
+    "@huma-shan/types": "0.37.1",
     "@requestnetwork/utils": "0.37.0",
     "bluebird": "3.7.2",
     "keyv": "4.0.3",

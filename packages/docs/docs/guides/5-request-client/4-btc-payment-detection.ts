@@ -19,7 +19,7 @@
 // The signature provider allows us to sign the request
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // RequestNetwork is the interface we will use to interact with the Request network
-import * as RequestNetwork from '@requestnetwork/request-client.js';
+import * as RequestNetwork from '@huma-shan/request-client.js';
 
 /**
  * ### Identity

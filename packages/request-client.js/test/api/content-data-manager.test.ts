@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes } from '@huma-shan/types';
 
 import ContentDataExtension from '../../src/api/content-data-extension';
 

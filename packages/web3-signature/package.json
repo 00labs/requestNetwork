@@ -2,7 +2,7 @@
   "name": "@requestnetwork/web3-signature",
   "version": "0.4.37",
   "publishConfig": {
-    "registry": "http://localhost:8081/repository/requestnetwork/"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Signature provider using web3 ethereum library.",
   "keywords": [
@@ -33,7 +33,7 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/types": "0.37.0",
+    "@huma-shan/types": "0.37.1",
     "@requestnetwork/utils": "0.37.0",
     "ethers": "5.5.1",
     "tslib": "2.3.1"

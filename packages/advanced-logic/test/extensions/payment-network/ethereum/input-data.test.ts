@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 
 import EthereumInputDataPaymentNetwork from '../../../../src/extensions/payment-network/ethereum/input-data';

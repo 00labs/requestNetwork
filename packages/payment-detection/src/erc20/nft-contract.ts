@@ -3,10 +3,10 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import Utils from '@requestnetwork/utils';
-import { invoiceNFTArtifact } from '@requestnetwork/smart-contracts';
+import { invoiceNFTArtifact } from '@huma-shan/smart-contracts';
 import TheGraphInfoRetriever from './thegraph-info-retriever';
 import { networkSupportsTheGraph } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';

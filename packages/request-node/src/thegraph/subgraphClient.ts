@@ -1,4 +1,4 @@
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@huma-shan/types';
 import { GraphQLClient } from 'graphql-request';
 import {
   GetBlock,

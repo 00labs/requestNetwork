@@ -43,7 +43,8 @@
     "test:watch": "yarn test --watch",
     "start": "ts-node index.ts",
     "start-goerli": "ts-node index-goerli.ts",
-    "start-test": "ts-node test.ts"
+    "start-test": "ts-node test.ts",
+    "server": "ts-node server.ts"
   },
   "dependencies": {
     "@requestnetwork/advanced-logic": "0.34.0",
@@ -61,7 +62,8 @@
     "@requestnetwork/utils": "0.35.0",
     "axios": "0.27.2",
     "ethers": "5.5.1",
-    "tslib": "2.3.1"
+    "tslib": "2.3.1",
+    "express": "4.18.2"
   },
   "devDependencies": {
     "@compodoc/compodoc": "1.1.11",

@@ -82,7 +82,6 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
 
     const paymentAndEscrowEvents = await this.extractEvents(
       PaymentTypes.EVENTS_NAMES.PAYMENT,
-      paymentAddress,
       this.getPaymentReference(request),
       request.currency,
       paymentChain,
@@ -109,7 +108,6 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
    */
   protected async extractEvents(
     eventName: PaymentTypes.EVENTS_NAMES,
-    address: string | undefined,
     paymentReference: string,
     requestCurrency: RequestLogicTypes.ICurrency,
     paymentChain: string,
@@ -132,12 +130,6 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
     const { address: nftContractAddress, creationBlockNumber: nftCreationBlockNumber } =
       ERC20NFTPaymentDetector.getDeploymentInformation(paymentChain, paymentNetwork.version);
 
-    if (address == null) {
-      return {
-        paymentEvents: [],
-      };
-    }
-
     if (networkSupportsTheGraph(paymentChain)) {
       const graphInfoRetriever = new TheGraphInfoRetriever(
         paymentReference,
@@ -154,7 +146,7 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
         nftContractAddress,
         nftCreationBlockNumber,
         requestCurrency.value,
-        address,
+        nftContractAddress,
         eventName,
         paymentChain,
       );

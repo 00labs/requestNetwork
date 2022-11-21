@@ -245,7 +245,7 @@ export function validateRequest(
     !validCurrencyValue ||
     !extension?.values?.salt ||
     (paymentNetworkId !== PaymentTypes.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT &&
-      !extension?.values?.paymentAddress)
+      !extension?.values?.paymentAddress) // erc20 nft payment network needn't paymentAddress
   ) {
     throw new Error(`request cannot be processed, or is not an ${paymentNetworkId} request`);
   }

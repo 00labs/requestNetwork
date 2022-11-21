@@ -18,7 +18,7 @@ import { IPreparedTransaction } from './prepared-transaction';
 import MultiFormat from '@requestnetwork/multi-format';
 
 /**
- * Processes a transaction to pay an ERC20 Request.
+ * Processes a transaction to pay an ERC20 NFT Request.
  * @param request
  * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
  * @param amount optionally, the amount to pay. Defaults to remaining amount of the request.
@@ -36,7 +36,7 @@ export async function payErc20NFTRequest(
 }
 
 /**
- * Encodes the call to pay a request through the ERC20 proxy contract, can be used with a Multisig contract.
+ * Encodes the call to pay a request through the ERC20 nft contract, can be used with a Multisig contract.
  * @param request request to pay
  * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
  * @param amount optionally, the amount to pay. Defaults to remaining amount of the request.
@@ -51,14 +51,9 @@ export function encodePayErc20NFTRequest(
   const amountToPay = getAmountToPay(request, amount);
   const { paymentReference } = getRequestPaymentValues(request);
 
-  console.log(
-    `reqIdObj.value: ${reqIdObj.value}, amountToPay: ${amountToPay}, paymentReference: ` +
-      `0x${paymentReference}`,
-  );
-
   const nftContract = InvoiceNFT__factory.createInterface();
   return nftContract.encodeFunctionData('payOwner', [
-    reqIdObj.value,
+    reqIdObj.value, // get tokenId from requestId
     amountToPay,
     `0x${paymentReference}`,
   ]);
@@ -83,12 +78,13 @@ export function _getErc20NFTPaymentUrl(
 
   const reqIdObj = MultiFormat.deserialize(request.requestId);
   const amountToPay = getAmountToPay(request, amount);
-  const parameters = `payOwner?uint256=${reqIdObj.value}&uint256=${amountToPay}`;
+  const { paymentReference } = getRequestPaymentValues(request);
+  const parameters = `payOwner?uint256=${reqIdObj.value}&uint256=${amountToPay}&bytes=${paymentReference}`;
   return `ethereum:${contractAddress}/${parameters}`;
 }
 
 /**
- * Encodes the call to pay a request through the ERC20 proxy contract, can be used with a Multisig contract.
+ * Encodes the call to pay a request through the ERC20 nft contract, can be used with a Multisig contract.
  * @param request request to pay
  * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
  * @param amount optionally, the amount to pay. Defaults to remaining amount of the request.

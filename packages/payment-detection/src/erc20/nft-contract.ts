@@ -20,7 +20,7 @@ const NFT_CONTRACT_ADDRESS_MAP = {
 };
 
 /**
- * Handle payment networks with ERC20 proxy contract extension
+ * Handle payment networks with ERC20 nft contract extension
  */
 export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
   ExtensionTypes.PnAnyToErc20.IAnyToERC20,
@@ -61,8 +61,6 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
   protected async getEvents(
     request: RequestLogicTypes.IRequest,
   ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20PaymentEventParameters>> {
-    console.log(`ReferenceBasedDetector getEvents...`);
-
     const paymentExtension = this.getPaymentExtension(request);
     const paymentChain = this.getPaymentChain(request);
 
@@ -113,14 +111,6 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
     paymentChain: string,
     paymentNetwork: ExtensionTypes.IState<ExtensionTypes.PnReferenceBased.ICreationParameters>,
   ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20PaymentEventParameters>> {
-    console.log(`ERC20NFTPaymentDetector extractEvents...`);
-
-    // console.log(
-    //   `address: ${address}, paymentReference: ${paymentReference}, requestCurrency: ${JSON.stringify(
-    //     requestCurrency,
-    //   )}, paymentNetwork: ${JSON.stringify(paymentNetwork)}, paymentChain: ${paymentChain}`,
-    // );
-
     if (!paymentReference) {
       return {
         paymentEvents: [],
@@ -151,7 +141,6 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
         paymentChain,
       );
       const paymentEvents = await nftInfoRetriever.getTransferEvents();
-      // console.log(`paymentEvents: ${JSON.stringify(paymentEvents)}`);
       return {
         paymentEvents,
       };

@@ -4,18 +4,18 @@ import { StatusCodes } from 'http-status-codes';
 import { getPersistTransactionTimeout } from '../config';
 
 /**
- * Class to persist transactions though the data-access layer
+ * Class to create nft though the data-access layer
  */
 export default class TokenizeHandler {
   /**
-   * Persist transaction constructor
+   * Create nft constructor
    */
   constructor(private dataAccess: DataAccessTypes.IDataWrite, private logger: LogTypes.ILogger) {
     this.handler = this.handler.bind(this);
   }
 
   /**
-   * Handles persistTransaction of data-access layer.
+   * Handles tokenize of data-access layer.
    *
    * @param clientRequest http client request object
    * @param serverResponse http server response object

@@ -27,16 +27,21 @@ export default class TransactionManager implements TransactionTypes.ITransaction
     this.channelParser = new ChannelParser(decryptionProvider);
   }
 
+  /**
+   * Create a NFT in storage
+   *
+   * @param recipient the NFT owner
+   * @param assetToken erc20 token address
+   * @param tokenId NFT id, 64 bytes data
+   * @param metadata metadata string
+   */
   public async tokenizeRequest(
     recipient: string,
     assetToken: string,
     tokenId: string,
     metadata: string,
   ): Promise<any> {
-    // console.log('manager');
-    // console.log(this.dataAccess.constructor.name);
     if (this.dataAccess.tokenizeRequest) {
-      console.log('call tokenRequest...');
       return this.dataAccess.tokenizeRequest(recipient, assetToken, tokenId, metadata);
     } else {
       console.log('none');

@@ -4,7 +4,7 @@ import { BigNumber, ethers } from 'ethers';
 import { getDefaultProvider } from '../provider';
 import { parseLogArgs } from '../utils';
 
-// The ERC20 nft smart contract ABI fragment containing TransferWithReference event
+// The ERC20 nft smart contract ABI fragment containing Payment event
 const erc20nftContractAbiFragment = [
   'event Payment(address sender,address recipient,uint256 tokenId,address assetAddress,uint256 amount,uint256 paymentId,bytes indexed paymentReference)',
 ];
@@ -21,7 +21,7 @@ type PaymentArgs = {
 };
 
 /**
- * Retrieves a list of payment events from a payment reference, a destination address, a token address and a proxy contract
+ * Retrieves a list of payment events from a payment reference, a destination address, a token address and a nft contract
  */
 export default class NFTERC20InfoRetriever
   implements IPaymentRetriever<PaymentTypes.ERC20PaymentNetworkEvent>
@@ -62,8 +62,6 @@ export default class NFTERC20InfoRetriever
    * Retrieves transfer events for the current contract, address and network.
    */
   public async getTransferEvents(): Promise<PaymentTypes.ERC20PaymentNetworkEvent[]> {
-    console.log(`NFTERC20InfoRetriever getTransferEvents...`);
-
     // Create a filter to find all the Transfer logs for the toAddress
     const filter = this.contractNft.filters.Payment(
       null,
@@ -82,7 +80,6 @@ export default class NFTERC20InfoRetriever
 
     // Merge both events
     const logs = [...nftLogs];
-    // console.log(`logs: ${JSON.stringify(logs)}`);
 
     // Parses, filters and creates the events from the logs with the payment reference
     const eventPromises = logs

@@ -137,6 +137,14 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
     return result;
   }
 
+  /**
+   * Create a new nft on a node through HTTP.
+   *
+   * @param recipient the NFT owner
+   * @param assetToken erc20 token address
+   * @param tokenId NFT id, 64 bytes data
+   * @param metadata metadata string
+   */
   public async tokenizeRequest(
     recipient: string,
     assetToken: string,
@@ -145,7 +153,6 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
   ): Promise<void> {
     // We don't retry this request since it may fail because of a slow Storage
     // For example, if the Ethereum network is slow and we retry the request three times
-    // three data will be persisted at the end
     await axios.post(
       '/tokenize',
       {

@@ -719,11 +719,6 @@ export default class Request {
   public async refreshBalance(): Promise<Types.Payment.IBalanceWithEvents<any> | null> {
     // TODO: PROT-1131 - add a pending balance
     if (this.paymentNetwork && this.requestData) {
-      // console.log(
-      //   `refreshBalance - paymentNetwork: ${JSON.stringify(this.paymentNetwork)}-${JSON.stringify(
-      //     typeof this.paymentNetwork,
-      //   )}, requestData: ${JSON.stringify(this.requestData)}`,
-      // );
       this.balance = await this.paymentNetwork.getBalance(this.requestData);
     }
 

@@ -3,7 +3,7 @@
 // @ts-nocheck
 
 // RequestNetwork is the interface we will use to interact with the Request network
-import * as RequestNetwork from '.';
+import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package
@@ -18,7 +18,10 @@ import { ContractTransaction, ethers, Wallet } from 'ethers';
 
 import MultiFormat from '@requestnetwork/multi-format';
 
-const WEB3_PROVIDER_URL = 'https://eth-goerli.g.alchemy.com/v2/N3msdQ9jj9ifTG8rGj8m09Q_ZeU1VFI3';
+import { config } from 'dotenv';
+config();
+
+const WEB3_PROVIDER_URL = process.env.WEB3_PROVIDER_URL;
 const provider = new ethers.providers.JsonRpcProvider(
   WEB3_PROVIDER_URL,
 ) as ethers.providers.Provider;
@@ -97,6 +100,12 @@ const requestCreateParams = {
   signer: payeeIdentity,
 };
 
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 (async () => {
   console.log('start...');
@@ -105,6 +114,7 @@ const requestCreateParams = {
   console.log('payee address: ' + payeeIdentity.value);
 
   // ✏️ Create the request
+  console.log('create request: ' + JSON.stringify(requestCreateParams));
   const request: RequestNetwork.Request = await requestNetwork.createRequest(requestCreateParams);
   console.log(`request ${request.requestId} created`);
   await request.waitForConfirmation();
@@ -143,6 +153,9 @@ const requestCreateParams = {
   console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
   reqIdObj = { value: tokenId, type: metadata };
   console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
+
+  console.log('sleep 5s...');
+  await sleep(5000);
 
   console.log('Balance1: ', request.getData().balance?.balance);
   await request.refresh();

@@ -80,20 +80,10 @@ export default class RequestNetwork {
       parameters,
     );
 
-    console.log(
-      `createRequest - requestParameters: ${JSON.stringify(
-        requestParameters,
-      )}, topics: ${JSON.stringify(topics)}, paymentNetwork: ${JSON.stringify(paymentNetwork)}`,
-    );
-
     const requestLogicCreateResult = await this.requestLogic.createRequest(
       requestParameters,
       parameters.signer,
       topics,
-    );
-
-    console.log(
-      `createRequest - requestLogicCreateResult: ${JSON.stringify(requestLogicCreateResult)}`,
     );
 
     // create the request object

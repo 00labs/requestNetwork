@@ -172,13 +172,20 @@ export default class DataAccess implements DataAccessTypes.IDataAccess {
     await this.stopAutoSynchronization();
   }
 
+  /**
+   * Function to create a NFT for one erc20 payment
+   *
+   * @param recipient the NFT owner
+   * @param assetToken erc20 token address
+   * @param tokenId NFT id, 64 bytes data
+   * @param metadata metadata string
+   */
   public async tokenizeRequest(
     recipient: string,
     assetToken: string,
     tokenId: string,
     metadata: string,
   ): Promise<any> {
-    console.log('data access');
     return (
       this.storage.tokenizeRequest &&
       this.storage.tokenizeRequest(recipient, assetToken, tokenId, metadata)

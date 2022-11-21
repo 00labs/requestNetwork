@@ -1,5 +1,5 @@
 // RequestNetwork is the interface we will use to interact with the Request network
-import * as RequestNetwork from '.';
+import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package

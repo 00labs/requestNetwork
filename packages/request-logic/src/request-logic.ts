@@ -51,22 +51,8 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       topics,
     );
 
-    console.log(`createRequest requestParameters: ${JSON.stringify(requestParameters)}`);
-
-    console.log(
-      `createRequest step1 - action: ${JSON.stringify(action)}, requestId: ${JSON.stringify(
-        requestId,
-      )}, hashedTopics: ${JSON.stringify(hashedTopics)}`,
-    );
-
     // Validate the action, the apply will throw in case of error
     RequestLogicCore.applyActionToRequest(null, action, Date.now(), this.advancedLogic);
-
-    console.log(
-      `createRequest step2 - action: ${JSON.stringify(action)}, requestId: ${JSON.stringify(
-        requestId,
-      )}, hashedTopics: ${JSON.stringify(hashedTopics)}`,
-    );
 
     const resultPersistTx = await this.transactionManager.persistTransaction(
       JSON.stringify(action),
@@ -74,18 +60,16 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       hashedTopics,
     );
 
+    // Create nft for erc20 nft payment network
     if (this.transactionManager.tokenizeRequest && requestParameters.extensionsData) {
       const paymentData = requestParameters.extensionsData[0];
       if (paymentData.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
         if (requestParameters.payee) {
-          const recipient = requestParameters.payee.value;
+          const recipient = requestParameters.payee.value; // payee is the owner of nft
           const assetToken = requestParameters.currency.value;
           const reqIdObj = MultiFormat.deserialize(requestId);
-          const tokenId = reqIdObj.value;
-          const metadata = Buffer.from(reqIdObj.type).toString('base64');
-          console.log(
-            `call transactionManager.tokenizeRequest(recipient,assetToken,tokenId,metadata): ${recipient}, ${assetToken}, ${tokenId}, ${metadata}`,
-          );
+          const tokenId = reqIdObj.value; // tokenId is requestId.value
+          const metadata = Buffer.from(reqIdObj.type).toString('base64'); // metadata is requestId.type
           await this.transactionManager.tokenizeRequest(recipient, assetToken, tokenId, metadata);
         }
       }

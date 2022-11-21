@@ -247,11 +247,13 @@ export default class SmartContractManager {
   }
 
   /**
-   * Adds hash to smart contract from content hash and content feesParameters
-   * @param contentHash Hash of the content to store, this hash should be used to retrieve the content
-   * @param feesParameters parameters used to compute storage fee
+   * Create a NFT
+   *
+   * @param recipient the NFT owner
+   * @param assetToken erc20 token address
+   * @param tokenId NFT id, 64 bytes data
+   * @param metadata metadata string
    * @param gasPrice Replace the default gas price
-   * @returns Promise resolved when transaction is confirmed on Ethereum
    */
   public async mintInvoiceNFT(
     recipient: string,
@@ -261,7 +263,6 @@ export default class SmartContractManager {
     gasPrice?: BigNumber,
     nonce?: number,
   ): Promise<any> {
-    console.log('mint');
     // Get the account for the transaction
     const account = await this.getMainAccount();
 
@@ -309,7 +310,6 @@ export default class SmartContractManager {
             )} ts: ${Date.now()}`,
           );
 
-          console.log('TXN HASH');
           // Store the transaction hash in case we need it in the future
           transactionHash = hash;
           this.logger.debug(
@@ -328,7 +328,6 @@ export default class SmartContractManager {
           );
 
           // If failed because of polling timeout, try to resubmit the transaction with more gas
-          console.log('ERR');
           if (
             transactionError.toString().includes(TRANSACTION_POLLING_TIMEOUT) &&
             transactionHash
@@ -384,7 +383,6 @@ export default class SmartContractManager {
         })
         .on('confirmation', (confirmationNumber: number, receiptAfterConfirmation: any) => {
           if (!confirmationResolved) {
-            console.log('CONFIRM');
             this.logger.info(
               `Confirmation nb ${confirmationNumber} for mint NFT: ${receiptAfterConfirmation.transactionHash}`,
             );

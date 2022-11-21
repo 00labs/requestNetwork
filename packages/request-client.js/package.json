@@ -44,7 +44,7 @@
     "start-local": "ts-node workshop-local.ts",
     "start-goerli": "ts-node workshop-goerli.ts",
     "start-test": "ts-node test.ts",
-    "server": "ts-node server.ts"
+    "server": "ts-node api-server.ts"
   },
   "dependencies": {
     "@requestnetwork/advanced-logic": "0.35.0",
@@ -61,6 +61,7 @@
     "@requestnetwork/types": "0.36.0",
     "@requestnetwork/utils": "0.36.0",
     "axios": "0.27.2",
+    "cors": "2.8.5",
     "ethers": "5.5.1",
     "tslib": "2.3.1",
     "express": "4.18.2",
@@ -71,6 +72,7 @@
     "@types/jest": "26.0.13",
     "amd-loader": "0.0.8",
     "axios-mock-adapter": "1.19.0",
+    "dotenv": "16.0.3",
     "duplicate-package-checker-webpack-plugin": "3.0.0",
     "jest": "26.4.2",
     "npm-run-all": "4.1.5",

@@ -305,13 +305,10 @@ export default class SmartContractManager {
       const transactionParameters = {
         from: account,
         gas: '500000',
-        gasPrice: gasPriceToUse,
+        maxFeePerGas: gasPriceToUse,
+        maxPriorityFeePerGas: 10000000000,
         nonce,
       };
-
-      this.logger.debug(
-        `mintInvoiceNFT recipient: ${recipient}, assetToken: ${assetToken}, tokenId: ${tokenId}, metadata: ${metadata}, gasPrice: ${gasPriceToUse}, nonce: ${nonce}`,
-      );
 
       this.invoiceNFT.methods
         .mint(recipient, tokenId, assetToken, metadata)
@@ -460,11 +457,12 @@ export default class SmartContractManager {
       const transactionParameters = {
         from: account,
         gas: '100000',
-        gasPrice: gasPriceToUse,
+        maxFeePerGas: gasPriceToUse,
+        maxPriorityFeePerGas: 10000000000,
         nonce,
         value: fee,
       };
-      this.logger.debug(`addHashAndSizeToEthereum gasPrice: ${gasPriceToUse}, nonce: ${nonce}, `);
+
       this.requestHashSubmitter.methods
         .submitHash(contentHash, feesParametersAsBytes)
         .send(transactionParameters)

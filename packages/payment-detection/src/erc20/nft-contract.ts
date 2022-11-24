@@ -74,9 +74,9 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
       );
     }
     this.checkRequiredParameter(paymentExtension.values.salt, 'salt');
-    const paymentAddress = '0x9aebb4b8abf7afc96dc00f707f766499c5ebedf1';
-    console.log(`paymentAddress: ${paymentAddress}`);
-    console.log(`paymentRef: ${this.getPaymentReference(request)}`);
+    // const paymentAddress = '0x9aebb4b8abf7afc96dc00f707f766499c5ebedf1';
+    // console.log(`paymentAddress: ${paymentAddress}`);
+    // console.log(`paymentRef: ${this.getPaymentReference(request)}`);
 
     const paymentAndEscrowEvents = await this.extractEvents(
       PaymentTypes.EVENTS_NAMES.PAYMENT,

@@ -75,6 +75,9 @@ export default class SmartContractManager {
    */
   private retryDelay: number | undefined;
 
+  private maxFeePerGas: BigNumber;
+  private maxPriorityFeePerGas: BigNumber;
+
   /**
    * Constructor
    * @param web3Connection Object to connect to the Ethereum network
@@ -168,6 +171,9 @@ export default class SmartContractManager {
       getLastBlockNumberDelay,
       this.logger,
     );
+
+    this.maxFeePerGas = config.getDefaultEthereumGasPrice();
+    this.maxPriorityFeePerGas = config.getDefaultEthereumGasPriorityPrice();
   }
 
   /**
@@ -291,8 +297,8 @@ export default class SmartContractManager {
       const transactionParameters = {
         from: account,
         gas: '500000',
-        maxFeePerGas: gasPriceToUse,
-        maxPriorityFeePerGas: 10000000000,
+        maxFeePerGas: this.maxFeePerGas,
+        maxPriorityFeePerGas: this.maxPriorityFeePerGas,
         nonce,
       };
 
@@ -446,8 +452,8 @@ export default class SmartContractManager {
       const transactionParameters = {
         from: account,
         gas: '100000',
-        maxFeePerGas: gasPriceToUse,
-        maxPriorityFeePerGas: 10000000000,
+        maxFeePerGas: this.maxFeePerGas,
+        maxPriorityFeePerGas: this.maxPriorityFeePerGas,
         nonce,
         value: fee,
       };

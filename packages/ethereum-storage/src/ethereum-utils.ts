@@ -11,6 +11,7 @@ const networks = {
   [StorageTypes.EthereumNetwork.GOERLI]: 'goerli',
   [StorageTypes.EthereumNetwork.SOKOL]: 'sokol',
   [StorageTypes.EthereumNetwork.XDAI]: 'xdai',
+  [StorageTypes.EthereumNetwork.MATIC]: 'matic',
 };
 
 /**

@@ -75,7 +75,6 @@ app.get('/invoice', async function (req, res) {
   let tId: BigNumber;
   try {
     tId = BN.from(tokenId);
-    console.log(`tId: ${JSON.stringify(tId)}`);
     const metadataBase64 = await invoiceNFT.tokenURI(tId);
     const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
     const reqIdObj = { value: tId.toHexString(), type: metadata };

@@ -17,6 +17,10 @@ export const invoiceNFTArtifact = new ContractArtifact<InvoiceNFT>(
           address: '0x9aEBB4B8abf7afC96dC00f707F766499C5EbeDF1',
           creationBlockNumber: 7956654,
         },
+        matic: {
+          address: '0xf98b8a94edbc9628b7b2141465980f2c3acab23f',
+          creationBlockNumber: 36487297,
+        },
       },
     },
   },

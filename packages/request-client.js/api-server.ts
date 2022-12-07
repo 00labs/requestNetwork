@@ -21,7 +21,10 @@ const WEB3_PROVIDER_URL = process.env.WEB3_PROVIDER_URL;
 const provider = new ethers.providers.JsonRpcProvider(
   WEB3_PROVIDER_URL,
 ) as ethers.providers.Provider;
-const INVOICE_NFT_ADDR = '0x9aEBB4B8abf7afC96dC00f707F766499C5EbeDF1';
+const INVOICE_NFT_ADDR = process.env.INVOICE_NFT_ADDRESS;
+if (!INVOICE_NFT_ADDR) {
+  throw new Error('Empty Invoice NFT address');
+}
 const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
 
 const server = app.listen(port, () => {

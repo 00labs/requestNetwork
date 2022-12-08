@@ -5,10 +5,7 @@ const cors = require('cors');
 
 import * as RequestNetwork from './dist';
 import { ethers, BigNumber as BN, BigNumber } from 'ethers';
-import {
-  InvoiceNFT__factory,
-  IERC20Metadata__factory,
-} from '@requestnetwork/smart-contracts/types';
+import { InvoiceNFT__factory, IERC20Metadata__factory } from '@huma-shan/smart-contracts/types';
 import MultiFormat from '@requestnetwork/multi-format';
 
 dotenv.config();

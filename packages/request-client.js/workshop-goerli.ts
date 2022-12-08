@@ -75,6 +75,9 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
       type: RequestNetwork.Types.RequestLogic.CURRENCY.ERC20,
     },
   ],
+  nodeConnectionConfig: {
+    baseURL: 'https://goerli.rn.huma.finance',
+  },
 });
 //#endregion
 

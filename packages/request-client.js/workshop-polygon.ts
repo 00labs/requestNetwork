@@ -78,9 +78,9 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
       type: RequestNetwork.Types.RequestLogic.CURRENCY.ERC20,
     },
   ],
-  // nodeConnectionConfig: {
-  //   baseURL: 'http://ec2-3-101-65-54.us-west-1.compute.amazonaws.com:3000',
-  // },
+  nodeConnectionConfig: {
+    baseURL: 'https://polygon.rn.huma.finance',
+  },
 });
 //#endregion
 

@@ -43,6 +43,7 @@
     "test:watch": "yarn test --watch",
     "start-local": "ts-node workshop-local.ts",
     "start-goerli": "ts-node workshop-goerli.ts",
+    "start-polygon": "ts-node workshop-polygon.ts",
     "start-test": "ts-node test.ts",
     "server": "ts-node api-server.ts"
   },

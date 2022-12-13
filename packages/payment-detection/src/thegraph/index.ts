@@ -31,7 +31,19 @@ export const getTheGraphClient = (
   //  for early testing.
   // const url = `${baseUrl}/subgraphs/name/requestnetwork/request-payments-${network}`;
   // network;
-  const url = 'https://api.studio.thegraph.com/query/35118/requestnetwork-nft/0.0.5';
+  let url;
+  switch (_network) {
+    case 'goerli':
+      url = 'https://api.studio.thegraph.com/query/35118/requestnetwork-nft/0.0.5';
+      break;
+    case 'matic':
+      url = 'https://api.thegraph.com/subgraphs/name/00labs/huma-rn-test-polygon';
+      break;
+    default:
+      throw 'No network';
+      break;
+  }
+
   return getSdk(new GraphQLClient(url, options));
 };
 

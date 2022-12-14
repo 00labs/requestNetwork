@@ -40,7 +40,7 @@
     "@huma-shan/advanced-logic": "0.36.3",
     "@huma-shan/data-access": "0.28.3",
     "@huma-shan/ethereum-storage": "0.28.3",
-    "@huma-shan/payment-detection": "0.37.3",
+    "@huma-shan/payment-detection": "0.37.4",
     "@huma-shan/payment-processor": "0.39.3",
     "@huma-shan/request-client.js": "0.41.3",
     "@huma-shan/request-logic": "0.28.3",

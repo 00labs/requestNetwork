@@ -36,7 +36,7 @@
   "dependencies": {
     "@requestnetwork/currency": "0.10.0",
     "@requestnetwork/epk-signature": "0.7.0",
-    "@huma-shan/payment-detection": "0.37.3",
+    "@huma-shan/payment-detection": "0.37.4",
     "@huma-shan/request-client.js": "0.41.3",
     "@huma-shan/smart-contracts": "0.30.3",
     "@huma-shan/types": "0.37.3",

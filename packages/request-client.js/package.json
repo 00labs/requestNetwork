@@ -46,7 +46,7 @@
     "@requestnetwork/data-format": "0.11.0",
     "@requestnetwork/epk-signature": "0.7.0",
     "@requestnetwork/multi-format": "0.17.0",
-    "@huma-shan/payment-detection": "0.37.3",
+    "@huma-shan/payment-detection": "0.37.4",
     "@huma-shan/payment-processor": "0.39.3",
     "@huma-shan/request-logic": "0.28.3",
     "@huma-shan/smart-contracts": "0.30.3",

@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/payment-processor",
-  "version": "0.39.3",
+  "version": "0.39.4",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -34,8 +34,8 @@
     "@requestnetwork/currency": "0.10.0",
     "@requestnetwork/multi-format": "0.17.0",
     "@huma-shan/payment-detection": "0.37.4",
-    "@huma-shan/smart-contracts": "0.30.3",
-    "@huma-shan/types": "0.37.3",
+    "@huma-shan/smart-contracts": "0.30.4",
+    "@huma-shan/types": "0.37.4",
     "@requestnetwork/utils": "0.37.0",
     "@superfluid-finance/sdk-core": "0.3.2",
     "ethers": "5.5.1",

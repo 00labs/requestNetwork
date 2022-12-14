@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@metamask/contract-metadata": "1.31.0",
-    "@huma-shan/types": "0.37.3",
+    "@huma-shan/types": "0.37.4",
     "@requestnetwork/utils": "0.37.0",
     "multicoin-address-validator": "0.5.2",
     "node-dijkstra": "2.5.0",

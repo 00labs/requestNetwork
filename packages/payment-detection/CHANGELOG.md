@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.36.0) (2022-11-04)
+# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.36.0) (2022-11-04)
 
 ### Bug Fixes
 
@@ -101,7 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - TheGraph get last synced block ([#521](https://github.com/RequestNetwork/requestNetwork/issues/521)) ([7d69ae4](https://github.com/RequestNetwork/requestNetwork/commit/7d69ae49c1bb56fffd94f3fa49ab038b040491bf))
 - upgrade near references to 0.2.0 ([#580](https://github.com/RequestNetwork/requestNetwork/issues/580)) ([2f0507d](https://github.com/RequestNetwork/requestNetwork/commit/2f0507df3d98b2ee9e15d21818b0ac639ee4cca3))
 
-# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.35.0) (2021-06-22)
+# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.35.0) (2021-06-22)
 
 ### Bug Fixes
 
@@ -118,7 +118,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment-detection with TheGraph ([#519](https://github.com/RequestNetwork/requestNetwork/issues/519)) ([c068b88](https://github.com/RequestNetwork/requestNetwork/commit/c068b88786111558a84cdff941bc60dd04f6034a))
 - TheGraph get last synced block ([#521](https://github.com/RequestNetwork/requestNetwork/issues/521)) ([7d69ae4](https://github.com/RequestNetwork/requestNetwork/commit/7d69ae49c1bb56fffd94f3fa49ab038b040491bf))
 
-# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.34.0) (2021-05-12)
+# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.34.0) (2021-05-12)
 
 ### Bug Fixes
 
@@ -131,7 +131,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - ERC20 Fee Proxy on Matic ([#495](https://github.com/RequestNetwork/requestNetwork/issues/495)) ([ac003d5](https://github.com/RequestNetwork/requestNetwork/commit/ac003d538715c18dc158ccc84249da10dc9a984f))
 - Payment detection for the any to erc20 payment network ([#419](https://github.com/RequestNetwork/requestNetwork/issues/419)) ([6f7338f](https://github.com/RequestNetwork/requestNetwork/commit/6f7338f42ddf793a733a31b434d6116beebefdf6))
 
-# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.33.0) (2021-04-19)
+# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.33.0) (2021-04-19)
 
 ### Bug Fixes
 
@@ -141,7 +141,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Payment detection for the any to erc20 payment network ([#419](https://github.com/RequestNetwork/requestNetwork/issues/419)) ([6f7338f](https://github.com/RequestNetwork/requestNetwork/commit/6f7338f42ddf793a733a31b434d6116beebefdf6))
 
-# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.32.0) (2021-03-25)
+# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.32.0) (2021-03-25)
 
 ### Bug Fixes
 
@@ -151,7 +151,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Payment detection for the any to erc20 payment network ([#419](https://github.com/RequestNetwork/requestNetwork/issues/419)) ([6f7338f](https://github.com/RequestNetwork/requestNetwork/commit/6f7338f42ddf793a733a31b434d6116beebefdf6))
 
-# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.31.0) (2021-03-15)
+# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.31.0) (2021-03-15)
 
 ### Bug Fixes
 
@@ -161,21 +161,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Payment detection for the any to erc20 payment network ([#419](https://github.com/RequestNetwork/requestNetwork/issues/419)) ([6f7338f](https://github.com/RequestNetwork/requestNetwork/commit/6f7338f42ddf793a733a31b434d6116beebefdf6))
 
-## [0.30.4](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.30.4) (2021-03-03)
+## [0.30.4](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.30.4) (2021-03-03)
 
-**Note:** Version bump only for package @requestnetwork/payment-detection
+**Note:** Version bump only for package @huma-shan/payment-detection
 
-## [0.30.3](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.30.3) (2021-02-22)
+## [0.30.3](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.30.3) (2021-02-22)
 
-**Note:** Version bump only for package @requestnetwork/payment-detection
+**Note:** Version bump only for package @huma-shan/payment-detection
 
-## [0.30.2](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.30.2) (2020-12-22)
+## [0.30.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.30.2) (2020-12-22)
 
-**Note:** Version bump only for package @requestnetwork/payment-detection
+**Note:** Version bump only for package @huma-shan/payment-detection
 
-## [0.30.1](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/payment-detection@0.30.0...@requestnetwork/payment-detection@0.30.1) (2020-12-21)
+## [0.30.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/payment-detection@0.30.0...@huma-shan/payment-detection@0.30.1) (2020-12-21)
 
-**Note:** Version bump only for package @requestnetwork/payment-detection
+**Note:** Version bump only for package @huma-shan/payment-detection
 
 # 0.30.0 (2020-12-02)
 

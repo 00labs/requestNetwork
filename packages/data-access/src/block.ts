@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@huma-shan/types';
 import { deepCopy } from '@requestnetwork/utils';
 
 /**

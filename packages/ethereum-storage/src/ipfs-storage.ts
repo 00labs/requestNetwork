@@ -1,4 +1,4 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 
 import { getIpfsExpectedBootstrapNodes, getPinRequestConfig } from './config';
 import IpfsManager from './ipfs-manager';

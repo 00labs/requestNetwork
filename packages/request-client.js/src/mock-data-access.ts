@@ -1,5 +1,5 @@
-import { DataAccess } from '@requestnetwork/data-access';
-import { StorageTypes } from '@requestnetwork/types';
+import { DataAccess } from '@huma-shan/data-access';
+import { StorageTypes } from '@huma-shan/types';
 
 /**
  * Mock Data access that bypasses the initialization.

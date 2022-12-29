@@ -1,4 +1,4 @@
-import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@huma-shan/types';
 import { deepCopy } from '@requestnetwork/utils';
 import CancelAction from '../../../src/actions/cancel';
 

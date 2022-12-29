@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { IPaymentRetriever } from '../types';
 import { ethers } from 'ethers';
 import { getDefaultProvider } from '@requestnetwork/utils';

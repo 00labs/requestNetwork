@@ -1,15 +1,10 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { deepCopy } from '@requestnetwork/utils';
 
 import { approveErc20ForSwapWithConversionIfNeeded } from '../../src/payment/swap-conversion-erc20';
-import { ERC20, ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20, ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { swapToPayAnyToErc20Request } from '../../src/payment/swap-any-to-erc20';
 import { IConversionSettings } from '../../src/payment/settings';
 

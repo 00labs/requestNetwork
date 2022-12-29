@@ -1,5 +1,5 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { erc20ProxyArtifact } from '@requestnetwork/smart-contracts';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
+import { erc20ProxyArtifact } from '@huma-shan/smart-contracts';
 import ProxyInfoRetriever from './proxy-info-retriever';
 import { TheGraphInfoRetriever } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';

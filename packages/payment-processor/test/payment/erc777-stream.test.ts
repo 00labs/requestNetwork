@@ -1,12 +1,7 @@
 import { Wallet, providers, Contract, utils as ethersUtils, BigNumber } from 'ethers';
 import { Framework } from '@superfluid-finance/sdk-core';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { deepCopy } from '@requestnetwork/utils';
 
 import {

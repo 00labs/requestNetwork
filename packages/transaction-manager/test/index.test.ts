@@ -3,7 +3,7 @@ import { normalizeKeccak256Hash } from '@requestnetwork/utils';
 
 import { EventEmitter } from 'events';
 
-import { DataAccessTypes, EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
+import { DataAccessTypes, EncryptionTypes, TransactionTypes } from '@huma-shan/types';
 
 import { TransactionManager } from '../src/index';
 import TransactionsFactory from '../src/transactions-factory';

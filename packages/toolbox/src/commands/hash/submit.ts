@@ -4,8 +4,8 @@
 import { InferArgs } from '../../types';
 import yargs from 'yargs';
 import { getWallet } from '../transaction/utils';
-import { EthereumTransactionSubmitter, IpfsStorage } from '@requestnetwork/ethereum-storage';
-import { StorageTypes } from '@requestnetwork/types';
+import { EthereumTransactionSubmitter, IpfsStorage } from '@huma-shan/ethereum-storage';
+import { StorageTypes } from '@huma-shan/types';
 
 export const command = 'hash submit <ipfsHash>';
 export const describe = 'Forces the submission of an IPFS hash to the Request HashStorage contract';

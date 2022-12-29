@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes, ExtensionTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, ExtensionTypes } from '@huma-shan/types';
 
 import * as DataBTCCreate from './utils/payment-network/bitcoin/generator-data-create';
 import * as DataDeclarativeCreate from './utils/payment-network/any/generator-data-create';

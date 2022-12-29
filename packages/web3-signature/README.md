@@ -22,7 +22,7 @@ npm install @requestnetwork/web3-signature
 import {
   IdentityTypes,
   SignatureTypes
-} from '@requestnetwork/types'
+} from '@huma-shan/types'
 
 import Web3SignatureProvider from '@requestnetwork/web3-signature'
 

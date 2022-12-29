@@ -10,7 +10,7 @@ import {
   BatchConversionPayments__factory,
   BatchConversionPayments,
 } from '../../src/types';
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { BigNumber, ContractTransaction, Signer } from 'ethers';
 import { expect } from 'chai';
 import { CurrencyManager } from '@requestnetwork/currency';

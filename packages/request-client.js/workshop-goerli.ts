@@ -8,12 +8,12 @@ import {
   mintErc20TransferrableReceivable,
   getReceivableTokenIdForRequest,
   payRequest,
-} from '@requestnetwork/payment-processor';
+} from '@huma-shan/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
-import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { TestERC20__factory } from '@huma-shan/smart-contracts/types';
 
-import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
@@ -29,12 +29,19 @@ const provider = new ethers.providers.JsonRpcProvider(
 const localToken = '0xf17FF940864351631b1be3ac03702dEA085ba51c';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
+<<<<<<< HEAD
 const RECEIVABLE_ADDR = '0xF8C9a2Df5C2808F97f7d56A214373340cbB66832';
+=======
+const RECEIVABLE_ADDR = '0x2E8045D885e9e4F339122304D9e591c9E1c5a2Af';
+>>>>>>> d9090507 (Revert "Delete testing files")
 const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 const PAYEE_ADDRESS = '0x3BD44d4ee0E914E7ADE18a51A80f597E153aD343';
 const PAYEE_PRIVATE_KEY = '0xa8e85c1c3bdcb3221493d1f43dfd9e7dd966c799fd46bd0d6a45a97f9df59adb';
+<<<<<<< HEAD
 const payeeWallet = new Wallet(PAYEE_PRIVATE_KEY, provider);
+=======
+>>>>>>> d9090507 (Revert "Delete testing files")
 
 const PAYER_ADDRESS = '0x4A01c67879C8188F481Ac932c938b73D9373E479';
 const PAYER_PRIVATE_KEY = '0x7be5e6a94f10886842322e564b3c907c09b878c88a63a9945a89d87a4413c0d8';
@@ -103,7 +110,11 @@ const requestCreateParams = {
   signer: payeeIdentity,
 };
 
+<<<<<<< HEAD
 function sleep(ms: any) {
+=======
+function sleep(ms) {
+>>>>>>> d9090507 (Revert "Delete testing files")
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
@@ -127,7 +138,11 @@ function sleep(ms: any) {
   // ✏️ Mint the receivable
   const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(
     requestData,
+<<<<<<< HEAD
     payeeWallet,
+=======
+    payerPaymentWallet,
+>>>>>>> d9090507 (Revert "Delete testing files")
   );
   console.log(`Mint tx: ${mintTx.hash}`);
   await mintTx.wait(1);

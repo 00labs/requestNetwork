@@ -15,7 +15,7 @@ import { ChainlinkConversionPath } from '../src/types/ChainlinkConversionPath';
 // @ts-ignore Cannot find module
 import { EthConversionProxy } from '../src/types/EthConversionProxy';
 import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { HardhatRuntimeEnvironmentExtended } from '../scripts-create2/types';
 import { computeCreate2DeploymentAddress } from '../scripts-create2/compute-one-address';
 

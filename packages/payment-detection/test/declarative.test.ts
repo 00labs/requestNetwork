@@ -4,7 +4,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import { DeclarativePaymentDetector } from '../src/declarative';
 import { mockAdvancedLogicBase } from './utils';

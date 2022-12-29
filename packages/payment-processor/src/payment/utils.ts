@@ -1,10 +1,10 @@
 import { ethers, Signer, providers, BigNumber, BigNumberish, ContractTransaction } from 'ethers';
 
-import { getDefaultProvider, getPaymentReference } from '@requestnetwork/payment-detection';
-import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { getDefaultProvider, getPaymentReference } from '@huma-shan/payment-detection';
+import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import { getCurrencyHash } from '@requestnetwork/currency';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 /** @constant MAX_ALLOWANCE set to the max uint256 value */
 export const MAX_ALLOWANCE = BigNumber.from(2).pow(256).sub(1);

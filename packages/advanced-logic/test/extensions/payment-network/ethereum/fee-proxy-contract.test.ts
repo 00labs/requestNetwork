@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import EthereumFeeProxyContract from '../../../../src/extensions/payment-network/ethereum/fee-proxy-contract';
 

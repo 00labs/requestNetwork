@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, RequestLogicTypes } from '@huma-shan/types';
 import Action from './action';
 import Request from './request';
 

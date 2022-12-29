@@ -2,7 +2,7 @@
 /* eslint-disable no-magic-numbers */
 import { EscrowERC20InfoRetriever } from '../../src/erc20/escrow-info-retriever';
 import { ethers } from 'ethers';
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 
 const escrowContractAddress = '0xF08dF3eFDD854FEDE77Ed3b2E515090EEe765154';
 const paymentReferenceMock = 'aaaa';

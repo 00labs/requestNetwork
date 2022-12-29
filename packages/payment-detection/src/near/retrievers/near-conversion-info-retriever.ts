@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { CurrencyDefinition } from '@requestnetwork/currency';
 import { NearInfoRetriever } from './near-info-retriever';
 

@@ -1,8 +1,8 @@
 import { ContractTransaction, Signer, providers, constants, BigNumber } from 'ethers';
-import { batchPaymentsArtifact } from '@requestnetwork/smart-contracts';
-import { BatchPayments__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes } from '@requestnetwork/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { batchPaymentsArtifact } from '@huma-shan/smart-contracts';
+import { BatchPayments__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes } from '@huma-shan/types';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 import { ITransactionOverrides } from './transaction-overrides';
 import {
   comparePnTypeAndVersion,

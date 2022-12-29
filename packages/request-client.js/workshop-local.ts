@@ -8,14 +8,14 @@ import {
   approveErc20IfNeeded,
   mintErc20TransferrableReceivable,
   getReceivableTokenIdForRequest,
-} from '@requestnetwork/payment-processor';
+} from '@huma-shan/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
-import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { TestERC20__factory } from '@huma-shan/smart-contracts/types';
 
-import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contracts/types';
 
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@huma-shan/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
@@ -41,9 +41,12 @@ const payerIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/0");
 const payerPaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/1").connect(provider);
 
 const payeeIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2");
+<<<<<<< HEAD
 const payeeProviderWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2").connect(provider);
 
 const payee2IdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/3");
+=======
+>>>>>>> d9090507 (Revert "Delete testing files")
 
 //#endregion
 
@@ -97,7 +100,11 @@ const paymentNetwork: RequestNetwork.Types.Payment.PaymentNetworkCreateParameter
 // ✏️ The main request info: 1 TestERC20 from Payee to Payer
 const requestInfo: RequestNetwork.Types.IRequestInfo = {
   currency: 'ERC20',
+<<<<<<< HEAD
   expectedAmount: '2',
+=======
+  expectedAmount: '1',
+>>>>>>> d9090507 (Revert "Delete testing files")
   payee: payeeIdentity,
   payer: payerIdentity,
 };
@@ -141,7 +148,11 @@ function sleep(ms: any) {
   // ✏️ Pay the request
   await approveErc20IfNeeded(requestData, payerPaymentWallet.address, payerPaymentWallet);
 
+<<<<<<< HEAD
   const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet, 1);
+=======
+  const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);
+>>>>>>> d9090507 (Revert "Delete testing files")
   console.log(`Payment tx: ${tx.hash}`);
   await tx.wait(1);
   console.log(`After payment`);
@@ -161,6 +172,7 @@ function sleep(ms: any) {
 
   await sleep(5000);
 
+<<<<<<< HEAD
   console.log('Balance before refresh: ', request.getData().balance?.balance);
   await request.refresh();
   console.log('Balance after: ', request.getData().balance?.balance);
@@ -200,4 +212,9 @@ function sleep(ms: any) {
   console.log('Balance before refresh: ', request.getData().balance?.balance);
   await request.refresh();
   console.log('Balance after: ', request.getData().balance?.balance);
+=======
+  console.log('Balance1: ', request.getData().balance?.balance);
+  await request.refresh();
+  console.log('Balance2: ', request.getData().balance?.balance);
+>>>>>>> d9090507 (Revert "Delete testing files")
 })();

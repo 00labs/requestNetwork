@@ -1,5 +1,5 @@
 import { FeeReferenceBasedPaymentNetwork } from './fee-reference-based';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import { InvalidPaymentAddressError, UnsupportedNetworkError } from './address-based';
 
 export default abstract class AnyToNativeTokenPaymentNetwork extends FeeReferenceBasedPaymentNetwork {

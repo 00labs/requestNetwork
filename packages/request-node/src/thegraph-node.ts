@@ -1,13 +1,13 @@
 import KeyvFile from 'keyv-file';
 import { providers, Wallet } from 'ethers';
 import { NonceManager } from '@ethersproject/experimental';
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 
 import { RequestNodeBase } from './requestNodeBase';
 import * as config from './config';
 import { getIpfsStorage } from './storageUtils';
 import { TheGraphDataAccess } from '@requestnetwork/thegraph-data-access';
-import { EthereumStorageEthers } from '@requestnetwork/ethereum-storage';
+import { EthereumStorageEthers } from '@huma-shan/ethereum-storage';
 import { SimpleLogger } from '@requestnetwork/utils';
 
 const getNetworkFromId = (networkId: number) => {

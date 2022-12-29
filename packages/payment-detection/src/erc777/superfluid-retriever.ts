@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { FlowUpdatedEvent, SentEvent } from '../thegraph/generated/graphql-superfluid';
 import {
   getTheGraphSuperfluidClient,

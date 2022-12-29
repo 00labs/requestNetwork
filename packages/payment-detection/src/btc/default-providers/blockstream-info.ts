@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import Axios from 'axios';
 import { BigNumber } from 'ethers';
 import { retry } from '@requestnetwork/utils';

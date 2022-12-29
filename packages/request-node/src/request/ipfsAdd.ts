@@ -1,5 +1,5 @@
-import { Block } from '@requestnetwork/data-access';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { Block } from '@huma-shan/data-access';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 import { Request, Response } from 'express';
 
 import { StatusCodes } from 'http-status-codes';

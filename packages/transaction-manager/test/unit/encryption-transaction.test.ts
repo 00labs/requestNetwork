@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { EncryptionTypes } from '@requestnetwork/types';
+import { EncryptionTypes } from '@huma-shan/types';
 
 import EncryptedTransaction from '../../src/encrypted-transaction';
 import { encrypt, normalizeKeccak256Hash } from '@requestnetwork/utils';

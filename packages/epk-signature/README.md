@@ -18,7 +18,7 @@ npm install @requestnetwork/epk-signature
 ## Usage
 
 ```javascript
-import { IdentityTypes,  SignatureTypes } from '@requestnetwork/types'
+import { IdentityTypes,  SignatureTypes } from '@huma-shan/types'
 
 import EthereumPrivateKeySignatureProvider from '@requestnetwork/epk-signature'
 

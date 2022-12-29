@@ -28,15 +28,15 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@requestnetwork/data-access": "0.27.0",
+    "@huma-shan/data-access": "0.28.6",
     "@requestnetwork/epk-decryption": "0.3.34",
     "@requestnetwork/epk-signature": "0.5.35",
     "@requestnetwork/multi-format": "0.15.10",
-    "@requestnetwork/payment-processor": "0.38.0",
-    "@requestnetwork/request-client.js": "0.40.0",
-    "@requestnetwork/request-logic": "0.26.10",
-    "@requestnetwork/transaction-manager": "0.27.0",
-    "@requestnetwork/types": "0.36.0",
+    "@huma-shan/payment-processor": "0.39.6",
+    "@huma-shan/request-client.js": "0.41.6",
+    "@huma-shan/request-logic": "0.28.6",
+    "@huma-shan/transaction-manager": "0.28.6",
+    "@huma-shan/types": "0.37.6",
     "@requestnetwork/utils": "0.36.0",
     "ethers": "5.5.1",
     "tslib": "2.3.1"

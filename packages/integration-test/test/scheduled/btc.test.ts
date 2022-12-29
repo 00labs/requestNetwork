@@ -1,6 +1,6 @@
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestNetwork } from '@requestnetwork/request-client.js';
-import { PaymentTypes, SignatureTypes, ExtensionTypes } from '@requestnetwork/types';
+import { RequestNetwork } from '@huma-shan/request-client.js';
+import { PaymentTypes, SignatureTypes, ExtensionTypes } from '@huma-shan/types';
 import { payee, requestData, testnetRequestData } from './btc-test-data';
 
 const signatureProvider = new EthereumPrivateKeySignatureProvider({

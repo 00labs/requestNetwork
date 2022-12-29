@@ -8,7 +8,7 @@ import {
   getSignerAndGasFees,
 } from './adminTasks';
 import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 /**
  * Updates the values of the batch fees of the BatchConversionPayments contract, if needed.

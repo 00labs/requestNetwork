@@ -1,7 +1,7 @@
 import { ContractTransaction, Signer, BigNumberish, providers, BigNumber } from 'ethers';
 
-import { AnyToERC20PaymentDetector } from '@requestnetwork/payment-detection';
-import { ClientTypes } from '@requestnetwork/types';
+import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
+import { ClientTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import { getProvider, getSigner, getProxyAddress } from './utils';

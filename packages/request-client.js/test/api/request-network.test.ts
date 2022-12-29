@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes, SignatureTypes, TransactionTypes } from '@requestnetwork/types';
+import { DataAccessTypes, SignatureTypes, TransactionTypes } from '@huma-shan/types';
 
 import RequestNetwork from '../../src/api/request-network';
 

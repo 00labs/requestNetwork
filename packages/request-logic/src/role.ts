@@ -1,4 +1,4 @@
-import { IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { areEqualIdentities } from '@requestnetwork/utils';
 
 /**

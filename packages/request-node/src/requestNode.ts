@@ -1,5 +1,5 @@
-import { DataAccess, TransactionIndex } from '@requestnetwork/data-access';
-import { LogTypes } from '@requestnetwork/types';
+import { DataAccess, TransactionIndex } from '@huma-shan/data-access';
+import { LogTypes } from '@huma-shan/types';
 
 import KeyvFile from 'keyv-file';
 

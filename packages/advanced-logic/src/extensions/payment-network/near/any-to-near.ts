@@ -1,5 +1,5 @@
 import { ICurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import AnyToNativeTokenPaymentNetwork from '../any-to-native';
 
 const CURRENT_VERSION = '0.1.0';

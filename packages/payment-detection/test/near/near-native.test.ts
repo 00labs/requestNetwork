@@ -1,10 +1,10 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { CurrencyManager } from '@requestnetwork/currency';
 import { PaymentNetworkFactory } from '../../src';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
 import { NearInfoRetriever, NearNativeTokenPaymentDetector } from '../../src/near';
 import { deepCopy } from 'ethers/lib/utils';
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
+import { AdvancedLogic } from '@huma-shan/advanced-logic';
 
 const currencyManager = CurrencyManager.getDefault();
 const advancedLogic = new AdvancedLogic(currencyManager);

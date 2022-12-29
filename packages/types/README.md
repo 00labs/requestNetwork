@@ -1,18 +1,18 @@
-# @requestnetwork/types
+# @huma-shan/types
 
-`@requestnetwork/types` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/types` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is the collection of typescript types shared across @requestnetwork packages.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/types --save-dev
+npm install @huma-shan/types --save-dev
 ```
 
 ## Usage
 
 ```javascript
-import { IdentityTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureTypes } from '@huma-shan/types';
 
 const signatureMethod = SignatureTypes.REQUEST_SIGNATURE_METHOD.ECDSA;
 const identityType = IdentityTypes.REQUEST_IDENTITY_TYPE.ETHEREUM_ADDRESS;

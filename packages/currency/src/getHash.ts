@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { last20bytesOfNormalizedKeccak256Hash } from '@requestnetwork/utils';
 
 export const getHash = (curr: RequestLogicTypes.ICurrency): string => {

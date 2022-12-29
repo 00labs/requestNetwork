@@ -4,7 +4,7 @@ import {
   DecryptionProviderTypes,
   EncryptionTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { normalizeKeccak256Hash } from '@requestnetwork/utils';
 
 import { EventEmitter } from 'events';

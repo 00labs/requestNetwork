@@ -1,4 +1,4 @@
-import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@huma-shan/types';
 
 import { ecSign, getAddressFromPrivateKey, normalizeKeccak256Hash } from '@requestnetwork/utils';
 

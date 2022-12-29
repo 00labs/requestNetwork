@@ -1,17 +1,9 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
 import MultiFormat from '@requestnetwork/multi-format';
-import { Request, RequestNetwork, Types } from '@requestnetwork/request-client.js';
-import {
-  IdentityTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-  ExtensionTypes,
-} from '@requestnetwork/types';
-import {
-  payRequest,
-  approveErc20ForProxyConversionIfNeeded,
-} from '@requestnetwork/payment-processor';
+import { Request, RequestNetwork, Types } from '@huma-shan/request-client.js';
+import { IdentityTypes, PaymentTypes, RequestLogicTypes, ExtensionTypes } from '@huma-shan/types';
+import { payRequest, approveErc20ForProxyConversionIfNeeded } from '@huma-shan/payment-processor';
 import { CurrencyInput, CurrencyManager } from '@requestnetwork/currency';
 
 import { Wallet, providers, BigNumber } from 'ethers';

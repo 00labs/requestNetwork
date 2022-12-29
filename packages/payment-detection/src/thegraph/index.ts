@@ -20,28 +20,27 @@ export type TheGraphClientOptions = {
 };
 
 export const getTheGraphClient = (
-  _network: string,
+  network: string,
   options?: TheGraphClientOptions,
 ): TheGraphClient => {
-  // const baseUrl = options?.baseUrl || network === 'private' ? 'http://localhost:8000' : BASE_URL;
   // Note: it is also possible to use the IPFS hash of the subgraph
   //  eg. /subgraphs/id/QmcCaSkefrmhe4xQj6Y6BBbHiFkbrn6UGDEBUWER7nt399
   //  which is a better security but would require an update of the
   //  library each time the subgraph is updated, which isn't ideal
   //  for early testing.
-  // const url = `${baseUrl}/subgraphs/name/requestnetwork/request-payments-${network}`;
-  // network;
   let url;
-  switch (_network) {
+  switch (network) {
     case 'goerli':
       url = 'https://api.studio.thegraph.com/query/35118/requestnetwork-nft/0.0.5';
       break;
     case 'matic':
       url = 'https://api.thegraph.com/subgraphs/name/00labs/huma-rn-test-polygon';
       break;
-    default:
-      throw 'No network';
-      break;
+    default: {
+      const baseUrl =
+        options?.baseUrl || network === 'private' ? 'http://localhost:8000' : BASE_URL;
+      url = `${baseUrl}/subgraphs/name/requestnetwork/request-payments-${network}`;
+    }
   }
 
   return getSdk(new GraphQLClient(url, options));

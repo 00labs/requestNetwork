@@ -18,7 +18,7 @@ import { EthFeeProxyPaymentDetector } from './eth/fee-proxy-detector';
 import { AnyToERC20PaymentDetector } from './any/any-to-erc20-proxy';
 import { NearNativeTokenPaymentDetector } from './near-detector';
 import { AnyToEthFeeProxyPaymentDetector } from './any/any-to-eth-proxy';
-import { ERC20NFTPaymentDetector } from './erc20/nft-contract';
+import { ERC20TransferrableReceivablePaymentDetector } from './erc20/transferrable-receivable';
 
 const PN_ID = PaymentTypes.PAYMENT_NETWORK_ID;
 
@@ -42,7 +42,7 @@ const supportedPaymentNetwork: ISupportedPaymentNetworkByCurrency = {
       [PN_ID.ERC20_ADDRESS_BASED]: ERC20AddressBasedPaymentDetector,
       [PN_ID.ERC20_PROXY_CONTRACT]: ERC20ProxyPaymentDetector,
       [PN_ID.ERC20_FEE_PROXY_CONTRACT]: ERC20FeeProxyPaymentDetector,
-      [PN_ID.ERC20_NFT_CONTRACT]: ERC20NFTPaymentDetector,
+      [PN_ID.ERC20_TRANSFERRABLE_RECEIVABLE]: ERC20TransferrableReceivablePaymentDetector,
     },
   },
   ETH: {

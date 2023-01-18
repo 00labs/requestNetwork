@@ -40,7 +40,6 @@ export default class SmartContractManager {
   public eth: any;
   public requestHashStorage: any;
   public requestHashSubmitter: any;
-  public invoiceNFT: any;
 
   /**
    * Handles the block numbers and blockTimestamp
@@ -55,7 +54,6 @@ export default class SmartContractManager {
   protected networkName = '';
   protected hashStorageAddress: string;
   protected hashSubmitterAddress: string;
-  protected invoiceNFTAddress: string;
 
   // Block where the contract has been created
   // This value is stored in config file for each network
@@ -79,9 +77,6 @@ export default class SmartContractManager {
    * Delay between retries for web3 API calls
    */
   private retryDelay: number | undefined;
-
-  private maxFeePerGas: BigNumber;
-  private maxPriorityFeePerGas: BigNumber;
 
   /**
    * Handler to get gas price
@@ -154,8 +149,6 @@ export default class SmartContractManager {
       this.networkName,
     );
 
-    this.invoiceNFTAddress = SmartContracts.invoiceNFTArtifact.getAddress(this.networkName);
-
     // Initialize smart contract instance
     this.requestHashStorage = new this.eth.Contract(
       SmartContracts.requestHashStorageArtifact.getContractAbi(),
@@ -164,10 +157,6 @@ export default class SmartContractManager {
     this.requestHashSubmitter = new this.eth.Contract(
       SmartContracts.requestHashSubmitterArtifact.getContractAbi(),
       this.hashSubmitterAddress,
-    );
-    this.invoiceNFT = new this.eth.Contract(
-      SmartContracts.invoiceNFTArtifact.getContractAbi(),
-      this.invoiceNFTAddress,
     );
 
     this.timeout = web3Connection.timeout || config.getDefaultEthereumProviderTimeout();
@@ -264,151 +253,6 @@ export default class SmartContractManager {
   }
 
   /**
-   * Create a NFT
-   *
-   * @param recipient the NFT owner
-   * @param assetToken erc20 token address
-   * @param tokenId NFT id, 64 bytes data
-   * @param metadata metadata string
-   * @param gasPrice Replace the default gas price
-   */
-  public async mintInvoiceNFT(
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-    gasPrice?: BigNumber,
-    nonce?: number,
-  ): Promise<any> {
-    // Get the account for the transaction
-    const account = await this.getMainAccount();
-
-    // Handler to get gas price
-    const gasPriceDefiner = new GasPriceDefiner();
-
-    // Determines the gas price to use
-    // If the gas price is provided as a parameter, we use this value
-    // If the gas price is not provided and we use mainnet, we determine it from gas price api providers
-    // We use the fast value provided by the api providers
-    // Otherwise, we use default value from config
-    const gasPriceToUse =
-      gasPrice ||
-      (await gasPriceDefiner.getGasPrice(StorageTypes.GasPriceType.FAST, this.networkName));
-
-    // Send transaction to contract
-    // TODO(PROT-181): Implement a log manager for the library
-    // use it for the different events (error, transactionHash, receipt and confirmation)
-    return new Promise((resolve, reject) => {
-      // This boolean is set to true once the promise has been resolved
-      // When set to true, we use it to ignore next confirmation event function call
-      let confirmationResolved = false;
-
-      // Keep the transaction hash for future needs
-      let transactionHash = '';
-      const transactionParameters = {
-        from: account,
-        gas: '500000',
-        maxFeePerGas: this.maxFeePerGas,
-        maxPriorityFeePerGas: this.maxPriorityFeePerGas,
-        nonce,
-      };
-
-      this.invoiceNFT.methods
-        .mint(recipient, tokenId, assetToken, metadata)
-        .send(transactionParameters)
-        .on('transactionHash', async (hash: any) => {
-          this.logger.debug(
-            `mintInvoiceNFT transactionCount: ${await this.eth.getTransactionCount(
-              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
-              'pending',
-            )} ts: ${Date.now()}`,
-          );
-
-          // Store the transaction hash in case we need it in the future
-          transactionHash = hash;
-          this.logger.debug(
-            `Ethereum mintNFT transaction: ${JSON.stringify({
-              hash,
-              ...transactionParameters,
-            })}`,
-          );
-        })
-        .on('error', async (transactionError: string) => {
-          this.logger.debug(
-            `mintInvoiceNFT transactionCount: ${await this.eth.getTransactionCount(
-              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
-              'pending',
-            )} ts: ${Date.now()}`,
-          );
-
-          // If failed because of polling timeout, try to resubmit the transaction with more gas
-          if (
-            transactionError.toString().includes(TRANSACTION_POLLING_TIMEOUT) &&
-            transactionHash
-          ) {
-            // If we didn't set the nonce, find the current transaction nonce
-            if (!nonce) {
-              const tx = await this.eth.getTransaction(transactionHash);
-              nonce = tx.nonce;
-            }
-
-            // Get the new gas price for the transaction
-            const newGasPrice = await gasPriceDefiner.getGasPrice(
-              StorageTypes.GasPriceType.FAST,
-              this.networkName,
-            );
-
-            // If the new gas price is higher than the previous, resubmit the transaction
-            if (newGasPrice.gt(gasPriceToUse)) {
-              // Retry transaction with the new gas price and propagate back the result
-              try {
-                resolve(
-                  await this.mintInvoiceNFT(
-                    recipient,
-                    assetToken,
-                    tokenId,
-                    metadata,
-                    newGasPrice,
-                    nonce,
-                  ),
-                );
-              } catch (error) {
-                reject(error);
-              }
-            } else {
-              // The transaction is stuck, but it doesn't seem to be a gas issue. Nothing better to do than to wait...
-              this.logger.warn(
-                `Transaction ${transactionHash} hasn't been mined for more than ${config.getTransactionPollingTimeout()} seconds. It may be stuck.`,
-              );
-            }
-          } else {
-            const logObject = JSON.stringify({
-              recipient,
-              assetToken,
-              tokenId,
-              metadata,
-              from: account,
-              gasPrice: gasPriceToUse,
-              nonce,
-            });
-            this.logger.error(`Failed transaction: ${logObject}`);
-            reject(Error(`Ethereum transaction error:  ${transactionError}`));
-          }
-        })
-        .on('confirmation', (confirmationNumber: number, receiptAfterConfirmation: any) => {
-          if (!confirmationResolved) {
-            this.logger.info(
-              `Confirmation nb ${confirmationNumber} for mint NFT: ${receiptAfterConfirmation.transactionHash}`,
-            );
-
-            confirmationResolved = true;
-            resolve(true);
-          }
-        });
-    });
-  }
-
-  /**
    * Adds hash to smart contract from content hash and content feesParameters
    * @param contentHash Hash of the content to store, this hash should be used to retrieve the content
    * @param feesParameters parameters used to compute storage fee
@@ -460,23 +304,14 @@ export default class SmartContractManager {
       const transactionParameters = {
         from: account,
         gas: '100000',
-        maxFeePerGas: this.maxFeePerGas,
-        maxPriorityFeePerGas: this.maxPriorityFeePerGas,
+        gasPrice: gasPriceToUse,
         nonce,
         value: fee,
       };
-
       this.requestHashSubmitter.methods
         .submitHash(contentHash, feesParametersAsBytes)
         .send(transactionParameters)
-        .on('transactionHash', async (hash: any) => {
-          this.logger.debug(
-            `addHashAndSizeToEthereum transactionCount: ${await this.eth.getTransactionCount(
-              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
-              'pending',
-            )}`,
-          );
-
+        .on('transactionHash', (hash: any) => {
           // Store the transaction hash in case we need it in the future
           transactionHash = hash;
           this.logger.debug(
@@ -487,13 +322,6 @@ export default class SmartContractManager {
           );
         })
         .on('error', async (transactionError: string) => {
-          this.logger.debug(
-            `addHashAndSizeToEthereum transactionCount: ${await this.eth.getTransactionCount(
-              '0x627306090abab3a6e1400e9345bc60c78a8bef57',
-              'pending',
-            )} ts: ${Date.now()}`,
-          );
-
           // If failed because of polling timeout, try to resubmit the transaction with more gas
           if (
             transactionError.toString().includes(TRANSACTION_POLLING_TIMEOUT) &&
@@ -683,7 +511,6 @@ export default class SmartContractManager {
       currentProvider: this.eth.currentProvider.host,
       hashStorageAddress: this.hashStorageAddress,
       hashSubmitterAddress: this.hashSubmitterAddress,
-      invoiceNFTAddress: this.invoiceNFTAddress,
       maxConcurrency: this.maxConcurrency,
       maxRetries: this.maxRetries,
       networkName: this.networkName,

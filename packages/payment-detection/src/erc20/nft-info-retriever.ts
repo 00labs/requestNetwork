@@ -95,7 +95,8 @@ export default class NFTERC20InfoRetriever
       // Keeps only the log with the right token and the right destination address
       .filter(
         ({ parsedLog }) =>
-          parsedLog.assetAddress.toLowerCase() === this.tokenContractAddress.toLowerCase(),
+          parsedLog.assetAddress.toLowerCase() === this.tokenContractAddress.toLowerCase() &&
+          parsedLog.to.toLowerCase() === this.toAddress.toLowerCase(),
       )
       // Creates the balance events
       .map(async ({ parsedLog, blockNumber, transactionHash }) => ({

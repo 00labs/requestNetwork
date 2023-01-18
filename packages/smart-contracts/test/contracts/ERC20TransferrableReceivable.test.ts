@@ -12,7 +12,7 @@ import { BigNumber as BN } from 'ethers';
 
 const BASE_DECIMAL = BN.from(10).pow(BN.from(18));
 
-describe.only('contract: ERC20TransferrableReceivable', () => {
+describe('contract: ERC20TransferrableReceivable', () => {
   let deployer: Signer;
   let user1: Signer, user1Addr: string;
   let user2: Signer, user2Addr: string;

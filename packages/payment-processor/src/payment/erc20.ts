@@ -43,7 +43,7 @@ export async function payErc20Request(
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_PROXY_CONTRACT) {
     return payErc20ProxyRequest(request, signerOrProvider, amount, overrides);
   }
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
     return payErc20NFTRequest(request, signerOrProvider, amount, overrides);
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
@@ -248,7 +248,7 @@ export function _getErc20PaymentUrl(
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
     return _getErc20FeeProxyPaymentUrl(request, amount);
   }
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
     return _getErc20NFTPaymentUrl(request, amount);
   }
   throw new Error('Not a supported ERC20 proxy payment network request');
@@ -278,7 +278,7 @@ function getProxyAddress(request: ClientTypes.IRequestData): string {
       Erc20PaymentNetwork.ERC20FeeProxyPaymentDetector.getDeploymentInformation,
     );
   }
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
     return genericGetProxyAddress(
       request,
       Erc20PaymentNetwork.ERC20NFTPaymentDetector.getDeploymentInformation,

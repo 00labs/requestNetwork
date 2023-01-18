@@ -3,12 +3,16 @@ import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package
-import { payRequest, approveErc20IfNeeded } from '@requestnetwork/payment-processor';
+import {
+  payRequest,
+  approveErc20IfNeeded,
+  mintErc20TransferrableReceivable,
+} from '@requestnetwork/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 
-import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
@@ -21,8 +25,8 @@ const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Prov
 const localToken = '0x9FBDa871d559710256a2502A2517b794B482Db40';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
-const INVOICE_NFT_ADDR = '0x2e335F247E91caa168c64b63104C4475b2af3942';
-const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
+const RECEIVABLE_ADDR = '0x2e335F247E91caa168c64b63104C4475b2af3942';
+const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 //#endregion
 
@@ -82,7 +86,7 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 //#region Request setup
 // ✏️ Payment network information
 const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
-  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT,
+  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
     // paymentAddress: payeePaymentWallet.address,
   },
@@ -105,7 +109,6 @@ const requestCreateParams = {
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 (async () => {
   console.log(await erc20.symbol());
-
   console.log('payee address: ' + payeeIdentity.value);
 
   // ✏️ Create the request
@@ -113,17 +116,23 @@ const requestCreateParams = {
   console.log(`request ${request.requestId} created`);
   await request.waitForConfirmation();
   console.log(`request ${request.requestId} confirmed`);
+  const requestData = request.getData();
 
-  // ✏️ Accept the request
+  // ✏️ Mint the receivable
+  const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(
+    requestData,
+    payerPaymentWallet,
+  );
+  console.log(`Mint tx: ${mintTx.hash}`);
+  await mintTx.wait(1);
+  console.log(`After mint`);
 
   console.log(`Before payment`);
   console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
-
   // ✏️ Pay the request
-  await approveErc20IfNeeded(request.getData(), payerPaymentWallet.address, payerPaymentWallet);
+  await approveErc20IfNeeded(requestData, payerPaymentWallet.address, payerPaymentWallet);
 
-  const requestData = request.getData();
   const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);
   console.log(`Payment tx: ${tx.hash}`);
   await tx.wait(1);
@@ -134,13 +143,13 @@ const requestCreateParams = {
   console.log('Balance: ', request.getData().balance?.balance);
 
   console.log('payee address: ' + payeeIdentity.value);
-  console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
+  console.log('payee receivables: ' + (await invoiceReceivable.balanceOf(payeeIdentity.value)));
 
   let reqIdObj = MultiFormat.deserialize(request.requestId);
   const tokenId = reqIdObj.value;
 
-  console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
-  const metadataBase64 = await invoiceNFT.tokenURI(tokenId);
+  console.log(`${tokenId} owner: ${await invoiceReceivable.ownerOf(tokenId)}`);
+  const metadataBase64 = await invoiceReceivable.tokenURI(tokenId);
   const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
   console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
   reqIdObj = { value: tokenId, type: metadata };

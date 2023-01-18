@@ -6,7 +6,7 @@ const cors = require('cors');
 import * as RequestNetwork from './dist';
 import { ethers, BigNumber as BN, BigNumber } from 'ethers';
 import {
-  InvoiceNFT__factory,
+  ERC20TransferrableReceivable__factory,
   IERC20Metadata__factory,
 } from '@requestnetwork/smart-contracts/types';
 import MultiFormat from '@requestnetwork/multi-format';
@@ -21,11 +21,11 @@ const WEB3_PROVIDER_URL = process.env.WEB3_PROVIDER_URL;
 const provider = new ethers.providers.JsonRpcProvider(
   WEB3_PROVIDER_URL,
 ) as ethers.providers.Provider;
-const INVOICE_NFT_ADDR = process.env.INVOICE_NFT_ADDRESS;
-if (!INVOICE_NFT_ADDR) {
-  throw new Error('Empty Invoice NFT address');
+const RECEIVABLE_ADDR = process.env.RECEIVABLE_ADDRESS;
+if (!RECEIVABLE_ADDR) {
+  throw new Error('Empty Invoice Receivable address');
 }
-const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
+const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 const server = app.listen(port, () => {
   console.log(`app listening on port ${port}`);
@@ -78,7 +78,7 @@ app.get('/invoice', async function (req, res) {
   let tId: BigNumber;
   try {
     tId = BN.from(tokenId);
-    const metadataBase64 = await invoiceNFT.tokenURI(tId);
+    const metadataBase64 = await invoiceReceivable.tokenURI(tId);
     const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
     const reqIdObj = { value: tId.toHexString(), type: metadata };
     requestId = MultiFormat.serialize(reqIdObj);
@@ -107,7 +107,7 @@ app.get('/invoice', async function (req, res) {
   try {
     await request.refresh();
     const response = await parseInvoiceResponseFromRequestData(request.getData());
-    const owner = await invoiceNFT.ownerOf(tId);
+    const owner = await invoiceReceivable.ownerOf(tId);
     response.owner = owner;
     res.json(response);
   } catch (e) {

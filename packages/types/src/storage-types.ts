@@ -4,12 +4,6 @@ import { BigNumber } from 'ethers';
 
 /** Interface of the storage */
 export interface IStorage {
-  tokenizeRequest?: (
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-  ) => Promise<any>;
   initialize: () => Promise<void>;
   append: (data: string) => Promise<IAppendResult>;
   read: (dataId: string) => Promise<IEntry>;
@@ -146,7 +140,6 @@ export enum EthereumNetwork {
   KOVAN = 42,
   SOKOL = 77,
   XDAI = 100,
-  MATIC = 137,
 }
 
 /** Information to connect to a web3 provider */

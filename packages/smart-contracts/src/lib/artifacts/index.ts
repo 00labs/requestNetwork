@@ -19,6 +19,6 @@ export * from './RequestHashStorage';
 export * from './RequestHashSubmitter';
 export * from './RequestDeployer';
 /**
- * Invoice NFT
+ * ERC20 Transferrable Receivable
  */
-export * from './InvoiceNFT';
+export * from './ERC20TransferrableReceivable';

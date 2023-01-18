@@ -3,12 +3,6 @@ import * as Encryption from './encryption-types';
 
 /** Transaction Manager interface */
 export interface ITransactionManager {
-  tokenizeRequest?: (
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-  ) => Promise<any>;
   persistTransaction: (
     transactionData: ITransactionData,
     channelId: string,

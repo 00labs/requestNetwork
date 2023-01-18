@@ -27,11 +27,6 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
         bytes indexed paymentReference
     );
 
-    error zeroAddressProvided(); // 0x5ff75ab0
-    error tokenIdAlreadyExists();
-    error zeroAmountProvided(); // 0x71799f2a
-    error noAssetToken();
-
     constructor(string memory name, string memory symbol) ERC721(name, symbol) {
     }
 
@@ -49,7 +44,7 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
         uint256 amount,
         bytes calldata paymentReference
     ) external {
-        if (amount == 0) revert zeroAmountProvided();
+        require(amount != 0, "Zero amount provided");
         address owner = ownerOf(tokenId);
         _paymentId.increment();
         address assetAddress = assetToken[tokenId];
@@ -72,8 +67,8 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
         address erc20Addr,
         string memory tokenURI
     ) external {
-        if (recipient == address(0) || erc20Addr == address(0)) revert zeroAddressProvided();
-        if (_exists(tokenId)) revert tokenIdAlreadyExists();
+        require(recipient != address(0) && erc20Addr != address(0), "Zero address provided");
+        require(!_exists(tokenId), "tokenId already exists");
 
         _mint(recipient, tokenId);
         assetToken[tokenId] = erc20Addr;

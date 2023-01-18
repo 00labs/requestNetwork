@@ -5,6 +5,7 @@ import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/
 import { getCurrencyHash } from '@requestnetwork/currency';
 import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
 import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { PAYMENT_NETWORK_ID } from 'types/dist/payment-types';
 
 /** @constant MAX_ALLOWANCE set to the max uint256 value */
 export const MAX_ALLOWANCE = BigNumber.from(2).pow(256).sub(1);
@@ -307,6 +308,28 @@ export function validateConversionFeeProxyRequest(
     !tokensAccepted?.map((t) => t.toLowerCase()).includes(tokenAddress.toLowerCase())
   ) {
     throw new Error(`The token ${tokenAddress} is not accepted to pay this request`);
+  }
+}
+
+/**
+ * Validates the parameters for an ERC20 Fee Proxy payment.
+ * @param request to validate
+ */
+export function validateMintERC20TransferrableReceivable(request: ClientTypes.IRequestData): void {
+  // Validate that there exists a payee
+  if (request.payee == null) {
+    throw new Error(`Expected a payee for this request`);
+  }
+
+  // Validate that there exists an assetAddress
+  const expectedCurrencyType = currenciesMap[PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT];
+  if (
+    !expectedCurrencyType ||
+    request.currencyInfo.type !== expectedCurrencyType ||
+    !request.currencyInfo.network ||
+    !request.currencyInfo.value
+  ) {
+    throw new Error(`Expected a valid currency ${expectedCurrencyType} on this request`);
   }
 }
 

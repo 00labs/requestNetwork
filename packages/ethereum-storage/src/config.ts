@@ -6,8 +6,7 @@ import { BigNumber } from 'ethers';
 const config = {
   ethereum: {
     default: 'private' as const,
-    gasPriceDefault: '200000000000',
-    gasPriorityPriceDefault: '10000000000',
+    gasPriceDefault: '100000000000',
     maxRetries: 5,
     nodeUrlDefault: {
       private: {
@@ -84,12 +83,6 @@ export function getDefaultEthereumNetwork(): string {
  */
 export function getDefaultEthereumGasPrice(): BigNumber {
   return BigNumber.from(process?.env?.GAS_PRICE_DEFAULT || config.ethereum.gasPriceDefault);
-}
-
-export function getDefaultEthereumGasPriorityPrice(): BigNumber {
-  return BigNumber.from(
-    process?.env?.GAS_PRIORITY_PRICE_DEFAULT || config.ethereum.gasPriorityPriceDefault,
-  );
 }
 
 /**

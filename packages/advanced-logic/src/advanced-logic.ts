@@ -127,7 +127,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
       [ExtensionTypes.PAYMENT_NETWORK_ID.ANY_TO_ETH_PROXY]: this.extensions.anyToEthProxy,
       [ExtensionTypes.PAYMENT_NETWORK_ID.ANY_TO_NATIVE_TOKEN]:
         this.getAnyToNativeTokenExtensionForActionAndState(extensionAction, requestState),
-      [ExtensionTypes.PAYMENT_NETWORK_ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT]:
+      [ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE]:
         this.extensions.nftContractErc20,
     }[id];
 

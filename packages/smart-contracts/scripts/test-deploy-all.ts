@@ -6,7 +6,7 @@ import { deployEscrow } from './test-deploy-escrow-deployment';
 import { deployBatchPayment } from './test-deploy-batch-erc-eth-deployment';
 import { deploySuperFluid } from './test-deploy-superfluid';
 import { deployBatchConversionPayment } from './test-deploy-batch-conversion-deployment';
-import { deployInvoiceNFT } from './test-deploy-invoice-nft';
+import { deployERC20TransferrableReceivable } from './test-deploy-erc20-transferrable-receivable';
 
 // Deploys, set up the contracts
 export default async function deploy(_args: any, hre: HardhatRuntimeEnvironment): Promise<any> {
@@ -17,5 +17,5 @@ export default async function deploy(_args: any, hre: HardhatRuntimeEnvironment)
   await deployBatchPayment(_args, hre);
   await deploySuperFluid(hre);
   await deployBatchConversionPayment(_args, hre);
-  await deployInvoiceNFT(hre);
+  await deployERC20TransferrableReceivable(hre);
 }

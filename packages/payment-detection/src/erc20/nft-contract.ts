@@ -6,7 +6,7 @@ import {
 } from '@requestnetwork/types';
 
 import Utils from '@requestnetwork/utils';
-import { invoiceNFTArtifact } from '@requestnetwork/smart-contracts';
+import { erc20TransferrableReceivableArtifact } from '@requestnetwork/smart-contracts';
 import TheGraphInfoRetriever from './thegraph-info-retriever';
 import { networkSupportsTheGraph } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';
@@ -148,7 +148,7 @@ export class ERC20NFTPaymentDetector extends PaymentDetectorBase<
    * Returns deployment information for the underlying smart contract for a given payment network version
    */
   public static getDeploymentInformation = makeGetDeploymentInformation(
-    invoiceNFTArtifact,
+    erc20TransferrableReceivableArtifact,
     NFT_CONTRACT_ADDRESS_MAP,
   );
 

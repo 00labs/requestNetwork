@@ -1,7 +1,7 @@
 import { ContractTransaction, Signer, BigNumberish, providers } from 'ethers';
 
 import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
 import { ClientTypes, PaymentTypes } from '@requestnetwork/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
@@ -12,10 +12,68 @@ import {
   getSigner,
   validateRequest,
   getRequestPaymentValues,
+  validateMintERC20TransferrableReceivable,
 } from './utils';
 import { IPreparedTransaction } from './prepared-transaction';
 
 import MultiFormat from '@requestnetwork/multi-format';
+
+/**
+ * Processes a transaction to mint an ERC20TransferrableReceivable.
+ * @param request
+ * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
+ * @param overrides optionally, override default transaction values, like gas.
+ */
+export async function mintErc20TransferrableReceivable(
+  request: ClientTypes.IRequestData,
+  signerOrProvider: providers.Provider | Signer = getProvider(),
+  overrides?: ITransactionOverrides,
+): Promise<ContractTransaction> {
+  const { data, to, value } = prepareMintErc20TransferrableReceivableTransaction(request);
+  const signer = getSigner(signerOrProvider);
+  return signer.sendTransaction({ data, to, value, ...overrides });
+}
+
+/**
+ * Encodes the call to mint a request through an ERC20TransferrableReceivable contract, can be used with a Multisig contract.
+ * @param request request to pay
+ */
+export function prepareMintErc20TransferrableReceivableTransaction(
+  request: ClientTypes.IRequestData,
+): IPreparedTransaction {
+  validateMintERC20TransferrableReceivable(request);
+
+  return {
+    data: encodeMintErc20TransferrableReceivableRequest(request),
+    to: getProxyAddress(
+      request,
+      Erc20PaymentNetwork.ERC20NFTPaymentDetector.getDeploymentInformation,
+    ),
+    value: 0,
+  };
+}
+
+/**
+ * Encodes call to mint a request through an ERC20TransferrableReceivable contract, can be used with a Multisig contract.
+ * @param request request to pay
+ */
+export function encodeMintErc20TransferrableReceivableRequest(
+  request: ClientTypes.IRequestData,
+): string {
+  validateMintERC20TransferrableReceivable(request);
+
+  console.log(request.currencyInfo.value);
+  const tokenAddress = request.currencyInfo.value;
+
+  const nftContract = ERC20TransferrableReceivable__factory.createInterface();
+  return nftContract.encodeFunctionData('mint', [
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    request.payee!.value,
+    request.requestId,
+    tokenAddress,
+    `0x01`,
+  ]);
+}
 
 /**
  * Processes a transaction to pay an ERC20 NFT Request.
@@ -41,6 +99,28 @@ export async function payErc20NFTRequest(
  * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
  * @param amount optionally, the amount to pay. Defaults to remaining amount of the request.
  */
+export function prepareErc20NFTPaymentTransaction(
+  request: ClientTypes.IRequestData,
+  amount?: BigNumberish,
+): IPreparedTransaction {
+  validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT);
+
+  return {
+    data: encodePayErc20NFTRequest(request, amount),
+    to: getProxyAddress(
+      request,
+      Erc20PaymentNetwork.ERC20NFTPaymentDetector.getDeploymentInformation,
+    ),
+    value: 0,
+  };
+}
+
+/**
+ * Encodes the call to pay a request through the ERC20 nft contract, can be used with a Multisig contract.
+ * @param request request to pay
+ * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
+ * @param amount optionally, the amount to pay. Defaults to remaining amount of the request.
+ */
 export function encodePayErc20NFTRequest(
   request: ClientTypes.IRequestData,
   amount?: BigNumberish,
@@ -51,7 +131,7 @@ export function encodePayErc20NFTRequest(
   const amountToPay = getAmountToPay(request, amount);
   const { paymentReference } = getRequestPaymentValues(request);
 
-  const nftContract = InvoiceNFT__factory.createInterface();
+  const nftContract = ERC20TransferrableReceivable__factory.createInterface();
   return nftContract.encodeFunctionData('payOwner', [
     reqIdObj.value, // get tokenId from requestId
     amountToPay,
@@ -81,26 +161,4 @@ export function _getErc20NFTPaymentUrl(
   const { paymentReference } = getRequestPaymentValues(request);
   const parameters = `payOwner?uint256=${reqIdObj.value}&uint256=${amountToPay}&bytes=${paymentReference}`;
   return `ethereum:${contractAddress}/${parameters}`;
-}
-
-/**
- * Encodes the call to pay a request through the ERC20 nft contract, can be used with a Multisig contract.
- * @param request request to pay
- * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
- * @param amount optionally, the amount to pay. Defaults to remaining amount of the request.
- */
-export function prepareErc20NFTPaymentTransaction(
-  request: ClientTypes.IRequestData,
-  amount?: BigNumberish,
-): IPreparedTransaction {
-  validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT);
-
-  return {
-    data: encodePayErc20NFTRequest(request, amount),
-    to: getProxyAddress(
-      request,
-      Erc20PaymentNetwork.ERC20NFTPaymentDetector.getDeploymentInformation,
-    ),
-    value: 0,
-  };
 }

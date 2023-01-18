@@ -3,12 +3,6 @@ import { EventEmitter } from 'events';
 import { BigNumber } from 'ethers';
 
 export interface IStorageWrite {
-  tokenizeRequest?: (
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-  ) => Promise<any>;
   initialize: () => Promise<void>;
   append: (data: string) => Promise<IAppendResult>;
 }
@@ -153,7 +147,6 @@ export enum EthereumNetwork {
   KOVAN = 42,
   SOKOL = 77,
   XDAI = 100,
-  MATIC = 137,
 }
 
 /** Information to connect to a web3 provider */

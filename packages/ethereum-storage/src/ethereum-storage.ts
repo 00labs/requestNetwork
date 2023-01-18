@@ -156,23 +156,6 @@ export class EthereumStorage implements StorageTypes.IStorage {
   }
 
   /**
-   * Function to create a NFT for one erc20 payment
-   *
-   * @param recipient the NFT owner
-   * @param assetToken erc20 token address
-   * @param tokenId NFT id, 64 bytes data
-   * @param metadata metadata string
-   */
-  public async tokenizeRequest(
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-  ): Promise<any> {
-    return this.smartContractManager.mintInvoiceNFT(recipient, assetToken, tokenId, metadata);
-  }
-
-  /**
    * Append content into the storage: add the content to ipfs and the hash on Ethereum
    * @param content Content to add into the storage
    * @returns Promise resolving id used to retrieve the content

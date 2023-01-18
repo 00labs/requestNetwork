@@ -52,21 +52,22 @@ describe.only('contract: ERC20TransferrableReceivable', () => {
 
   describe('mint', async function () {
     it('revert with empty recipient', async function () {
-      await expect(receivable.mint(ethers.constants.AddressZero, 1, testToken.address, '0x01')).to
-        .be.reverted;
-      // 'zeroAddressProvided()'
+      await expect(
+        receivable.mint(ethers.constants.AddressZero, 1, testToken.address, '0x01'),
+      ).to.be.revertedWith('Zero address provided');
     });
 
     it('revert with asset address', async function () {
-      await expect(receivable.mint(user1Addr, 1, ethers.constants.AddressZero, '0x01')).to.be
-        .reverted;
-      // 'zeroAddressProvided()'
+      await expect(
+        receivable.mint(user1Addr, 1, ethers.constants.AddressZero, '0x01'),
+      ).to.be.revertedWith('Zero address provided');
     });
 
     it('revert with duplicated tokenId', async function () {
       await receivable.mint(user1Addr, 1, testToken.address, '0x01');
-      await expect(receivable.mint(user1Addr, 1, testToken.address, '0x01')).reverted;
-      // 'tokenIdAlreadyExists()'
+      await expect(receivable.mint(user1Addr, 1, testToken.address, '0x01')).to.be.revertedWith(
+        'tokenId already exists',
+      );
     });
 
     it('success', async function () {
@@ -121,8 +122,9 @@ describe.only('contract: ERC20TransferrableReceivable', () => {
       const tokenId = 1;
       const metadata = ethers.utils.base64.encode('0x01');
       await receivable.mint(await user1.getAddress(), tokenId, testToken.address, metadata);
-      await expect(receivable.payOwner(tokenId, 0, '0x01')).reverted;
-      // 'zeroAmountProvided()'
+      await expect(receivable.payOwner(tokenId, 0, '0x01')).to.be.revertedWith(
+        'Zero amount provided',
+      );
     });
 
     it('success for original owner', async function () {

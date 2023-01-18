@@ -24,7 +24,7 @@ import AnyToNear from './extensions/payment-network/near/any-to-near';
 import AnyToNearTestnet from './extensions/payment-network/near/any-to-near-testnet';
 import NativeToken from './extensions/payment-network/native-token';
 import AnyToNative from './extensions/payment-network/any-to-native';
-import NftContractErc20 from './extensions/payment-network/erc20/nft-contract';
+import Erc20TransferrableReceivablePaymentNetwork from './extensions/payment-network/erc20/transferrable-receivable';
 
 /**
  * Module to manage Advanced logic extensions
@@ -47,7 +47,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
     feeProxyContractEth: FeeProxyContractEth;
     anyToEthProxy: AnyToEthProxy;
     anyToNativeToken: AnyToNative[];
-    nftContractErc20: NftContractErc20;
+    erc20TransferrableReceivable: Erc20TransferrableReceivablePaymentNetwork;
   };
 
   constructor(currencyManager?: ICurrencyManager) {
@@ -69,7 +69,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
       anyToEthProxy: new AnyToEthProxy(currencyManager),
       nativeToken: [new NearNative(), new NearTestnetNative()],
       anyToNativeToken: [new AnyToNear(currencyManager), new AnyToNearTestnet(currencyManager)],
-      nftContractErc20: new NftContractErc20(),
+      erc20TransferrableReceivable: new Erc20TransferrableReceivablePaymentNetwork(),
     };
   }
 
@@ -128,7 +128,7 @@ export default class AdvancedLogic implements AdvancedLogicTypes.IAdvancedLogic 
       [ExtensionTypes.PAYMENT_NETWORK_ID.ANY_TO_NATIVE_TOKEN]:
         this.getAnyToNativeTokenExtensionForActionAndState(extensionAction, requestState),
       [ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE]:
-        this.extensions.nftContractErc20,
+        this.extensions.erc20TransferrableReceivable,
     }[id];
 
     if (!extension) {

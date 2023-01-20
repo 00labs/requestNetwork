@@ -17,5 +17,5 @@ export default async function deploy(_args: any, hre: HardhatRuntimeEnvironment)
   await deployBatchPayment(_args, hre);
   await deploySuperFluid(hre);
   await deployBatchConversionPayment(_args, hre);
-  await deployERC20TransferrableReceivable(hre);
+  await deployERC20TransferrableReceivable(_args, hre, mainPaymentAddresses);
 }

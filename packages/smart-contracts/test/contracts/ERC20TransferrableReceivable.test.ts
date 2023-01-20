@@ -7,18 +7,20 @@ import {
   TestERC20,
   ERC20TransferrableReceivable__factory,
   ERC20TransferrableReceivable,
+  ERC20FeeProxy,
+  ERC20FeeProxy__factory,
 } from '../../src/types';
 import { BigNumber as BN } from 'ethers';
 
 const BASE_DECIMAL = BN.from(10).pow(BN.from(18));
 
-describe('contract: ERC20TransferrableReceivable', () => {
+describe.only('contract: ERC20TransferrableReceivable', () => {
   let deployer: Signer;
   let user1: Signer, user1Addr: string;
   let user2: Signer, user2Addr: string;
   let user3: Signer, user3Addr: string;
 
-  let testToken: TestERC20, receivable: ERC20TransferrableReceivable;
+  let testToken: TestERC20, receivable: ERC20TransferrableReceivable, erc20FeeProxy: ERC20FeeProxy;
 
   before(async function () {
     [deployer, user1, user2, user3] = await ethers.getSigners();
@@ -29,9 +31,11 @@ describe('contract: ERC20TransferrableReceivable', () => {
 
   beforeEach(async function () {
     testToken = await new TestERC20__factory(deployer).deploy(BN.from(1000000).mul(BASE_DECIMAL));
+    erc20FeeProxy = await new ERC20FeeProxy__factory(deployer).deploy();
     receivable = await new ERC20TransferrableReceivable__factory(deployer).deploy(
       'Request Transferrable Receivable',
       'RReceivable',
+      erc20FeeProxy.address,
     );
 
     await testToken.approve(receivable.address, ethers.constants.MaxUint256);
@@ -45,7 +49,7 @@ describe('contract: ERC20TransferrableReceivable', () => {
   async function verifyReceivableIndexes(indexes: any) {
     const res = [];
     for (let i = 1; i <= 5; i++) {
-      res[i - 1] = await receivable.getTokenIdIndex(i);
+      res[i - 1] = await receivable.getReceivableIdIndex(i);
     }
     expect(res.toString()).equals(indexes.toString());
   }
@@ -63,21 +67,23 @@ describe('contract: ERC20TransferrableReceivable', () => {
       ).to.be.revertedWith('Zero address provided');
     });
 
-    it('revert with duplicated tokenId', async function () {
+    it('revert with duplicated receivableId', async function () {
       await receivable.mint(user1Addr, 1, testToken.address, '0x01');
       await expect(receivable.mint(user1Addr, 1, testToken.address, '0x01')).to.be.revertedWith(
-        'tokenId already exists',
+        'receivableId already exists',
       );
     });
 
     it('success', async function () {
-      const tokenId = BN.from('0x34cc5f0224acb0544a9d325f8f2160c53130ba4671849472f2a96a35c93a78d6');
+      const receivableId = BN.from(
+        '0x34cc5f0224acb0544a9d325f8f2160c53130ba4671849472f2a96a35c93a78d6',
+      );
 
       const metadata = ethers.utils.base64.encode('0x01');
       console.log('metadata: ' + metadata);
-      await receivable.mint(user1Addr, tokenId, testToken.address, metadata);
-      const owner = await receivable.ownerOf(tokenId);
-      const md = await receivable.tokenURI(tokenId);
+      await receivable.mint(user1Addr, receivableId, testToken.address, metadata);
+      const owner = await receivable.ownerOf(receivableId);
+      const md = await receivable.tokenURI(receivableId);
       expect(owner).equals(user1Addr);
       expect(md).equals(metadata);
     });
@@ -119,37 +125,37 @@ describe('contract: ERC20TransferrableReceivable', () => {
 
   describe('payOwner', async function () {
     it('revert with zero amount', async function () {
-      const tokenId = 1;
+      const receivableId = 1;
       const metadata = ethers.utils.base64.encode('0x01');
-      await receivable.mint(await user1.getAddress(), tokenId, testToken.address, metadata);
-      await expect(receivable.payOwner(tokenId, 0, '0x01')).to.be.revertedWith(
-        'Zero amount provided',
-      );
+      await receivable.mint(await user1.getAddress(), receivableId, testToken.address, metadata);
+      await expect(
+        receivable.payOwner(receivableId, 0, '0x01', 0, ethers.constants.AddressZero),
+      ).to.be.revertedWith('Zero amount provided');
     });
 
     it('success for original owner', async function () {
-      const tokenId = 1;
+      const receivableId = 1;
       const metadata = ethers.utils.base64.encode('0x01');
       const user1Addr = await user1.getAddress();
-      await receivable.mint(user1Addr, tokenId, testToken.address, metadata);
+      await receivable.mint(user1Addr, receivableId, testToken.address, metadata);
       const amount = BN.from(100).mul(BASE_DECIMAL);
       const beforeBal = await testToken.balanceOf(user1Addr);
-      await receivable.payOwner(tokenId, amount, '0x02');
+      await receivable.payOwner(receivableId, amount, '0x02', 0, ethers.constants.AddressZero);
       const afterBal = await testToken.balanceOf(user1Addr);
       expect(amount).equals(afterBal.sub(beforeBal));
     });
 
     it('success for new owner', async function () {
-      const tokenId = 1;
+      const receivableId = 1;
       const metadata = ethers.utils.base64.encode('0x01');
       const user1Addr = await user1.getAddress();
       const user2Addr = await user2.getAddress();
-      await receivable.mint(user1Addr, tokenId, testToken.address, metadata);
-      await receivable.connect(user1).transferFrom(user1Addr, user2Addr, tokenId);
+      await receivable.mint(user1Addr, receivableId, testToken.address, metadata);
+      await receivable.connect(user1).transferFrom(user1Addr, user2Addr, receivableId);
 
       const amount = BN.from(100).mul(BASE_DECIMAL);
       const beforeBal = await testToken.balanceOf(user2Addr);
-      await receivable.payOwner(tokenId, amount, '0x01');
+      await receivable.payOwner(receivableId, amount, '0x01', 0, ethers.constants.AddressZero);
       const afterBal = await testToken.balanceOf(user2Addr);
       expect(amount).equals(afterBal.sub(beforeBal));
     });

@@ -1,4 +1,4 @@
-import { ContractTransaction, Signer, BigNumberish, providers } from 'ethers';
+import { ContractTransaction, Signer, BigNumberish, providers, BigNumber, constants } from 'ethers';
 
 import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
 import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
@@ -65,7 +65,6 @@ export function encodeMintErc20TransferrableReceivableRequest(
   const tokenAddress = request.currencyInfo.value;
   const reqIdObj = MultiFormat.deserialize(request.requestId);
   const metadata = Buffer.from(reqIdObj.type).toString('base64'); // metadata is requestId.type
-  console.log(reqIdObj.type);
 
   const receivableContract = ERC20TransferrableReceivable__factory.createInterface();
   return receivableContract.encodeFunctionData('mint', [
@@ -88,11 +87,13 @@ export async function payErc20TransferrableReceivableRequest(
   request: ClientTypes.IRequestData,
   signerOrProvider: providers.Provider | Signer = getProvider(),
   amount?: BigNumberish,
+  feeAmount?: BigNumberish,
   overrides?: ITransactionOverrides,
 ): Promise<ContractTransaction> {
   const { data, to, value } = prepareErc20TransferrableReceivablePaymentTransaction(
     request,
     amount,
+    feeAmount,
   );
   const signer = getSigner(signerOrProvider);
   return signer.sendTransaction({ data, to, value, ...overrides });
@@ -107,11 +108,12 @@ export async function payErc20TransferrableReceivableRequest(
 export function prepareErc20TransferrableReceivablePaymentTransaction(
   request: ClientTypes.IRequestData,
   amount?: BigNumberish,
+  feeAmountOverride?: BigNumberish,
 ): IPreparedTransaction {
   validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
 
   return {
-    data: encodePayErc20TransferrableReceivableRequest(request, amount),
+    data: encodePayErc20TransferrableReceivableRequest(request, amount, feeAmountOverride),
     to: getProxyAddress(
       request,
       Erc20PaymentNetwork.ERC20TransferrableReceivablePaymentDetector.getDeploymentInformation,
@@ -129,18 +131,22 @@ export function prepareErc20TransferrableReceivablePaymentTransaction(
 export function encodePayErc20TransferrableReceivableRequest(
   request: ClientTypes.IRequestData,
   amount?: BigNumberish,
+  feeAmountOverride?: BigNumberish,
 ): string {
   validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
 
   const reqIdObj = MultiFormat.deserialize(request.requestId);
   const amountToPay = getAmountToPay(request, amount);
-  const { paymentReference } = getRequestPaymentValues(request);
+  const { paymentReference, feeAddress, feeAmount } = getRequestPaymentValues(request);
+  const feeToPay = BigNumber.from(feeAmountOverride || feeAmount || 0);
 
   const receivableContract = ERC20TransferrableReceivable__factory.createInterface();
   return receivableContract.encodeFunctionData('payOwner', [
     reqIdObj.value, // get tokenId from requestId
     amountToPay,
     `0x${paymentReference}`,
+    feeToPay,
+    feeAddress || constants.AddressZero,
   ]);
 }
 

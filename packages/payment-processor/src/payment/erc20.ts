@@ -47,7 +47,13 @@ export async function payErc20Request(
     return payErc20ProxyRequest(request, signerOrProvider, amount, overrides);
   }
   if (id === ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE) {
-    return payErc20TransferrableReceivableRequest(request, signerOrProvider, amount, overrides);
+    return payErc20TransferrableReceivableRequest(
+      request,
+      signerOrProvider,
+      amount,
+      feeAmount,
+      overrides,
+    );
   }
   if (id === ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_FEE_PROXY_CONTRACT) {
     if (swapSettings) {
@@ -252,13 +258,8 @@ export function _getErc20PaymentUrl(
   if (id === ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_FEE_PROXY_CONTRACT) {
     return _getErc20FeeProxyPaymentUrl(request, amount);
   }
-<<<<<<< HEAD
   if (id === ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE) {
-    return _getErc20NFTPaymentUrl(request, amount);
-=======
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
     return _getErc20TransferrableReceivablePaymentUrl(request, amount);
->>>>>>> 6d07fda8 (Finish refactoring and renaming)
   }
   throw new Error('Not a supported ERC20 proxy payment network request');
 }

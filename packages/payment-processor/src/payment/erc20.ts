@@ -47,7 +47,13 @@ export async function payErc20Request(
     return payErc20ProxyRequest(request, signerOrProvider, amount, overrides);
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
-    return payErc20TransferrableReceivableRequest(request, signerOrProvider, amount, overrides);
+    return payErc20TransferrableReceivableRequest(
+      request,
+      signerOrProvider,
+      amount,
+      feeAmount,
+      overrides,
+    );
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
     if (swapSettings) {

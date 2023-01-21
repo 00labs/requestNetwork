@@ -6,18 +6,20 @@ import { parseLogArgs } from '../utils';
 
 // The ERC20 receivable smart contract ABI fragment containing Payment event
 const erc20TransferrableReceivableContractAbiFragment = [
-  'event Payment(address sender,address recipient,uint256 tokenId,address assetAddress,uint256 amount,uint256 paymentId,bytes indexed paymentReference)',
+  'event Payment(address sender, address recipient, uint256 receivableId, address assetAddress, uint256 amount, uint256 paymentId, bytes indexed paymentReference, uint256 feeAmount, address feeAddress)',
 ];
 
 /** Payment event */
 type PaymentArgs = {
-  from: string;
-  to: string;
-  tokenId: BigNumber;
+  sender: string;
+  recipient: string;
+  receivableId: BigNumber;
   assetAddress: string;
   amount: BigNumber;
   paymentId: BigNumber;
   paymentReference: string;
+  feeAmount: BigNumber;
+  feeAddress: string;
 };
 
 /**
@@ -63,7 +65,7 @@ export default class ERC20TransferrableReceivableInfoRetriever
    * Retrieves transfer events for the current contract, address and network.
    */
   public async getTransferEvents(): Promise<PaymentTypes.ERC20PaymentNetworkEvent[]> {
-    // Create a filter to find all the Transfer logs for the toAddress
+    // Create a filter to find all the Payment logs for the toAddress
     const filter = this.contract.filters.Payment(
       null,
       null,
@@ -91,11 +93,9 @@ export default class ERC20TransferrableReceivableInfoRetriever
         };
       })
       // Keeps only the log with the right token and the right destination address
-      .filter(
-        ({ parsedLog }) =>
-          parsedLog.assetAddress.toLowerCase() === this.tokenContractAddress.toLowerCase() &&
-          parsedLog.to.toLowerCase() === this.toAddress.toLowerCase(),
-      )
+      .filter(({ parsedLog }) => {
+        return parsedLog.assetAddress.toLowerCase() === this.tokenContractAddress.toLowerCase();
+      })
       // Creates the balance events
       .map(async ({ parsedLog, blockNumber, transactionHash }) => ({
         amount: parsedLog.amount.toString(),

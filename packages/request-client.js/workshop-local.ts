@@ -108,7 +108,6 @@ const requestCreateParams = {
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 (async () => {
-  console.log(await erc20.symbol());
   console.log('payee address: ' + payeeIdentity.value);
 
   // ✏️ Create the request
@@ -140,7 +139,6 @@ const requestCreateParams = {
 
   console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
-  console.log('Balance: ', request.getData().balance?.balance);
 
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee receivables: ' + (await invoiceReceivable.balanceOf(payeeIdentity.value)));
@@ -154,10 +152,6 @@ const requestCreateParams = {
   console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
   reqIdObj = { value: tokenId, type: metadata };
   console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
-
-  // await request.refresh();
-
-  // console.log(`request: ${JSON.stringify(request)}`);
 
   console.log('Balance1: ', request.getData().balance?.balance);
   await request.refresh();

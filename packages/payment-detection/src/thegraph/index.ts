@@ -57,5 +57,6 @@ export const getTheGraphNearClient = (
 };
 
 export const networkSupportsTheGraph = (network: string): boolean => {
+  return true;
   return network !== 'private';
 };

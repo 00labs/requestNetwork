@@ -77,7 +77,7 @@ export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetector
 
     const paymentAndEscrowEvents = await this.extractEvents(
       PaymentTypes.EVENTS_NAMES.PAYMENT,
-      this.getPaymentReference(request),
+      getPaymentReference(request) ?? '',
       request.currency,
       paymentChain,
       paymentExtension,
@@ -127,11 +127,11 @@ export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetector
         paymentReference,
         receivableContractAddress,
         requestCurrency.value,
-        receivableContractAddress,
+        '', // Filtering by payee address does not apply for tranferrable receivables
         eventName,
         paymentChain,
       );
-      return graphInfoRetriever.getTransferEvents();
+      return graphInfoRetriever.getReceivableEvents();
     } else {
       const transferrableReceivableInfoRetriever = new ERC20TransferrableReceivableInfoRetriever(
         paymentReference,
@@ -167,10 +167,5 @@ export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetector
       throw Error(`request.currency.network must be defined for ${this.paymentNetworkId}`);
     }
     return network;
-  }
-
-  protected getPaymentReference(request: RequestLogicTypes.IRequest): string {
-    const result = getPaymentReference(request);
-    return result ? result : '';
   }
 }

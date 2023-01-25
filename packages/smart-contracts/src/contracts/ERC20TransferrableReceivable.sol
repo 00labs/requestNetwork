@@ -22,6 +22,7 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
   event Payment(
     address sender,
     address recipient,
+    address paymentProxy,
     uint256 receivableId,
     address assetAddress,
     uint256 amount,
@@ -71,6 +72,7 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     emit Payment(
       msg.sender,
       owner,
+      paymentProxy,
       receivableId,
       assetAddress,
       amount,

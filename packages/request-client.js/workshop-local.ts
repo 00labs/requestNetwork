@@ -106,6 +106,12 @@ const requestCreateParams = {
 };
 //#endregion
 
+function sleep(ms: any) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 (async () => {
   console.log('payee address: ' + payeeIdentity.value);
@@ -152,6 +158,8 @@ const requestCreateParams = {
   console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
   reqIdObj = { value: tokenId, type: metadata };
   console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
+
+  await sleep(5000);
 
   console.log('Balance1: ', request.getData().balance?.balance);
   await request.refresh();

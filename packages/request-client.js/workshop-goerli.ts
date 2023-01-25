@@ -1,13 +1,15 @@
 // /* eslint-disable @typescript-eslint/ban-ts-comment */
 // /* eslint-disable @typescript-eslint/no-unused-vars */
-// @ts-nocheck
-
 // RequestNetwork is the interface we will use to interact with the Request network
 import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 // The payment methods are in a separate package
-import { approveErc20IfNeeded, payRequest } from '@requestnetwork/payment-processor';
+import {
+  approveErc20IfNeeded,
+  mintErc20TransferrableReceivable,
+  payRequest,
+} from '@requestnetwork/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
@@ -76,7 +78,7 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
     },
   ],
   nodeConnectionConfig: {
-    baseURL: 'https://goerli.rn.huma.finance',
+    baseURL: 'http://localhost:3000',
   },
 });
 //#endregion
@@ -122,9 +124,18 @@ function sleep(ms) {
   console.log(`request ${request.requestId} created`);
   await request.waitForConfirmation();
   console.log(`request ${request.requestId} confirmed`);
+  const requestData = request.getData();
+
+  // ✏️ Mint the receivable
+  const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(
+    requestData,
+    payerPaymentWallet,
+  );
+  console.log(`Mint tx: ${mintTx.hash}`);
+  await mintTx.wait(1);
+  console.log(`After mint`);
 
   // ✏️ Accept the request
-
   console.log(`Before payment`);
   console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
   console.log(`Payer: ${(await erc20.balanceOf(payerIdentity.value)).toString()}`);
@@ -134,7 +145,6 @@ function sleep(ms) {
 
   await approveErc20IfNeeded(request.getData(), payerPaymentWallet.address, payerPaymentWallet);
 
-  const requestData = request.getData();
   const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);
   console.log(`Payment tx: ${tx.hash}`);
   await tx.wait(1);

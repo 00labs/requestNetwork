@@ -6,7 +6,7 @@ import { parseLogArgs } from '../utils';
 
 // The ERC20 receivable smart contract ABI fragment containing Payment event
 const erc20TransferrableReceivableContractAbiFragment = [
-  'event Payment(address sender, address recipient, uint256 receivableId, address assetAddress, uint256 amount, uint256 paymentId, bytes indexed paymentReference, uint256 feeAmount, address feeAddress)',
+  'event Payment(address sender, address recipient, address paymentProxy, uint256 receivableId, address assetAddress, uint256 amount, uint256 paymentId, bytes indexed paymentReference, uint256 feeAmount, address feeAddress)',
 ];
 
 /** Payment event */

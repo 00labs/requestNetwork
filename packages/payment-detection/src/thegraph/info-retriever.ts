@@ -48,6 +48,21 @@ export class TheGraphInfoRetriever {
     };
   }
 
+  public async getReceivableEvents(
+    params: TransferEventsParams,
+  ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20FeePaymentEventParameters>> {
+    const { payments, escrowEvents } = await this.client.GetPaymentsAndEscrowStateForReceivables({
+      reference: utils.keccak256(`0x${params.paymentReference}`),
+    });
+
+    return {
+      paymentEvents: payments
+        .filter((payment) => this.filterPaymentEvents(payment, params))
+        .map((payment) => this.mapPaymentEvents(payment, params, true /* allowsUndefined */)),
+      escrowEvents: escrowEvents.map((escrow) => this.mapEscrowEvents(escrow, params)),
+    };
+  }
+
   private filterPaymentEvents(payment: PaymentEventResultFragment, params: TransferEventsParams) {
     // Check contract address matches expected
     if (formatAddress(payment.contractAddress) !== formatAddress(params.contractAddress)) {
@@ -74,7 +89,11 @@ export class TheGraphInfoRetriever {
     return true;
   }
 
-  private mapPaymentEvents(payment: PaymentEventResultFragment, params: TransferEventsParams) {
+  private mapPaymentEvents(
+    payment: PaymentEventResultFragment,
+    params: TransferEventsParams,
+    allowsUndefined = false,
+  ) {
     let amount: string = payment.amount;
     let feeAmount: string = payment.feeAmount;
 
@@ -97,7 +116,7 @@ export class TheGraphInfoRetriever {
       parameters: {
         feeAmount,
         block: payment.block,
-        to: formatAddress(payment.to, 'to'),
+        to: formatAddress(payment.to, 'to', allowsUndefined),
         ...mapValues(
           pick(
             payment,

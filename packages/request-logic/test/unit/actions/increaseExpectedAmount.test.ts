@@ -1,4 +1,4 @@
-import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import IncreaseExpectedAmountAction from '../../../src/actions/increaseExpectedAmount';
 

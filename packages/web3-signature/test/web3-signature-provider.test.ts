@@ -1,4 +1,4 @@
-import { IdentityTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureTypes } from '@huma-shan/types';
 
 import Web3SignatureProvider from '../src/web3-signature-provider';
 

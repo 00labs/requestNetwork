@@ -1,8 +1,8 @@
-import { EthInputDataPaymentDetector } from '@requestnetwork/payment-detection';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { EthInputDataPaymentDetector } from '@huma-shan/payment-detection';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 import { mockAdvancedLogic } from './mocks';
-import { Types, Utils } from '@requestnetwork/request-client.js';
+import { Types, Utils } from '@huma-shan/request-client.js';
 import {
   ethInputDataCreationHash,
   localEthInputDataPaymentNetworkParams,

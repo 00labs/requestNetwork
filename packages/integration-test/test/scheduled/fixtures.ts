@@ -1,5 +1,5 @@
-import { IdentityTypes, PaymentTypes } from '@requestnetwork/types';
-import { RequestNetwork, Types } from '@requestnetwork/request-client.js';
+import { IdentityTypes, PaymentTypes } from '@huma-shan/types';
+import { RequestNetwork, Types } from '@huma-shan/request-client.js';
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
 
 export const httpConfig = {

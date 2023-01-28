@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import { BigNumber } from 'ethers';
 
 // This contains default values used to use Ethereum Network and IPFS

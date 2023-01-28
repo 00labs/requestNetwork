@@ -1,7 +1,7 @@
 import KeyvFile from 'keyv-file';
 import { providers, Wallet } from 'ethers';
 import { NonceManager } from '@ethersproject/experimental';
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 
 import { TheGraphDataAccess } from './TheGraphDataAccess';
 import { RequestNodeBase } from '../requestNodeBase';

@@ -5,7 +5,7 @@ import {
   ISO4217CurrencyInput,
   NativeCurrencyInput,
 } from './types';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 /**
  * Checks if a Near address is valid according to a currency network.

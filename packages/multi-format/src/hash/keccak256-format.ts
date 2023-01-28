@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@huma-shan/types';
 
 import HexadecimalSerializableMultiFormat from '../hexadecimal-serializable-multi-format';
 

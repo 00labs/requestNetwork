@@ -1,9 +1,4 @@
-import {
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-  SignatureTypes,
-} from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes, SignatureTypes } from '@huma-shan/types';
 
 // payee id
 export const payeeRaw = {

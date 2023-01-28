@@ -1,8 +1,8 @@
 import { utils, Wallet } from 'ethers';
 import inquirer from 'inquirer';
-import { getDefaultProvider } from '@requestnetwork/payment-detection';
-import { chainlinkConversionPath } from '@requestnetwork/smart-contracts';
-import { ChainlinkConversionPath } from '@requestnetwork/smart-contracts/types';
+import { getDefaultProvider } from '@huma-shan/payment-detection';
+import { chainlinkConversionPath } from '@huma-shan/smart-contracts';
+import { ChainlinkConversionPath } from '@huma-shan/smart-contracts/types';
 
 export const runUpdate = async <T extends 'updateAggregator' | 'updateAggregatorsList'>(
   method: T,

@@ -1,6 +1,6 @@
-# @requestnetwork/data-access
+# @huma-shan/data-access
 
-`@requestnetwork/data-access` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/data-access` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is the default implementation of the Data Access layer. The Data Access layer is responsible for:
 
 - Indexing transactions to allow retrieval. In the context of the Request Protocol, examples of transactions are "create a request", "accept a request", "change the expected amount of a request"
@@ -30,7 +30,7 @@ The topics are for example, the identities of the stakeholders of the request. S
 ## Installation
 
 ```bash
-npm install @requestnetwork/data-access
+npm install @huma-shan/data-access
 ```
 
 ## Usage
@@ -38,10 +38,10 @@ npm install @requestnetwork/data-access
 ### Persist a Transaction
 
 ```typescript
-import DataAccess from '@requestnetwork/data-access';
-import { DataAccessTypes, SignatureTypes, StorageTypes } from '@requestnetwork/types';
+import DataAccess from '@huma-shan/data-access';
+import { DataAccessTypes, SignatureTypes, StorageTypes } from '@huma-shan/types';
 
-// Any implementation of Storage layer, @requestnetwork/ethereum-storage for example
+// Any implementation of Storage layer, @huma-shan/ethereum-storage for example
 const storage: StorageTypes.IStorage;
 
 const dataAccess = new DataAccess(storage);
@@ -75,10 +75,10 @@ const result = await dataAccess.persistTransaction(transaction, channelId, chann
 ### Get Transactions by topic
 
 ```typescript
-import DataAccess from '@requestnetwork/data-access';
-import { DataAccessTypes, SignatureTypes, StorageTypes } from '@requestnetwork/types';
+import DataAccess from '@huma-shan/data-access';
+import { DataAccessTypes, SignatureTypes, StorageTypes } from '@huma-shan/types';
 
-const storage: StorageTypes.IStorage; // Any implementation of Storage layer, @requestnetwork/ethereum-storage for example
+const storage: StorageTypes.IStorage; // Any implementation of Storage layer, @huma-shan/ethereum-storage for example
 
 const dataAccess = new DataAccess(storage);
 await dataAccess.initialize();
@@ -93,10 +93,10 @@ const {
 ### Get Transactions by multiple topics
 
 ```typescript
-import DataAccess from '@requestnetwork/data-access';
-import { DataAccessTypes, SignatureTypes, StorageTypes } from '@requestnetwork/types';
+import DataAccess from '@huma-shan/data-access';
+import { DataAccessTypes, SignatureTypes, StorageTypes } from '@huma-shan/types';
 
-const storage: StorageTypes.IStorage; // Any implementation of Storage layer, @requestnetwork/ethereum-storage for example
+const storage: StorageTypes.IStorage; // Any implementation of Storage layer, @huma-shan/ethereum-storage for example
 
 const dataAccess = new DataAccess(storage);
 await dataAccess.initialize();
@@ -114,10 +114,10 @@ const {
 ### Get Transactions by channelId
 
 ```typescript
-import DataAccess from '@requestnetwork/data-access';
-import { DataAccessTypes, SignatureTypes, StorageTypes } from '@requestnetwork/types';
+import DataAccess from '@huma-shan/data-access';
+import { DataAccessTypes, SignatureTypes, StorageTypes } from '@huma-shan/types';
 
-const storage: StorageTypes.IStorage; // Any implementation of Storage layer, @requestnetwork/ethereum-storage for example
+const storage: StorageTypes.IStorage; // Any implementation of Storage layer, @huma-shan/ethereum-storage for example
 
 const dataAccess = new DataAccess(storage);
 await dataAccess.initialize();
@@ -133,7 +133,7 @@ const {
 
 ### Indexing
 
-Transactions are indexed with `topics`. When persisting a transaction on data-access, topics can be given as second parameters. These topics will allow retrieving transactions later. For example, each transaction made by @requestnetwork/request-logic are indexed with the `requestId`.
+Transactions are indexed with `topics`. When persisting a transaction on data-access, topics can be given as second parameters. These topics will allow retrieving transactions later. For example, each transaction made by @huma-shan/request-logic are indexed with the `requestId`.
 
 ### Batching
 

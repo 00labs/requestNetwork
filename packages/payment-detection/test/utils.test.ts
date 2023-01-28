@@ -1,5 +1,5 @@
 import { CurrencyManager } from '@requestnetwork/currency';
-import { ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes } from '@huma-shan/types';
 import {
   padAmountForChainlink,
   unpadAmountFromChainlink,

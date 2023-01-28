@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { EthFeeProxyPaymentDetector } from '../../src';
 
 let ethFeeProxyDetector: EthFeeProxyPaymentDetector;

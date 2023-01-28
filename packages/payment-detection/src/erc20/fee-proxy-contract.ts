@@ -1,10 +1,10 @@
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
+import { erc20FeeProxyArtifact } from '@huma-shan/smart-contracts';
 import {
   AdvancedLogicTypes,
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { CurrencyDefinition, ICurrencyManager } from '@requestnetwork/currency';
 import ProxyInfoRetriever from './proxy-info-retriever';
 

@@ -8,7 +8,7 @@ import {
 } from '../src/lib';
 import { deployOne } from './deploy-one';
 import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 export async function deployERC20ConversionProxy(
   args: {

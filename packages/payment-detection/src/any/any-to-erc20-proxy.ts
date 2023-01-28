@@ -1,10 +1,10 @@
-import { erc20ConversionProxy } from '@requestnetwork/smart-contracts';
+import { erc20ConversionProxy } from '@huma-shan/smart-contracts';
 import {
   AdvancedLogicTypes,
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { ICurrencyManager } from '@requestnetwork/currency';
 import { ERC20FeeProxyPaymentDetectorBase } from '../erc20/fee-proxy-contract';

@@ -1,6 +1,6 @@
 import { CurrencyManager, CurrencyInput, CurrencyPairs } from '@requestnetwork/currency';
 import axios from 'axios';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 type Proxy = {
   pair: string;

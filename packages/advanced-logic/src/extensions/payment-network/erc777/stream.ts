@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes, TypesUtils } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes, TypesUtils } from '@huma-shan/types';
 import ReferenceBasedPaymentNetwork from '../reference-based';
 import Utils from '@requestnetwork/utils';
 const CURRENT_VERSION = '0.1.0';

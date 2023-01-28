@@ -1,22 +1,14 @@
 {
   "name": "@requestnetwork/multi-format",
-  "version": "0.15.9",
+  "version": "0.17.0",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Multi-format for Request Network packages.",
   "keywords": [
     "requestnetwork",
     "multi-format"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/multi-format#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"
@@ -40,7 +32,7 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/types": "0.35.0",
+    "@huma-shan/types": "0.37.4",
     "tslib": "2.3.1"
   },
   "devDependencies": {

@@ -1,22 +1,14 @@
 {
-  "name": "@requestnetwork/ethereum-storage",
-  "version": "0.26.0",
+  "name": "@huma-shan/ethereum-storage",
+  "version": "0.28.4",
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/"
   },
   "description": "Request Network storage layer based on ethereum.",
   "keywords": [
     "requestnetwork",
     "ethereum-storage"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RequestNetwork/requestNetwork.git"
-  },
-  "homepage": "https://github.com/RequestNetwork/requestNetwork/tree/master/packages/ethereum-storage#readme",
-  "bugs": {
-    "url": "https://github.com/RequestNetwork/requestNetwork/issues"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0"
@@ -40,9 +32,9 @@
     "init-ipfs": "node scripts/init-ipfs.js"
   },
   "dependencies": {
-    "@requestnetwork/smart-contracts": "0.28.0",
-    "@requestnetwork/types": "0.35.0",
-    "@requestnetwork/utils": "0.35.0",
+    "@huma-shan/smart-contracts": "0.30.4",
+    "@huma-shan/types": "0.37.4",
+    "@requestnetwork/utils": "0.37.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "ethers": "5.5.1",

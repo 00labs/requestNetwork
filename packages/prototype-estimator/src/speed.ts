@@ -1,5 +1,5 @@
 import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestNetwork, Types } from '@requestnetwork/request-client.js';
+import { RequestNetwork, Types } from '@huma-shan/request-client.js';
 
 import * as benchmark from 'benchmark';
 

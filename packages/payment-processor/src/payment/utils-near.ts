@@ -1,7 +1,7 @@
 import { BigNumber, BigNumberish, ethers } from 'ethers';
 import { Contract } from 'near-api-js';
 import { Near, WalletConnection } from 'near-api-js';
-import { NearNativeTokenPaymentDetector } from '@requestnetwork/payment-detection';
+import { NearNativeTokenPaymentDetector } from '@huma-shan/payment-detection';
 
 export const isValidNearAddress = async (nearNetwork: Near, address: string): Promise<boolean> => {
   try {

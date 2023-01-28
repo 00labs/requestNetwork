@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { utils } from 'ethers';
 import { getTheGraphClient, TheGraphClient, TheGraphClientOptions } from '../thegraph';
 

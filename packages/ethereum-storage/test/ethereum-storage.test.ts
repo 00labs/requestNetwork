@@ -1,5 +1,5 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { StorageTypes } from '@requestnetwork/types';
+import * as SmartContracts from '@huma-shan/smart-contracts';
+import { StorageTypes } from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { EventEmitter } from 'events';
 

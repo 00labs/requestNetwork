@@ -1,4 +1,4 @@
-import { EncryptionTypes, MultiFormatTypes } from '@requestnetwork/types';
+import { EncryptionTypes, MultiFormatTypes } from '@huma-shan/types';
 
 import SerializableMultiFormat from '../serializable-multi-format';
 

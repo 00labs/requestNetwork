@@ -1,6 +1,6 @@
-# @requestnetwork/payment-detection
+# @huma-shan/payment-detection
 
-`@requestnetwork/payment-detection` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/payment-detection` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It contains the implementation of request-related events interpretations, typically onchain payments of requests.
 
 The interpretation of events is specified by the payment extension added to the request. [Cf. advanced-logic specifications](../advanced-logic/specs/).

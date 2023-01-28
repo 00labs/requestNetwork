@@ -1,6 +1,6 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import {
   _getPaymentUrl,

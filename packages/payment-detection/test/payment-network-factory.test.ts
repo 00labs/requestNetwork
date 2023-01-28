@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { CurrencyManager } from '@requestnetwork/currency';
 import { BtcMainnetAddressBasedDetector } from '../src/btc/mainnet-address-based';
 import { DeclarativePaymentDetector } from '../src/declarative';

@@ -1,7 +1,7 @@
 import { ethers, BigNumberish } from 'ethers';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
-import { ClientTypes } from '@requestnetwork/types';
+import { ClientTypes } from '@huma-shan/types';
 
 import { getAmountToPay } from './utils';
 

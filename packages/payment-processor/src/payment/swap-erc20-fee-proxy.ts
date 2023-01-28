@@ -1,8 +1,8 @@
 import { constants, ContractTransaction, Signer, BigNumber, BigNumberish, providers } from 'ethers';
 
-import { erc20FeeProxyArtifact, erc20SwapToPayArtifact } from '@requestnetwork/smart-contracts';
-import { ERC20SwapToPay__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes } from '@requestnetwork/types';
+import { erc20FeeProxyArtifact, erc20SwapToPayArtifact } from '@huma-shan/smart-contracts';
+import { ERC20SwapToPay__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {

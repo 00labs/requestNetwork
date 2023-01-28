@@ -1,7 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
+import { AdvancedLogic } from '@huma-shan/advanced-logic';
 import { CurrencyManager } from '@requestnetwork/currency';
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { mocked } from 'ts-jest/utils';
 import { StaticJsonRpcProvider } from '@ethersproject/providers';
 import { AnyToEthFeeProxyPaymentDetector } from '../../src/any';

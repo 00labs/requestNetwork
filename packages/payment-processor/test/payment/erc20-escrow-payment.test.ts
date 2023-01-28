@@ -5,12 +5,12 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import Utils from '@requestnetwork/utils';
 import { Escrow } from '../../src/';
 import { getRequestPaymentValues, getSigner } from '../../src/payment/utils';
 
-import { erc20EscrowToPayArtifact } from '@requestnetwork/smart-contracts';
+import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contracts';
 import { getErc20Balance } from '../../src/payment/erc20';
 
 /* eslint-disable no-magic-numbers */

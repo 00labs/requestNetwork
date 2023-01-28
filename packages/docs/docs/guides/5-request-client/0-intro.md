@@ -18,7 +18,7 @@ Request uses this library, to track and handle all the states of the payment unt
 
 ```shell
 # install the request js library
-npm install @requestnetwork/request-client.js
+npm install @huma-shan/request-client.js
 # install a request signature provider (e.g: web3-signature to use Metamask)
 npm install @requestnetwork/web3-signature
 ```
@@ -26,9 +26,9 @@ npm install @requestnetwork/web3-signature
 2. Import the client
 
 ```jsx
-import { RequestNetwork } from '@requestnetwork/request-client.js';
+import { RequestNetwork } from '@huma-shan/request-client.js';
 
-const RequestNetwork = require('@requestnetwork/request-client.js');
+const RequestNetwork = require('@huma-shan/request-client.js');
 ```
 
 3. Configure the node

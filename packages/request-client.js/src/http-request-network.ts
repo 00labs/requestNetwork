@@ -4,7 +4,7 @@ import {
   DataAccessTypes,
   DecryptionProviderTypes,
   SignatureProviderTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { AxiosRequestConfig } from 'axios';
 import RequestNetwork from './api/request-network';
 import HttpDataAccess from './http-data-access';

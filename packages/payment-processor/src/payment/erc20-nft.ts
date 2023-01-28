@@ -1,8 +1,8 @@
 import { ContractTransaction, Signer, BigNumberish, providers } from 'ethers';
 
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import { InvoiceNFT__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, PaymentTypes } from '@requestnetwork/types';
+import { Erc20PaymentNetwork } from '@huma-shan/payment-detection';
+import { InvoiceNFT__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes, PaymentTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {

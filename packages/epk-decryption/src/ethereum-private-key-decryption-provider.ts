@@ -1,4 +1,4 @@
-import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
+import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@huma-shan/types';
 
 import Utils from '@requestnetwork/utils';
 

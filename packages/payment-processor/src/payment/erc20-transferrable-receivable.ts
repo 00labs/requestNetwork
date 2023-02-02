@@ -28,7 +28,7 @@ import MultiFormat from '@requestnetwork/multi-format';
 
 // The ERC20 receivable smart contract ABI fragment
 const erc20TransferrableReceivableContractAbiFragment = [
-  'function getReceivableTokenId(bytes calldata paymentReference, address originalPaymentAddress) view returns (uint256)',
+  'function getReceivableTokenId(bytes paymentReference, address originalPaymentAddress) view returns (uint256)',
 ];
 
 /**

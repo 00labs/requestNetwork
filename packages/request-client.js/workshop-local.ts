@@ -7,6 +7,7 @@ import {
   payRequest,
   approveErc20IfNeeded,
   mintErc20TransferrableReceivable,
+  getReceivableTokenIdForRequest,
 } from '@requestnetwork/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
@@ -15,8 +16,6 @@ import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
-
-import MultiFormat from '@requestnetwork/multi-format';
 
 //#region Local ERC20 Config
 const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Provider;
@@ -88,7 +87,7 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
   id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
-    // paymentAddress: payeePaymentWallet.address,
+    paymentAddress: payeePaymentWallet.address,
   },
 };
 
@@ -149,15 +148,12 @@ function sleep(ms: any) {
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee receivables: ' + (await invoiceReceivable.balanceOf(payeeIdentity.value)));
 
-  let reqIdObj = MultiFormat.deserialize(request.requestId);
-  const tokenId = reqIdObj.value;
+  const tokenId = await getReceivableTokenIdForRequest(request.getData(), payerPaymentWallet);
 
   console.log(`${tokenId} owner: ${await invoiceReceivable.ownerOf(tokenId)}`);
   const metadataBase64 = await invoiceReceivable.tokenURI(tokenId);
   const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
   console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
-  reqIdObj = { value: tokenId, type: metadata };
-  console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
 
   await sleep(5000);
 

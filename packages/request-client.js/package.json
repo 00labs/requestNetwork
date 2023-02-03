@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/request-client.js",
-  "version": "0.41.4",
+  "version": "0.41.5",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -40,18 +40,18 @@
     "server": "ts-node api-server.ts"
   },
   "dependencies": {
-    "@huma-shan/advanced-logic": "0.36.4",
+    "@huma-shan/advanced-logic": "0.36.5",
     "@requestnetwork/currency": "0.10.0",
-    "@huma-shan/data-access": "0.28.4",
+    "@huma-shan/data-access": "0.28.5",
     "@requestnetwork/data-format": "0.11.0",
     "@requestnetwork/epk-signature": "0.7.0",
     "@requestnetwork/multi-format": "0.17.0",
-    "@huma-shan/payment-detection": "0.37.4",
-    "@huma-shan/payment-processor": "0.39.4",
-    "@huma-shan/request-logic": "0.28.4",
-    "@huma-shan/smart-contracts": "0.30.4",
-    "@huma-shan/transaction-manager": "0.28.4",
-    "@huma-shan/types": "0.37.4",
+    "@huma-shan/payment-detection": "0.37.5",
+    "@huma-shan/payment-processor": "0.39.5",
+    "@huma-shan/request-logic": "0.28.5",
+    "@huma-shan/smart-contracts": "0.30.5",
+    "@huma-shan/transaction-manager": "0.28.5",
+    "@huma-shan/types": "0.37.5",
     "@requestnetwork/utils": "0.37.0",
     "axios": "0.27.2",
     "cors": "2.8.5",

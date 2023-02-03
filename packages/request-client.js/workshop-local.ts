@@ -125,6 +125,7 @@ function sleep(ms: any) {
   await request.waitForConfirmation();
   console.log(`request ${request.requestId} confirmed`);
   const requestData = request.getData();
+  // console.log(`request: ${JSON.stringify(request)}`);
 
   // ✏️ Mint the receivable
   const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(

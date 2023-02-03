@@ -1,5 +1,5 @@
-// /* eslint-disable @typescript-eslint/ban-ts-comment */
-// /* eslint-disable @typescript-eslint/no-unused-vars */
+// @ts-nocheck
+
 // RequestNetwork is the interface we will use to interact with the Request network
 import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
@@ -8,6 +8,7 @@ import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signatu
 import {
   approveErc20IfNeeded,
   mintErc20TransferrableReceivable,
+  getReceivableTokenIdForRequest,
   payRequest,
 } from '@requestnetwork/payment-processor';
 
@@ -32,7 +33,7 @@ const provider = new ethers.providers.JsonRpcProvider(
 const localToken = '0xf17FF940864351631b1be3ac03702dEA085ba51c';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
-const RECEIVABLE_ADDR = '0x9aEBB4B8abf7afC96dC00f707F766499C5EbeDF1';
+const RECEIVABLE_ADDR = '0x2E8045D885e9e4F339122304D9e591c9E1c5a2Af';
 const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 const PAYEE_ADDRESS = '0x3BD44d4ee0E914E7ADE18a51A80f597E153aD343';
@@ -88,7 +89,7 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
   id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
-    // paymentAddress: payeePaymentWallet.address,
+    paymentAddress: PAYEE_ADDRESS,
   },
 };
 
@@ -157,15 +158,12 @@ function sleep(ms) {
   console.log('payee address: ' + payeeIdentity.value);
   console.log('payee receivables: ' + (await invoiceReceivable.balanceOf(payeeIdentity.value)));
 
-  let reqIdObj = MultiFormat.deserialize(request.requestId);
-  const tokenId = reqIdObj.value;
+  const tokenId = await getReceivableTokenIdForRequest(request.getData(), payerPaymentWallet);
 
   console.log(`${tokenId} owner: ${await invoiceReceivable.ownerOf(tokenId)}`);
   const metadataBase64 = await invoiceReceivable.tokenURI(tokenId);
-  const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
-  console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
-  reqIdObj = { value: tokenId, type: metadata };
-  console.log(`combined requestId: ${MultiFormat.serialize(reqIdObj)}`);
+  const requestId = Buffer.from(metadataBase64, 'base64').toString('ascii');
+  console.log(`${tokenId} metadataBase64: ${metadataBase64}, requestId: ${requestId}`);
 
   console.log('sleep 5s...');
   await sleep(5000);

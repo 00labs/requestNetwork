@@ -22,8 +22,8 @@ export const erc20FeeProxyArtifact = new ContractArtifact<ERC20FeeProxy>(
           creationBlockNumber: 7118080,
         },
         goerli: {
-          address: '0x399F5EE127ce7432E4921a61b8CF52b0af52cbfE',
-          creationBlockNumber: 7091472,
+          address: '0xD7f6DC1F8F41986abE4E187A743c66f829aCEFf1',
+          creationBlockNumber: 8427439,
         },
         matic: {
           address: '0x2171a0dc12a9E5b1659feF2BB20E54c84Fa7dB0C',

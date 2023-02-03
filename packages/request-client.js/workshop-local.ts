@@ -87,7 +87,7 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
   id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
-    paymentAddress: payeePaymentWallet.address,
+    paymentAddress: payeeIdentity.value,
   },
 };
 

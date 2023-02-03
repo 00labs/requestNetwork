@@ -121,6 +121,7 @@ function sleep(ms: any) {
   await request.waitForConfirmation();
   console.log(`request ${request.requestId} confirmed`);
   const requestData = request.getData();
+  // console.log(`request: ${JSON.stringify(request)}`);
 
   // ✏️ Mint the receivable
   const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(
@@ -152,8 +153,8 @@ function sleep(ms: any) {
 
   console.log(`${tokenId} owner: ${await invoiceReceivable.ownerOf(tokenId)}`);
   const metadataBase64 = await invoiceReceivable.tokenURI(tokenId);
-  const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
-  console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
+  const requestId = Buffer.from(metadataBase64, 'base64').toString('ascii');
+  console.log(`${tokenId} metadataBase64: ${metadataBase64}, requestId: ${requestId}`);
 
   await sleep(5000);
 

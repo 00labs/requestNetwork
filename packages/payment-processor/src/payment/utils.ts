@@ -228,8 +228,7 @@ export function validateRequest(
     !validCurrencyType ||
     !validCurrencyValue ||
     !extension?.values?.salt ||
-    (paymentNetworkId !== PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE &&
-      !extension?.values?.paymentAddress) // erc20 transferrable receivable payment network needn't paymentAddress
+    !extension?.values?.paymentAddress
   ) {
     throw new Error(`request cannot be processed, or is not an ${paymentNetworkId} request`);
   }

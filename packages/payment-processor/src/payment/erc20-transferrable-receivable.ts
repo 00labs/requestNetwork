@@ -28,7 +28,7 @@ import MultiFormat from '@requestnetwork/multi-format';
 
 // The ERC20 receivable smart contract ABI fragment
 const erc20TransferrableReceivableContractAbiFragment = [
-  'function getReceivableTokenId(bytes paymentReference, address originalPaymentAddress) view returns (uint256)',
+  'function getReceivableTokenId(bytes calldata paymentReference, address originalPaymentAddress) public view returns (uint256)',
 ];
 
 /**
@@ -37,7 +37,7 @@ const erc20TransferrableReceivableContractAbiFragment = [
  * @param request
  * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
  */
-async function getReceivableTokenIdForRequest(
+export async function getReceivableTokenIdForRequest(
   request: ClientTypes.IRequestData,
   signerOrProvider: providers.Provider | Signer,
 ): Promise<BigNumber> {
@@ -52,7 +52,6 @@ async function getReceivableTokenIdForRequest(
   );
 
   const { paymentReference, paymentAddress } = getRequestPaymentValues(request);
-
   return await contract.getReceivableTokenId(`0x${paymentReference}`, paymentAddress);
 }
 
@@ -104,12 +103,12 @@ export function encodeMintErc20TransferrableReceivableRequest(
   const reqIdObj = MultiFormat.deserialize(request.requestId);
   const metadata = Buffer.from(reqIdObj.type).toString('base64'); // metadata is requestId.type
 
-  const { paymentReference } = getRequestPaymentValues(request);
+  const { paymentReference, paymentAddress } = getRequestPaymentValues(request);
 
   const receivableContract = ERC20TransferrableReceivable__factory.createInterface();
   return receivableContract.encodeFunctionData('mint', [
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    request.payee!.value,
+    paymentAddress,
     `0x${paymentReference}`,
     tokenAddress,
     metadata,

@@ -100,8 +100,7 @@ export function encodeMintErc20TransferrableReceivableRequest(
   validateMintERC20TransferrableReceivable(request);
 
   const tokenAddress = request.currencyInfo.value;
-  const reqIdObj = MultiFormat.deserialize(request.requestId);
-  const metadata = Buffer.from(reqIdObj.type).toString('base64'); // metadata is requestId.type
+  const metadata = Buffer.from(request.requestId).toString('base64'); // metadata is requestId
 
   const { paymentReference, paymentAddress } = getRequestPaymentValues(request);
 

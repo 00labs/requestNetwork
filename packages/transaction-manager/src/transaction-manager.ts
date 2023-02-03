@@ -28,27 +28,6 @@ export default class TransactionManager implements TransactionTypes.ITransaction
   }
 
   /**
-   * Create a NFT in storage
-   *
-   * @param recipient the NFT owner
-   * @param assetToken erc20 token address
-   * @param tokenId NFT id, 64 bytes data
-   * @param metadata metadata string
-   */
-  public async tokenizeRequest(
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-  ): Promise<any> {
-    if (this.dataAccess.tokenizeRequest) {
-      return this.dataAccess.tokenizeRequest(recipient, assetToken, tokenId, metadata);
-    } else {
-      console.log('none');
-    }
-  }
-
-  /**
    * Persists a transaction and topics in storage. If encryptionParams is given, the transaction will be encrypted
    *
    * @param transactionData transaction to persist

@@ -1,0 +1,36 @@
+query GetReceivablePaymentsAndEscrowState(
+  $receivableContractAddress: Bytes!
+  $proxyContractAddress: Bytes!
+  $reference: Bytes!
+  $tokenAddress: Bytes
+) {
+  receivablePayments(
+    where: {
+      contractAddress: $receivableContractAddress
+      paymentProxy: $proxyContractAddress
+      reference: $reference
+      tokenAddress: $tokenAddress
+    }
+    orderBy: timestamp
+    orderDirection: asc
+  ) {
+    amount
+    block
+    txHash
+    feeAmount
+    feeAddress
+    from
+    gasUsed
+    gasPrice
+    timestamp
+  }
+  escrowEvents(where: { reference: $reference }, orderBy: timestamp, orderDirection: asc) {
+    txHash
+    eventName
+    from
+    timestamp
+    block
+    gasUsed
+    gasPrice
+  }
+}

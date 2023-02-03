@@ -138,34 +138,6 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
   }
 
   /**
-   * Create a new nft on a node through HTTP.
-   *
-   * @param recipient the NFT owner
-   * @param assetToken erc20 token address
-   * @param tokenId NFT id, 64 bytes data
-   * @param metadata metadata string
-   */
-  public async tokenizeRequest(
-    recipient: string,
-    assetToken: string,
-    tokenId: string,
-    metadata: string,
-  ): Promise<void> {
-    // We don't retry this request since it may fail because of a slow Storage
-    // For example, if the Ethereum network is slow and we retry the request three times
-    await axios.post(
-      '/tokenize',
-      {
-        recipient,
-        assetToken,
-        tokenId,
-        metadata,
-      },
-      this.axiosConfig,
-    );
-  }
-
-  /**
    * Gets the transactions for a channel from the node through HTTP.
    *
    * @param channelId The channel id to search for

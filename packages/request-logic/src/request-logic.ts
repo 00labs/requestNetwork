@@ -4,7 +4,6 @@ import MultiFormat from '@requestnetwork/multi-format';
 import {
   AdvancedLogicTypes,
   EncryptionTypes,
-  ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
   SignatureProviderTypes,
@@ -59,21 +58,6 @@ export default class RequestLogic implements RequestLogicTypes.IRequestLogic {
       requestId,
       hashedTopics,
     );
-
-    // Create nft for erc20 nft payment network
-    if (this.transactionManager.tokenizeRequest && requestParameters.extensionsData) {
-      const paymentData = requestParameters.extensionsData[0];
-      if (paymentData.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-        if (requestParameters.payee) {
-          const recipient = requestParameters.payee.value; // payee is the owner of nft
-          const assetToken = requestParameters.currency.value;
-          const reqIdObj = MultiFormat.deserialize(requestId);
-          const tokenId = reqIdObj.value; // tokenId is requestId.value
-          const metadata = Buffer.from(reqIdObj.type).toString('base64'); // metadata is requestId.type
-          await this.transactionManager.tokenizeRequest(recipient, assetToken, tokenId, metadata);
-        }
-      }
-    }
 
     const result = Object.assign(new EventEmitter(), {
       meta: { transactionManagerMeta: resultPersistTx.meta },

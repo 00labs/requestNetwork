@@ -167,8 +167,8 @@ export function getPaymentReference(
   if (!salt) return;
 
   let info = getInfo(extension.values, event);
-  if (extension.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-    // set info to extension id because it is empty for erc20 nft payment network
+  if (extension.id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
+    // set info to extension id because it is empty for erc20 transferrable receivable payment network
     info = extension.id;
   }
   if (!info) return;

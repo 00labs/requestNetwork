@@ -12,7 +12,7 @@ import { approveErc20IfNeeded, payRequest } from '@huma-shan/payment-processor';
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
 import { TestERC20__factory } from '@huma-shan/smart-contracts/types';
 
-import { InvoiceNFT__factory } from '@huma-shan/smart-contracts/types';
+import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
@@ -30,8 +30,8 @@ const provider = new ethers.providers.JsonRpcProvider(
 const localToken = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
-const INVOICE_NFT_ADDR = '0xf98b8a94edbc9628b7b2141465980f2c3acab23f';
-const invoiceNFT = InvoiceNFT__factory.connect(INVOICE_NFT_ADDR, provider);
+const RECEIVABLE_ADDR = '0xf98b8a94edbc9628b7b2141465980f2c3acab23f';
+const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 const PAYEE_ADDRESS = '0x3BD44d4ee0E914E7ADE18a51A80f597E153aD343';
 const PAYEE_PRIVATE_KEY = '0xa8e85c1c3bdcb3221493d1f43dfd9e7dd966c799fd46bd0d6a45a97f9df59adb';
@@ -87,7 +87,7 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 //#region Request setup
 // ✏️ Payment network information
 const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
-  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT,
+  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
     // paymentAddress: payeePaymentWallet.address,
   },
@@ -158,13 +158,13 @@ function sleep(ms) {
   console.log('Balance: ', request.getData().balance?.balance);
 
   console.log('payee address: ' + payeeIdentity.value);
-  console.log('payee NFTs: ' + (await invoiceNFT.balanceOf(payeeIdentity.value)));
+  console.log('payee receivables: ' + (await invoiceReceivable.balanceOf(payeeIdentity.value)));
 
   let reqIdObj = MultiFormat.deserialize(request.requestId);
   const tokenId = reqIdObj.value;
 
-  console.log(`${tokenId} owner: ${await invoiceNFT.ownerOf(tokenId)}`);
-  const metadataBase64 = await invoiceNFT.tokenURI(tokenId);
+  console.log(`${tokenId} owner: ${await invoiceReceivable.ownerOf(tokenId)}`);
+  const metadataBase64 = await invoiceReceivable.tokenURI(tokenId);
   const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
   console.log(`${tokenId} metadataBase64: ${metadataBase64}, metadata: ${metadata}`);
   reqIdObj = { value: tokenId, type: metadata };

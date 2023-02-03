@@ -25,10 +25,6 @@ export const requestHashSubmitterArtifact = new ContractArtifact<RequestOpenHash
           address: '0xdB0Cc75aEA12091BeEd17Aa9c55f4C1359a9f363',
           creationBlockNumber: 7996917,
         },
-        matic: {
-          address: '0xb4a0a358fd1c31d3591e9d04369e5cd06ad166e4',
-          creationBlockNumber: 36487021,
-        },
         xdai: {
           address: '0x268C146Afb4790902Ee26A6D2d3aff968623Ec80',
           creationBlockNumber: 15193804,

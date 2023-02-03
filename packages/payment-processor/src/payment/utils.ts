@@ -151,7 +151,7 @@ const {
   ERC20_FEE_PROXY_CONTRACT,
   ANY_TO_ERC20_PROXY,
   NATIVE_TOKEN,
-  ERC20_NFT_CONTRACT,
+  ERC20_TRANSFERRABLE_RECEIVABLE,
 } = PaymentTypes.PAYMENT_NETWORK_ID;
 const currenciesMap: any = {
   [ERC777_STREAM]: RequestLogicTypes.CURRENCY.ERC777,
@@ -160,7 +160,7 @@ const currenciesMap: any = {
   [ETH_INPUT_DATA]: RequestLogicTypes.CURRENCY.ETH,
   [ETH_FEE_PROXY_CONTRACT]: RequestLogicTypes.CURRENCY.ETH,
   [NATIVE_TOKEN]: RequestLogicTypes.CURRENCY.ETH,
-  [ERC20_NFT_CONTRACT]: RequestLogicTypes.CURRENCY.ERC20,
+  [ERC20_TRANSFERRABLE_RECEIVABLE]: RequestLogicTypes.CURRENCY.ERC20,
 };
 
 /**
@@ -193,9 +193,12 @@ export function validateRequest(
 
   // ERC20 based payment networks are only valid if the request currency has a value
   const validCurrencyValue =
-    ![ERC20_PROXY_CONTRACT, ERC20_FEE_PROXY_CONTRACT, ERC777_STREAM, ERC20_NFT_CONTRACT].includes(
-      paymentNetworkId,
-    ) || request.currencyInfo.value;
+    ![
+      ERC20_PROXY_CONTRACT,
+      ERC20_FEE_PROXY_CONTRACT,
+      ERC777_STREAM,
+      ERC20_TRANSFERRABLE_RECEIVABLE,
+    ].includes(paymentNetworkId) || request.currencyInfo.value;
 
   // Payment network with fees should have both or none of fee address and fee amount
   const validFeeParams =
@@ -220,8 +223,7 @@ export function validateRequest(
     !validCurrencyType ||
     !validCurrencyValue ||
     !extension?.values?.salt ||
-    (paymentNetworkId !== PaymentTypes.PAYMENT_NETWORK_ID.ERC20_NFT_CONTRACT &&
-      !extension?.values?.paymentAddress) // erc20 nft payment network needn't paymentAddress
+    !extension?.values?.paymentAddress
   ) {
     throw new Error(`request cannot be processed, or is not an ${paymentNetworkId} request`);
   }
@@ -284,6 +286,29 @@ export function validateConversionFeeProxyRequest(
     !tokensAccepted?.map((t) => t.toLowerCase()).includes(tokenAddress.toLowerCase())
   ) {
     throw new Error(`The token ${tokenAddress} is not accepted to pay this request`);
+  }
+}
+
+/**
+ * Validates the parameters for an ERC20 Fee Proxy payment.
+ * @param request to validate
+ */
+export function validateMintERC20TransferrableReceivable(request: ClientTypes.IRequestData): void {
+  // Validate that there exists a payee
+  if (request.payee == null) {
+    throw new Error(`Expected a payee for this request`);
+  }
+
+  // Validate that there exists an assetAddress
+  const expectedCurrencyType =
+    currenciesMap[PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE];
+  if (
+    !expectedCurrencyType ||
+    request.currencyInfo.type !== expectedCurrencyType ||
+    !request.currencyInfo.network ||
+    !request.currencyInfo.value
+  ) {
+    throw new Error(`Expected a valid currency ${expectedCurrencyType} on this request`);
   }
 }
 

@@ -7,7 +7,10 @@ import { ClientTypes, ExtensionTypes, PaymentTypes } from '@huma-shan/types';
 import { _getErc20FeeProxyPaymentUrl, payErc20FeeProxyRequest } from './erc20-fee-proxy';
 import { ISwapSettings, swapErc20FeeProxyRequest } from './swap-erc20-fee-proxy';
 import { _getErc20ProxyPaymentUrl, payErc20ProxyRequest } from './erc20-proxy';
-import { _getErc20NFTPaymentUrl, payErc20NFTRequest } from './erc20-nft';
+import {
+  _getErc20TransferrableReceivablePaymentUrl,
+  payErc20TransferrableReceivableRequest,
+} from './erc20-transferrable-receivable';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {
@@ -43,8 +46,14 @@ export async function payErc20Request(
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_PROXY_CONTRACT) {
     return payErc20ProxyRequest(request, signerOrProvider, amount, overrides);
   }
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-    return payErc20NFTRequest(request, signerOrProvider, amount, overrides);
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
+    return payErc20TransferrableReceivableRequest(
+      request,
+      signerOrProvider,
+      amount,
+      feeAmount,
+      overrides,
+    );
   }
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
     if (swapSettings) {
@@ -248,8 +257,8 @@ export function _getErc20PaymentUrl(
   if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_FEE_PROXY_CONTRACT) {
     return _getErc20FeeProxyPaymentUrl(request, amount);
   }
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
-    return _getErc20NFTPaymentUrl(request, amount);
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
+    return _getErc20TransferrableReceivablePaymentUrl(request, amount);
   }
   throw new Error('Not a supported ERC20 proxy payment network request');
 }
@@ -278,10 +287,10 @@ function getProxyAddress(request: ClientTypes.IRequestData): string {
       Erc20PaymentNetwork.ERC20FeeProxyPaymentDetector.getDeploymentInformation,
     );
   }
-  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_NFT_CONTRACT) {
+  if (id === ExtensionTypes.ID.PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE) {
     return genericGetProxyAddress(
       request,
-      Erc20PaymentNetwork.ERC20NFTPaymentDetector.getDeploymentInformation,
+      Erc20PaymentNetwork.ERC20TransferrableReceivablePaymentDetector.getDeploymentInformation,
     );
   }
 

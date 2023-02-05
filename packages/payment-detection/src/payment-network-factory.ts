@@ -17,6 +17,7 @@ import {
   ERC20AddressBasedPaymentDetector,
   ERC20FeeProxyPaymentDetector,
   ERC20ProxyPaymentDetector,
+  ERC20TransferrableReceivablePaymentDetector,
 } from './erc20';
 import { SuperFluidPaymentDetector } from './erc777/superfluid-detector';
 import { EthFeeProxyPaymentDetector, EthInputDataPaymentDetector } from './eth';
@@ -25,7 +26,6 @@ import { NearConversionNativeTokenPaymentDetector, NearNativeTokenPaymentDetecto
 import { getPaymentNetworkExtension } from './utils';
 import { getTheGraphClient } from './thegraph';
 import { getDefaultProvider } from 'ethers';
-import { ERC20TransferrableReceivablePaymentDetector } from './erc20/transferrable-receivable';
 
 const PN_ID = ExtensionTypes.PAYMENT_NETWORK_ID;
 

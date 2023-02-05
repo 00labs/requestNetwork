@@ -55,6 +55,10 @@ export class TheGraphInfoRetriever {
       reference: utils.keccak256(`0x${params.paymentReference}`),
     });
 
+    params.contractAddress = formatAddress(params.contractAddress, 'contractAddress');
+    params.acceptedTokens =
+      params.acceptedTokens?.map((tok) => formatAddress(tok, 'acceptedTokens')) || [];
+
     return {
       paymentEvents: payments
         .filter((payment) => this.filterPaymentEvents(payment, params))

@@ -1,6 +1,5 @@
 // /* eslint-disable @typescript-eslint/ban-ts-comment */
 // /* eslint-disable @typescript-eslint/no-unused-vars */
-// @ts-nocheck
 
 // RequestNetwork is the interface we will use to interact with the Request network
 import * as RequestNetwork from './dist';
@@ -86,10 +85,10 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 
 //#region Request setup
 // ✏️ Payment network information
-const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
-  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
+const paymentNetwork: RequestNetwork.Types.Payment.PaymentNetworkCreateParameters = {
+  id: RequestNetwork.Types.Extension.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
-    // paymentAddress: payeePaymentWallet.address,
+    paymentAddress: payeeIdentity.value,
   },
 };
 
@@ -106,7 +105,7 @@ const requestCreateParams = {
   signer: payeeIdentity,
 };
 
-function sleep(ms) {
+function sleep(ms: number | undefined) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });

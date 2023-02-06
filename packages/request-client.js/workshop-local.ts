@@ -15,6 +15,8 @@ import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 
 import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
 
+import { ExtensionTypes } from '@requestnetwork/types';
+
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 
 //#region Local ERC20 Config
@@ -39,8 +41,6 @@ const payerIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/0");
 const payerPaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/1").connect(provider);
 
 const payeeIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2");
-const payeePaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/3").connect(provider);
-payeePaymentWallet;
 
 //#endregion
 
@@ -84,8 +84,8 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 
 //#region Request setup
 // ✏️ Payment network information
-const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
-  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
+const paymentNetwork: RequestNetwork.Types.Payment.PaymentNetworkCreateParameters = {
+  id: ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
     paymentAddress: payeeIdentity.value,
   },
@@ -114,6 +114,7 @@ function sleep(ms: any) {
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 (async () => {
   console.log('payee address: ' + payeeIdentity.value);
+  console.log('payer address: ' + payerIdentity.value);
 
   // ✏️ Create the request
   const request: RequestNetwork.Request = await requestNetwork.createRequest(requestCreateParams);
@@ -121,12 +122,11 @@ function sleep(ms: any) {
   await request.waitForConfirmation();
   console.log(`request ${request.requestId} confirmed`);
   const requestData = request.getData();
-  // console.log(`request: ${JSON.stringify(request)}`);
 
   // ✏️ Mint the receivable
   const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(
     requestData,
-    payerPaymentWallet,
+    payeeIdentityWallet.connect(provider),
   );
   console.log(`Mint tx: ${mintTx.hash}`);
   await mintTx.wait(1);

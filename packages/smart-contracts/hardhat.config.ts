@@ -75,7 +75,7 @@ export default {
       accounts,
     },
     matic: {
-      url: process.env.WEB3_PROVIDER_URL || 'https://polygon-mainnet.g.alchemy.com/v2/YOUR_API_KEY',
+      url: url('matic'),
       chainId: 137,
       accounts,
     },

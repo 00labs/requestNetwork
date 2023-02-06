@@ -1,7 +1,7 @@
 import { PaymentTypes } from '@requestnetwork/types';
 import { IPaymentRetriever } from '../types';
 import { BigNumber, ethers } from 'ethers';
-import { getDefaultProvider } from '../provider';
+import { getDefaultProvider } from '@requestnetwork/utils';
 import { parseLogArgs } from '../utils';
 
 // The ERC20 receivable smart contract ABI fragment containing Payment event

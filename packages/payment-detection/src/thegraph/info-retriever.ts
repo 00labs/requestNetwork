@@ -62,7 +62,7 @@ export class TheGraphInfoRetriever {
     return {
       paymentEvents: payments
         .filter((payment) => this.filterPaymentEvents(payment, params))
-        .map((payment) => this.mapPaymentEvents(payment, params, true /* allowsUndefined */)),
+        .map((payment) => this.mapPaymentEvents(payment, params)),
       escrowEvents: escrowEvents.map((escrow) => this.mapEscrowEvents(escrow, params)),
     };
   }
@@ -93,11 +93,7 @@ export class TheGraphInfoRetriever {
     return true;
   }
 
-  private mapPaymentEvents(
-    payment: PaymentEventResultFragment,
-    params: TransferEventsParams,
-    allowsUndefined = false,
-  ) {
+  private mapPaymentEvents(payment: PaymentEventResultFragment, params: TransferEventsParams) {
     let amount: string = payment.amount;
     let feeAmount: string = payment.feeAmount;
 
@@ -120,7 +116,7 @@ export class TheGraphInfoRetriever {
       parameters: {
         feeAmount,
         block: payment.block,
-        to: formatAddress(payment.to, 'to', allowsUndefined),
+        to: formatAddress(payment.to, 'to'),
         ...mapValues(
           pick(
             payment,

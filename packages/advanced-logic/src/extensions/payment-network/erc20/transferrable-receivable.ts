@@ -10,12 +10,10 @@ export default class Erc20TransferrableReceivablePaymentNetwork<
   TCreationParameters extends ExtensionTypes.PnReferenceBased.ICreationParameters = ExtensionTypes.PnReferenceBased.ICreationParameters,
 > extends ReferenceBasedPaymentNetwork<TCreationParameters> {
   public constructor(
-    public extensionId: ExtensionTypes.ID = ExtensionTypes.ID
-      .PAYMENT_NETWORK_ERC20_TRANSFERRABLE_RECEIVABLE,
+    public extensionId: ExtensionTypes.PAYMENT_NETWORK_ID = ExtensionTypes.PAYMENT_NETWORK_ID
+      .ERC20_TRANSFERRABLE_RECEIVABLE,
     public currentVersion: string = CURRENT_VERSION,
-    public supportedNetworks: string[] = ['mainnet', 'rinkeby', 'goerli', 'private', 'matic'],
-    public supportedCurrencyType: RequestLogicTypes.CURRENCY = RequestLogicTypes.CURRENCY.ERC20,
   ) {
-    super(extensionId, currentVersion, supportedNetworks, supportedCurrencyType);
+    super(extensionId, currentVersion, RequestLogicTypes.CURRENCY.ERC20);
   }
 }

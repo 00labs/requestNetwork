@@ -2,12 +2,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import '@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol';
 import '@openzeppelin/contracts/utils/Counters.sol';
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol';
 
 contract ERC20TransferrableReceivable is ERC721URIStorage {
-  using SafeERC20 for IERC20;
   using Counters for Counters.Counter;
 
   // Counter for uniquely identifying payments
@@ -16,12 +14,16 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
   // Counter for uniquely identifying receivable tokens
   Counters.Counter private _receivableTokenId;
 
-  // ERC20 that one ERC20TransferrableReceivable is paid in
-  mapping(uint256 => address) public assetToken;
+  struct ReceivableInfo {
+    address tokenAddress;
+    uint256 amount;
+    uint256 balance;
+  }
+  mapping(uint256 => ReceivableInfo) public receivableInfoMapping;
 
   // Nested mapping for looking up receivable token given a paymentReference
   // and original payment address
-  mapping(bytes => mapping(address => uint256)) private _receivableTokenIdMapping;
+  mapping(bytes32 => uint256) public _receivableTokenIdMapping;
 
   // Helper mappings to lookup all receivable tokens owned by an address
   mapping(address => uint256[]) private _receivableIds;
@@ -35,12 +37,9 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     address recipient,
     address paymentProxy,
     uint256 receivableTokenId,
-    address assetAddress,
-    uint256 amount,
+    address tokenAddress,
     uint256 paymentId,
-    bytes indexed paymentReference,
-    uint256 feeAmount,
-    address feeAddress
+    bytes indexed paymentReference
   );
 
   // Event to declare a transfer with a reference
@@ -76,12 +75,14 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     require(amount != 0, 'Zero amount provided');
     address owner = ownerOf(receivableTokenId);
     _paymentId.increment();
-    address assetAddress = assetToken[receivableTokenId];
+
+    ReceivableInfo storage receivableInfo = receivableInfoMapping[receivableTokenId];
+    address tokenAddress = receivableInfo.tokenAddress;
 
     (bool status, ) = paymentProxy.delegatecall(
       abi.encodeWithSignature(
         'transferFromWithReferenceAndFee(address,address,uint256,bytes,uint256,address)',
-        assetAddress,
+        tokenAddress,
         owner,
         amount,
         paymentReference,
@@ -91,57 +92,52 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     );
     require(status, 'transferFromWithReferenceAndFee failed');
 
+    receivableInfo.balance += amount;
+
     emit Payment(
       msg.sender,
       owner,
       paymentProxy,
       receivableTokenId,
-      assetAddress,
-      amount,
+      tokenAddress,
       _paymentId.current(),
-      paymentReference,
-      feeAmount,
-      feeAddress
+      paymentReference
     );
   }
 
   function mint(
-    address originalPaymentAddress,
     bytes calldata paymentReference,
+    uint256 amount,
     address erc20Addr,
     string memory receivableURI
   ) external {
+    require(msg.sender != address(0) && erc20Addr != address(0), 'Zero address provided');
     require(
-      originalPaymentAddress != address(0) && erc20Addr != address(0),
-      'Zero address provided'
-    );
-    require(
-      getReceivableTokenId(paymentReference, originalPaymentAddress) == 0,
+      _receivableTokenIdMapping[keccak256(abi.encodePacked(msg.sender, paymentReference))] == 0,
       'Receivable has already been minted for this user and request'
     );
     _receivableTokenId.increment();
     uint256 currentReceivableTokenId = _receivableTokenId.current();
 
-    _mint(originalPaymentAddress, currentReceivableTokenId);
-    _receivableTokenIdMapping[paymentReference][originalPaymentAddress] = currentReceivableTokenId;
-    assetToken[currentReceivableTokenId] = erc20Addr;
+    _mint(msg.sender, currentReceivableTokenId);
+    _receivableTokenIdMapping[
+      keccak256(abi.encodePacked(msg.sender, paymentReference))
+    ] = currentReceivableTokenId;
+    receivableInfoMapping[currentReceivableTokenId] = ReceivableInfo({
+      tokenAddress: erc20Addr,
+      amount: amount,
+      balance: 0
+    });
     _setTokenURI(currentReceivableTokenId, receivableURI);
   }
 
+  // Grab all IDS of receivables owned by account
   function getIds(address account) external view returns (uint256[] memory) {
     return _receivableIds[account];
   }
 
   function getReceivableIdIndex(uint256 receivableId) external view returns (uint256) {
     return _receivableIdIndexes[receivableId];
-  }
-
-  function getReceivableTokenId(bytes calldata paymentReference, address originalPaymentAddress)
-    public
-    view
-    returns (uint256)
-  {
-    return _receivableTokenIdMapping[paymentReference][originalPaymentAddress];
   }
 
   function _beforeTokenTransfer(

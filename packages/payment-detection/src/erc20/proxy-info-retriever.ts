@@ -64,8 +64,12 @@ export default class ProxyERC20InfoRetriever
 
   /**
    * Retrieves transfer events for the current contract, address and network.
+   * @param isReceivable Whether or not this proxy contract is a receivable contract, which
+   * ignores the toAddress filtering since they can be transferred to other recipients.
    */
-  public async getTransferEvents(): Promise<PaymentTypes.ERC20PaymentNetworkEvent[]> {
+  public async getTransferEvents(
+    isReceivable = false,
+  ): Promise<PaymentTypes.ERC20PaymentNetworkEvent[]> {
     // Create a filter to find all the Transfer logs for the toAddress
     const filter = this.contractProxy.filters.TransferWithReference(
       null,
@@ -112,7 +116,7 @@ export default class ProxyERC20InfoRetriever
       .filter(
         ({ parsedLog }) =>
           parsedLog.tokenAddress.toLowerCase() === this.tokenContractAddress.toLowerCase() &&
-          parsedLog.to.toLowerCase() === this.toAddress.toLowerCase(),
+          (isReceivable || parsedLog.to.toLowerCase() === this.toAddress.toLowerCase()),
       )
       // Creates the balance events
       .map(async ({ parsedLog, blockNumber, transactionHash }) => ({
@@ -122,7 +126,7 @@ export default class ProxyERC20InfoRetriever
           block: blockNumber,
           feeAddress: parsedLog.feeAddress || undefined,
           feeAmount: parsedLog.feeAmount?.toString() || undefined,
-          to: this.toAddress,
+          to: parsedLog.to,
           txHash: transactionHash,
         },
         timestamp: (await this.provider.getBlock(blockNumber || 0)).timestamp,

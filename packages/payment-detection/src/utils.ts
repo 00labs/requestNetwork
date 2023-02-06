@@ -180,7 +180,6 @@ export function getPaymentReference(
 export const formatAddress: {
   (address: string | null | undefined, key?: string, allowsUndefined?: false): string;
   (address: string | null | undefined, key?: string, allowsUndefined?: true): string | undefined;
-  (address: string | null | undefined, key?: string, allowsUndefined?: boolean): string | undefined;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 } = (address: string | null | undefined, key?: string, allowsUndefined = false): any => {
   if (!address && allowsUndefined) return undefined;

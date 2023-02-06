@@ -111,18 +111,19 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     address erc20Addr,
     string memory receivableURI
   ) external {
-    require(msg.sender != address(0) && erc20Addr != address(0), 'Zero address provided');
+    require(paymentReference.length > 0, 'Zero paymentReference provided');
+    require(amount > 0, 'Zero amount provided');
+    require(erc20Addr != address(0), 'Zero address provided');
+    bytes32 idKey = keccak256(abi.encodePacked(msg.sender, paymentReference));
     require(
-      receivableTokenIdMapping[keccak256(abi.encodePacked(msg.sender, paymentReference))] == 0,
+      receivableTokenIdMapping[idKey] == 0,
       'Receivable has already been minted for this user and request'
     );
     _receivableTokenId.increment();
     uint256 currentReceivableTokenId = _receivableTokenId.current();
 
     _mint(msg.sender, currentReceivableTokenId);
-    receivableTokenIdMapping[
-      keccak256(abi.encode(msg.sender, paymentReference))
-    ] = currentReceivableTokenId;
+    receivableTokenIdMapping[idKey] = currentReceivableTokenId;
     receivableInfoMapping[currentReceivableTokenId] = ReceivableInfo({
       tokenAddress: erc20Addr,
       amount: amount,

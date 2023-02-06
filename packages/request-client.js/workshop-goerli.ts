@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 // RequestNetwork is the interface we will use to interact with the Request network
 import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
@@ -18,8 +16,6 @@ import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
 import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
-
-import MultiFormat from '@requestnetwork/multi-format';
 
 import { config } from 'dotenv';
 config();
@@ -86,10 +82,10 @@ const requestNetwork = new RequestNetwork.RequestNetwork({
 
 //#region Request setup
 // ✏️ Payment network information
-const paymentNetwork: RequestNetwork.Types.Payment.IPaymentNetworkCreateParameters = {
-  id: RequestNetwork.Types.Payment.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
+const paymentNetwork: RequestNetwork.Types.Payment.PaymentNetworkCreateParameters = {
+  id: RequestNetwork.Types.Extension.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
   parameters: {
-    paymentAddress: PAYEE_ADDRESS,
+    paymentAddress: payeeIdentity.value,
   },
 };
 

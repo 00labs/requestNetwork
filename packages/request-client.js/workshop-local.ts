@@ -26,7 +26,7 @@ const provider = new ethers.providers.JsonRpcProvider() as ethers.providers.Prov
 const localToken = '0x9FBDa871d559710256a2502A2517b794B482Db40';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
-const RECEIVABLE_ADDR = '0x2e335F247E91caa168c64b63104C4475b2af3942';
+const RECEIVABLE_ADDR = '0xF426505ac145abE033fE77C666840063757Be9cd';
 const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 //#endregion

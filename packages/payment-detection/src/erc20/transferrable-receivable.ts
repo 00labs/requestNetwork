@@ -3,7 +3,6 @@ import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork
 import { TheGraphInfoRetriever } from '../thegraph';
 import { erc20TransferrableReceivableArtifact } from '@requestnetwork/smart-contracts';
 import { makeGetDeploymentInformation } from '../utils';
-// import ERC20TransferrableReceivableInfoRetriever from './transferrable-receivable-info-retriever';
 import { PaymentNetworkOptions, ReferenceBasedDetectorOptions } from '../types';
 import { ReferenceBasedDetector } from '../reference-based-detector';
 import ProxyInfoRetriever from './proxy-info-retriever';
@@ -30,8 +29,8 @@ export class ERC20TransferrableReceivablePaymentDetector extends ReferenceBasedD
     getSubgraphClient,
   }: ReferenceBasedDetectorOptions & Pick<PaymentNetworkOptions, 'getSubgraphClient'>) {
     super(
-      ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_PROXY_CONTRACT,
-      advancedLogic.extensions.proxyContractErc20,
+      ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
+      advancedLogic.extensions.erc20TransferrableReceivable,
       currencyManager,
     );
     this.getSubgraphClient = getSubgraphClient;
@@ -83,16 +82,6 @@ export class ERC20TransferrableReceivablePaymentDetector extends ReferenceBasedD
         acceptedTokens: [requestCurrency.value],
       });
     } else {
-      // const transferrableReceivableInfoRetriever = new ERC20TransferrableReceivableInfoRetriever(
-      //   paymentReference,
-      //   receivableContractAddress,
-      //   receivableCreationBlockNumber,
-      //   requestCurrency.value,
-      //   receivableContractAddress,
-      //   eventName,
-      //   paymentChain,
-      // );
-
       const transferrableReceivableInfoRetriever = new ProxyInfoRetriever(
         paymentReference,
         receivableContractAddress,

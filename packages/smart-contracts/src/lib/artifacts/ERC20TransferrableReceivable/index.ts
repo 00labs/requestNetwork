@@ -11,7 +11,7 @@ export const erc20TransferrableReceivableArtifact =
         abi: ABI_0_1_0,
         deployment: {
           private: {
-            address: '0x2e335F247E91caa168c64b63104C4475b2af3942',
+            address: '0xF426505ac145abE033fE77C666840063757Be9cd',
             creationBlockNumber: 0,
           },
           goerli: {

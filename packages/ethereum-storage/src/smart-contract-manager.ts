@@ -196,6 +196,7 @@ export default class SmartContractManager {
         .then((isListening: boolean) => {
           // The timeout must be disabled
           clearTimeout(connectionTimer);
+
           if (isListening) {
             resolve();
           } else {

@@ -324,7 +324,7 @@ export function validateMintERC20TransferrableReceivable(request: ClientTypes.IR
 
   // Validate that there exists an assetAddress
   const expectedCurrencyType =
-    currenciesMap[PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE];
+    currenciesMap[ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE];
   if (
     !expectedCurrencyType ||
     request.currencyInfo.type !== expectedCurrencyType ||

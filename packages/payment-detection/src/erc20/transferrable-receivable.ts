@@ -1,19 +1,12 @@
-import {
-  AdvancedLogicTypes,
-  ExtensionTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
 
-import Utils from '@requestnetwork/utils';
+import { TheGraphInfoRetriever } from '../thegraph';
 import { erc20TransferrableReceivableArtifact } from '@requestnetwork/smart-contracts';
-import TheGraphInfoRetriever from './thegraph-info-retriever';
-import { networkSupportsTheGraph } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';
-import ERC20TransferrableReceivableInfoRetriever from './transferrable-receivable-info-retriever';
-import { PaymentDetectorBase } from '../payment-detector-base';
-import { BalanceError } from '../balance-error';
-import { getPaymentReference } from '../utils';
+// import ERC20TransferrableReceivableInfoRetriever from './transferrable-receivable-info-retriever';
+import { PaymentNetworkOptions, ReferenceBasedDetectorOptions } from '../types';
+import { ReferenceBasedDetector } from '../reference-based-detector';
+import ProxyInfoRetriever from './proxy-info-retriever';
 
 const ERC20_TRANSFERRABLE_RECEIVABLE_CONTRACT_ADDRESS_MAP = {
   ['0.1.0']: '0.1.0',
@@ -22,73 +15,26 @@ const ERC20_TRANSFERRABLE_RECEIVABLE_CONTRACT_ADDRESS_MAP = {
 /**
  * Handle payment networks with ERC20 transferrable receivable contract extension
  */
-export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetectorBase<
-  ExtensionTypes.PnAnyToErc20.IAnyToERC20,
+export class ERC20TransferrableReceivablePaymentDetector extends ReferenceBasedDetector<
+  ExtensionTypes.PnReferenceBased.IReferenceBased,
   PaymentTypes.IERC20PaymentEventParameters
 > {
+  private readonly getSubgraphClient: PaymentNetworkOptions['getSubgraphClient'];
+
   /**
    * @param extension The advanced logic payment network extensions
    */
-  public constructor({ advancedLogic }: { advancedLogic: AdvancedLogicTypes.IAdvancedLogic }) {
+  public constructor({
+    advancedLogic,
+    currencyManager,
+    getSubgraphClient,
+  }: ReferenceBasedDetectorOptions & Pick<PaymentNetworkOptions, 'getSubgraphClient'>) {
     super(
-      PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE,
-      advancedLogic.extensions.erc20TransferrableReceivable,
+      ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_PROXY_CONTRACT,
+      advancedLogic.extensions.proxyContractErc20,
+      currencyManager,
     );
-  }
-
-  public async createExtensionsDataForCreation(
-    paymentNetworkCreationParameters: any,
-  ): Promise<any> {
-    // If no salt is given, generate one
-    paymentNetworkCreationParameters.salt =
-      paymentNetworkCreationParameters.salt || (await Utils.crypto.generate8randomBytes());
-
-    return this.extension.createCreationAction({
-      paymentAddress: paymentNetworkCreationParameters.paymentAddress,
-      refundAddress: paymentNetworkCreationParameters.refundAddress,
-      ...paymentNetworkCreationParameters,
-    });
-  }
-
-  public createExtensionsDataForAddRefundInformation(parameters: any): any {
-    throw new Error(`Unsupported ${parameters}`);
-  }
-
-  public createExtensionsDataForAddPaymentInformation(parameters: any): any {
-    throw new Error(`Unsupported ${parameters}`);
-  }
-
-  protected async getEvents(
-    request: RequestLogicTypes.IRequest,
-  ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20PaymentEventParameters>> {
-    const paymentExtension = this.getPaymentExtension(request);
-    const paymentChain = this.getPaymentChain(request);
-
-    const supportedNetworks = this.extension.supportedNetworks;
-    if (!supportedNetworks.includes(paymentChain)) {
-      throw new BalanceError(
-        `Payment network ${paymentChain} not supported by ${
-          this.paymentNetworkId
-        } payment detection. Supported networks: ${supportedNetworks.join(', ')}`,
-        PaymentTypes.BALANCE_ERROR_CODE.NETWORK_NOT_SUPPORTED,
-      );
-    }
-    this.checkRequiredParameter(paymentExtension.values.salt, 'salt');
-
-    const paymentAndEscrowEvents = await this.extractEvents(
-      PaymentTypes.EVENTS_NAMES.PAYMENT,
-      getPaymentReference(request) ?? '',
-      request.currency,
-      paymentChain,
-      paymentExtension,
-    );
-    const paymentEvents = paymentAndEscrowEvents.paymentEvents;
-    const escrowEvents = paymentAndEscrowEvents.escrowEvents;
-
-    return {
-      paymentEvents: paymentEvents,
-      escrowEvents: escrowEvents,
-    };
+    this.getSubgraphClient = getSubgraphClient;
   }
 
   /**
@@ -103,11 +49,14 @@ export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetector
    */
   protected async extractEvents(
     eventName: PaymentTypes.EVENTS_NAMES,
+    toAddress: string | undefined,
     paymentReference: string,
     requestCurrency: RequestLogicTypes.ICurrency,
     paymentChain: string,
     paymentNetwork: ExtensionTypes.IState<ExtensionTypes.PnReferenceBased.ICreationParameters>,
   ): Promise<PaymentTypes.AllNetworkEvents<PaymentTypes.IERC20PaymentEventParameters>> {
+    // To satisfy typescript
+    toAddress;
     if (!paymentReference) {
       return {
         paymentEvents: [],
@@ -122,27 +71,40 @@ export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetector
       paymentNetwork.version,
     );
 
-    if (networkSupportsTheGraph(paymentChain)) {
-      const graphInfoRetriever = new TheGraphInfoRetriever(
+    const subgraphClient = this.getSubgraphClient(paymentChain);
+    if (subgraphClient) {
+      const graphInfoRetriever = new TheGraphInfoRetriever(subgraphClient, this.currencyManager);
+      return graphInfoRetriever.getReceivableEvents({
         paymentReference,
-        receivableContractAddress,
-        requestCurrency.value,
-        '', // Filtering by payee address does not apply for tranferrable receivables
-        eventName,
+        toAddress: '', // Filtering by payee address does not apply for transferrable receivables
+        contractAddress: receivableContractAddress,
         paymentChain,
-      );
-      return graphInfoRetriever.getReceivableEvents();
+        eventName,
+        acceptedTokens: [requestCurrency.value],
+      });
     } else {
-      const transferrableReceivableInfoRetriever = new ERC20TransferrableReceivableInfoRetriever(
+      // const transferrableReceivableInfoRetriever = new ERC20TransferrableReceivableInfoRetriever(
+      //   paymentReference,
+      //   receivableContractAddress,
+      //   receivableCreationBlockNumber,
+      //   requestCurrency.value,
+      //   receivableContractAddress,
+      //   eventName,
+      //   paymentChain,
+      // );
+
+      const transferrableReceivableInfoRetriever = new ProxyInfoRetriever(
         paymentReference,
         receivableContractAddress,
         receivableCreationBlockNumber,
         requestCurrency.value,
-        receivableContractAddress,
+        '',
         eventName,
         paymentChain,
       );
-      const paymentEvents = await transferrableReceivableInfoRetriever.getTransferEvents();
+      const paymentEvents = await transferrableReceivableInfoRetriever.getTransferEvents(
+        true /* isReceivable */,
+      );
       return {
         paymentEvents,
       };
@@ -156,16 +118,4 @@ export class ERC20TransferrableReceivablePaymentDetector extends PaymentDetector
     erc20TransferrableReceivableArtifact,
     ERC20_TRANSFERRABLE_RECEIVABLE_CONTRACT_ADDRESS_MAP,
   );
-
-  /**
-   * Get the network of the payment
-   * @returns The network of payment
-   */
-  protected getPaymentChain(request: RequestLogicTypes.IRequest): string {
-    const network = request.currency.network;
-    if (!network) {
-      throw Error(`request.currency.network must be defined for ${this.paymentNetworkId}`);
-    }
-    return network;
-  }
 }

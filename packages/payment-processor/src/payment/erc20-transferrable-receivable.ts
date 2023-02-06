@@ -10,7 +10,7 @@ import {
 
 import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
 import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, PaymentTypes } from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {
@@ -153,7 +153,7 @@ export async function prepareErc20TransferrableReceivablePaymentTransaction(
   amount?: BigNumberish,
   feeAmountOverride?: BigNumberish,
 ): Promise<IPreparedTransaction> {
-  validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
+  validateRequest(request, ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
 
   return {
     data: await encodePayErc20TransferrableReceivableRequest(
@@ -183,7 +183,7 @@ export async function encodePayErc20TransferrableReceivableRequest(
   amount?: BigNumberish,
   feeAmountOverride?: BigNumberish,
 ): Promise<string> {
-  validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
+  validateRequest(request, ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
 
   const amountToPay = getAmountToPay(request, amount);
   const { paymentReference, feeAddress, feeAmount } = getRequestPaymentValues(request);
@@ -213,7 +213,7 @@ export function _getErc20TransferrableReceivablePaymentUrl(
   request: ClientTypes.IRequestData,
   amount?: BigNumberish,
 ): string {
-  validateRequest(request, PaymentTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
+  validateRequest(request, ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE);
   const contractAddress = getProxyAddress(
     request,
     Erc20PaymentNetwork.ERC20TransferrableReceivablePaymentDetector.getDeploymentInformation,

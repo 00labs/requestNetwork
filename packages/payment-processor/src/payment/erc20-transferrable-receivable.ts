@@ -28,7 +28,7 @@ import MultiFormat from '@requestnetwork/multi-format';
 
 // The ERC20 receivable smart contract ABI fragment
 const erc20TransferrableReceivableContractAbiFragment = [
-  'function getReceivableTokenId(bytes calldata paymentReference, address originalPaymentAddress) public view returns (uint256)',
+  'function receivableTokenIdMapping(bytes32) public view returns (uint256)',
 ];
 
 /**
@@ -52,7 +52,15 @@ export async function getReceivableTokenIdForRequest(
   );
 
   const { paymentReference, paymentAddress } = getRequestPaymentValues(request);
-  return await contract.getReceivableTokenId(`0x${paymentReference}`, paymentAddress);
+
+  return await contract.receivableTokenIdMapping(
+    ethers.utils.keccak256(
+      ethers.utils.defaultAbiCoder.encode(
+        ['address', 'bytes'],
+        [paymentAddress, `0x${paymentReference}`],
+      ),
+    ),
+  );
 }
 
 /**
@@ -103,13 +111,14 @@ export function encodeMintErc20TransferrableReceivableRequest(
   const reqIdObj = MultiFormat.deserialize(request.requestId);
   const metadata = Buffer.from(reqIdObj.type).toString('base64'); // metadata is requestId.type
 
-  const { paymentReference, paymentAddress } = getRequestPaymentValues(request);
+  const { paymentReference } = getRequestPaymentValues(request);
+  const amount = getAmountToPay(request);
 
   const receivableContract = ERC20TransferrableReceivable__factory.createInterface();
   return receivableContract.encodeFunctionData('mint', [
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    paymentAddress,
     `0x${paymentReference}`,
+    amount,
     tokenAddress,
     metadata,
   ]);

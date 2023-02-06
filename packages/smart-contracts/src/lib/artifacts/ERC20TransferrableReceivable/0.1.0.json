@@ -101,14 +101,8 @@
         {
           "indexed": false,
           "internalType": "address",
-          "name": "assetAddress",
+          "name": "tokenAddress",
           "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
         },
         {
           "indexed": false,
@@ -121,18 +115,6 @@
           "internalType": "bytes",
           "name": "paymentReference",
           "type": "bytes"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "feeAmount",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "feeAddress",
-          "type": "address"
         }
       ],
       "name": "Payment",
@@ -227,25 +209,6 @@
     {
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "assetToken",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
           "internalType": "address",
           "name": "owner",
           "type": "address"
@@ -322,30 +285,6 @@
     {
       "inputs": [
         {
-          "internalType": "bytes",
-          "name": "paymentReference",
-          "type": "bytes"
-        },
-        {
-          "internalType": "address",
-          "name": "originalPaymentAddress",
-          "type": "address"
-        }
-      ],
-      "name": "getReceivableTokenId",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
           "internalType": "address",
           "name": "owner",
           "type": "address"
@@ -370,14 +309,14 @@
     {
       "inputs": [
         {
-          "internalType": "address",
-          "name": "originalPaymentAddress",
-          "type": "address"
-        },
-        {
           "internalType": "bytes",
           "name": "paymentReference",
           "type": "bytes"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
         },
         {
           "internalType": "address",
@@ -468,6 +407,54 @@
           "internalType": "address",
           "name": "",
           "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "receivableInfoMapping",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "receivableTokenIdMapping",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",

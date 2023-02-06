@@ -166,11 +166,7 @@ export function getPaymentReference(
   const salt = extension.values.salt;
   if (!salt) return;
 
-  let info = getInfo(extension.values, event);
-  if (extension.id === ExtensionTypes.PAYMENT_NETWORK_ID.ERC20_TRANSFERRABLE_RECEIVABLE) {
-    // set info to extension id because it is empty for erc20 transferrable receivable payment network
-    info = extension.id;
-  }
+  const info = getInfo(extension.values, event);
   if (!info) return;
 
   return PaymentReferenceCalculator.calculate(requestId, salt, info);

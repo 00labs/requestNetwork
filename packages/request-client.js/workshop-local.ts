@@ -41,6 +41,9 @@ const payerIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/0");
 const payerPaymentWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/1").connect(provider);
 
 const payeeIdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2");
+const payeeProviderWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/2").connect(provider);
+
+const payee2IdentityWallet = Wallet.fromMnemonic(mnemonic, "m/44'/60'/0'/0/3");
 
 //#endregion
 
@@ -94,7 +97,7 @@ const paymentNetwork: RequestNetwork.Types.Payment.PaymentNetworkCreateParameter
 // ✏️ The main request info: 1 TestERC20 from Payee to Payer
 const requestInfo: RequestNetwork.Types.IRequestInfo = {
   currency: 'ERC20',
-  expectedAmount: '1',
+  expectedAmount: '2',
   payee: payeeIdentity,
   payer: payerIdentity,
 };
@@ -138,7 +141,7 @@ function sleep(ms: any) {
   // ✏️ Pay the request
   await approveErc20IfNeeded(requestData, payerPaymentWallet.address, payerPaymentWallet);
 
-  const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet);
+  const tx: ContractTransaction = await payRequest(requestData, payerPaymentWallet, 1);
   console.log(`Payment tx: ${tx.hash}`);
   await tx.wait(1);
   console.log(`After payment`);
@@ -158,7 +161,43 @@ function sleep(ms: any) {
 
   await sleep(5000);
 
-  console.log('Balance1: ', request.getData().balance?.balance);
+  console.log('Balance before refresh: ', request.getData().balance?.balance);
   await request.refresh();
-  console.log('Balance2: ', request.getData().balance?.balance);
+  console.log('Balance after: ', request.getData().balance?.balance);
+
+  console.log('transfer to second owner');
+  const transferTx: ContractTransaction = await invoiceReceivable
+    .connect(payeeProviderWallet)
+    ['safeTransferFrom(address,address,uint256)'](
+      payeeIdentityWallet.address,
+      payee2IdentityWallet.address,
+      tokenId,
+    );
+  await transferTx.wait();
+  console.log('after transfer');
+  console.log('payee receivables: ' + (await invoiceReceivable.balanceOf(payeeIdentity.value)));
+  console.log(
+    'payee2 receivables: ' + (await invoiceReceivable.balanceOf(payee2IdentityWallet.address)),
+  );
+
+  // ✏️ Pay the request again
+  console.log('Before second payment');
+  console.log(`Old payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
+  console.log(`New payee: ${(await erc20.balanceOf(payee2IdentityWallet.address)).toString()}`);
+  console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
+
+  await approveErc20IfNeeded(requestData, payerPaymentWallet.address, payerPaymentWallet);
+  const tx2: ContractTransaction = await payRequest(requestData, payerPaymentWallet, 1);
+  console.log(`Payment tx: ${tx.hash}`);
+  await tx2.wait(1);
+  console.log(`After payment`);
+  console.log(`Old payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);
+  console.log(`New payee: ${(await erc20.balanceOf(payee2IdentityWallet.address)).toString()}`);
+  console.log(`Payer: ${(await erc20.balanceOf(payerPaymentWallet.address)).toString()}`);
+
+  await sleep(5000);
+
+  console.log('Balance before refresh: ', request.getData().balance?.balance);
+  await request.refresh();
+  console.log('Balance after: ', request.getData().balance?.balance);
 })();

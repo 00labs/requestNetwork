@@ -54,12 +54,7 @@ export async function getReceivableTokenIdForRequest(
   const { paymentReference, paymentAddress } = getRequestPaymentValues(request);
 
   return await contract.receivableTokenIdMapping(
-    ethers.utils.keccak256(
-      ethers.utils.defaultAbiCoder.encode(
-        ['address', 'bytes'],
-        [paymentAddress, `0x${paymentReference}`],
-      ),
-    ),
+    ethers.utils.solidityKeccak256(['address', 'bytes'], [paymentAddress, `0x${paymentReference}`]),
   );
 }
 

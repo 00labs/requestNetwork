@@ -15,8 +15,8 @@ export const erc20TransferrableReceivableArtifact =
             creationBlockNumber: 0,
           },
           goerli: {
-            address: '0x5c7bb93ED5CAF047f9ac1850bA2075A580b38457',
-            creationBlockNumber: 8364056,
+            address: '0xF8C9a2Df5C2808F97f7d56A214373340cbB66832',
+            creationBlockNumber: 8444058,
           },
         },
       },

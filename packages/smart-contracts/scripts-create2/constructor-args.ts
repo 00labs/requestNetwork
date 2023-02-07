@@ -61,7 +61,7 @@ export const getConstructorArgs = (contract: string, network?: string): string[]
     case 'ERC20TransferrableReceivable': {
       if (!network) {
         throw new Error(
-          'Escrow contract requires network parameter to get correct address of erc20FeeProxy',
+          'Receivable contract requires network parameter to get correct address of erc20FeeProxy',
         );
       }
       const erc20FeeProxy = artifacts.erc20FeeProxyArtifact;

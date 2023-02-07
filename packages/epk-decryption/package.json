@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/epk-decryption",
-  "version": "0.4.8",
+  "version": "0.5.0",
   "publishConfig": {
     "access": "public"
   },
@@ -41,9 +41,9 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@huma-shan/multi-format": "0.16.8",
-    "@huma-shan/types": "0.37.8",
-    "@huma-shan/utils": "0.37.8",
+    "@huma-shan/multi-format": "0.17.0",
+    "@huma-shan/types": "0.38.0",
+    "@huma-shan/utils": "0.38.0",
     "tslib": "2.3.1"
   },
   "devDependencies": {

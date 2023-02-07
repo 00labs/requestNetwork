@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/toolbox",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
   "description": "Toolbox for Request Network.",
   "keywords": [
@@ -42,14 +42,14 @@
     "referenceCalculator": "yarn cli referenceCalculator"
   },
   "dependencies": {
-    "@huma-shan/currency": "0.10.8",
-    "@huma-shan/epk-signature": "0.6.8",
-    "@huma-shan/ethereum-storage": "0.28.8",
-    "@huma-shan/payment-detection": "0.37.8",
-    "@huma-shan/request-client.js": "0.41.8",
-    "@huma-shan/smart-contracts": "0.30.8",
-    "@huma-shan/types": "0.37.8",
-    "@huma-shan/utils": "0.37.8",
+    "@huma-shan/currency": "0.11.0",
+    "@huma-shan/epk-signature": "0.7.0",
+    "@huma-shan/ethereum-storage": "0.29.0",
+    "@huma-shan/payment-detection": "0.38.0",
+    "@huma-shan/request-client.js": "0.42.0",
+    "@huma-shan/smart-contracts": "0.31.0",
+    "@huma-shan/types": "0.38.0",
+    "@huma-shan/utils": "0.38.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "ethers": "5.5.1",

@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/types",
-  "version": "0.37.8",
+  "version": "0.38.0",
   "publishConfig": {
     "access": "public"
   },

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2023-02-07)
+
+### Bug Fixes
+
+- ts-node configuration ([#138](https://github.com/RequestNetwork/requestNetwork/issues/138)) ([e2180d5](https://github.com/RequestNetwork/requestNetwork/commit/e2180d507bd87116fdeb3466690b6df0c5187976))
+- typescript lint for test files ([#778](https://github.com/RequestNetwork/requestNetwork/issues/778)) ([048e876](https://github.com/RequestNetwork/requestNetwork/commit/048e876a905516be0de8a31d446e4572eb74eccb))
+- webpack ts-loader build conf ([#779](https://github.com/RequestNetwork/requestNetwork/issues/779)) ([4288234](https://github.com/RequestNetwork/requestNetwork/commit/4288234726248ebabdc6d01e0fb3c6222e41f58a))
+
+### Features
+
+- **transaction-manager:** decrypt channels ([#516](https://github.com/RequestNetwork/requestNetwork/issues/516)) ([8142c3d](https://github.com/RequestNetwork/requestNetwork/commit/8142c3dda149ad00513dae8c6d9f15a74aebf7b7))
+- Ethereum Private key (Epk) decryption provider implementation ([#499](https://github.com/RequestNetwork/requestNetwork/issues/499)) ([207b762](https://github.com/RequestNetwork/requestNetwork/commit/207b76213628570d346decd4ec5a7912ddb2bf09))
+
 ## [0.3.34](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/epk-decryption@0.3.24...@huma-shan/epk-decryption@0.3.34) (2022-11-04)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
-# @requestnetwork/request-client.js
+# @huma-shan/request-client.js
 
-`@requestnetwork/request-client.js` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/request-client.js` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 This package allows you to interact with the Request blockchain through [Request nodes](https://github.com/RequestNetwork/requestNetwork/blob/master/packages/request-node). This client side library uses Request nodes as servers, connected in HTTP. See the Request node documentation for more details on their API.
 It ships both as a commonjs and a UMD module. This means you can use it in node application and in web pages.
 
@@ -8,7 +8,7 @@ It ships both as a commonjs and a UMD module. This means you can use it in node 
 
 ```bash
 # install the request js library
-npm install @requestnetwork/request-client.js
+npm install @huma-shan/request-client.js
 # install a request signature provider (e.g: web3-signature to use Metamask)
 npm install @requestnetwork/web3-signature
 ```

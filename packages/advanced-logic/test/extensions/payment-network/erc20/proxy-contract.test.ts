@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes, IdentityTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes, IdentityTypes } from '@huma-shan/types';
 
 import Erc20ProxyContract from '../../../../src/extensions/payment-network/erc20/proxy-contract';
 

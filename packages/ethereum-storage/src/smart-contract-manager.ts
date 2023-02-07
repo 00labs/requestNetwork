@@ -1,5 +1,5 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import * as SmartContracts from '@huma-shan/smart-contracts';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 import * as Bluebird from 'bluebird';
 import * as config from './config';
 import EthereumBlocks from './ethereum-blocks';

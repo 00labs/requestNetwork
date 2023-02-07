@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@huma-shan/types';
 import { ICurrencyManager } from '@requestnetwork/currency';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 

@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { TransactionTypes } from '@requestnetwork/types';
+import { TransactionTypes } from '@huma-shan/types';
 import ChannelParser from '../../src/channel-parser';
 import TransactionsFactory from '../../src/transactions-factory';
 import * as TestData from './utils/test-data';

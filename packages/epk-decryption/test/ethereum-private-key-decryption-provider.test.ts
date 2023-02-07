@@ -1,4 +1,4 @@
-import { EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
+import { EncryptionTypes, IdentityTypes } from '@huma-shan/types';
 
 import EthereumPrivateKeyDecryptionProvider from '../src/ethereum-private-key-decryption-provider';
 import { encrypt } from '@requestnetwork/utils';

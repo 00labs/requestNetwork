@@ -4,7 +4,7 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { deepCopy, normalizeKeccak256Hash } from '@requestnetwork/utils';
 
 import Action from '../../src/action';

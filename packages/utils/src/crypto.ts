@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@huma-shan/types';
 import { ethers } from 'ethers';
 import {
   decryptWithAes256cbc,

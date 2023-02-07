@@ -1,12 +1,7 @@
 import { ContractTransaction, Signer, providers, BigNumber, constants } from 'ethers';
-import { batchConversionPaymentsArtifact } from '@requestnetwork/smart-contracts';
-import { BatchConversionPayments__factory } from '@requestnetwork/smart-contracts/types';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { batchConversionPaymentsArtifact } from '@huma-shan/smart-contracts';
+import { BatchConversionPayments__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes, ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { ITransactionOverrides } from './transaction-overrides';
 import {
   comparePnTypeAndVersion,
@@ -19,10 +14,7 @@ import {
   MAX_ALLOWANCE,
   validateErc20FeeProxyRequest,
 } from './utils';
-import {
-  padAmountForChainlink,
-  getPaymentNetworkExtension,
-} from '@requestnetwork/payment-detection';
+import { padAmountForChainlink, getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 import { IPreparedTransaction } from './prepared-transaction';
 import { EnrichedRequest, IConversionPaymentSettings } from './index';
 import { checkRequestAndGetPathAndCurrency } from './any-to-erc20-proxy';

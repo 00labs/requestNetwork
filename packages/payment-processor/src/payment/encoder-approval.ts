@@ -2,7 +2,7 @@ import { IRequestPaymentOptions } from './settings';
 import { IPreparedTransaction } from './prepared-transaction';
 import { providers, BigNumber } from 'ethers';
 import { hasErc20Approval, prepareApproveErc20 } from './erc20';
-import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import {
   hasErc20ApprovalForProxyConversion,
   prepareApproveErc20ForProxyConversion,
@@ -12,7 +12,7 @@ import {
   hasErc20ApprovalForSwapWithConversion,
   prepareApprovalErc20ForSwapWithConversionToPay,
 } from './swap-conversion-erc20';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 /**
  * For a given request and user, encode an approval transaction if it is needed.

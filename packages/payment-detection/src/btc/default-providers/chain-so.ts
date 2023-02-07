@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import Axios from 'axios';
 import * as converterBTC from 'satoshi-bitcoin';
 import { BigNumber } from 'ethers';

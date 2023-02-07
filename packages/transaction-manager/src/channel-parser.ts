@@ -1,4 +1,4 @@
-import { DecryptionProviderTypes, EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
+import { DecryptionProviderTypes, EncryptionTypes, TransactionTypes } from '@huma-shan/types';
 
 import TransactionsParser from './transactions-parser';
 

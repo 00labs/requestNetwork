@@ -1,5 +1,5 @@
 import { CurrencyManager, CurrencyDefinition } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 export const currencyManager = new CurrencyManager([
   ...CurrencyManager.getDefaultList(),

@@ -81,7 +81,7 @@ jobs:
           command: yarn lint:check
       - run:
           name: Build types
-          command: yarn workspace @requestnetwork/types run build
+          command: yarn workspace @huma-shan/types run build
       - run:
           name: Build utils
           command: yarn workspace @requestnetwork/utils run build
@@ -90,10 +90,10 @@ jobs:
           command: yarn workspace @requestnetwork/currency run build
       - run:
           name: Generate Smart Contract types
-          command: yarn workspace @requestnetwork/smart-contracts run build
+          command: yarn workspace @huma-shan/smart-contracts run build
       - run:
           name: Generate Payment Detection queries
-          command: yarn workspace @requestnetwork/payment-detection run codegen
+          command: yarn workspace @huma-shan/payment-detection run codegen
 
       - run:
           name: Build all packages (tsc)
@@ -122,13 +122,13 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build request-client.js'
-          command: 'yarn workspace @requestnetwork/request-client.js run build:commonjs'
+          command: 'yarn workspace @huma-shan/request-client.js run build:commonjs'
       - run:
           name: 'Deploy test contracts from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test request-client.js'
-          command: 'yarn workspace @requestnetwork/request-client.js run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/request-client.js run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -142,10 +142,10 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build data-access'
-          command: 'yarn workspace @requestnetwork/data-access run build'
+          command: 'yarn workspace @huma-shan/data-access run build'
       - run:
           name: 'Test data-access'
-          command: 'yarn workspace @requestnetwork/data-access run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/data-access run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -176,10 +176,10 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build transaction-manager'
-          command: 'yarn workspace @requestnetwork/transaction-manager run build'
+          command: 'yarn workspace @huma-shan/transaction-manager run build'
       - run:
           name: 'Test transaction-manager'
-          command: 'yarn workspace @requestnetwork/transaction-manager run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/transaction-manager run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -195,13 +195,13 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build ethereum-storage'
-          command: 'yarn workspace @requestnetwork/ethereum-storage run build'
+          command: 'yarn workspace @huma-shan/ethereum-storage run build'
       - run:
           name: 'Deploy contracs smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test ethereum-storage'
-          command: 'yarn workspace @requestnetwork/ethereum-storage run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/ethereum-storage run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -216,16 +216,16 @@ jobs:
           at: *working_directory
       - run:
           name: 'Deploy contracs smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Lint smart contracts smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run lint:sol:check'
+          command: 'yarn workspace @huma-shan/smart-contracts run lint:sol:check'
       - run:
           name: 'Test smart contracts smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run test'
+          command: 'yarn workspace @huma-shan/smart-contracts run test'
       - run:
           name: 'Test smart contracts utilities'
-          command: 'yarn workspace @requestnetwork/smart-contracts run test:lib --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/smart-contracts run test:lib --ci --maxWorkers=1'
   test-request-logic:
     docker:
       - *node_image
@@ -235,10 +235,10 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build request-logic'
-          command: 'yarn workspace @requestnetwork/request-logic run build'
+          command: 'yarn workspace @huma-shan/request-logic run build'
       - run:
           name: 'Test request-logic'
-          command: 'yarn workspace @requestnetwork/request-logic run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/request-logic run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -252,10 +252,10 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build advanced-logic'
-          command: 'yarn workspace @requestnetwork/advanced-logic run build'
+          command: 'yarn workspace @huma-shan/advanced-logic run build'
       - run:
           name: 'Test advanced-logic'
-          command: 'yarn workspace @requestnetwork/advanced-logic run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/advanced-logic run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -276,7 +276,7 @@ jobs:
           command: 'yarn workspace @requestnetwork/request-node run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run: *step_graph_deploy
       - run:
           name: 'Test request-node'
@@ -378,7 +378,7 @@ jobs:
           command: 'yarn workspace @requestnetwork/integration-test run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Start request-node'
           command: 'yarn workspace @requestnetwork/request-node run start'
@@ -407,7 +407,7 @@ jobs:
           command: 'yarn workspace @requestnetwork/integration-test run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run: *step_graph_deploy
       - run:
           name: 'Start request-node'
@@ -478,13 +478,13 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build payment-detection'
-          command: 'yarn workspace @requestnetwork/payment-detection run build'
+          command: 'yarn workspace @huma-shan/payment-detection run build'
       - run:
           name: 'Deploy test contracts from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test payment-detection'
-          command: 'yarn workspace @requestnetwork/payment-detection run test --ci'
+          command: 'yarn workspace @huma-shan/payment-detection run test --ci'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -499,13 +499,13 @@ jobs:
           at: *working_directory
       - run:
           name: 'Build payment-processor'
-          command: 'yarn workspace @requestnetwork/payment-processor run build'
+          command: 'yarn workspace @huma-shan/payment-processor run build'
       - run:
           name: 'Deploy test contracts from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test payment-processor'
-          command: 'yarn workspace @requestnetwork/payment-processor run test --ci'
+          command: 'yarn workspace @huma-shan/payment-processor run test --ci'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -544,7 +544,7 @@ jobs:
           command: 'yarn workspace @requestnetwork/integration-test run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @requestnetwork/smart-contracts run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Start request-node'
           command: 'yarn workspace @requestnetwork/request-node run start'

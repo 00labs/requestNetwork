@@ -5,9 +5,9 @@ import {
   CurrencyManager,
   UnsupportedCurrencyError,
 } from '@requestnetwork/currency';
-import { AnyToERC20PaymentDetector } from '@requestnetwork/payment-detection';
-import { Erc20ConversionProxy__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
+import { Erc20ConversionProxy__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {
@@ -18,7 +18,7 @@ import {
   getSigner,
   validateConversionFeeProxyRequest,
 } from './utils';
-import { padAmountForChainlink } from '@requestnetwork/payment-detection';
+import { padAmountForChainlink } from '@huma-shan/payment-detection';
 import { IPreparedTransaction } from './prepared-transaction';
 import { IConversionPaymentSettings } from './index';
 

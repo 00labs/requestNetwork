@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { ICurrencyManager } from '@requestnetwork/currency';
 import {
   ContractBasedDetector,

@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import Role from '../../src/role';
 
 import * as TestData from './utils/test-data-generator';

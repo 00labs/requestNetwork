@@ -1,6 +1,6 @@
 import { SuperFluidInfoRetriever } from '../../src/erc777/superfluid-retriever';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { GraphQLClient } from 'graphql-request';
 import { mocked } from 'ts-jest/utils';
 import { mockSuperfluidSubgraph } from './mocks';

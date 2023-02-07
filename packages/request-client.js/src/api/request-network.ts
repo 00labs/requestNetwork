@@ -1,7 +1,7 @@
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { PaymentNetworkFactory, PaymentNetworkOptions } from '@requestnetwork/payment-detection';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { AdvancedLogic } from '@huma-shan/advanced-logic';
+import { PaymentNetworkFactory, PaymentNetworkOptions } from '@huma-shan/payment-detection';
+import { RequestLogic } from '@huma-shan/request-logic';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 import {
   AdvancedLogicTypes,
   DataAccessTypes,
@@ -12,7 +12,7 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { deepCopy, supportedIdentities } from '@requestnetwork/utils';
 import {
   CurrencyManager,

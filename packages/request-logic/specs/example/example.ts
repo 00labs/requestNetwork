@@ -5,7 +5,7 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import RequestLogic from '../../src/requestLogicCore';
 import { sign } from '@requestnetwork/utils';

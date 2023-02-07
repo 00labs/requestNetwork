@@ -1,10 +1,10 @@
 import { ethers, providers } from 'ethers';
-import { chainlinkConversionPath } from '@requestnetwork/smart-contracts';
-import { getDefaultProvider, parseLogArgs } from '@requestnetwork/payment-detection';
+import { chainlinkConversionPath } from '@huma-shan/smart-contracts';
+import { getDefaultProvider, parseLogArgs } from '@huma-shan/payment-detection';
 import {
   ChainlinkConversionPath__factory,
   ChainlinkConversionPath,
-} from '@requestnetwork/smart-contracts/types';
+} from '@huma-shan/smart-contracts/types';
 import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
 import Bluebird from 'bluebird';
 import chunk from 'lodash/chunk';

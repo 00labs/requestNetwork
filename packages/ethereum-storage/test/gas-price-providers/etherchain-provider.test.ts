@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import EtherchainProvider from '../../src/gas-price-providers/etherchain-provider';
 
 import axios from 'axios';

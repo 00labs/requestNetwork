@@ -1,5 +1,5 @@
-import { PaymentTypes } from '@requestnetwork/types';
-import { erc20EscrowToPayArtifact } from '@requestnetwork/smart-contracts';
+import { PaymentTypes } from '@huma-shan/types';
+import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contracts';
 import { BigNumber, ethers } from 'ethers';
 import { IEventRetriever } from '../types';
 import { makeGetDeploymentInformation, parseLogArgs } from '../utils';

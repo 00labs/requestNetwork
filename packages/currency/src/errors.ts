@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 
 const getSymbolAndNetwork = (
   symbolWithNetwork: string | Omit<RequestLogicTypes.ICurrency, 'type'>,

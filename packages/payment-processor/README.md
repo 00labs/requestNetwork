@@ -1,6 +1,6 @@
-# @requestnetwork/payment-processor
+# @huma-shan/payment-processor
 
-`@requestnetwork/payment-processor` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/payment-processor` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It contains client-side payment methods for:
 
 - ERC20 proxy contract

@@ -1,4 +1,4 @@
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
+import { Erc20PaymentNetwork } from '@huma-shan/payment-detection';
 import { CurrencyManager } from '@requestnetwork/currency';
 import { createMockErc20FeeRequest } from '../utils';
 import { mockAdvancedLogic } from './mocks';

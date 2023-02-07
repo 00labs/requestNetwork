@@ -1,5 +1,5 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { PaymentReferenceCalculator } from '@requestnetwork/payment-detection';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
+import { PaymentReferenceCalculator } from '@huma-shan/payment-detection';
 
 import { IConversionPaymentSettings, _getPaymentUrl } from '../../src/payment';
 import * as nearUtils from '../../src/payment/utils-near';

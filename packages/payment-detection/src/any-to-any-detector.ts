@@ -1,4 +1,4 @@
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@huma-shan/types';
 import { FeeReferenceBasedDetector } from './fee-reference-based-detector';
 import { ICurrencyManager } from '@requestnetwork/currency';
 import { generate8randomBytes } from '@requestnetwork/utils';

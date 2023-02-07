@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { PaymentDetectorBase } from './payment-detector-base';
 import { notNull } from '@requestnetwork/utils';
 

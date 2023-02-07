@@ -1,4 +1,4 @@
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@huma-shan/types';
 import { AbstractExtension } from './abstract-extension';
 
 const CURRENT_VERSION = '0.1.0';

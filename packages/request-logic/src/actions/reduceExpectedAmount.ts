@@ -1,4 +1,4 @@
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@huma-shan/types';
 
 import Action from '../action';
 import Request from '../request';

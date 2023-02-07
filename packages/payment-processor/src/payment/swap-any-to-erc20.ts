@@ -1,9 +1,9 @@
 import { constants, ContractTransaction, Signer, BigNumber, providers } from 'ethers';
 
-import { AnyToERC20PaymentDetector } from '@requestnetwork/payment-detection';
-import { erc20SwapConversionArtifact } from '@requestnetwork/smart-contracts';
-import { ERC20SwapToConversion__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
+import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
+import { erc20SwapConversionArtifact } from '@huma-shan/smart-contracts';
+import { ERC20SwapToConversion__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 
 import {
   getAmountToPay,

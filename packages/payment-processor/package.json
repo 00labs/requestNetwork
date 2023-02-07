@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/payment-processor",
-  "version": "0.39.6",
+  "version": "0.39.7",
   "publishConfig": {
     "access": "public"
   },
@@ -41,9 +41,9 @@
   "dependencies": {
     "@openzeppelin/contracts": "4.7.3",
     "@requestnetwork/currency": "0.9.0",
-    "@huma-shan/payment-detection": "0.37.6",
-    "@huma-shan/smart-contracts": "0.30.6",
-    "@huma-shan/types": "0.37.6",
+    "@huma-shan/payment-detection": "0.37.7",
+    "@huma-shan/smart-contracts": "0.30.7",
+    "@huma-shan/types": "0.37.7",
     "@requestnetwork/utils": "0.36.0",
     "@requestnetwork/multi-format": "0.15.10",
     "@superfluid-finance/sdk-core": "0.3.2",

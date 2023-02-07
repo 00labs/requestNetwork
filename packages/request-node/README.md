@@ -1,6 +1,6 @@
-# @requestnetwork/request-node
+# @huma-shan/request-node
 
-`@requestnetwork/request-node` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/request-node` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 This package allows you to run a full Request Node.
 
 Request Nodes are the basic servers used to allow any user to communicate with the Request Network protocol, these servers abstract the complexity of the storage layer for the users. The users can easily create a request or execute an action on a request by sending messages to the Node.
@@ -151,7 +151,7 @@ A Node can be deployed by anyone. Users interested by running their own node can
 #### Through the npm executable
 
 ```bash
-npm install -g @requestnetwork/request-node
+npm install -g @huma-shan/request-node
 ```
 
 This will allow you to run the node with

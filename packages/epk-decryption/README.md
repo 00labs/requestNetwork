@@ -1,8 +1,8 @@
-# @requestnetwork/epk-decryption
+# @huma-shan/epk-decryption
 
 Ethereum Private Key Decryption Provider.
 
-`@requestnetwork/epk-decryption` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/epk-decryption` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 
 Implementation of the decryption provider from the private keys.
 The decryption provider is used to make decryption in the Request Network Protocol (e.g.: see [Transaction Manager](/packages/transaction-manager)).
@@ -12,7 +12,7 @@ It uses the Request Network Protocol concept of `Identity` described in the [req
 ## Installation
 
 ```bash
-npm install @requestnetwork/epk-decryption
+npm install @huma-shan/epk-decryption
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ npm install @requestnetwork/epk-decryption
 ```javascript
 import { EncryptionTypes, IdentityTypes } from '@huma-shan/types'
 
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption'
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption'
 
 const decryptionParametersExample: EncryptionTypes.IDecryptionParameters = {
   key: '0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3',

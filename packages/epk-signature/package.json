@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/epk-signature",
-  "version": "0.5.35",
+  "name": "@huma-shan/epk-signature",
+  "version": "0.6.8",
   "publishConfig": {
     "access": "public"
   },

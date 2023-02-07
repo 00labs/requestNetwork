@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/multi-format",
-  "version": "0.15.10",
+  "name": "@huma-shan/multi-format",
+  "version": "0.16.8",
   "publishConfig": {
     "access": "public"
   },

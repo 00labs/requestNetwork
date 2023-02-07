@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import MultiFormat from '@requestnetwork/multi-format';
+import { EthereumPrivateKeyDecryptionProvider } from '@huma-shan/epk-decryption';
+import MultiFormat from '@huma-shan/multi-format';
 import { Request, RequestNetwork, Types } from '@huma-shan/request-client.js';
 import { IdentityTypes, PaymentTypes, RequestLogicTypes, ExtensionTypes } from '@huma-shan/types';
 import { payRequest, approveErc20ForProxyConversionIfNeeded } from '@huma-shan/payment-processor';

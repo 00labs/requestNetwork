@@ -45,7 +45,7 @@
     "@huma-shan/smart-contracts": "0.30.8",
     "@huma-shan/types": "0.37.8",
     "@huma-shan/utils": "0.37.8",
-    "@requestnetwork/multi-format": "0.15.10",
+    "@huma-shan/multi-format": "0.16.8",
     "@superfluid-finance/sdk-core": "0.3.2",
     "ethers": "5.5.1",
     "near-api-js": "1.1.0",

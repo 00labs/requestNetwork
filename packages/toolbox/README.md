@@ -1,6 +1,6 @@
-# @requestnetwork/toolbox
+# @huma-shan/toolbox
 
-`@requestnetwork/toolbox` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/toolbox` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is a collection of miscellaneous tools.
 This package can use other package of the monorepo, but the other packages cannot use toolbox.
 
@@ -18,7 +18,7 @@ Create a request. Only the amount can be specified, optionally.
 #### As a package
 
 ```javascript
-import { CreateRequest } from '@requestnetwork/toolbox';
+import { CreateRequest } from '@huma-shan/toolbox';
 
 CreateRequest.createTestRequest();
 CreateRequest.createTestRequest(12);

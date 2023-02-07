@@ -20,7 +20,7 @@ You can see the specification of decryption provider [here](./specs/decryption-p
 An example of implementation of a decryption provider is available in the package: [epk-decryption](../../epk-decryption)
 
 ```javascript
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption';
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 
 // Decryption provider setup
@@ -87,7 +87,7 @@ const { result } = await transactionManager.persistTransaction(data, channelId, 
 ### Get Transactions from channel id
 
 ```javascript
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption';
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption';
 import { DataAccessTypes, SignatureTypes } from '@huma-shan/types';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 
@@ -111,7 +111,7 @@ const {
 ### Get Transactions from topic
 
 ```typescript
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption';
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption';
 import { DataAccessTypes, SignatureTypes } from '@huma-shan/types';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 

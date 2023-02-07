@@ -1,5 +1,5 @@
 {
-  "name": "@requestnetwork/usage-examples",
+  "name": "@huma-shan/usage-examples",
   "version": "0.23.10",
   "private": true,
   "description": "Usage examples of Request Network.",
@@ -29,9 +29,9 @@
   },
   "dependencies": {
     "@huma-shan/data-access": "0.28.8",
-    "@requestnetwork/epk-decryption": "0.3.34",
-    "@requestnetwork/epk-signature": "0.5.35",
-    "@requestnetwork/multi-format": "0.15.10",
+    "@huma-shan/epk-decryption": "0.4.8",
+    "@huma-shan/epk-signature": "0.6.8",
+    "@huma-shan/multi-format": "0.16.8",
     "@huma-shan/payment-processor": "0.39.8",
     "@huma-shan/request-client.js": "0.41.8",
     "@huma-shan/request-logic": "0.28.8",

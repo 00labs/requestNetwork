@@ -1,6 +1,6 @@
 import { AdvancedLogic } from '@huma-shan/advanced-logic';
 import { DataAccess } from '@huma-shan/data-access';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
 import { RequestLogic } from '@huma-shan/request-logic';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@huma-shan/types';

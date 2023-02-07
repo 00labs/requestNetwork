@@ -1,5 +1,5 @@
 import { DataAccess } from '@huma-shan/data-access';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
 import { RequestLogic } from '@huma-shan/request-logic';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 import {
@@ -29,7 +29,7 @@ const createParams = {
   timestamp: 1544426030,
 };
 
-// A signature provider, for example @requestnetwork/epk-signature
+// A signature provider, for example @huma-shan/epk-signature
 const signatureProvider: SignatureProviderTypes.ISignatureProvider =
   new EthereumPrivateKeySignatureProvider({
     method: SignatureTypes.METHOD.ECDSA,

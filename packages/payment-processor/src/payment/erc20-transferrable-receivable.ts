@@ -24,7 +24,7 @@ import {
 } from './utils';
 import { IPreparedTransaction } from './prepared-transaction';
 
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 
 // The ERC20 receivable smart contract ABI fragment
 const erc20TransferrableReceivableContractAbiFragment = [

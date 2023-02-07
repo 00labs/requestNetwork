@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import { StorageTypes } from '@huma-shan/types';
 import { EventEmitter } from 'events';
 import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@huma-shan/utils';

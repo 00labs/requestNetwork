@@ -4,10 +4,10 @@ const web3Eth = require('web3-eth');
 
 import { AdvancedLogic } from '@huma-shan/advanced-logic';
 import { DataAccess } from '@huma-shan/data-access';
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
+import { EthereumPrivateKeyDecryptionProvider } from '@huma-shan/epk-decryption';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
 import { EthereumStorage, IpfsStorage } from '@huma-shan/ethereum-storage';
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import { RequestLogic } from '@huma-shan/request-logic';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 import {

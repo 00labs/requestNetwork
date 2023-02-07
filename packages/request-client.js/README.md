@@ -10,7 +10,7 @@ It ships both as a commonjs and a UMD module. This means you can use it in node 
 # install the request js library
 npm install @huma-shan/request-client.js
 # install a request signature provider (e.g: web3-signature to use Metamask)
-npm install @requestnetwork/web3-signature
+npm install @huma-shan/web3-signature
 ```
 
 ## Usage
@@ -195,7 +195,7 @@ To get encrypted request you must use a decryption provider.
 
 ```bash
 # install a request decryption provider (e.g: epk-decryption). If you need to get encrypted requests.
-npm install @requestnetwork/epk-decryption
+npm install @huma-shan/epk-decryption
 ```
 
 ```html

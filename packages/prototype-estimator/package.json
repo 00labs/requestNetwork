@@ -1,5 +1,5 @@
 {
-  "name": "@requestnetwork/prototype-estimator",
+  "name": "@huma-shan/prototype-estimator",
   "version": "1.21.10",
   "private": true,
   "description": "Tool to estimate size and throughput of v2 system.",
@@ -29,12 +29,12 @@
   "dependencies": {
     "@huma-shan/advanced-logic": "0.36.8",
     "@huma-shan/data-access": "0.28.8",
-    "@requestnetwork/epk-signature": "0.5.35",
+    "@huma-shan/epk-signature": "0.6.8",
     "@huma-shan/ethereum-storage": "0.28.8",
-    "@requestnetwork/multi-format": "0.15.10",
+    "@huma-shan/multi-format": "0.16.8",
     "@huma-shan/request-client.js": "0.41.8",
     "@huma-shan/request-logic": "0.28.8",
-    "@requestnetwork/request-node": "0.27.0",
+    "@huma-shan/request-node": "0.28.8",
     "@huma-shan/transaction-manager": "0.28.8",
     "@huma-shan/types": "0.37.8",
     "@huma-shan/utils": "0.37.8",

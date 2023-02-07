@@ -1,6 +1,6 @@
-# @requestnetwork/integration-test
+# @huma-shan/integration-test
 
-`@requestnetwork/integration-test` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/integration-test` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It tests that the layers on the Request Network system work together:
 
 - @huma-shan/advanced-logic
@@ -26,7 +26,7 @@ It tests the direct integration of the layers:
 
 - @huma-shan/advanced-logic
 - @huma-shan/data-access
-- @requestnetwork/epk-signature
+- @huma-shan/epk-signature
 - @huma-shan/ethereum-storage
 - @huma-shan/request-logic
 - @huma-shan/transaction-manager
@@ -40,7 +40,7 @@ npm run test:layers
 It tests the integration of the Request node and the client side library:
 
 - @huma-shan/request-client.js
-- @requestnetwork/request-node
+- @huma-shan/request-node
 
 ```bash
 npm run test:node

@@ -1,8 +1,8 @@
-# @requestnetwork/epk-signature
+# @huma-shan/epk-signature
 
 Ethereum Private Key Signature Provider.
 
-`@requestnetwork/epk-signature` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/epk-signature` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 
 Implementation of the signature provider from the private keys.
 The signature provider is used to make signature in the Request Network Protocol (e.g.: see [Request Logic](/packages/request-logic)).
@@ -12,7 +12,7 @@ It uses the Request Network Protocol concepts of `Identity` and `Signature` desc
 ## Installation
 
 ```bash
-npm install @requestnetwork/epk-signature
+npm install @huma-shan/epk-signature
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ npm install @requestnetwork/epk-signature
 ```javascript
 import { IdentityTypes,  SignatureTypes } from '@huma-shan/types'
 
-import EthereumPrivateKeySignatureProvider from '@requestnetwork/epk-signature'
+import EthereumPrivateKeySignatureProvider from '@huma-shan/epk-signature'
 
 const signatureParametersExample: SignatureTypes.ISignatureParameters = {
   method: SignatureTypes.METHOD.ECDSA,

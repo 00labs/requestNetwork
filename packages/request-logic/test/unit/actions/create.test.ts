@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import { IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { normalizeKeccak256Hash } from '@huma-shan/utils';

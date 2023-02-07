@@ -9,7 +9,7 @@ import {
   ERC20TransferrableReceivable__factory,
   IERC20Metadata__factory,
 } from '@huma-shan/smart-contracts/types';
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 
 dotenv.config();
 const app = express();

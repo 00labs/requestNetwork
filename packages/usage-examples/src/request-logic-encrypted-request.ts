@@ -1,6 +1,6 @@
 import { DataAccess } from '@huma-shan/data-access';
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
+import { EthereumPrivateKeyDecryptionProvider } from '@huma-shan/epk-decryption';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
 import { RequestLogic } from '@huma-shan/request-logic';
 import { TransactionManager } from '@huma-shan/transaction-manager';
 import {
@@ -46,14 +46,14 @@ const payerEncryptionParameters: EncryptionTypes.IEncryptionParameters = {
   method: EncryptionTypes.METHOD.ECIES,
 };
 
-// A signature provider, for example @requestnetwork/epk-signature
+// A signature provider, for example @huma-shan/epk-signature
 const signatureProvider: SignatureProviderTypes.ISignatureProvider =
   new EthereumPrivateKeySignatureProvider({
     method: SignatureTypes.METHOD.ECDSA,
     privateKey: '0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3',
   });
 
-// A decryption provider, for example @requestnetwork/epk-decryption
+// A decryption provider, for example @huma-shan/epk-decryption
 const decryptionProvider: DecryptionProviderTypes.IDecryptionProvider =
   new EthereumPrivateKeyDecryptionProvider(payeeDecryptionParameters);
 

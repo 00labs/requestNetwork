@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/thegraph-data-access",
-  "version": "0.35.1",
+  "name": "@huma-shan/thegraph-data-access",
+  "version": "0.36.8",
   "publishConfig": {
     "access": "public"
   },

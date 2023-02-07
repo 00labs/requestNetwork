@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/web3-signature",
-  "version": "0.4.36",
+  "name": "@huma-shan/web3-signature",
+  "version": "0.5.8",
   "publishConfig": {
     "access": "public"
   },

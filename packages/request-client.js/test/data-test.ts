@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import {
   ExtensionTypes,
   IdentityTypes,

@@ -6,7 +6,7 @@ import { LogTypes } from '@huma-shan/types';
 import { RequestNodeBase } from './requestNodeBase';
 import * as config from './config';
 import { getIpfsStorage } from './storageUtils';
-import { TheGraphDataAccess } from '@requestnetwork/thegraph-data-access';
+import { TheGraphDataAccess } from '@huma-shan/thegraph-data-access';
 import { EthereumStorageEthers } from '@huma-shan/ethereum-storage';
 import { SimpleLogger } from '@huma-shan/utils';
 

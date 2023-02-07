@@ -39,7 +39,7 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/multi-format": "0.15.10",
+    "@huma-shan/multi-format": "0.16.8",
     "@huma-shan/types": "0.37.8",
     "@huma-shan/utils": "0.37.8",
     "bluebird": "3.7.2",

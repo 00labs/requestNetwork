@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/data-format",
-  "version": "0.10.0",
+  "name": "@huma-shan/data-format",
+  "version": "0.11.8",
   "publishConfig": {
     "access": "public"
   },

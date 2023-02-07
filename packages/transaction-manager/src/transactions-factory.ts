@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import { EncryptionTypes, TransactionTypes } from '@huma-shan/types';
 import { encrypt, generate32BufferKey, getIdentityFromEncryptionParams } from '@huma-shan/utils';
 

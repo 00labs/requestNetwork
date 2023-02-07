@@ -1,4 +1,4 @@
-import DataFormat from '@requestnetwork/data-format';
+import DataFormat from '@huma-shan/data-format';
 import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 
 // Extension ID for this class: content data

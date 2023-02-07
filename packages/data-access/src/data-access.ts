@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import { DataAccessTypes, LogTypes, StorageTypes } from '@huma-shan/types';
 import { deepCopy, getCurrentTimestampInSecond, SimpleLogger, unique } from '@huma-shan/utils';
 

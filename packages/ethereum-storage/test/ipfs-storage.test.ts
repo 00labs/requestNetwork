@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import { IpfsStorage } from '../src/ipfs-storage';
 
 const ipfsGatewayConnection: StorageTypes.IIpfsGatewayConnection = {

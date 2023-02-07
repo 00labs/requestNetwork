@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 
 import { BigNumber, utils } from 'ethers';
 

@@ -1,18 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import MultiFormat from '@requestnetwork/multi-format';
-import { Request, RequestNetwork, Types } from '@requestnetwork/request-client.js';
-import {
-  IdentityTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-  ExtensionTypes,
-} from '@requestnetwork/types';
-import {
-  payRequest,
-  approveErc20ForProxyConversionIfNeeded,
-} from '@requestnetwork/payment-processor';
-import { CurrencyInput, CurrencyManager } from '@requestnetwork/currency';
+import { EthereumPrivateKeyDecryptionProvider } from '@huma-shan/epk-decryption';
+import MultiFormat from '@huma-shan/multi-format';
+import { Request, RequestNetwork, Types } from '@huma-shan/request-client.js';
+import { IdentityTypes, PaymentTypes, RequestLogicTypes, ExtensionTypes } from '@huma-shan/types';
+import { payRequest, approveErc20ForProxyConversionIfNeeded } from '@huma-shan/payment-processor';
+import { CurrencyInput, CurrencyManager } from '@huma-shan/currency';
 
 import { Wallet, providers, BigNumber } from 'ethers';
 import {
@@ -23,7 +15,7 @@ import {
   requestNetwork,
   signatureProvider,
 } from './scheduled/fixtures';
-import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 const mnemonic = 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat';
 const provider = new providers.JsonRpcProvider('http://localhost:8545');

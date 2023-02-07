@@ -8,8 +8,8 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { decrypt, random32Bytes } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { decrypt, random32Bytes } from '@huma-shan/utils';
 import { ethers } from 'ethers';
 
 import AxiosMockAdapter from 'axios-mock-adapter';
@@ -17,7 +17,7 @@ import { Request, RequestNetwork, RequestNetworkBase } from '../src/index';
 import * as TestData from './data-test';
 import * as TestDataRealBTC from './data-test-real-btc';
 
-import { PaymentReferenceCalculator } from '@requestnetwork/payment-detection';
+import { PaymentReferenceCalculator } from '@huma-shan/payment-detection';
 import { BigNumber } from 'ethers';
 import EtherscanProviderMock from './etherscan-mock';
 import httpConfigDefaults from '../src/http-config-defaults';

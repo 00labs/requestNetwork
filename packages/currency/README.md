@@ -1,19 +1,19 @@
-# @requestnetwork/currency
+# @huma-shan/currency
 
-`@requestnetwork/currency` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/currency` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is a collection of tools for the currencies shared between the @requestnetwork packages.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/currency
+npm install @huma-shan/currency
 ```
 
 ## Usage
 
 ```javascript
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { Currency, Token } from '@requestnetwork/currency';
+import { RequestLogicTypes } from '@huma-shan/types';
+import { Currency, Token } from '@huma-shan/currency';
 
 const decimals = new Currency({
   type: RequestLogicTypes.CURRENCY.ETH,

@@ -1,9 +1,9 @@
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { DataAccess } from '@requestnetwork/data-access';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
-import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@requestnetwork/types';
+import { AdvancedLogic } from '@huma-shan/advanced-logic';
+import { DataAccess } from '@huma-shan/data-access';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
+import { RequestLogic } from '@huma-shan/request-logic';
+import { TransactionManager } from '@huma-shan/transaction-manager';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@huma-shan/types';
 import MockStorage from './mock-storage';
 
 const signatureInfo: SignatureTypes.ISignatureParameters = {

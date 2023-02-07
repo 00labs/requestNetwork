@@ -1,6 +1,6 @@
 import { BigNumber, providers, constants } from 'ethers';
 import { GasDefinerProps } from './ethereum-storage-ethers';
-import { estimateGasFees } from '@requestnetwork/utils';
+import { estimateGasFees } from '@huma-shan/utils';
 
 export class GasFeeDefiner {
   private readonly provider: providers.JsonRpcProvider;

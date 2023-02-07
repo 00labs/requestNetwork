@@ -1,11 +1,11 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import {
   IdentityTypes,
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
-import { deepCopy, normalizeKeccak256Hash } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import Action from '../../src/action';
 import CreateAction from '../../src/actions/create';

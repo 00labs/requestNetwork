@@ -1,9 +1,9 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import MultiFormat from '@huma-shan/multi-format';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import { EventEmitter } from 'events';
 
-import { DataAccessTypes, EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
+import { DataAccessTypes, EncryptionTypes, TransactionTypes } from '@huma-shan/types';
 
 import { TransactionManager } from '../src/index';
 import TransactionsFactory from '../src/transactions-factory';

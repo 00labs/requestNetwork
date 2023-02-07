@@ -11,7 +11,7 @@ import {
 import { BigNumber, Signer } from 'ethers';
 import { expect, use } from 'chai';
 import { solidity } from 'ethereum-waffle';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { chainlinkConversionPath } from '../../src/lib';
 import { localERC20AlphaArtifact } from './localArtifacts';
 

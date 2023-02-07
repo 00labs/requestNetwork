@@ -1,5 +1,5 @@
-import { hasSufficientFunds, payRequest } from '@requestnetwork/payment-processor';
-import { RequestNetwork } from '@requestnetwork/request-client.js';
+import { hasSufficientFunds, payRequest } from '@huma-shan/payment-processor';
+import { RequestNetwork } from '@huma-shan/request-client.js';
 import { Wallet } from 'ethers';
 
 /* eslint-disable @typescript-eslint/no-floating-promises */

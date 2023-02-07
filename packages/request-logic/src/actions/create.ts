@@ -1,4 +1,4 @@
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@huma-shan/types';
 import * as Semver from 'semver';
 import Action from '../action';
 import Version from '../version';
@@ -8,7 +8,7 @@ import {
   identityHasError,
   isString,
   isValidAmount,
-} from '@requestnetwork/utils';
+} from '@huma-shan/utils';
 
 /**
  * Implementation of the request logic specification

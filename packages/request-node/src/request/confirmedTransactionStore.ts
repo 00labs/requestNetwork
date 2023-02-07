@@ -1,4 +1,4 @@
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@huma-shan/types';
 import Keyv, { Store } from 'keyv';
 
 /**

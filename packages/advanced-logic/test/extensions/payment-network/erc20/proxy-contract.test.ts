@@ -1,11 +1,11 @@
-import { ExtensionTypes, RequestLogicTypes, IdentityTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes, IdentityTypes } from '@huma-shan/types';
 
 import Erc20ProxyContract from '../../../../src/extensions/payment-network/erc20/proxy-contract';
 
 import * as DataERC20AddPaymentAddress from '../../../utils/payment-network/erc20/proxy-contract-add-payment-address-data-generator';
 import * as DataERC20Create from '../../../utils/payment-network/erc20/proxy-contract-create-data-generator';
 import * as TestData from '../../../utils/test-data-generator';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 const erc20ProxyContract = new Erc20ProxyContract();
 

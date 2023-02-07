@@ -1,5 +1,5 @@
-import { LogTypes } from '@requestnetwork/types';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { LogTypes } from '@huma-shan/types';
+import { SimpleLogger } from '@huma-shan/utils';
 import chalk from 'chalk';
 
 /** The different logging modes supported by this logger */

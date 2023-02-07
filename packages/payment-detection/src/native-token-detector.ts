@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes } from '@huma-shan/types';
 
 import { ReferenceBasedDetector } from './reference-based-detector';
 import { NativeDetectorOptions } from './types';

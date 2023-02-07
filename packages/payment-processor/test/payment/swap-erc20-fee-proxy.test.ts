@@ -1,18 +1,13 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 
 import { getErc20Balance } from '../../src/payment/erc20';
 import { approveErc20ForSwapToPayIfNeeded } from '../../src/payment/swap-erc20';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { ISwapSettings, swapErc20FeeProxyRequest } from '../../src/payment/swap-erc20-fee-proxy';
-import { erc20SwapToPayArtifact } from '@requestnetwork/smart-contracts';
+import { erc20SwapToPayArtifact } from '@huma-shan/smart-contracts';
 import { revokeErc20Approval } from '../../src/payment/utils';
 
 /* eslint-disable no-magic-numbers */

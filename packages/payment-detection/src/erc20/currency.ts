@@ -3,11 +3,11 @@ import {
   CurrencyManager,
   getCurrencyHash,
   StorageCurrency,
-} from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+} from '@huma-shan/currency';
+import { RequestLogicTypes } from '@huma-shan/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { isAddress } from 'ethers/lib/utils';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@huma-shan/utils';
 
 export const loadCurrencyFromContract = async (
   currency: StorageCurrency,

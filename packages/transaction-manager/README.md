@@ -1,13 +1,13 @@
-# @requestnetwork/transaction-manager
+# @huma-shan/transaction-manager
 
-`@requestnetwork/transaction-manager` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/transaction-manager` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is the default implementation of the Transaction layer. It creates transactions to be sent to Data Access.
 When privacy is implemented, this package will handle the encryption.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/transaction-manager
+npm install @huma-shan/transaction-manager
 ```
 
 ## Usage
@@ -20,8 +20,8 @@ You can see the specification of decryption provider [here](./specs/decryption-p
 An example of implementation of a decryption provider is available in the package: [epk-decryption](../../epk-decryption)
 
 ```javascript
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 
 // Decryption provider setup
 const decryptionProvider = new EthereumPrivateKeyDecryptionProvider({
@@ -41,10 +41,10 @@ const transactionManager = new TransactionManager(dataAccess, decryptionProvider
 ### Persist a clear transaction
 
 ```javascript
-import { DataAccessTypes, SignatureTypes } from '@requestnetwork/types';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { DataAccessTypes, SignatureTypes } from '@huma-shan/types';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 
-const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @requestnetwork/data-access
+const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @huma-shan/data-access
 
 const transactionManager = new TransactionManager(dataAccess);
 
@@ -58,10 +58,10 @@ const { result } = await transactionManager.persistTransaction(data, channelId, 
 ### Persist an encrypted transaction
 
 ```javascript
-import { DataAccessTypes, SignatureTypes } from '@requestnetwork/types';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { DataAccessTypes, SignatureTypes } from '@huma-shan/types';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 
-const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @requestnetwork/data-access
+const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @huma-shan/data-access
 
 const transactionManager = new TransactionManager(dataAccess, decryptionProvider);
 
@@ -87,11 +87,11 @@ const { result } = await transactionManager.persistTransaction(data, channelId, 
 ### Get Transactions from channel id
 
 ```javascript
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption';
-import { DataAccessTypes, SignatureTypes } from '@requestnetwork/types';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption';
+import { DataAccessTypes, SignatureTypes } from '@huma-shan/types';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 
-const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @requestnetwork/data-access
+const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @huma-shan/data-access
 
 // Decryption provider setup if needed
 const decryptionProvider = new EthereumPrivateKeyDecryptionProvider({
@@ -111,11 +111,11 @@ const {
 ### Get Transactions from topic
 
 ```typescript
-import EthereumPrivateKeyDecryptionProvider from '@requestnetwork/epk-decryption';
-import { DataAccessTypes, SignatureTypes } from '@requestnetwork/types';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import EthereumPrivateKeyDecryptionProvider from '@huma-shan/epk-decryption';
+import { DataAccessTypes, SignatureTypes } from '@huma-shan/types';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 
-const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @requestnetwork/data-access
+const dataAccess: DataAccessTypes.IDataAccess; // A Data Access implementation, for example @huma-shan/data-access
 
 // Decryption provider setup if needed
 const decryptionProvider = new EthereumPrivateKeyDecryptionProvider({

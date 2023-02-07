@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import {
   AdvancedLogicTypes,
   EncryptionTypes,
@@ -8,9 +8,9 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import RequestLogicCore from './requestLogicCore';
-import { normalizeKeccak256Hash, notNull, uniqueByProperty } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, notNull, uniqueByProperty } from '@huma-shan/utils';
 
 /**
  * Implementation of Request Logic

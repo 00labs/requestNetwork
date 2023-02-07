@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/prototype-estimator",
-  "version": "1.21.10",
+  "name": "@huma-shan/prototype-estimator",
+  "version": "1.22.0",
   "private": true,
   "description": "Tool to estimate size and throughput of v2 system.",
   "keywords": [
@@ -27,17 +27,17 @@
     "start": "ts-node src/index.ts"
   },
   "dependencies": {
-    "@requestnetwork/advanced-logic": "0.35.0",
-    "@requestnetwork/data-access": "0.27.0",
-    "@requestnetwork/epk-signature": "0.5.35",
-    "@requestnetwork/ethereum-storage": "0.27.0",
-    "@requestnetwork/multi-format": "0.15.10",
-    "@requestnetwork/request-client.js": "0.40.0",
-    "@requestnetwork/request-logic": "0.26.10",
-    "@requestnetwork/request-node": "0.27.0",
-    "@requestnetwork/transaction-manager": "0.27.0",
-    "@requestnetwork/types": "0.36.0",
-    "@requestnetwork/utils": "0.36.0",
+    "@huma-shan/advanced-logic": "0.37.0",
+    "@huma-shan/data-access": "0.29.0",
+    "@huma-shan/epk-signature": "0.7.0",
+    "@huma-shan/ethereum-storage": "0.29.0",
+    "@huma-shan/multi-format": "0.17.0",
+    "@huma-shan/request-client.js": "0.42.0",
+    "@huma-shan/request-logic": "0.29.0",
+    "@huma-shan/request-node": "0.29.0",
+    "@huma-shan/transaction-manager": "0.29.0",
+    "@huma-shan/types": "0.38.0",
+    "@huma-shan/utils": "0.38.0",
     "benchmark": "2.1.4",
     "simple-statistics": "7.4.0",
     "tslib": "2.3.1"

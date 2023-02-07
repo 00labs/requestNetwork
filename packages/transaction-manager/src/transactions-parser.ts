@@ -1,10 +1,10 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-format';
 import {
   DecryptionProviderTypes,
   EncryptionTypes,
   IdentityTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import ClearTransaction from './clear-transaction';
 import EncryptedTransaction from './encrypted-transaction';

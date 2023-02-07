@@ -1,4 +1,4 @@
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 import { StatusCodes } from 'http-status-codes';
 import request from 'supertest';
 import { RequestNode } from '../src/requestNode';

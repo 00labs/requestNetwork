@@ -1,4 +1,4 @@
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 
 /**
  * Module to start and stop a periodical function

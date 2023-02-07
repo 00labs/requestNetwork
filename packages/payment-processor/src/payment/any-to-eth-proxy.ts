@@ -1,13 +1,13 @@
 import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNumber } from 'ethers';
 
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { AnyToEthFeeProxyPaymentDetector } from '@requestnetwork/payment-detection';
-import { EthConversionProxy__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
+import { AnyToEthFeeProxyPaymentDetector } from '@huma-shan/payment-detection';
+import { EthConversionProxy__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import { getAmountToPay, getProvider, getRequestPaymentValues, getSigner } from './utils';
-import { padAmountForChainlink } from '@requestnetwork/payment-detection';
+import { padAmountForChainlink } from '@huma-shan/payment-detection';
 import { IPreparedTransaction } from './prepared-transaction';
 import { IConversionPaymentSettings } from './index';
 import { getProxyAddress } from './utils';

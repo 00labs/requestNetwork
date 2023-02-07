@@ -8,7 +8,8 @@ import { ethers, BigNumber as BN, BigNumber } from 'ethers';
 import {
   ERC20TransferrableReceivable__factory,
   IERC20Metadata__factory,
-} from '@requestnetwork/smart-contracts/types';
+} from '@huma-shan/smart-contracts/types';
+import MultiFormat from '@huma-shan/multi-format';
 
 dotenv.config();
 const app = express();

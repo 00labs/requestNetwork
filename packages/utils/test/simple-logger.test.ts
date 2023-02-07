@@ -1,4 +1,4 @@
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 import { SimpleLogger } from '../src';
 
 const LogLevel = LogTypes.LogLevel;

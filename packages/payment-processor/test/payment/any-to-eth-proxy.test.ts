@@ -1,11 +1,6 @@
 import { Wallet, providers } from 'ethers';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 import { payAnyToEthProxyRequest } from '../../src/payment/any-to-eth-proxy';
 import { currencyManager } from './shared';
 import { IConversionPaymentSettings } from '../../src/index';

@@ -2,7 +2,7 @@ import {
   getDefaultProvider,
   initPaymentDetectionApiKeys,
   setProviderFactory,
-} from '@requestnetwork/utils';
+} from '@huma-shan/utils';
 import { PaymentNetworkFactory } from './payment-network-factory';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 import * as BtcPaymentNetwork from './btc';

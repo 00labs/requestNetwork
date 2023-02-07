@@ -1,6 +1,6 @@
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { areEqualIdentities, deepCopy } from '@requestnetwork/utils';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
+import { areEqualIdentities, deepCopy } from '@huma-shan/utils';
 import DeclarativePaymentNetwork from './declarative';
 
 /**

@@ -1,9 +1,9 @@
-import { ClientTypes, DataAccessTypes } from '@requestnetwork/types';
+import { ClientTypes, DataAccessTypes } from '@huma-shan/types';
 import axios, { AxiosRequestConfig } from 'axios';
 
 import { EventEmitter } from 'events';
 import httpConfigDefaults from './http-config-defaults';
-import { normalizeKeccak256Hash, retry } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, retry } from '@huma-shan/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../package.json');

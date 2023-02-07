@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/request-client.js",
-  "version": "0.40.0",
+  "name": "@huma-shan/request-client.js",
+  "version": "0.42.0",
   "publishConfig": {
     "access": "public"
   },
@@ -48,25 +48,25 @@
     "server": "ts-node api-server.ts"
   },
   "dependencies": {
-    "@requestnetwork/advanced-logic": "0.35.0",
-    "@requestnetwork/currency": "0.9.0",
-    "@requestnetwork/data-access": "0.27.0",
-    "@requestnetwork/data-format": "0.10.0",
-    "@requestnetwork/epk-signature": "0.5.35",
-    "@requestnetwork/multi-format": "0.15.10",
-    "@requestnetwork/payment-detection": "0.36.0",
-    "@requestnetwork/payment-processor": "0.38.0",
-    "@requestnetwork/request-logic": "0.26.10",
-    "@requestnetwork/smart-contracts": "0.29.0",
-    "@requestnetwork/transaction-manager": "0.27.0",
-    "@requestnetwork/types": "0.36.0",
-    "@requestnetwork/utils": "0.36.0",
+    "@huma-shan/advanced-logic": "0.37.0",
+    "@huma-shan/currency": "0.11.0",
+    "@huma-shan/data-access": "0.29.0",
+    "@huma-shan/data-format": "0.12.0",
+    "@huma-shan/epk-signature": "0.7.0",
+    "@huma-shan/multi-format": "0.17.0",
+    "@huma-shan/payment-detection": "0.38.0",
+    "@huma-shan/payment-processor": "0.40.0",
+    "@huma-shan/request-logic": "0.29.0",
+    "@huma-shan/smart-contracts": "0.31.0",
+    "@huma-shan/transaction-manager": "0.29.0",
+    "@huma-shan/types": "0.38.0",
+    "@huma-shan/utils": "0.38.0",
     "axios": "0.27.2",
     "cors": "2.8.5",
+    "dotenv": "16.0.3",
     "ethers": "5.5.1",
-    "tslib": "2.3.1",
     "express": "4.18.2",
-    "dotenv": "16.0.3"
+    "tslib": "2.3.1"
   },
   "devDependencies": {
     "@compodoc/compodoc": "1.1.11",

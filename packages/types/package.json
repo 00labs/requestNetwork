@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/types",
-  "version": "0.36.0",
+  "name": "@huma-shan/types",
+  "version": "0.38.0",
   "publishConfig": {
     "access": "public"
   },

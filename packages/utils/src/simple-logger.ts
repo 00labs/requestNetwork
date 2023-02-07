@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@huma-shan/types';
 
 // The default log level to use if none is used at the constructor.
 const DEFAULT_LOG_LEVEL = LogTypes.LogLevel.QUIET;

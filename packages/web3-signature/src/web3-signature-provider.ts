@@ -1,6 +1,6 @@
-import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@huma-shan/types';
 
-import { areEqualIdentities, normalize, recoverSigner } from '@requestnetwork/utils';
+import { areEqualIdentities, normalize, recoverSigner } from '@huma-shan/utils';
 
 import { providers } from 'ethers';
 

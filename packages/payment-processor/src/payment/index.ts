@@ -1,6 +1,6 @@
 import { ContractTransaction, Signer, BigNumber, BigNumberish, providers } from 'ethers';
 
-import { ClientTypes, ExtensionTypes, TypesUtils } from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, TypesUtils } from '@huma-shan/types';
 
 import { getBtcPaymentUrl } from './btc-address-based';
 import { _getErc20PaymentUrl, getAnyErc20Balance } from './erc20';
@@ -11,12 +11,12 @@ import { payEthFeeProxyRequest } from './eth-fee-proxy';
 import { ITransactionOverrides } from './transaction-overrides';
 import { getNetworkProvider, getProvider, getSigner } from './utils';
 import { ISwapSettings } from './swap-erc20-fee-proxy';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { payAnyToErc20ProxyRequest } from './any-to-erc20-proxy';
 import { payAnyToEthProxyRequest } from './any-to-eth-proxy';
 import { WalletConnection } from 'near-api-js';
 import { isNearNetwork, isNearAccountSolvent } from './utils-near';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import { encodeRequestErc20Approval } from './encoder-approval';
 import { encodeRequestPayment } from './encoder-payment';
 import { IPreparedTransaction } from './prepared-transaction';

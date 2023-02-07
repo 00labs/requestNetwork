@@ -4,8 +4,8 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+} from '@huma-shan/types';
+import { CurrencyManager } from '@huma-shan/currency';
 import { ERC20FeeProxyPaymentDetector } from '../../src/erc20/fee-proxy-contract';
 import { mockAdvancedLogicBase } from '../utils';
 

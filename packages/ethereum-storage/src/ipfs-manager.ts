@@ -1,11 +1,11 @@
 import { UnixFS } from 'ipfs-unixfs';
 import * as qs from 'qs';
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 
 import { getDefaultIpfs, getIpfsErrorHandlingConfig } from './config';
 import * as FormData from 'form-data';
-import { retry, SimpleLogger } from '@requestnetwork/utils';
+import { retry, SimpleLogger } from '@huma-shan/utils';
 
 /** A mapping between IPFS Paths and the response type */
 type IpfsPaths = {

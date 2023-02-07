@@ -1,5 +1,5 @@
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import * as RequestNetwork from '@requestnetwork/request-client.js';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
+import * as RequestNetwork from '@huma-shan/request-client.js';
 
 // payee information
 const payeeSignatureInfo = {

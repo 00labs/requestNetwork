@@ -1,14 +1,14 @@
-import { DataAccess } from '@requestnetwork/data-access';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { DataAccess } from '@huma-shan/data-access';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
+import { RequestLogic } from '@huma-shan/request-logic';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 import {
   IdentityTypes,
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 import MockStorage from './mock/mock-storage';
 
@@ -29,7 +29,7 @@ const createParams = {
   timestamp: 1544426030,
 };
 
-// A signature provider, for example @requestnetwork/epk-signature
+// A signature provider, for example @huma-shan/epk-signature
 const signatureProvider: SignatureProviderTypes.ISignatureProvider =
   new EthereumPrivateKeySignatureProvider({
     method: SignatureTypes.METHOD.ECDSA,
@@ -42,7 +42,7 @@ const signatureProvider: SignatureProviderTypes.ISignatureProvider =
   const dataAccess = new DataAccess(new MockStorage());
   await dataAccess.initialize();
 
-  // A transaction manager, for example @requestnetwork/transaction-manager
+  // A transaction manager, for example @huma-shan/transaction-manager
   const transactionManager: TransactionTypes.ITransactionManager = new TransactionManager(
     dataAccess,
   );

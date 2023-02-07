@@ -1,5 +1,5 @@
-import { EthereumStorage, IpfsStorage } from '@requestnetwork/ethereum-storage';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { EthereumStorage, IpfsStorage } from '@huma-shan/ethereum-storage';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 import * as config from './config';
 
 import Keyv from 'keyv';

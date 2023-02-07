@@ -4,12 +4,12 @@ import EtherchainProvider from './gas-price-providers/etherchain-provider';
 import EtherscanProvider from './gas-price-providers/etherscan-provider';
 import EthGasStationProvider from './gas-price-providers/ethgasstation-provider';
 
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 
 import { BigNumber } from 'ethers';
 import XDaiFixedProvider from './gas-price-providers/xdai-fixed-provider';
 import { GasDefinerProps } from './ethereum-storage-ethers';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@huma-shan/utils';
 
 /**
  * Determines the gas price to use depending on the used network

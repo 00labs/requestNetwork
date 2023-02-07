@@ -1,4 +1,4 @@
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import AnyToNearPaymentNetwork from './any-to-near';
 
 export default class AnyToNearTestnetPaymentNetwork extends AnyToNearPaymentNetwork {

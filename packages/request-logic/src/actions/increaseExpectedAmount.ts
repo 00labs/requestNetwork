@@ -1,9 +1,9 @@
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@huma-shan/types';
 
 import Action from '../action';
 import Request from '../request';
 import Version from '../version';
-import { addAmount, deepCopy, isValidAmount } from '@requestnetwork/utils';
+import { addAmount, deepCopy, isValidAmount } from '@huma-shan/utils';
 
 /**
  * Implementation of the action increaseExpectedAmount from request logic specification

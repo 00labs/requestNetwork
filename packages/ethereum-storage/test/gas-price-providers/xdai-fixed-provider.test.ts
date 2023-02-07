@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import { BigNumber } from 'ethers';
 import XDaiFixedProvider from '../../src/gas-price-providers/xdai-fixed-provider';
 

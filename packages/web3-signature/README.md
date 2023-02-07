@@ -1,8 +1,8 @@
-# @requestnetwork/web3-signature
+# @huma-shan/web3-signature
 
 Web3 Signature Provider.
 
-`@requestnetwork/web3-signature` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/web3-signature` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 
 Implementation of the signature provider from the web3 tools.
 The signature provider is used to make signature in the Request Network Protocol (e.g.: see [Request Logic](/packages/request-logic)).
@@ -13,7 +13,7 @@ It uses the Request Network Protocol concepts of `Identity` and `Signature` desc
 ## Installation
 
 ```bash
-npm install @requestnetwork/web3-signature
+npm install @huma-shan/web3-signature
 ```
 
 ## Usage
@@ -22,9 +22,9 @@ npm install @requestnetwork/web3-signature
 import {
   IdentityTypes,
   SignatureTypes
-} from '@requestnetwork/types'
+} from '@huma-shan/types'
 
-import Web3SignatureProvider from '@requestnetwork/web3-signature'
+import Web3SignatureProvider from '@huma-shan/web3-signature'
 
 // Identity from the previous signature parameter
 const identityExample: IdentityTypes.IIdentity = {

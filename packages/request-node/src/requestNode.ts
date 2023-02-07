@@ -1,5 +1,5 @@
-import { DataAccess, TransactionIndex } from '@requestnetwork/data-access';
-import { LogTypes } from '@requestnetwork/types';
+import { DataAccess, TransactionIndex } from '@huma-shan/data-access';
+import { LogTypes } from '@huma-shan/types';
 
 import KeyvFile from 'keyv-file';
 
@@ -7,7 +7,7 @@ import { getInitializationStorageFilePath, getMnemonic } from './config';
 import { getEthereumStorage, getIpfsStorage } from './storageUtils';
 
 import { RequestNodeBase } from './requestNodeBase';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@huma-shan/utils';
 
 export class RequestNode extends RequestNodeBase {
   constructor(logger?: LogTypes.ILogger) {

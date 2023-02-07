@@ -9,7 +9,7 @@ import {
   isEip1559Supported,
   getCeloProvider,
   getDefaultProvider,
-} from '@requestnetwork/utils';
+} from '@huma-shan/utils';
 
 // Fees: 0.5%
 export const REQUEST_SWAP_FEES = 5;

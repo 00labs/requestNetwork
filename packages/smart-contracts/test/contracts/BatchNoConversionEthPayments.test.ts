@@ -1,7 +1,7 @@
 import { ethers, network } from 'hardhat';
 import { BigNumber, Signer } from 'ethers';
 import { expect } from 'chai';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 import {
   EthereumFeeProxy__factory,
   BatchNoConversionPayments__factory,
@@ -12,7 +12,7 @@ import { EthereumFeeProxy, BatchNoConversionPayments } from '../../src/types';
 import { chainlinkConversionPath } from '../../src/lib';
 import { HttpNetworkConfig } from 'hardhat/types';
 import { PaymentTypes } from 'types/dist';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 
 const logGasInfos = false;
 

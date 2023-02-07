@@ -1,6 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import MultiFormat from '@huma-shan/multi-format';
+import { DataAccessTypes } from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 
 /**
  * Module to manage a block in the data access-layer

@@ -1,11 +1,11 @@
 import { mocked } from 'ts-jest/utils';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import {
   AdvancedLogicTypes,
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { getTheGraphClient } from '../../src/thegraph';
 import { EthInputDataPaymentDetector } from '../../src/eth/input-data';
 import { mockAdvancedLogicBase } from '../utils';

@@ -3,8 +3,8 @@ import {
   RequestLogicTypes,
   SignatureTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
-import { sign } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { sign } from '@huma-shan/utils';
 
 const payee = {
   identity: {

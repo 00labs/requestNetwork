@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { utils } from 'ethers';
 import addressValidator from 'multicoin-address-validator';
 import { getSupportedERC20Tokens } from './erc20';

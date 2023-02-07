@@ -1,5 +1,5 @@
-import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
-import { decrypt } from '@requestnetwork/utils';
+import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@huma-shan/types';
+import { decrypt } from '@huma-shan/utils';
 
 export const idRaw1 = {
   address: '0xaf083f77f1ffd54218d91491afd06c9296eac3ce',

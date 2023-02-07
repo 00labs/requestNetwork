@@ -1,6 +1,6 @@
 import * as Bluebird from 'bluebird';
 
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 import { getMaxIpfsReadRetry } from './config';
 
 import IgnoredDataIds from './ignored-dataIds';

@@ -1,18 +1,18 @@
-# @requestnetwork/data-format
+# @huma-shan/data-format
 
-`@requestnetwork/data-format` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/data-format` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is a JSON Schema library providing standard for the data of the Request Network protocol. It also provide a javascript entry point to validate a given JSON.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/data-format
+npm install @huma-shan/data-format
 ```
 
 ### Usage
 
 ```js
-import dataFormat from '@requestnetwork/data-format';
+import dataFormat from '@huma-shan/data-format';
 
 let result = data - format.validate(A_JSON_OBJECT);
 

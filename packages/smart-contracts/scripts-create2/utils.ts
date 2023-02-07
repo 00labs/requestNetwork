@@ -16,6 +16,7 @@ export const create2ContractDeploymentList = [
   /*  'ERC20SwapToConversion',
   'ERC20EscrowToPay',
   'BatchConversionPayments', */
+  'ERC20TransferrableReceivable',
 ];
 
 /**
@@ -50,6 +51,8 @@ export const getArtifact = (contract: string): artifacts.ContractArtifact<Contra
       return artifacts.erc20EscrowToPayArtifact;
     case 'BatchConversionPayments':
       return artifacts.batchConversionPaymentsArtifact;
+    case 'ERC20TransferrableReceivable':
+      return artifacts.erc20TransferrableReceivableArtifact;
     default:
       throw new Error('Contract unknown');
   }

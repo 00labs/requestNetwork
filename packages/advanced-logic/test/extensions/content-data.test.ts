@@ -1,5 +1,5 @@
 import { ExtensionTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 import ContentData from '../../src/extensions/content-data';
 

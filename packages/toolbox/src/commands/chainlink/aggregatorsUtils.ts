@@ -1,4 +1,4 @@
-import { CurrencyManager, CurrencyInput, AggregatorsMap } from '@requestnetwork/currency';
+import { CurrencyManager, CurrencyInput, AggregatorsMap } from '@huma-shan/currency';
 import axios from 'axios';
 import { RequestLogicTypes } from '@huma-shan/types';
 

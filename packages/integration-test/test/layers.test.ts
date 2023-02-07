@@ -1,4 +1,4 @@
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 
 const web3Eth = require('web3-eth');
 

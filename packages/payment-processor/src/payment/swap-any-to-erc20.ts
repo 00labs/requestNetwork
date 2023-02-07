@@ -13,7 +13,7 @@ import {
   getSigner,
   validateConversionFeeProxyRequest,
 } from './utils';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { IRequestPaymentOptions } from './settings';
 import { IPreparedTransaction } from './prepared-transaction';
 

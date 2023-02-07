@@ -1,5 +1,5 @@
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 import Erc777StreamPaymentNetwork from '../../../../src/extensions/payment-network/erc777/stream';
 

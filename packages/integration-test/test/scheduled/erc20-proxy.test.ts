@@ -3,7 +3,7 @@ import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { mockAdvancedLogic } from './mocks';
 import { Types, Utils } from '@huma-shan/request-client.js';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import {
   erc20requestCreationHash,
   localErc20PaymentNetworkParams,

@@ -1,4 +1,4 @@
-import { CurrencyInput, CurrencyManager, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyInput, CurrencyManager, ICurrencyManager } from '@huma-shan/currency';
 import {
   ClientTypes,
   DataAccessTypes,

@@ -20,7 +20,7 @@ import { EnrichedRequest, IConversionPaymentSettings } from './index';
 import { checkRequestAndGetPathAndCurrency } from './any-to-erc20-proxy';
 import { checkErc20Allowance, encodeApproveAnyErc20 } from './erc20';
 import { IState } from 'types/dist/extension-types';
-import { CurrencyDefinition, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyDefinition, ICurrencyManager } from '@huma-shan/currency';
 import { IConversionSettings, IRequestPaymentOptions } from './settings';
 
 const CURRENCY = RequestLogicTypes.CURRENCY;

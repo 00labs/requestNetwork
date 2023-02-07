@@ -1,5 +1,5 @@
 import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 import IncreaseExpectedAmountAction from '../../../src/actions/increaseExpectedAmount';
 
 import Version from '../../../src/version';

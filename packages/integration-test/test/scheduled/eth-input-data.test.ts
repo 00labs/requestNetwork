@@ -1,6 +1,6 @@
 import { EthInputDataPaymentDetector } from '@huma-shan/payment-detection';
 import { RequestLogicTypes } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 
 import { mockAdvancedLogic } from './mocks';
 import { Types, Utils } from '@huma-shan/request-client.js';

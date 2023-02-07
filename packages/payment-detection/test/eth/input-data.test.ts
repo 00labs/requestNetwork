@@ -1,5 +1,5 @@
 import { mocked } from 'ts-jest/utils';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import {
   AdvancedLogicTypes,
   ExtensionTypes,

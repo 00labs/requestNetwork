@@ -1,5 +1,5 @@
 import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 /**
  * Abstract class to create extension

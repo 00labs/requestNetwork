@@ -1,6 +1,6 @@
 import { erc20FeeProxyArtifact } from '@huma-shan/smart-contracts';
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
-import { CurrencyDefinition, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyDefinition, ICurrencyManager } from '@huma-shan/currency';
 import ProxyInfoRetriever from './proxy-info-retriever';
 
 import { loadCurrencyFromContract } from './currency';

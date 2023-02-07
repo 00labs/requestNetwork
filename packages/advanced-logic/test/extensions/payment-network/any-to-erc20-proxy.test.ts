@@ -1,6 +1,6 @@
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { deepCopy } from '@huma-shan/utils';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 
 import AnyToErc20Proxy from '../../../src/extensions/payment-network/any-to-erc20-proxy';
 import * as DataConversionERC20FeeAddData from '../../utils/payment-network/erc20/any-to-erc20-proxy-add-data-generator';

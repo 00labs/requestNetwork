@@ -1,6 +1,6 @@
 import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@huma-shan/types';
 
-import { decrypt, getAddressFromPrivateKey } from '@requestnetwork/utils';
+import { decrypt, getAddressFromPrivateKey } from '@huma-shan/utils';
 
 /** Type of the dictionary of decryptionParameters (private keys) indexed by ethereum address */
 type IDecryptionParametersDictionary = Map<string, EncryptionTypes.IDecryptionParameters>;

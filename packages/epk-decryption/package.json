@@ -43,7 +43,7 @@
   "dependencies": {
     "@requestnetwork/multi-format": "0.15.10",
     "@huma-shan/types": "0.37.8",
-    "@requestnetwork/utils": "0.36.0",
+    "@huma-shan/utils": "0.37.8",
     "tslib": "2.3.1"
   },
   "devDependencies": {

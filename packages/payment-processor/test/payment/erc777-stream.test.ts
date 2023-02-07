@@ -2,7 +2,7 @@ import { Wallet, providers, Contract, utils as ethersUtils, BigNumber } from 'et
 import { Framework } from '@superfluid-finance/sdk-core';
 
 import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 import {
   closeErc777StreamRequest,

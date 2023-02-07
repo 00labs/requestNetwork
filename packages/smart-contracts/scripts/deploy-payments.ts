@@ -14,7 +14,7 @@ import { ChainlinkConversionPath } from '../src/types/ChainlinkConversionPath';
 // eslint-disable-next-line
 // @ts-ignore Cannot find module
 import { EthConversionProxy } from '../src/types/EthConversionProxy';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
 import { HardhatRuntimeEnvironmentExtended } from '../scripts-create2/types';
 import { computeCreate2DeploymentAddress } from '../scripts-create2/compute-one-address';

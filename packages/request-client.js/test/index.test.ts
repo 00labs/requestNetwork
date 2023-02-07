@@ -9,7 +9,7 @@ import {
   PaymentTypes,
   RequestLogicTypes,
 } from '@huma-shan/types';
-import { decrypt, random32Bytes } from '@requestnetwork/utils';
+import { decrypt, random32Bytes } from '@huma-shan/utils';
 import { ethers } from 'ethers';
 
 import AxiosMockAdapter from 'axios-mock-adapter';

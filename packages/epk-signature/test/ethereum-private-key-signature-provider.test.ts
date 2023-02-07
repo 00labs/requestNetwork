@@ -1,7 +1,7 @@
 import { IdentityTypes, SignatureTypes } from '@huma-shan/types';
 
 import EthereumPrivateKeySignatureProvider from '../src/ethereum-private-key-signature-provider';
-import { ecSign, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { ecSign, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 const id1Raw = {
   address: '0xaf083f77f1ffd54218d91491afd06c9296eac3ce',

@@ -1,10 +1,6 @@
 import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNumber } from 'ethers';
 
-import {
-  CurrencyDefinition,
-  CurrencyManager,
-  UnsupportedCurrencyError,
-} from '@requestnetwork/currency';
+import { CurrencyDefinition, CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
 import { Erc20ConversionProxy__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, RequestLogicTypes } from '@huma-shan/types';

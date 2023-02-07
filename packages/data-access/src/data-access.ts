@@ -1,6 +1,6 @@
 import MultiFormat from '@requestnetwork/multi-format';
 import { DataAccessTypes, LogTypes, StorageTypes } from '@huma-shan/types';
-import { deepCopy, getCurrentTimestampInSecond, SimpleLogger, unique } from '@requestnetwork/utils';
+import { deepCopy, getCurrentTimestampInSecond, SimpleLogger, unique } from '@huma-shan/utils';
 
 import * as Bluebird from 'bluebird';
 import { EventEmitter } from 'events';

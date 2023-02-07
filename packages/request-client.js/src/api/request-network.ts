@@ -13,12 +13,8 @@ import {
   SignatureProviderTypes,
   TransactionTypes,
 } from '@huma-shan/types';
-import { deepCopy, supportedIdentities } from '@requestnetwork/utils';
-import {
-  CurrencyManager,
-  ICurrencyManager,
-  UnsupportedCurrencyError,
-} from '@requestnetwork/currency';
+import { deepCopy, supportedIdentities } from '@huma-shan/utils';
+import { CurrencyManager, ICurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import * as Types from '../types';
 import ContentDataExtension from './content-data-extension';
 import Request from './request';

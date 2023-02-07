@@ -1,4 +1,4 @@
-import { ICurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { ICurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import AnyToNativeTokenPaymentNetwork from '../any-to-native';
 

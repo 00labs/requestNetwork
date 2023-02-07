@@ -1,5 +1,5 @@
 import { StorageTypes } from '@huma-shan/types';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@huma-shan/utils';
 
 import ethereumEntriesToIpfsContent from '../src/ethereum-entries-to-ipfs-content';
 import IgnoredDataIndex from '../src/ignored-dataIds';

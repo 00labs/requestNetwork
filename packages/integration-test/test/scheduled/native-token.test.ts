@@ -2,7 +2,7 @@ import { PaymentNetworkFactory } from '@huma-shan/payment-detection';
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import { PnReferenceBased } from '@huma-shan/types/dist/extension-types';
 import { AdvancedLogic } from '@huma-shan/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { omit } from 'lodash';
 
 const advancedLogic = new AdvancedLogic();

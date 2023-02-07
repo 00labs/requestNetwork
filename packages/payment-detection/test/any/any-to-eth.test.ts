@@ -1,5 +1,5 @@
 import { AdvancedLogic } from '@huma-shan/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { StaticJsonRpcProvider } from '@ethersproject/providers';
 import { AnyToEthFeeProxyPaymentDetector } from '../../src/any';

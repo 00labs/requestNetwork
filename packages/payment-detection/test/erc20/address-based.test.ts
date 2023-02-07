@@ -7,7 +7,7 @@ import {
 import { ERC20AddressBasedPaymentDetector } from '../../src/erc20';
 import { mockAdvancedLogicBase } from '../utils';
 import { AdvancedLogic } from '@huma-shan/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 
 jest.setTimeout(10000);
 

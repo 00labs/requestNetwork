@@ -16,7 +16,7 @@ import { payAnyToErc20ProxyRequest } from './any-to-erc20-proxy';
 import { payAnyToEthProxyRequest } from './any-to-eth-proxy';
 import { WalletConnection } from 'near-api-js';
 import { isNearNetwork, isNearAccountSolvent } from './utils-near';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import { encodeRequestErc20Approval } from './encoder-approval';
 import { encodeRequestPayment } from './encoder-payment';
 import { IPreparedTransaction } from './prepared-transaction';

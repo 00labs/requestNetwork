@@ -84,10 +84,10 @@ jobs:
           command: yarn workspace @huma-shan/types run build
       - run:
           name: Build utils
-          command: yarn workspace @requestnetwork/utils run build
+          command: yarn workspace @huma-shan/utils run build
       - run:
           name: Build currency
-          command: yarn workspace @requestnetwork/currency run build
+          command: yarn workspace @huma-shan/currency run build
       - run:
           name: Generate Smart Contract types
           command: yarn workspace @huma-shan/smart-contracts run build
@@ -294,7 +294,7 @@ jobs:
           at: *working_directory
       - run:
           name: 'Test utils'
-          command: 'yarn workspace @requestnetwork/utils run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/utils run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:
@@ -308,7 +308,7 @@ jobs:
           at: *working_directory
       - run:
           name: 'Test currency'
-          command: 'yarn workspace @requestnetwork/currency run test --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/currency run test --ci --maxWorkers=1'
       - persist_to_workspace:
           root: *working_directory
           paths:

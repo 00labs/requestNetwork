@@ -4,7 +4,7 @@ import {
   SignatureTypes,
   TransactionTypes,
 } from '@huma-shan/types';
-import { sign } from '@requestnetwork/utils';
+import { sign } from '@huma-shan/utils';
 
 const payee = {
   identity: {

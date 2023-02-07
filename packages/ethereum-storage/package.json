@@ -42,7 +42,7 @@
   "dependencies": {
     "@huma-shan/smart-contracts": "0.30.8",
     "@huma-shan/types": "0.37.8",
-    "@requestnetwork/utils": "0.36.0",
+    "@huma-shan/utils": "0.37.8",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "ethers": "5.5.1",

@@ -1,6 +1,6 @@
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { deepCopy } from '@huma-shan/utils';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 
 import AnyToEthProxy from '../../../src/extensions/payment-network/any-to-eth-proxy';
 import * as DataConversionETHFeeAddData from '../../utils/payment-network/ethereum/any-to-eth-proxy-add-data-generator';

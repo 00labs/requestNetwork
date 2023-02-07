@@ -2,7 +2,7 @@ import MultiFormat from '@requestnetwork/multi-format';
 import { EncryptionTypes } from '@huma-shan/types';
 
 import EncryptedTransaction from '../../src/encrypted-transaction';
-import { encrypt, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { encrypt, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 const data = '{ "what": "ever", "it": "is,", "this": "must", "work": true }';
 const hash = MultiFormat.serialize(normalizeKeccak256Hash(JSON.parse(data)));

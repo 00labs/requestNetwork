@@ -5,7 +5,7 @@ import {
   TheGraphSuperfluidClient,
   TheGraphClientOptions,
 } from '../thegraph/superfluid';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 
 /** Parameters for getting payment events from theGraph */
 type GraphPaymentQueryParams = {

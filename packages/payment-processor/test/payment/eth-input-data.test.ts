@@ -1,7 +1,7 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
 import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 import { _getEthPaymentUrl, payEthInputDataRequest } from '../../src/payment/eth-input-data';
 import { getRequestPaymentValues } from '../../src/payment/utils';

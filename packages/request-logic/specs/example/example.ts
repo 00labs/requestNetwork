@@ -8,7 +8,7 @@ import {
 } from '@huma-shan/types';
 
 import RequestLogic from '../../src/requestLogicCore';
-import { sign } from '@requestnetwork/utils';
+import { sign } from '@huma-shan/utils';
 
 async function foo(): Promise<void> {
   // Bob (the payee)

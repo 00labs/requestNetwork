@@ -13,11 +13,11 @@ import {
 import { PaymentTypes } from '@huma-shan/types';
 import { BigNumber, ContractTransaction, Signer } from 'ethers';
 import { expect } from 'chai';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { chainlinkConversionPath } from '../../src/lib';
 import { FAU_USD_RATE } from '../../scripts/test-deploy-batch-conversion-deployment';
 import { localERC20AlphaArtifact, secondLocalERC20AlphaArtifact } from './localArtifacts';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 import { HttpNetworkConfig } from 'hardhat/types';
 import {
   DAI_USD_RATE,

@@ -15,7 +15,7 @@ import {
   processNearPaymentWithConversion,
 } from './utils-near';
 import { IConversionPaymentSettings } from '.';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 
 /**
  * Processes the transaction to pay a request in NEAR with on-chain conversion.

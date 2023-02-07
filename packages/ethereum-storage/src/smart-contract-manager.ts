@@ -12,12 +12,7 @@ const web3Eth = require('web3-eth');
 const web3Utils = require('web3-utils');
 
 import { BigNumber } from 'ethers';
-import {
-  flatten2DimensionsArray,
-  retry,
-  SimpleLogger,
-  timeoutPromise,
-} from '@requestnetwork/utils';
+import { flatten2DimensionsArray, retry, SimpleLogger, timeoutPromise } from '@huma-shan/utils';
 
 // Maximum number of attempt to create ethereum metadata when transaction to add hash and size to Ethereum is confirmed
 // 23 is the number of call of the transaction's confirmation event function

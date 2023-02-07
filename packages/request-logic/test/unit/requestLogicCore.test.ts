@@ -6,7 +6,7 @@ import {
   RequestLogicTypes,
   SignatureTypes,
 } from '@huma-shan/types';
-import { deepCopy, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { deepCopy, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import Version from '../../src/version';
 const CURRENT_VERSION = Version.currentVersion;

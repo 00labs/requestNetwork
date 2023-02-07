@@ -1,7 +1,7 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
 import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 import { payBatchProxyRequest, encodePayBatchRequest } from '../../src/payment/batch-proxy';
 import { getRequestPaymentValues } from '../../src/payment/utils';

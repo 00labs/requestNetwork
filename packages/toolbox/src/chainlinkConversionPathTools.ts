@@ -5,10 +5,10 @@ import {
   ChainlinkConversionPath__factory,
   ChainlinkConversionPath,
 } from '@huma-shan/smart-contracts/types';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import Bluebird from 'bluebird';
 import chunk from 'lodash/chunk';
-import { retry } from '@requestnetwork/utils';
+import { retry } from '@huma-shan/utils';
 
 export interface IOptions {
   network?: string;

@@ -1,4 +1,4 @@
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { ExtensionTypes, IdentityTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { EventEmitter } from 'events';

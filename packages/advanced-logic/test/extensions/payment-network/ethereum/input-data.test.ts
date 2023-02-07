@@ -1,5 +1,5 @@
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 import EthereumInputDataPaymentNetwork from '../../../../src/extensions/payment-network/ethereum/input-data';
 

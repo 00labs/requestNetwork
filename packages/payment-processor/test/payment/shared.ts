@@ -1,4 +1,4 @@
-import { CurrencyManager, CurrencyDefinition } from '@requestnetwork/currency';
+import { CurrencyManager, CurrencyDefinition } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
 
 export const currencyManager = new CurrencyManager([

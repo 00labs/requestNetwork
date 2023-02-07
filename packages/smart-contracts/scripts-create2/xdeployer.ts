@@ -6,7 +6,7 @@ import {
   getCeloProvider,
   getDefaultProvider,
   isEip1559Supported,
-} from '@requestnetwork/utils';
+} from '@huma-shan/utils';
 
 const ZERO_ETH_INPUT = 0;
 

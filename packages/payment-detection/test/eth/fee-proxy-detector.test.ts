@@ -1,4 +1,4 @@
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { EthFeeProxyPaymentDetector } from '../../src';
 import { mockAdvancedLogicBase } from '../utils';

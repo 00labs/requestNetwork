@@ -1,4 +1,4 @@
-import { keccak256Hash } from '@requestnetwork/utils';
+import { keccak256Hash } from '@huma-shan/utils';
 
 /**
  * Compute the payment reference

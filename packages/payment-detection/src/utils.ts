@@ -1,4 +1,4 @@
-import { CurrencyDefinition } from '@requestnetwork/currency';
+import { CurrencyDefinition } from '@huma-shan/currency';
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { BigNumber, BigNumberish, Contract, errors, logger } from 'ethers';
 import { getAddress, keccak256, LogDescription } from 'ethers/lib/utils';

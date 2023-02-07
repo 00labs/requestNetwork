@@ -3,7 +3,7 @@ import { TransactionTypes } from '@huma-shan/types';
 import ChannelParser from '../../src/channel-parser';
 import TransactionsFactory from '../../src/transactions-factory';
 import * as TestData from './utils/test-data';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 let channelParser: ChannelParser;
 

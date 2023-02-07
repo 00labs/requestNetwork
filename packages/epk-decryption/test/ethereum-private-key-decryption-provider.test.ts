@@ -1,7 +1,7 @@
 import { EncryptionTypes, IdentityTypes } from '@huma-shan/types';
 
 import EthereumPrivateKeyDecryptionProvider from '../src/ethereum-private-key-decryption-provider';
-import { encrypt } from '@requestnetwork/utils';
+import { encrypt } from '@huma-shan/utils';
 
 export const id1Raw = {
   address: '0xaf083f77f1ffd54218d91491afd06c9296eac3ce',

@@ -1,10 +1,6 @@
 import MultiFormat from '@requestnetwork/multi-format';
 import { EncryptionTypes, TransactionTypes } from '@huma-shan/types';
-import {
-  encrypt,
-  generate32BufferKey,
-  getIdentityFromEncryptionParams,
-} from '@requestnetwork/utils';
+import { encrypt, generate32BufferKey, getIdentityFromEncryptionParams } from '@huma-shan/utils';
 
 /**
  * Class to create transactions (clear and encrypted)

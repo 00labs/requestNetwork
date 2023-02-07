@@ -1,5 +1,5 @@
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
-import { CurrencyDefinition, CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyDefinition, CurrencyManager } from '@huma-shan/currency';
 import { PaymentNetworkFactory } from '../../src/payment-network-factory';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
 import {

@@ -1,6 +1,6 @@
 import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import ReferenceBasedPaymentNetwork from './reference-based';
-import { areEqualIdentities, deepCopy, isValidAmount } from '@requestnetwork/utils';
+import { areEqualIdentities, deepCopy, isValidAmount } from '@huma-shan/utils';
 
 /**
  * Core of the reference based with fee payment networks

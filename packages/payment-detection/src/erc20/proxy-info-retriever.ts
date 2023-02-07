@@ -2,7 +2,7 @@ import { PaymentTypes } from '@huma-shan/types';
 import { IPaymentRetriever } from '../types';
 import { BigNumber, ethers } from 'ethers';
 import { parseLogArgs } from '../utils';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@huma-shan/utils';
 
 // The ERC20 proxy smart contract ABI fragment containing TransferWithReference event
 const erc20proxyContractAbiFragment = [

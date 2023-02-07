@@ -1,6 +1,6 @@
 import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNumber } from 'ethers';
 
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { AnyToEthFeeProxyPaymentDetector } from '@huma-shan/payment-detection';
 import { EthConversionProxy__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, RequestLogicTypes } from '@huma-shan/types';

@@ -1,5 +1,5 @@
 import { LogTypes, StorageTypes } from '@huma-shan/types';
-import { cachedThrottle, retry, SimpleLogger } from '@requestnetwork/utils';
+import { cachedThrottle, retry, SimpleLogger } from '@huma-shan/utils';
 
 /**
  * Manages every info linked to the ethereum blocks (blockNumber, blockTimestamp, confirmations ... )

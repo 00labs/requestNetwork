@@ -7,7 +7,7 @@ import {
   updateNativeAndUSDAddress,
   getSignerAndGasFees,
 } from './adminTasks';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
 
 /**

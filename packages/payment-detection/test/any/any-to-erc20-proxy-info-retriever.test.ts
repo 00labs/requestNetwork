@@ -1,7 +1,7 @@
 /* eslint-disable no-invalid-this */
 /* eslint-disable no-magic-numbers */
 import { PaymentTypes } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { AnyToErc20InfoRetriever } from '../../src/any/retrievers/any-to-erc20-proxy';
 import { ethers } from 'ethers';
 import { erc20ConversionProxy } from '@huma-shan/smart-contracts';

@@ -8,7 +8,7 @@ import * as config from './config';
 import { getIpfsStorage } from './storageUtils';
 import { TheGraphDataAccess } from '@requestnetwork/thegraph-data-access';
 import { EthereumStorageEthers } from '@huma-shan/ethereum-storage';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@huma-shan/utils';
 
 const getNetworkFromId = (networkId: number) => {
   const customNames: Record<number, string> = {

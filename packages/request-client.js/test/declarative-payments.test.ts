@@ -19,8 +19,8 @@ import {
   getPaymentNetworkExtension,
 } from '@huma-shan/payment-detection';
 import { IRequestDataWithEvents } from '../src/types';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { sign } from '@requestnetwork/utils';
+import { CurrencyManager } from '@huma-shan/currency';
+import { sign } from '@huma-shan/utils';
 
 const httpConfig: Partial<ClientTypes.IHttpDataAccessConfig> = {
   getConfirmationDeferDelay: 0,

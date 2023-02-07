@@ -1,5 +1,5 @@
 import { IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
-import { areEqualIdentities } from '@requestnetwork/utils';
+import { areEqualIdentities } from '@huma-shan/utils';
 
 /**
  * Function to manage Request Logic Role

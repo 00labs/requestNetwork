@@ -1,5 +1,5 @@
 import MultiFormat from '@requestnetwork/multi-format';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import { EventEmitter } from 'events';
 

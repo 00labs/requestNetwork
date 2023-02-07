@@ -4,7 +4,7 @@ import {
   IdentityTypes,
   RequestLogicTypes,
 } from '@huma-shan/types';
-import { CurrencyManager, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager, ICurrencyManager } from '@huma-shan/currency';
 
 import ContentData from './extensions/content-data';
 import AddressBasedBtc from './extensions/payment-network/bitcoin/mainnet-address-based';

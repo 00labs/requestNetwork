@@ -4,7 +4,7 @@ import { StatusCodes } from 'http-status-codes';
 import { getPersistTransactionTimeout } from '../config';
 
 import ConfirmedTransactionStore from './confirmedTransactionStore';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 /**
  * Class to persist transactions though the data-access layer

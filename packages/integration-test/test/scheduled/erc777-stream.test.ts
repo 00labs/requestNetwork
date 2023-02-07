@@ -1,6 +1,6 @@
 import { SuperFluidPaymentDetector } from '@huma-shan/payment-detection';
 import { ExtensionTypes, IdentityTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 
 import { mockAdvancedLogic } from './mocks';
 

@@ -1,9 +1,9 @@
-import { CurrencyDefinition } from '@requestnetwork/currency';
+import { CurrencyDefinition } from '@huma-shan/currency';
 import { PaymentTypes } from '@huma-shan/types';
 import { BigNumber, ethers } from 'ethers';
 import { parseLogArgs, unpadAmountFromChainlink } from '../../utils';
 import type { JsonFragment } from '@ethersproject/abi';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@huma-shan/utils';
 
 /** TransferWithConversionAndReference event */
 type TransferWithConversionAndReferenceArgs = {

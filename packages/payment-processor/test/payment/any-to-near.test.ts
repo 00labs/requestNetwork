@@ -4,7 +4,7 @@ import { PaymentReferenceCalculator } from '@huma-shan/payment-detection';
 import { IConversionPaymentSettings, _getPaymentUrl } from '../../src/payment';
 import * as nearUtils from '../../src/payment/utils-near';
 import { payNearConversionRequest } from '../../src/payment/near-conversion';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/await-thenable */

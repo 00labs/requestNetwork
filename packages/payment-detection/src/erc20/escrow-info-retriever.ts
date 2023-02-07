@@ -3,7 +3,7 @@ import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contracts';
 import { BigNumber, ethers } from 'ethers';
 import { IEventRetriever } from '../types';
 import { makeGetDeploymentInformation, parseLogArgs } from '../utils';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@huma-shan/utils';
 
 const ESCROW_CONTRACT_ADDRESS_MAP = {
   ['0.1.0']: '0.1.0',

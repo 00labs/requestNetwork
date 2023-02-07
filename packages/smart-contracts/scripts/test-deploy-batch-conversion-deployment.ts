@@ -11,7 +11,7 @@ import {
   ethereumFeeProxyArtifact,
 } from '../src/lib';
 import { chainlinkConversionPath as chainlinkConvArtifact } from '../src/lib';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { deployAddressChecking } from './utils';
 import { BigNumber } from 'ethers';
 import { PRECISION_RATE } from './test-deploy_chainlink_contract';

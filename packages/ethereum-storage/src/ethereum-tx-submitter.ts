@@ -4,7 +4,7 @@ import { requestHashSubmitterArtifact } from '@huma-shan/smart-contracts';
 import { RequestOpenHashSubmitter } from '@huma-shan/smart-contracts/types';
 import { SubmitterProps } from './ethereum-storage-ethers';
 import { GasFeeDefiner } from './gas-fee-definer';
-import { SimpleLogger, isEip1559Supported } from '@requestnetwork/utils';
+import { SimpleLogger, isEip1559Supported } from '@huma-shan/utils';
 
 /**
  * Handles the submission of a hash on the request HashSubmitter contract

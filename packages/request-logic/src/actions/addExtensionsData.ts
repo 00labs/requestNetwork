@@ -3,7 +3,7 @@ import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@huma-
 import Action from '../action';
 import Request from '../request';
 import Version from '../version';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 /**
  * Implementation of the action add extensions data from request logic specification

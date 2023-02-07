@@ -40,11 +40,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "4.7.3",
-    "@requestnetwork/currency": "0.9.0",
+    "@huma-shan/currency": "0.10.8",
     "@huma-shan/payment-detection": "0.37.8",
     "@huma-shan/smart-contracts": "0.30.8",
     "@huma-shan/types": "0.37.8",
-    "@requestnetwork/utils": "0.36.0",
+    "@huma-shan/utils": "0.37.8",
     "@requestnetwork/multi-format": "0.15.10",
     "@superfluid-finance/sdk-core": "0.3.2",
     "ethers": "5.5.1",

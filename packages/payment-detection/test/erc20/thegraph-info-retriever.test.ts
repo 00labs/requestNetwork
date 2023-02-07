@@ -3,7 +3,7 @@ import { TheGraphInfoRetriever, TheGraphClient } from '../../src/thegraph';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
 import { utils } from 'ethers';
 import { PaymentTypes } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 
 const paymentsMockData = {
   ['0x6c93723bc5f82e6fbb2ea994bf0fb572fa19f7a2a3146065e21752b95668efe5' as string]: [

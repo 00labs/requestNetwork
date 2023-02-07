@@ -4,7 +4,7 @@ import {
   IdentityTypes,
   RequestLogicTypes,
 } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { SuperFluidPaymentDetector } from '../../src/erc777/superfluid-detector';
 import { genTransferEventsByMonth } from './mocks';
 import { mockAdvancedLogicBase } from '../utils';

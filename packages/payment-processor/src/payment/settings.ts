@@ -1,4 +1,4 @@
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
 import { BigNumber, BigNumberish } from 'ethers';
 import { ITransactionOverrides } from './transaction-overrides';

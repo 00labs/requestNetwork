@@ -2,7 +2,7 @@ import { IdentityTypes, SignatureTypes } from '@huma-shan/types';
 
 import Web3SignatureProvider from '../src/web3-signature-provider';
 
-import { ecSign, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { ecSign, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 const id1Raw = {
   identity: {

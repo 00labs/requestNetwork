@@ -6,7 +6,7 @@ import {
   PaymentTypes,
   RequestLogicTypes,
 } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { AnyToERC20PaymentDetector } from '../../src/any/any-to-erc20-proxy';
 import { getTheGraphClient } from '../../src/thegraph';

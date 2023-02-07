@@ -6,7 +6,7 @@ import RequestNetwork from '../../src/api/request-network';
 import Request from '../../src/api/request';
 
 import * as TestData from '../data-test';
-import { normalizeKeccak256Hash, sign } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, sign } from '@huma-shan/utils';
 
 const mockDataAccess: DataAccessTypes.IDataAccess = {
   _getStatus: jest.fn(),

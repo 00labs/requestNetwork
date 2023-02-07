@@ -9,7 +9,7 @@ import { LogTypes, StorageTypes } from '@huma-shan/types';
 import { BigNumber } from 'ethers';
 import XDaiFixedProvider from './gas-price-providers/xdai-fixed-provider';
 import { GasDefinerProps } from './ethereum-storage-ethers';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@huma-shan/utils';
 
 /**
  * Determines the gas price to use depending on the used network

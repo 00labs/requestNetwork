@@ -1,7 +1,7 @@
 import MultiFormat from '@requestnetwork/multi-format';
 import { IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import CreateAction from '../../../src/actions/create';
 

@@ -3,7 +3,7 @@ import TypedEmitter from 'typed-emitter';
 
 import { BigNumber } from 'ethers';
 
-import { getCurrentTimestampInSecond, retry, SimpleLogger } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, retry, SimpleLogger } from '@huma-shan/utils';
 import { Block } from '@huma-shan/data-access';
 import { DataAccessTypes, LogTypes, StorageTypes } from '@huma-shan/types';
 

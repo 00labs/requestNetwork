@@ -1,4 +1,4 @@
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
 import { ethConversionArtifact } from '../../src/lib';
 import { HardhatRuntimeEnvironmentExtended } from '../types';

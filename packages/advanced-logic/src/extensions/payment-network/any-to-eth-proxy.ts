@@ -1,4 +1,4 @@
-import { ICurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { ICurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import EthereumFeeProxyPaymentNetwork from './ethereum/fee-proxy-contract';
 

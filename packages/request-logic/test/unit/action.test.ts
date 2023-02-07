@@ -5,7 +5,7 @@ import {
   SignatureProviderTypes,
   SignatureTypes,
 } from '@huma-shan/types';
-import { deepCopy, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { deepCopy, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import Action from '../../src/action';
 import CreateAction from '../../src/actions/create';

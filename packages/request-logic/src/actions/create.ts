@@ -8,7 +8,7 @@ import {
   identityHasError,
   isString,
   isValidAmount,
-} from '@requestnetwork/utils';
+} from '@huma-shan/utils';
 
 /**
  * Implementation of the request logic specification

@@ -3,7 +3,7 @@ import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@huma-
 import * as Semver from 'semver';
 import Role from './role';
 import Version from './version';
-import { normalizeKeccak256Hash, recoverSigner } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, recoverSigner } from '@huma-shan/utils';
 
 /**
  * Function to manage Request logic action (object that will be interpreted to create or modify a request)

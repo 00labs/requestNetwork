@@ -1,6 +1,6 @@
 import * as SmartContracts from '@huma-shan/smart-contracts';
 import { StorageTypes } from '@huma-shan/types';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 import { EventEmitter } from 'events';
 
 import { EthereumStorage } from '../src/ethereum-storage';

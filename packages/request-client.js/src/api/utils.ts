@@ -1,5 +1,5 @@
 import { RequestLogicTypes } from '@huma-shan/types';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 /**
  * Collection of utils functions related to the library, meant to simplify its use.
  */

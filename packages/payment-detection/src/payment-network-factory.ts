@@ -4,7 +4,7 @@ import {
   PaymentTypes,
   RequestLogicTypes,
 } from '@huma-shan/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import {
   ContractBasedDetector,
   IPaymentNetworkModuleByType,

@@ -1,7 +1,7 @@
 import { ExtensionTypes } from '@huma-shan/types';
 import { FeeReferenceBasedDetector } from './fee-reference-based-detector';
-import { ICurrencyManager } from '@requestnetwork/currency';
-import { generate8randomBytes } from '@requestnetwork/utils';
+import { ICurrencyManager } from '@huma-shan/currency';
+import { generate8randomBytes } from '@huma-shan/utils';
 
 /**
  * Abstract class to extend to get the payment balance of conversion requests

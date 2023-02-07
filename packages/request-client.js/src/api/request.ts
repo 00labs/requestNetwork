@@ -1,12 +1,12 @@
 import { EventEmitter } from 'events';
 import { DeclarativePaymentDetector, EscrowERC20InfoRetriever } from '@huma-shan/payment-detection';
 import { IdentityTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import * as Types from '../types';
 import ContentDataExtension from './content-data-extension';
 import localUtils from './utils';
 import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contracts';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 /**
  * Class representing a request.

@@ -5,7 +5,7 @@ import {
   PaymentTypes,
   RequestLogicTypes,
 } from '@huma-shan/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { Erc20PaymentNetwork } from '../../src';
 import { mockAdvancedLogicBase } from '../utils';
 

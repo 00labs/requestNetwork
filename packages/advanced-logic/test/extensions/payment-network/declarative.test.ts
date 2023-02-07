@@ -1,6 +1,6 @@
 import PnAnyDeclarative from '../../../src/extensions/payment-network/declarative';
 
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 import { ExtensionTypes } from '@huma-shan/types';
 
 import * as TestDataDeclarative from '../../utils/payment-network/any/generator-data-create';

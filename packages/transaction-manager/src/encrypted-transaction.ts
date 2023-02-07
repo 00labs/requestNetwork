@@ -1,6 +1,6 @@
 import MultiFormat from '@requestnetwork/multi-format';
 import { EncryptionTypes, TransactionTypes } from '@huma-shan/types';
-import { decrypt, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { decrypt, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 /**
  * Class representing an encrypted transaction

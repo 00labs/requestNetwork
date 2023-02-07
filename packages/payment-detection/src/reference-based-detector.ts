@@ -1,9 +1,9 @@
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@huma-shan/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@huma-shan/currency';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 
 import { DeclarativePaymentDetectorBase } from './declarative';
-import { generate8randomBytes } from '@requestnetwork/utils';
+import { generate8randomBytes } from '@huma-shan/utils';
 
 /**
  * Abstract class to extend to get the payment balance of reference based requests

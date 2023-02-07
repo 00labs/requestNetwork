@@ -5,7 +5,7 @@ import {
   RequestLogicTypes,
 } from '@huma-shan/types';
 import { PaymentDetectorBase } from './payment-detector-base';
-import { notNull } from '@requestnetwork/utils';
+import { notNull } from '@huma-shan/utils';
 
 /**
  * Handles payment detection for a declarative request, or derived.

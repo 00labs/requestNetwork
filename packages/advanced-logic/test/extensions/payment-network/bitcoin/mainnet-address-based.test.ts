@@ -1,5 +1,5 @@
 import MainnetBitcoinAddressBasedPN from '../../../../src/extensions/payment-network/bitcoin/mainnet-address-based';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 import * as DataBTCAddPaymentAddress from '../../../utils/payment-network/bitcoin/generator-data-add-payment-address';
 import * as DataBTCCreate from '../../../utils/payment-network/bitcoin/generator-data-create';
 import * as TestData from '../../../utils/test-data-generator';

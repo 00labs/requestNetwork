@@ -2,7 +2,7 @@ import {
   conversionSupportedNetworks,
   ICurrencyManager,
   UnsupportedCurrencyError,
-} from '@requestnetwork/currency';
+} from '@huma-shan/currency';
 import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import Erc20FeeProxyPaymentNetwork from './erc20/fee-proxy-contract';
 

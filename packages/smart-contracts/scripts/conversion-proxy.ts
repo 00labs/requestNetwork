@@ -7,7 +7,7 @@ import {
   ethConversionArtifact,
 } from '../src/lib';
 import { deployOne } from './deploy-one';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
 
 export async function deployERC20ConversionProxy(

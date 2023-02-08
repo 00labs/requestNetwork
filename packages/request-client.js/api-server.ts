@@ -9,7 +9,6 @@ import {
   ERC20TransferrableReceivable__factory,
   IERC20Metadata__factory,
 } from '@requestnetwork/smart-contracts/types';
-import MultiFormat from '@requestnetwork/multi-format';
 
 dotenv.config();
 const app = express();
@@ -79,9 +78,7 @@ app.get('/invoice', async function (req, res) {
   try {
     tId = BN.from(tokenId);
     const metadataBase64 = await invoiceReceivable.tokenURI(tId);
-    const metadata = Buffer.from(metadataBase64, 'base64').toString('ascii');
-    const reqIdObj = { value: tId.toHexString(), type: metadata };
-    requestId = MultiFormat.serialize(reqIdObj);
+    requestId = Buffer.from(metadataBase64, 'base64').toString('ascii');
   } catch (e) {
     console.log(e);
     res

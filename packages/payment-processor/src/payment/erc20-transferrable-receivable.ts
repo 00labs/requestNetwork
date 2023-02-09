@@ -58,6 +58,12 @@ export async function getReceivableTokenIdForRequest(
   );
 }
 
+/**
+ * Helper method to determine whether a request has a receivable minted yet
+ *
+ * @param request
+ * @param signerOrProvider the Web3 provider, or signer. Defaults to window.ethereum.
+ */
 export async function hasReceivableForRequest(
   request: ClientTypes.IRequestData,
   signerOrProvider: providers.Provider | Signer,

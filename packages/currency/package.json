@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/currency",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "publishConfig": {
     "access": "public"
   },
@@ -42,8 +42,8 @@
     "add-erc20": "ts-node scripts/addErc20.ts"
   },
   "dependencies": {
-    "@huma-shan/types": "0.38.0",
-    "@huma-shan/utils": "0.38.0",
+    "@huma-shan/types": "0.39.0",
+    "@huma-shan/utils": "0.39.0",
     "@metamask/contract-metadata": "1.31.0",
     "multicoin-address-validator": "0.5.2",
     "node-dijkstra": "2.5.0",

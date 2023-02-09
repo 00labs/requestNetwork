@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2023-02-09)
+
+### Bug Fixes
+
+- ts-node configuration ([#138](https://github.com/RequestNetwork/requestNetwork/issues/138)) ([e2180d5](https://github.com/RequestNetwork/requestNetwork/commit/e2180d507bd87116fdeb3466690b6df0c5187976))
+- typescript lint for test files ([#778](https://github.com/RequestNetwork/requestNetwork/issues/778)) ([048e876](https://github.com/RequestNetwork/requestNetwork/commit/048e876a905516be0de8a31d446e4572eb74eccb))
+
+### Features
+
+- add multi-format package to serialize and deserialize data ([#546](https://github.com/RequestNetwork/requestNetwork/issues/546)) ([2b03cd1](https://github.com/RequestNetwork/requestNetwork/commit/2b03cd19f02ebc1e37f6253fec7aa13699165a3c))
+- replace symmetric encryption algorithm by aes-256-gcm ([#233](https://github.com/RequestNetwork/requestNetwork/issues/233)) ([969bebe](https://github.com/RequestNetwork/requestNetwork/commit/969bebeb99b4bc2fdd31405a162934cfdff6db05))
+
 # 0.17.0 (2023-02-07)
 
 ### Bug Fixes

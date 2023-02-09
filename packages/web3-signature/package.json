@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/web3-signature",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "publishConfig": {
     "access": "public"
   },
@@ -41,8 +41,8 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@huma-shan/types": "0.38.0",
-    "@huma-shan/utils": "0.38.0",
+    "@huma-shan/types": "0.39.0",
+    "@huma-shan/utils": "0.39.0",
     "ethers": "5.5.1",
     "tslib": "2.3.1"
   },

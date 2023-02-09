@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/payment-processor",
-  "version": "0.40.0",
+  "version": "0.41.0",
   "publishConfig": {
     "access": "public"
   },
@@ -39,12 +39,12 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@huma-shan/currency": "0.11.0",
-    "@huma-shan/multi-format": "0.17.0",
-    "@huma-shan/payment-detection": "0.38.0",
-    "@huma-shan/smart-contracts": "0.31.0",
-    "@huma-shan/types": "0.38.0",
-    "@huma-shan/utils": "0.38.0",
+    "@huma-shan/currency": "0.12.0",
+    "@huma-shan/multi-format": "0.18.0",
+    "@huma-shan/payment-detection": "0.39.0",
+    "@huma-shan/smart-contracts": "0.32.0",
+    "@huma-shan/types": "0.39.0",
+    "@huma-shan/utils": "0.39.0",
     "@openzeppelin/contracts": "4.7.3",
     "@superfluid-finance/sdk-core": "0.3.2",
     "ethers": "5.5.1",

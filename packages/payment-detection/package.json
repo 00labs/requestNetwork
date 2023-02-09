@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/payment-detection",
-  "version": "0.38.0",
+  "version": "0.39.0",
   "publishConfig": {
     "access": "public"
   },
@@ -41,10 +41,10 @@
     "codegen": "graphql-codegen --config codegen.yml ; graphql-codegen --config codegen-superfluid.yml; graphql-codegen --config codegen-near.yml"
   },
   "dependencies": {
-    "@huma-shan/currency": "0.11.0",
-    "@huma-shan/smart-contracts": "0.31.0",
-    "@huma-shan/types": "0.38.0",
-    "@huma-shan/utils": "0.38.0",
+    "@huma-shan/currency": "0.12.0",
+    "@huma-shan/smart-contracts": "0.32.0",
+    "@huma-shan/types": "0.39.0",
+    "@huma-shan/utils": "0.39.0",
     "axios": "0.27.2",
     "ethers": "5.5.1",
     "graphql": "15.5.1",
@@ -61,7 +61,7 @@
     "@graphql-codegen/typescript-graphql-request": "3.2.1",
     "@graphql-codegen/typescript-operations": "1.18.0",
     "@graphql-codegen/typescript-resolvers": "1.19.2",
-    "@huma-shan/advanced-logic": "0.37.0",
+    "@huma-shan/advanced-logic": "0.38.0",
     "@types/jest": "26.0.13",
     "@types/lodash": "4.14.161",
     "jest": "26.4.2",

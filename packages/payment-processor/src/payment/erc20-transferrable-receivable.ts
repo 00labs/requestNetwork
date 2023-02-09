@@ -58,6 +58,14 @@ export async function getReceivableTokenIdForRequest(
   );
 }
 
+export async function hasReceivableForRequest(
+  request: ClientTypes.IRequestData,
+  signerOrProvider: providers.Provider | Signer,
+): Promise<boolean> {
+  const receivableTokenId = await getReceivableTokenIdForRequest(request, signerOrProvider);
+  return !receivableTokenId.isZero();
+}
+
 /**
  * Processes a transaction to mint an ERC20TransferrableReceivable.
  * @param request
@@ -195,6 +203,12 @@ export async function encodePayErc20TransferrableReceivableRequest(
   const receivableContract = ERC20TransferrableReceivable__factory.createInterface();
 
   const receivableTokenId = await getReceivableTokenIdForRequest(request, signerOrProvider);
+
+  if (receivableTokenId.isZero()) {
+    throw new Error(
+      'The receivable for this request has not been minted yet. Please check with the payee.',
+    );
+  }
 
   return receivableContract.encodeFunctionData('payOwner', [
     receivableTokenId, // get tokenId from requestId

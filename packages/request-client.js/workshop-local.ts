@@ -8,6 +8,7 @@ import {
   approveErc20IfNeeded,
   mintErc20TransferrableReceivable,
   getReceivableTokenIdForRequest,
+  hasReceivableForRequest,
 } from '@requestnetwork/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
@@ -127,6 +128,12 @@ function sleep(ms: any) {
   const requestData = request.getData();
   // console.log(`request: ${JSON.stringify(request)}`);
 
+  let receivableCheck = await hasReceivableForRequest(
+    requestData,
+    payeeIdentityWallet.connect(provider),
+  );
+  console.log(`receivableCheck: ${receivableCheck}`);
+
   // ✏️ Mint the receivable
   const mintTx: ContractTransaction = await mintErc20TransferrableReceivable(
     requestData,
@@ -135,6 +142,12 @@ function sleep(ms: any) {
   console.log(`Mint tx: ${mintTx.hash}`);
   await mintTx.wait(1);
   console.log(`After mint`);
+
+  receivableCheck = await hasReceivableForRequest(
+    requestData,
+    payeeIdentityWallet.connect(provider),
+  );
+  console.log(`receivableCheck: ${receivableCheck}`);
 
   console.log(`Before payment`);
   console.log(`Payee: ${(await erc20.balanceOf(payeeIdentity.value)).toString()}`);

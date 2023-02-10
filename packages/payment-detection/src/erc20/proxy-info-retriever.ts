@@ -64,8 +64,8 @@ export default class ProxyERC20InfoRetriever
 
   /**
    * Retrieves transfer events for the current contract, address and network.
-   * @param isReceivable Whether or not this proxy contract is a receivable contract, which
-   * ignores the toAddress filtering since they can be transferred to other recipients.
+   * @param isReceivable Whether or not the request is expected to be paid
+   * through a receivable proxy contract
    */
   public async getTransferEvents(
     isReceivable = false,

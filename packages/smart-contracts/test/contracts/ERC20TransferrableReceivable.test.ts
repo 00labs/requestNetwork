@@ -141,7 +141,7 @@ describe('contract: ERC20TransferrableReceivable', () => {
       ).to.be.revertedWith('Zero amount provided');
     });
 
-    it('revert with "transferFromWithReferenceAndFee failed"', async function () {
+    it('reverts when proxy payment ERC20FeeProxy contract fails', async function () {
       const paymentRef = '0x01' as BytesLike;
       const user1Addr = await user1.getAddress();
       const amount = BN.from(100).mul(BASE_DECIMAL);

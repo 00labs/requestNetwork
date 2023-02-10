@@ -1,11 +1,11 @@
-// Contract based on https://docs.openzeppelin.com/contracts/3.x/erc721
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 import '@openzeppelin/contracts/utils/Counters.sol';
 import '@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol';
+import '@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol';
 
-contract ERC20TransferrableReceivable is ERC721URIStorage {
+contract ERC20TransferrableReceivable is ERC721, ERC721Enumerable, ERC721URIStorage {
   using Counters for Counters.Counter;
 
   // Counter for uniquely identifying payments
@@ -21,13 +21,9 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
   }
   mapping(uint256 => ReceivableInfo) public receivableInfoMapping;
 
-  // Nested mapping for looking up receivable token given a paymentReference
-  // and original payment address
+  // Mapping for looking up receivable token given a paymentReference
+  // and minter address
   mapping(bytes32 => uint256) public receivableTokenIdMapping;
-
-  // Helper mappings to lookup all receivable tokens owned by an address
-  mapping(address => uint256[]) private _receivableIds;
-  mapping(uint256 => uint256) private _receivableIdIndexes;
 
   address public paymentProxy;
 
@@ -61,10 +57,6 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     paymentProxy = _paymentProxyAddress;
   }
 
-  function supportsInterface(bytes4 interfaceId) public view override(ERC721) returns (bool) {
-    return super.supportsInterface(interfaceId);
-  }
-
   function payOwner(
     uint256 receivableTokenId,
     uint256 amount,
@@ -78,6 +70,7 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
 
     ReceivableInfo storage receivableInfo = receivableInfoMapping[receivableTokenId];
     address tokenAddress = receivableInfo.tokenAddress;
+    receivableInfo.balance += amount;
 
     (bool status, ) = paymentProxy.delegatecall(
       abi.encodeWithSignature(
@@ -91,8 +84,6 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
       )
     );
     require(status, 'transferFromWithReferenceAndFee failed');
-
-    receivableInfo.balance += amount;
 
     emit Payment(
       msg.sender,
@@ -121,50 +112,55 @@ contract ERC20TransferrableReceivable is ERC721URIStorage {
     );
     _receivableTokenId.increment();
     uint256 currentReceivableTokenId = _receivableTokenId.current();
-
-    _mint(msg.sender, currentReceivableTokenId);
     receivableTokenIdMapping[idKey] = currentReceivableTokenId;
     receivableInfoMapping[currentReceivableTokenId] = ReceivableInfo({
       tokenAddress: erc20Addr,
       amount: amount,
       balance: 0
     });
+
+    _mint(msg.sender, currentReceivableTokenId);
     _setTokenURI(currentReceivableTokenId, receivableURI);
   }
 
-  // Grab all IDS of receivables owned by account
-  function getIds(address account) external view returns (uint256[] memory) {
-    return _receivableIds[account];
+  function getTokenIds(address _owner) public view returns (uint256[] memory) {
+    uint256[] memory _tokensOfOwner = new uint256[](ERC721.balanceOf(_owner));
+    uint256 i;
+
+    for (i = 0; i < ERC721.balanceOf(_owner); i++) {
+      _tokensOfOwner[i] = ERC721Enumerable.tokenOfOwnerByIndex(_owner, i);
+    }
+    return (_tokensOfOwner);
   }
 
-  function getReceivableIdIndex(uint256 receivableId) external view returns (uint256) {
-    return _receivableIdIndexes[receivableId];
-  }
-
+  // The following functions are overrides required by Solidity.
   function _beforeTokenTransfer(
     address from,
     address to,
-    uint256 receivableId
-  ) internal override {
-    if (from != address(0)) {
-      uint256 index = _receivableIdIndexes[receivableId];
-      if (index > 0) {
-        index = index - 1;
-        uint256[] storage receivableIds = _receivableIds[from];
-        uint256 len = receivableIds.length;
-        if (index < len && receivableIds[index] > 0) {
-          if (index < len - 1) {
-            receivableIds[index] = receivableIds[len - 1];
-            _receivableIdIndexes[receivableIds[len - 1]] = index + 1;
-          }
-          receivableIds.pop();
-        }
-      }
-    }
-    if (to != address(0)) {
-      uint256[] storage receivableIds = _receivableIds[to];
-      receivableIds.push(receivableId);
-      _receivableIdIndexes[receivableId] = receivableIds.length;
-    }
+    uint256 tokenId
+  ) internal override(ERC721, ERC721Enumerable) {
+    super._beforeTokenTransfer(from, to, tokenId);
+  }
+
+  function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
+    super._burn(tokenId);
+  }
+
+  function tokenURI(uint256 tokenId)
+    public
+    view
+    override(ERC721, ERC721URIStorage)
+    returns (string memory)
+  {
+    return super.tokenURI(tokenId);
+  }
+
+  function supportsInterface(bytes4 interfaceId)
+    public
+    view
+    override(ERC721, ERC721Enumerable)
+    returns (bool)
+  {
+    return super.supportsInterface(interfaceId);
   }
 }

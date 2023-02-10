@@ -42,16 +42,8 @@ describe('contract: ERC20TransferrableReceivable', () => {
   });
 
   async function verifyReceivables(userAddr: string, receivableIds: any) {
-    const ids = await receivable.getIds(userAddr);
+    const ids = await receivable.getTokenIds(userAddr);
     expect(ids.toString()).to.equals(receivableIds.toString());
-  }
-
-  async function verifyReceivableIndexes(indexes: any) {
-    const res = [];
-    for (let i = 1; i <= 5; i++) {
-      res[i - 1] = await receivable.getReceivableIdIndex(i);
-    }
-    expect(res.toString()).to.equals(indexes.toString());
   }
 
   describe('mint', async function () {
@@ -60,6 +52,7 @@ describe('contract: ERC20TransferrableReceivable', () => {
         'Zero paymentReference provided',
       );
     });
+
     it('revert with zero amount', async function () {
       await expect(receivable.mint('0x01', 0, testToken.address, '')).to.be.revertedWith(
         'Zero amount provided',
@@ -84,7 +77,7 @@ describe('contract: ERC20TransferrableReceivable', () => {
       const metadata = ethers.utils.base64.encode(receivableId);
       const paymentRef = '0x01' as BytesLike;
       await receivable.connect(user1).mint(paymentRef, BASE_DECIMAL, testToken.address, metadata);
-      const ids = await receivable.getIds(user1Addr);
+      const ids = await receivable.getTokenIds(user1Addr);
       const tokenId = ids[0];
       expect(await receivable.ownerOf(tokenId)).to.equals(user1Addr);
       expect(await receivable.tokenURI(tokenId)).to.equals(metadata);
@@ -107,18 +100,15 @@ describe('contract: ERC20TransferrableReceivable', () => {
       await receivable.connect(user1).transferFrom(user1Addr, user2Addr, 1);
       await verifyReceivables(user1Addr, [3, 2]);
       await verifyReceivables(user2Addr, [4, 5, 1]);
-      await verifyReceivableIndexes([3, 2, 1, 1, 2]);
       await receivable
         .connect(user2)
         ['safeTransferFrom(address,address,uint256)'](user2Addr, user1Addr, 5);
       await verifyReceivables(user1Addr, [3, 2, 5]);
       await verifyReceivables(user2Addr, [4, 1]);
-      await verifyReceivableIndexes([2, 2, 1, 1, 3]);
       await receivable.connect(user1).approve(user3Addr, 3);
       await receivable.connect(user1).approve(user3Addr, 2);
       await receivable.connect(user1).approve(user3Addr, 5);
       await receivable.connect(user2).approve(user3Addr, 4);
-      await verifyReceivableIndexes([2, 2, 1, 1, 3]);
       await receivable.connect(user3).transferFrom(user1Addr, user3Addr, 5);
       await receivable.connect(user3).transferFrom(user1Addr, user3Addr, 2);
       await receivable.connect(user3).transferFrom(user1Addr, user3Addr, 3);
@@ -126,45 +116,42 @@ describe('contract: ERC20TransferrableReceivable', () => {
       await verifyReceivables(user1Addr, []);
       await verifyReceivables(user2Addr, [1]);
       await verifyReceivables(user3Addr, [5, 2, 3, 4]);
-      await verifyReceivableIndexes([1, 2, 3, 4, 1]);
     });
   });
 
   describe('payOwner', async function () {
+    let tokenId: BN;
+    let paymentRef: BytesLike;
+    let amount: BN;
+    let feeAmount: BN;
+
+    beforeEach(async () => {
+      paymentRef = '0x01' as BytesLike;
+      amount = BN.from(100).mul(BASE_DECIMAL);
+      await receivable.connect(user1).mint(paymentRef, amount, testToken.address, '1');
+      const ids = await receivable.getTokenIds(await user1.getAddress());
+      tokenId = ids[0];
+      feeAmount = BN.from(10).mul(BASE_DECIMAL);
+    });
+
     it('revert with zero amount', async function () {
-      const paymentRef = '0x01' as BytesLike;
-      await receivable.connect(user1).mint(paymentRef, BASE_DECIMAL, testToken.address, '1');
-      const ids = await receivable.getIds(await user1.getAddress());
-      const tokenId = ids[0];
       await expect(
         receivable.payOwner(tokenId, 0, paymentRef, 0, ethers.constants.AddressZero),
       ).to.be.revertedWith('Zero amount provided');
     });
 
     it('reverts when proxy payment ERC20FeeProxy contract fails', async function () {
-      const paymentRef = '0x01' as BytesLike;
-      const user1Addr = await user1.getAddress();
-      const amount = BN.from(100).mul(BASE_DECIMAL);
-      await receivable.connect(user1).mint(paymentRef, amount, testToken.address, '1');
-      const ids = await receivable.getIds(user1Addr);
-      const tokenId = ids[0];
-      const feeAmount = BN.from(10).mul(BASE_DECIMAL);
-      await testToken.transfer(await user2.getAddress(), amount);
-      await testToken.connect(user2).approve(receivable.address, amount);
+      await testToken.transfer(await user2.getAddress(), amount.add(feeAmount));
+      await testToken.connect(user2).approve(receivable.address, amount.add(feeAmount));
+      // user2 does not have enough tokens to pay this request
       await expect(
         receivable
           .connect(user2)
-          .payOwner(tokenId, amount, paymentRef, feeAmount, await user3.getAddress()),
+          .payOwner(tokenId, amount.mul(2), paymentRef, feeAmount, user3Addr),
       ).to.be.revertedWith('transferFromWithReferenceAndFee failed');
     });
 
     it('success for original owner', async function () {
-      const paymentRef = '0x01' as BytesLike;
-      const user1Addr = await user1.getAddress();
-      const amount = BN.from(100).mul(BASE_DECIMAL);
-      await receivable.connect(user1).mint(paymentRef, amount, testToken.address, '1');
-      const ids = await receivable.getIds(user1Addr);
-      const tokenId = ids[0];
       const beforeBal = await testToken.balanceOf(user1Addr);
       await expect(
         receivable.payOwner(tokenId, amount, paymentRef, 0, ethers.constants.AddressZero),
@@ -182,15 +169,105 @@ describe('contract: ERC20TransferrableReceivable', () => {
       expect(amount).to.equals(afterBal.sub(beforeBal));
     });
 
+    it('allow multiple mints per receivable', async function () {
+      await receivable.connect(user2).mint(paymentRef, amount, testToken.address, '1');
+      const key = ethers.utils.solidityKeccak256(['address', 'bytes'], [user1Addr, paymentRef]);
+      expect(await receivable.receivableTokenIdMapping(key)).to.equals(tokenId);
+    });
+
+    it('payment greater than amount', async function () {
+      const beforeBal = await testToken.balanceOf(user1Addr);
+      await expect(
+        receivable.payOwner(tokenId, amount.mul(2), paymentRef, 0, ethers.constants.AddressZero),
+      )
+        .to.emit(receivable, 'TransferWithReferenceAndFee')
+        .withArgs(
+          testToken.address,
+          user1Addr,
+          amount.mul(2),
+          paymentRef,
+          0,
+          ethers.constants.AddressZero,
+        );
+      const afterBal = await testToken.balanceOf(user1Addr);
+      expect(amount.mul(2)).to.equals(afterBal.sub(beforeBal));
+
+      const receivableInfo = await receivable.receivableInfoMapping(tokenId);
+      expect(amount.mul(2)).to.equals(receivableInfo.balance);
+    });
+
+    it('payment less than amount', async function () {
+      const beforeBal = await testToken.balanceOf(user1Addr);
+      await expect(
+        receivable.payOwner(tokenId, amount.div(2), paymentRef, 0, ethers.constants.AddressZero),
+      )
+        .to.emit(receivable, 'TransferWithReferenceAndFee')
+        .withArgs(
+          testToken.address,
+          user1Addr,
+          amount.div(2),
+          paymentRef,
+          0,
+          ethers.constants.AddressZero,
+        );
+      const afterBal = await testToken.balanceOf(user1Addr);
+      expect(amount.div(2)).to.equals(afterBal.sub(beforeBal));
+
+      const receivableInfo = await receivable.receivableInfoMapping(tokenId);
+      expect(amount.div(2)).to.equals(receivableInfo.balance);
+    });
+
+    it('enumeration works', async function () {});
+
+    it('payment with two different payees', async function () {
+      const beforeBal = await testToken.balanceOf(user1Addr);
+      await expect(
+        receivable.payOwner(tokenId, amount.div(2), paymentRef, 0, ethers.constants.AddressZero),
+      )
+        .to.emit(receivable, 'TransferWithReferenceAndFee')
+        .withArgs(
+          testToken.address,
+          user1Addr,
+          amount.div(2),
+          paymentRef,
+          0,
+          ethers.constants.AddressZero,
+        );
+      const afterBal = await testToken.balanceOf(user1Addr);
+      expect(amount.div(2)).to.equals(afterBal.sub(beforeBal));
+
+      let receivableInfo = await receivable.receivableInfoMapping(tokenId);
+      expect(amount.div(2)).to.equals(receivableInfo.balance);
+
+      // Transfer receivable
+      await receivable.connect(user1).transferFrom(user1Addr, user2Addr, tokenId);
+      expect(await receivable.ownerOf(tokenId)).to.equal(user2Addr);
+
+      const beforeBalUser2 = await testToken.balanceOf(user2Addr);
+      await expect(
+        receivable.payOwner(tokenId, amount.div(2), paymentRef, 0, ethers.constants.AddressZero),
+      )
+        .to.emit(receivable, 'TransferWithReferenceAndFee')
+        .withArgs(
+          testToken.address,
+          user2Addr,
+          amount.div(2),
+          paymentRef,
+          0,
+          ethers.constants.AddressZero,
+        );
+      const afterBalUser2 = await testToken.balanceOf(user2Addr);
+      expect(amount.div(2)).to.equals(afterBalUser2.sub(beforeBalUser2));
+
+      receivableInfo = await receivable.receivableInfoMapping(tokenId);
+      expect(amount).to.equals(receivableInfo.balance);
+    });
+
     it('success for new owner', async function () {
-      const paymentRef = '0x01' as BytesLike;
       const user1Addr = await user1.getAddress();
       const user2Addr = await user2.getAddress();
       const user3Addr = await user3.getAddress();
-      const amount = BN.from(100).mul(BASE_DECIMAL);
-      await receivable.connect(user1).mint(paymentRef, amount, testToken.address, '1');
-      const ids = await receivable.getIds(user1Addr);
-      const tokenId = ids[0];
+
       await receivable.connect(user1).transferFrom(user1Addr, user2Addr, tokenId);
 
       const feeAmount = BN.from(10).mul(BASE_DECIMAL);

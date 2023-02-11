@@ -29,7 +29,7 @@ const provider = new ethers.providers.JsonRpcProvider(
 const localToken = '0xf17FF940864351631b1be3ac03702dEA085ba51c';
 const erc20 = TestERC20__factory.connect(localToken, provider);
 
-const RECEIVABLE_ADDR = '0x4C85f86b88d24d93172f8d1633Ea7eBAe0A37672';
+const RECEIVABLE_ADDR = '0x3e4b9bA13C6284A8233E17792fc8C784ec9da565';
 const invoiceReceivable = ERC20TransferrableReceivable__factory.connect(RECEIVABLE_ADDR, provider);
 
 const PAYEE_ADDRESS = '0x3BD44d4ee0E914E7ADE18a51A80f597E153aD343';

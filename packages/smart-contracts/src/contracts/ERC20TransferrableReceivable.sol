@@ -31,6 +31,7 @@ contract ERC20TransferrableReceivable is ERC721, ERC721Enumerable, ERC721URIStor
   event Payment(
     address sender,
     address recipient,
+    uint256 amount,
     address paymentProxy,
     uint256 receivableTokenId,
     address tokenAddress,
@@ -88,6 +89,7 @@ contract ERC20TransferrableReceivable is ERC721, ERC721Enumerable, ERC721URIStor
     emit Payment(
       msg.sender,
       owner,
+      amount,
       paymentProxy,
       receivableTokenId,
       tokenAddress,

@@ -96,7 +96,7 @@ export class PaymentNetworkFactory {
       getSubgraphClient: (network) => {
         return network === 'private'
           ? undefined
-          : getTheGraphClient(`https://api.studio.thegraph.com/query/35118/requestnetwork-nft/1.4`);
+          : getTheGraphClient(`https://api.studio.thegraph.com/query/35118/requestnetwork-nft/1.6`);
       },
       explorerApiKeys: {},
       getRpcProvider: getDefaultProvider,

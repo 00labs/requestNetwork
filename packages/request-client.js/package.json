@@ -40,7 +40,8 @@
     "lint:check": "eslint .",
     "prepare": "yarn run build",
     "test": "jest",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "start-local": "ts-node workshop-local.ts"
   },
   "dependencies": {
     "@requestnetwork/advanced-logic": "0.35.0",

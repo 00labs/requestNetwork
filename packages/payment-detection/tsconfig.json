@@ -1,7 +1,4 @@
 {
   "extends": "../../tsconfig",
-  "include": ["src/", "test/"],
-  "compilerOptions": {
-    "lib": ["es2018", "DOM"]
-  }
+  "include": ["src/", "test/"]
 }

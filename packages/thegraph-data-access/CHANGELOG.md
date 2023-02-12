@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.36.11 (2023-02-12)
+
+**Note:** Version bump only for package @huma-shan/thegraph-data-access
+
 ## 0.35.1 (2022-11-04)
 
 **Note:** Version bump only for package @huma-shan/thegraph-data-access

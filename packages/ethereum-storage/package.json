@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/ethereum-storage",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "publishConfig": {
     "access": "public"
   },
@@ -40,9 +40,9 @@
     "init-ipfs": "node scripts/init-ipfs.js"
   },
   "dependencies": {
-    "@huma-shan/smart-contracts": "0.32.0",
-    "@huma-shan/types": "0.39.0",
-    "@huma-shan/utils": "0.39.0",
+    "@huma-shan/smart-contracts": "0.33.0",
+    "@huma-shan/types": "0.40.0",
+    "@huma-shan/utils": "0.40.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "ethers": "5.5.1",

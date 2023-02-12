@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.22.0 (2023-02-12)
+
+### Bug Fixes
+
+- publish dist folder instead of src ([#254](https://github.com/RequestNetwork/requestNetwork/issues/254)) ([d6b5bd4](https://github.com/RequestNetwork/requestNetwork/commit/d6b5bd4899550ece7e182ee937aaacaea5413842))
+- ts-node configuration ([#138](https://github.com/RequestNetwork/requestNetwork/issues/138)) ([e2180d5](https://github.com/RequestNetwork/requestNetwork/commit/e2180d507bd87116fdeb3466690b6df0c5187976))
+- typescript lint for test files ([#778](https://github.com/RequestNetwork/requestNetwork/issues/778)) ([048e876](https://github.com/RequestNetwork/requestNetwork/commit/048e876a905516be0de8a31d446e4572eb74eccb))
+- use last synched block timestamp as the sync timestamp instead of now ([#481](https://github.com/RequestNetwork/requestNetwork/issues/481)) ([81c8cd6](https://github.com/RequestNetwork/requestNetwork/commit/81c8cd6671ff7e80f182213205470c58647e7ef2))
+
+### Features
+
+- add a script to compute statistics on Node latency from a log file ([#435](https://github.com/RequestNetwork/requestNetwork/issues/435)) ([5974568](https://github.com/RequestNetwork/requestNetwork/commit/5974568b9e80c44ece0871163ef6b271238c8866))
+- add concurrent readMany to storage layer ([#363](https://github.com/RequestNetwork/requestNetwork/issues/363)) ([db3f484](https://github.com/RequestNetwork/requestNetwork/commit/db3f48482f2e97664d5090fa15592ccc96af955d))
+- add content data in estimator ([#242](https://github.com/RequestNetwork/requestNetwork/issues/242)) ([774cfa2](https://github.com/RequestNetwork/requestNetwork/commit/774cfa2155b964f6e4f68aea099f146e3449c050))
+- add entry point to request node to get monitoring status ([#191](https://github.com/RequestNetwork/requestNetwork/issues/191)) ([1d9c239](https://github.com/RequestNetwork/requestNetwork/commit/1d9c239f5de5143cd54c3470b42786eff17748f6))
+- add getIgnoredData() to the ethereum storage ([#206](https://github.com/RequestNetwork/requestNetwork/issues/206)) ([255d2dc](https://github.com/RequestNetwork/requestNetwork/commit/255d2dc22ce0158ba3e6ce6766efece6e4c054cb))
+- add logs to calculate success rate of transaction creation ([#443](https://github.com/RequestNetwork/requestNetwork/issues/443)) ([738a98d](https://github.com/RequestNetwork/requestNetwork/commit/738a98dde35c573fea98e4d68aa8ff6d2e2d18b1))
+- buffered ethereum storage ([#113](https://github.com/RequestNetwork/requestNetwork/issues/113)) ([fe4ece6](https://github.com/RequestNetwork/requestNetwork/commit/fe4ece6a1768155182be2d3ebb2908501f571912))
+- confirmed & pending state in the highest layers ([#119](https://github.com/RequestNetwork/requestNetwork/issues/119)) ([9424dc0](https://github.com/RequestNetwork/requestNetwork/commit/9424dc0c9482208fdbe714f8d29f5deed68711de))
+- persist transaction with custom ethereum provider ([#106](https://github.com/RequestNetwork/requestNetwork/issues/106)) ([61b215f](https://github.com/RequestNetwork/requestNetwork/commit/61b215fb8335d01dfa069d7f7899dd5b33749692))
+
 ## [1.21.10](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/prototype-estimator@1.21.0...@huma-shan/prototype-estimator@1.21.10) (2022-11-04)
 
 ### Bug Fixes

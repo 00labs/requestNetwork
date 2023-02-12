@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/advanced-logic",
-  "version": "0.38.0",
+  "version": "0.39.0",
   "publishConfig": {
     "access": "public"
   },
@@ -39,9 +39,9 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@huma-shan/currency": "0.12.0",
-    "@huma-shan/types": "0.39.0",
-    "@huma-shan/utils": "0.39.0",
+    "@huma-shan/currency": "0.13.0",
+    "@huma-shan/types": "0.40.0",
+    "@huma-shan/utils": "0.40.0",
     "@types/node": "16.11.7",
     "lodash": "4.17.21",
     "tslib": "2.5.0"

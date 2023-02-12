@@ -1,6 +1,6 @@
 {
   "name": "@huma-shan/request-node",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "publishConfig": {
     "access": "public"
   },
@@ -42,12 +42,12 @@
   },
   "dependencies": {
     "@ethersproject/experimental": "5.5.0",
-    "@huma-shan/data-access": "0.30.0",
-    "@huma-shan/ethereum-storage": "0.30.0",
-    "@huma-shan/smart-contracts": "0.32.0",
+    "@huma-shan/data-access": "0.31.0",
+    "@huma-shan/ethereum-storage": "0.31.0",
+    "@huma-shan/smart-contracts": "0.33.0",
     "@huma-shan/thegraph-data-access": "0.35.1",
-    "@huma-shan/types": "0.39.0",
-    "@huma-shan/utils": "0.39.0",
+    "@huma-shan/types": "0.40.0",
+    "@huma-shan/utils": "0.40.0",
     "@truffle/hdwallet-provider": "1.2.3",
     "chalk": "4.1.0",
     "cors": "2.8.5",

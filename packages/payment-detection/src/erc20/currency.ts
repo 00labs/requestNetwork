@@ -5,7 +5,7 @@ import {
   StorageCurrency,
 } from '@huma-shan/currency';
 import { RequestLogicTypes } from '@huma-shan/types';
-import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { isAddress } from 'ethers/lib/utils';
 import { getDefaultProvider } from '@huma-shan/utils';
 

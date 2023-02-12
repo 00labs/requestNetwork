@@ -1,4 +1,4 @@
-import * as SmartContracts from '@huma-shan/smart-contractsde';
+import * as SmartContracts from '@huma-shan/smart-contracts';
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { UnsupportedCurrencyError } from '@huma-shan/currency';

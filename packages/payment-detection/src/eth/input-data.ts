@@ -1,4 +1,4 @@
-import * as SmartContracts from '@huma-shan/smart-contractsde';
+import * as SmartContracts from '@huma-shan/smart-contracts';
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { EthInputDataInfoRetriever } from './info-retriever';
 import { EthProxyInfoRetriever } from './proxy-info-retriever';

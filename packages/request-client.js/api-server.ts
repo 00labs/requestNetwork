@@ -8,7 +8,7 @@ import { ethers, BigNumber as BN, BigNumber } from 'ethers';
 import {
   ERC20TransferrableReceivable__factory,
   IERC20Metadata__factory,
-} from '@huma-shan/smart-contractsde/types';
+} from '@huma-shan/smart-contracts/types';
 
 dotenv.config();
 const app = express();

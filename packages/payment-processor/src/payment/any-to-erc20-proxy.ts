@@ -2,7 +2,7 @@ import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNum
 
 import { CurrencyDefinition, CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
-import { Erc20ConversionProxy__factory } from '@huma-shan/smart-contractsde/types';
+import { Erc20ConversionProxy__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';

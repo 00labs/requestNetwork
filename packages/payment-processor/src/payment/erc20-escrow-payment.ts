@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { BigNumber, BigNumberish, constants, ContractTransaction, providers, Signer } from 'ethers';
-import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contractsde';
-import { ERC20EscrowToPay__factory } from '@huma-shan/smart-contractsde/types/';
+import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contracts';
+import { ERC20EscrowToPay__factory } from '@huma-shan/smart-contracts/types/';
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 import {
   getAmountToPay,

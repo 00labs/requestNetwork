@@ -1,10 +1,5 @@
 import { Wallet, providers, BigNumber } from 'ethers';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import {
   encodeRequestPayment,
   encodeRequestPaymentWithStream,
@@ -19,10 +14,7 @@ import {
   EthInputDataPaymentDetector,
 } from '@huma-shan/payment-detection';
 import { currencyManager } from './shared';
-import {
-  erc20SwapToPayArtifact,
-  erc20SwapConversionArtifact,
-} from '@huma-shan/smart-contractsde';
+import { erc20SwapToPayArtifact, erc20SwapConversionArtifact } from '@huma-shan/smart-contracts';
 import { DAIX_ADDRESS } from './erc777-stream.test';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */

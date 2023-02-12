@@ -9,7 +9,7 @@ import {
 } from 'ethers';
 
 import { Erc20PaymentNetwork } from '@huma-shan/payment-detection';
-import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contractsde/types';
+import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';

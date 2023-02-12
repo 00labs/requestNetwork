@@ -1,9 +1,9 @@
 import { Overrides, Wallet } from 'ethers';
 import inquirer from 'inquirer';
 import { getDefaultProvider } from '@huma-shan/payment-detection';
-import { chainlinkConversionPath } from '@huma-shan/smart-contractsde';
+import { chainlinkConversionPath } from '@huma-shan/smart-contracts';
 import { GasFeeDefiner } from '@huma-shan/ethereum-storage';
-import { ChainlinkConversionPath } from '@huma-shan/smart-contractsde/types';
+import { ChainlinkConversionPath } from '@huma-shan/smart-contracts/types';
 
 export const runUpdate = async <T extends 'updateAggregator' | 'updateAggregatorsList'>(
   method: T,

@@ -1,4 +1,4 @@
-import { erc20ConversionProxy } from '@huma-shan/smart-contractsde';
+import { erc20ConversionProxy } from '@huma-shan/smart-contracts';
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { ERC20FeeProxyPaymentDetectorBase } from '../erc20/fee-proxy-contract';
 import { AnyToErc20InfoRetriever } from './retrievers/any-to-erc20-proxy';

@@ -2,7 +2,7 @@ import { EventEmitter } from 'events';
 import { BigNumber, ContractReceipt, providers, Signer } from 'ethers';
 import TypedEmitter from 'typed-emitter';
 import { LogTypes, StorageTypes } from '@huma-shan/types';
-import { requestHashSubmitterArtifact } from '@huma-shan/smart-contractsde';
+import { requestHashSubmitterArtifact } from '@huma-shan/smart-contracts';
 import { EthereumTransactionSubmitter } from './ethereum-tx-submitter';
 import { getCurrentTimestampInSecond, SimpleLogger } from '@huma-shan/utils';
 

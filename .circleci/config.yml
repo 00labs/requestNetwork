@@ -90,7 +90,7 @@ jobs:
           command: yarn workspace @huma-shan/currency run build
       - run:
           name: Generate Smart Contract types
-          command: yarn workspace @huma-shan/smart-contractsde run build
+          command: yarn workspace @huma-shan/smart-contracts run build
       - run:
           name: Generate Payment Detection queries
           command: yarn workspace @huma-shan/payment-detection run codegen
@@ -125,7 +125,7 @@ jobs:
           command: 'yarn workspace @huma-shan/request-client.js run build:commonjs'
       - run:
           name: 'Deploy test contracts from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test request-client.js'
           command: 'yarn workspace @huma-shan/request-client.js run test --ci --maxWorkers=1'
@@ -198,7 +198,7 @@ jobs:
           command: 'yarn workspace @huma-shan/ethereum-storage run build'
       - run:
           name: 'Deploy contracs smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test ethereum-storage'
           command: 'yarn workspace @huma-shan/ethereum-storage run test --ci --maxWorkers=1'
@@ -216,16 +216,16 @@ jobs:
           at: *working_directory
       - run:
           name: 'Deploy contracs smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Lint smart contracts smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run lint:sol:check'
+          command: 'yarn workspace @huma-shan/smart-contracts run lint:sol:check'
       - run:
           name: 'Test smart contracts smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run test'
+          command: 'yarn workspace @huma-shan/smart-contracts run test'
       - run:
           name: 'Test smart contracts utilities'
-          command: 'yarn workspace @huma-shan/smart-contractsde run test:lib --ci --maxWorkers=1'
+          command: 'yarn workspace @huma-shan/smart-contracts run test:lib --ci --maxWorkers=1'
   test-request-logic:
     docker:
       - *node_image
@@ -276,7 +276,7 @@ jobs:
           command: 'yarn workspace @huma-shan/request-node run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run: *step_graph_deploy
       - run:
           name: 'Test request-node'
@@ -378,7 +378,7 @@ jobs:
           command: 'yarn workspace @huma-shan/integration-test run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Start request-node'
           command: 'yarn workspace @huma-shan/request-node run start'
@@ -407,7 +407,7 @@ jobs:
           command: 'yarn workspace @huma-shan/integration-test run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run: *step_graph_deploy
       - run:
           name: 'Start request-node'
@@ -481,7 +481,7 @@ jobs:
           command: 'yarn workspace @huma-shan/payment-detection run build'
       - run:
           name: 'Deploy test contracts from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test payment-detection'
           command: 'yarn workspace @huma-shan/payment-detection run test --ci'
@@ -502,7 +502,7 @@ jobs:
           command: 'yarn workspace @huma-shan/payment-processor run build'
       - run:
           name: 'Deploy test contracts from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Test payment-processor'
           command: 'yarn workspace @huma-shan/payment-processor run test --ci'
@@ -544,7 +544,7 @@ jobs:
           command: 'yarn workspace @huma-shan/integration-test run build'
       - run:
           name: 'Deploy test contract from smart-contracts'
-          command: 'yarn workspace @huma-shan/smart-contractsde run deploy'
+          command: 'yarn workspace @huma-shan/smart-contracts run deploy'
       - run:
           name: 'Start request-node'
           command: 'yarn workspace @huma-shan/request-node run start'

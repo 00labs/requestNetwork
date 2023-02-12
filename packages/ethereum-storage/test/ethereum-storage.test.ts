@@ -1,4 +1,4 @@
-import * as SmartContracts from '@huma-shan/smart-contractsde';
+import * as SmartContracts from '@huma-shan/smart-contracts';
 import { StorageTypes } from '@huma-shan/types';
 import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 import { EventEmitter } from 'events';

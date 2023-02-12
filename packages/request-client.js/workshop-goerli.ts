@@ -11,9 +11,9 @@ import {
 } from '@huma-shan/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
-import { TestERC20__factory } from '@huma-shan/smart-contractsde/types';
+import { TestERC20__factory } from '@huma-shan/smart-contracts/types';
 
-import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contractsde/types';
+import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contracts/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 

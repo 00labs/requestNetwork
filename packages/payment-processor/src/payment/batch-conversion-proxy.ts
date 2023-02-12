@@ -1,12 +1,7 @@
 import { ContractTransaction, Signer, providers, BigNumber, constants } from 'ethers';
-import { batchConversionPaymentsArtifact } from '@huma-shan/smart-contractsde';
-import { BatchConversionPayments__factory } from '@huma-shan/smart-contractsde/types';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { batchConversionPaymentsArtifact } from '@huma-shan/smart-contracts';
+import { BatchConversionPayments__factory } from '@huma-shan/smart-contracts/types';
+import { ClientTypes, ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { ITransactionOverrides } from './transaction-overrides';
 import {
   comparePnTypeAndVersion,

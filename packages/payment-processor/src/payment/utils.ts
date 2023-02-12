@@ -3,7 +3,7 @@ import { ethers, Signer, providers, BigNumber, BigNumberish, ContractTransaction
 import { getDefaultProvider, getPaymentReference } from '@huma-shan/payment-detection';
 import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import { getCurrencyHash } from '@huma-shan/currency';
-import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 /** @constant MAX_ALLOWANCE set to the max uint256 value */

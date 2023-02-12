@@ -1,8 +1,8 @@
 import { constants, ContractTransaction, Signer, BigNumber, providers } from 'ethers';
 
 import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
-import { erc20SwapConversionArtifact } from '@huma-shan/smart-contractsde';
-import { ERC20SwapToConversion__factory } from '@huma-shan/smart-contractsde/types';
+import { erc20SwapConversionArtifact } from '@huma-shan/smart-contracts';
+import { ERC20SwapToConversion__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 
 import {

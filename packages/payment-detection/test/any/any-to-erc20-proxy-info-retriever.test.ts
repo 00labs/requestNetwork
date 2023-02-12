@@ -4,7 +4,7 @@ import { PaymentTypes } from '@huma-shan/types';
 import { CurrencyManager } from '@huma-shan/currency';
 import { AnyToErc20InfoRetriever } from '../../src/any/retrievers/any-to-erc20-proxy';
 import { ethers } from 'ethers';
-import { erc20ConversionProxy } from '@huma-shan/smart-contractsde';
+import { erc20ConversionProxy } from '@huma-shan/smart-contracts';
 
 const conversionDeploymentInformation = erc20ConversionProxy.getDeploymentInformation('private');
 const conversionProxyAbi = erc20ConversionProxy.getContractAbi();

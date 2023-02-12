@@ -1,4 +1,4 @@
-import * as SmartContracts from '@huma-shan/smart-contractsde';
+import * as SmartContracts from '@huma-shan/smart-contracts';
 import { LogTypes, StorageTypes } from '@huma-shan/types';
 import * as Bluebird from 'bluebird';
 import * as config from './config';

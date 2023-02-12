@@ -1,5 +1,5 @@
 import { Block } from '@huma-shan/data-access';
-import { requestHashSubmitterArtifact } from '@huma-shan/smart-contractsde';
+import { requestHashSubmitterArtifact } from '@huma-shan/smart-contracts';
 import { ClientTypes, DataAccessTypes, StorageTypes } from '@huma-shan/types';
 import axios, { AxiosRequestConfig } from 'axios';
 import { ethers } from 'ethers';

@@ -1,7 +1,7 @@
 import { BigNumberish, ContractTransaction, providers, Signer } from 'ethers';
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 import { EthInputDataPaymentDetector } from '@huma-shan/payment-detection';
-import { EthereumProxy__factory } from '@huma-shan/smart-contractsde/types';
+import { EthereumProxy__factory } from '@huma-shan/smart-contracts/types';
 import { ITransactionOverrides } from './transaction-overrides';
 import {
   getAmountToPay,

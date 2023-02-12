@@ -1,11 +1,6 @@
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { Wallet, providers, BigNumber } from 'ethers';
-import { erc20FeeProxyArtifact } from '@huma-shan/smart-contractsde';
+import { erc20FeeProxyArtifact } from '@huma-shan/smart-contracts';
 import {
   _getErc20PaymentUrl,
   approveErc20,

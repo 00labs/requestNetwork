@@ -1,14 +1,9 @@
 import { Wallet, providers, BigNumber } from 'ethers';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { deepCopy } from '@huma-shan/utils';
 import { approveErc20ForProxyConversionIfNeeded } from '../../src/payment/conversion-erc20';
 import { payAnyToErc20ProxyRequest } from '../../src/payment/any-to-erc20-proxy';
-import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { currencyManager } from './shared';
 import { IConversionPaymentSettings } from '../../src/index';
 import { UnsupportedCurrencyError } from '@huma-shan/currency';

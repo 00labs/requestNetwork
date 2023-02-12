@@ -2,7 +2,7 @@ import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNum
 
 import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import { AnyToEthFeeProxyPaymentDetector } from '@huma-shan/payment-detection';
-import { EthConversionProxy__factory } from '@huma-shan/smart-contractsde/types';
+import { EthConversionProxy__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';

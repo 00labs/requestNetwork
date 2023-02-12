@@ -1,4 +1,4 @@
-import * as SmartContracts from '@huma-shan/smart-contractsde';
+import * as SmartContracts from '@huma-shan/smart-contracts';
 import { StorageTypes } from '@huma-shan/types';
 import EthereumBlocks from '../src/ethereum-blocks';
 import SmartContractManager from '../src/smart-contract-manager';

@@ -2,7 +2,7 @@ import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNum
 
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 import { EthFeeProxyPaymentDetector } from '@huma-shan/payment-detection';
-import { EthereumFeeProxy__factory } from '@huma-shan/smart-contractsde/types';
+import { EthereumFeeProxy__factory } from '@huma-shan/smart-contracts/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {

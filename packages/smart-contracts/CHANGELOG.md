@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.29.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.29.0) (2022-11-04)
+# [0.29.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.29.0) (2022-11-04)
 
 ### Bug Fixes
 
@@ -85,7 +85,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.28.0) (2021-06-22)
+# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.28.0) (2021-06-22)
 
 ### Bug Fixes
 
@@ -110,7 +110,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.27.0) (2021-05-12)
+# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.27.0) (2021-05-12)
 
 ### Bug Fixes
 
@@ -132,7 +132,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.26.0) (2021-04-19)
+# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.26.0) (2021-04-19)
 
 ### Bug Fixes
 
@@ -152,7 +152,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.25.0) (2021-03-25)
+# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.25.0) (2021-03-25)
 
 ### Features
 
@@ -166,7 +166,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.24.0) (2021-03-15)
+# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.24.0) (2021-03-15)
 
 ### Features
 
@@ -179,25 +179,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.23.0) (2021-03-03)
+# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.23.0) (2021-03-03)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.22.0) (2021-02-22)
+# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.22.0) (2021-02-22)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-## [0.21.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.21.2) (2020-12-22)
+## [0.21.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.21.2) (2020-12-22)
 
-**Note:** Version bump only for package @huma-shan/smart-contractsde
+**Note:** Version bump only for package @huma-shan/smart-contracts
 
-## [0.21.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contractsde@0.21.0...@huma-shan/smart-contractsde@0.21.1) (2020-12-21)
+## [0.21.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/smart-contracts@0.21.0...@huma-shan/smart-contracts@0.21.1) (2020-12-21)
 
-**Note:** Version bump only for package @huma-shan/smart-contractsde
+**Note:** Version bump only for package @huma-shan/smart-contracts
 
 # 0.21.0 (2020-12-02)
 

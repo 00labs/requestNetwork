@@ -1,19 +1,11 @@
 import { Wallet, providers, BigNumber, utils } from 'ethers';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { encodeRequestErc20ApprovalIfNeeded } from '../../src';
 import { getProxyAddress, MAX_ALLOWANCE, revokeErc20Approval } from '../../src/payment/utils';
 import { AnyToERC20PaymentDetector, Erc20PaymentNetwork } from '@huma-shan/payment-detection';
 import { currencyManager } from './shared';
 import { IPreparedTransaction } from '../../src/payment/prepared-transaction';
-import {
-  erc20SwapToPayArtifact,
-  erc20SwapConversionArtifact,
-} from '@huma-shan/smart-contractsde';
+import { erc20SwapToPayArtifact, erc20SwapConversionArtifact } from '@huma-shan/smart-contracts';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/await-thenable */

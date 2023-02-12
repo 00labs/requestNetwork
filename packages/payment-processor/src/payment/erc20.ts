@@ -1,7 +1,7 @@
 import { ContractTransaction, Signer, BigNumber, BigNumberish, providers } from 'ethers';
 
 import { Erc20PaymentNetwork, getPaymentNetworkExtension } from '@huma-shan/payment-detection';
-import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
+import { ERC20__factory } from '@huma-shan/smart-contracts/types';
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 
 import { _getErc20FeeProxyPaymentUrl, payErc20FeeProxyRequest } from './erc20-fee-proxy';

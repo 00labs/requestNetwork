@@ -1,16 +1,11 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { getErc20Balance } from '../../src/payment/erc20';
 import { deepCopy } from '@huma-shan/utils';
 import { revokeErc20Approval } from '@huma-shan/payment-processor/src/payment/utils';
 import { EnrichedRequest, IConversionPaymentSettings } from '../../src/index';
-import { batchConversionPaymentsArtifact } from '@huma-shan/smart-contractsde';
+import { batchConversionPaymentsArtifact } from '@huma-shan/smart-contracts';
 import { CurrencyManager, UnsupportedCurrencyError } from '@huma-shan/currency';
 import {
   approveErc20BatchConversionIfNeeded,

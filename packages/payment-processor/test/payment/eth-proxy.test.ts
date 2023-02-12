@@ -1,11 +1,6 @@
 import { Wallet, BigNumber, providers } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@huma-shan/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 import { deepCopy } from '@huma-shan/utils';
 
 import {
@@ -14,7 +9,7 @@ import {
   prepareEthProxyPaymentTransaction,
 } from '../../src/payment/eth-proxy';
 import { getRequestPaymentValues } from '../../src/payment/utils';
-import { ethereumProxyArtifact } from '@huma-shan/smart-contractsde';
+import { ethereumProxyArtifact } from '@huma-shan/smart-contracts';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/await-thenable */

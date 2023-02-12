@@ -1,6 +1,6 @@
 import { ContractTransaction, providers, Signer, BigNumberish, BigNumber } from 'ethers';
 
-import { erc20SwapConversionArtifact } from '@huma-shan/smart-contractsde';
+import { erc20SwapConversionArtifact } from '@huma-shan/smart-contracts';
 import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';

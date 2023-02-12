@@ -37,7 +37,7 @@ Join the [Request Discord][request-discord-url] to get in touch with us.
 | [`@huma-shan/web3-signature`](/packages/web3-signature)             | [![npm](https://img.shields.io/npm/v/@huma-shan/web3-signature.svg)](https://www.npmjs.com/package/@huma-shan/web3-signature)             | Sign requests using web3 tools (like Metamask)                      |
 | [`@huma-shan/multi-formatt`](/packages/multi-format)                | [![npm](https://img.shields.io/npm/v/@huma-shan/multi-formatt.svg)](https://www.npmjs.com/package/@huma-shan/multi-formatt)               | Serialize and deserialize object in the Request Network protocol    |
 | [`@huma-shan/thegraph-data-access`](/packages/thegraph-data-access) | [![npm](https://img.shields.io/npm/v/@huma-shan/thegraph-data-access.svg)](https://www.npmjs.com/package/@huma-shan/thegraph-data-access) | Storage of Request data on Ethereum and IPFS, indexed by TheGraph   |
-| [`@huma-shan/smart-contractsde`](/packages/smart-contracts)         | [![npm](https://img.shields.io/npm/v/@huma-shan/smart-contractsde.svg)](https://www.npmjs.com/package/@huma-shan/smart-contractsde)       | Sources and artifacts of the smart contracts                        |
+| [`@huma-shan/smart-contracts`](/packages/smart-contracts)           | [![npm](https://img.shields.io/npm/v/@huma-shan/smart-contracts.svg)](https://www.npmjs.com/package/@huma-shan/smart-contracts)           | Sources and artifacts of the smart contracts                        |
 
 ### Private Packages
 

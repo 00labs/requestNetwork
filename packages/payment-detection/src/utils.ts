@@ -2,7 +2,7 @@ import { CurrencyDefinition } from '@huma-shan/currency';
 import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import { BigNumber, BigNumberish, Contract, errors, logger } from 'ethers';
 import { getAddress, keccak256, LogDescription } from 'ethers/lib/utils';
-import { ContractArtifact, DeploymentInformation } from '@huma-shan/smart-contractsde';
+import { ContractArtifact, DeploymentInformation } from '@huma-shan/smart-contracts';
 import { NetworkNotSupported, VersionNotSupported } from './balance-error';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 

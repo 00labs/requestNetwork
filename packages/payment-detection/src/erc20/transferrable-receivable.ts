@@ -1,7 +1,7 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { TheGraphInfoRetriever } from '../thegraph';
-import { erc20TransferrableReceivableArtifact } from '@requestnetwork/smart-contracts';
+import { erc20TransferrableReceivableArtifact } from '@huma-shan/smart-contractsde';
 import { makeGetDeploymentInformation } from '../utils';
 import { PaymentNetworkOptions, ReferenceBasedDetectorOptions } from '../types';
 import { ReferenceBasedDetector } from '../reference-based-detector';

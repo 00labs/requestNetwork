@@ -1,10 +1,10 @@
 import EthereumUtils from '../ethereum-utils';
 
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@huma-shan/types';
 import Axios from 'axios';
 
 import { BigNumber } from 'ethers';
-import { retry } from '@requestnetwork/utils';
+import { retry } from '@huma-shan/utils';
 
 // Maximum number of api requests to retry when an error is encountered (ECONNRESET, EPIPE, ENOTFOUND)
 const ETHGASSTATION_REQUEST_MAX_RETRY = 3;

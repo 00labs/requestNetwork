@@ -1,5 +1,5 @@
 import * as yargs from 'yargs';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@huma-shan/currency';
 
 type Options = { to: string; from: string; network: string };
 

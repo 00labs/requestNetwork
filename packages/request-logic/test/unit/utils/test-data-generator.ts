@@ -4,9 +4,9 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
-import { sign } from '@requestnetwork/utils';
+import { sign } from '@huma-shan/utils';
 import Version from '../../../src/version';
 const CURRENT_VERSION = Version.currentVersion;
 

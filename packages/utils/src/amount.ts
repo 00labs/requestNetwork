@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { isString } from './utils';
 
 import { BigNumber } from 'ethers';

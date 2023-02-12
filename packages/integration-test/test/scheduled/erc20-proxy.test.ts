@@ -1,9 +1,9 @@
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { Erc20PaymentNetwork } from '@huma-shan/payment-detection';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import { mockAdvancedLogic } from './mocks';
-import { Types, Utils } from '@requestnetwork/request-client.js';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { Types, Utils } from '@huma-shan/request-client.js';
+import { CurrencyManager } from '@huma-shan/currency';
 import {
   erc20requestCreationHash,
   localErc20PaymentNetworkParams,

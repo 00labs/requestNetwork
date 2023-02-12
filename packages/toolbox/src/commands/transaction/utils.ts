@@ -1,4 +1,4 @@
-import { getDefaultProvider } from '@requestnetwork/payment-detection';
+import { getDefaultProvider } from '@huma-shan/payment-detection';
 import { providers, Wallet } from 'ethers';
 import axios from 'axios';
 

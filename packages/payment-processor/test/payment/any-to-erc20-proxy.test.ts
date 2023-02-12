@@ -4,15 +4,15 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 import { approveErc20ForProxyConversionIfNeeded } from '../../src/payment/conversion-erc20';
 import { payAnyToErc20ProxyRequest } from '../../src/payment/any-to-erc20-proxy';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
 import { currencyManager } from './shared';
 import { IConversionPaymentSettings } from '../../src/index';
-import { UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { AnyToERC20PaymentDetector } from '@requestnetwork/payment-detection';
+import { UnsupportedCurrencyError } from '@huma-shan/currency';
+import { AnyToERC20PaymentDetector } from '@huma-shan/payment-detection';
 import { getProxyAddress, MAX_ALLOWANCE, revokeErc20Approval } from '../../src/payment/utils';
 
 // Cf. ERC20Alpha in TestERC20.sol

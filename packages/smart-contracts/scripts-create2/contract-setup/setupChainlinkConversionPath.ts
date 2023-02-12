@@ -1,5 +1,5 @@
-import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager } from '@huma-shan/currency';
+import { RequestLogicTypes } from '@huma-shan/types';
 import { chainlinkConversionPath } from '../../src/lib';
 import { HardhatRuntimeEnvironmentExtended } from '../types';
 import { getSignerAndGasFees, updateNativeTokenHash } from './adminTasks';

@@ -1,10 +1,10 @@
 import { EventEmitter } from 'events';
 import { BigNumber, ContractReceipt, providers, Signer } from 'ethers';
 import TypedEmitter from 'typed-emitter';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
-import { requestHashSubmitterArtifact } from '@requestnetwork/smart-contracts';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
+import { requestHashSubmitterArtifact } from '@huma-shan/smart-contractsde';
 import { EthereumTransactionSubmitter } from './ethereum-tx-submitter';
-import { getCurrentTimestampInSecond, SimpleLogger } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, SimpleLogger } from '@huma-shan/utils';
 
 export type GasDefinerProps = {
   gasPriceMin?: BigNumber;

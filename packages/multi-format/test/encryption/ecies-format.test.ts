@@ -1,4 +1,4 @@
-import { EncryptionTypes, MultiFormatTypes } from '@requestnetwork/types';
+import { EncryptionTypes, MultiFormatTypes } from '@huma-shan/types';
 
 import EciesFormat from '../../src/encryption/ecies-format';
 let eciesFormat: EciesFormat;

@@ -1,7 +1,7 @@
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@huma-shan/types';
 
 import * as Keyv from 'keyv';
-import { flatten2DimensionsArray, unique } from '@requestnetwork/utils';
+import { flatten2DimensionsArray, unique } from '@huma-shan/utils';
 
 // Serialize function used for keyv to serialize a Set data structure into a string
 // There is no way to directly stringify a Set, we need to convert it to an array before

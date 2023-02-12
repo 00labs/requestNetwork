@@ -1,7 +1,7 @@
-import { AdvancedLogicTypes, ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, ExtensionTypes, PaymentTypes } from '@huma-shan/types';
 import { PaymentDetectorBase } from './payment-detector-base';
 import { GetDeploymentInformation } from './utils';
-import type { ICurrencyManager } from '@requestnetwork/currency';
+import type { ICurrencyManager } from '@huma-shan/currency';
 import type { providers } from 'ethers';
 import type { TheGraphClient } from './thegraph';
 

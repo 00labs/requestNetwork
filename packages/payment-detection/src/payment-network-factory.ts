@@ -3,8 +3,8 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+} from '@huma-shan/types';
+import { ICurrencyManager } from '@huma-shan/currency';
 import {
   ContractBasedDetector,
   IPaymentNetworkModuleByType,

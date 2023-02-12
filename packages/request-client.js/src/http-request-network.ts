@@ -1,12 +1,12 @@
-import { CurrencyInput, CurrencyManager, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyInput, CurrencyManager, ICurrencyManager } from '@huma-shan/currency';
 import {
   ClientTypes,
   DataAccessTypes,
   DecryptionProviderTypes,
   SignatureProviderTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { AxiosRequestConfig } from 'axios';
-import { PaymentNetworkOptions } from '@requestnetwork/payment-detection';
+import { PaymentNetworkOptions } from '@huma-shan/payment-detection';
 import RequestNetwork from './api/request-network';
 import HttpDataAccess from './http-data-access';
 import MockDataAccess from './mock-data-access';

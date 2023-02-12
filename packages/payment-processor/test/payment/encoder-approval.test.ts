@@ -4,16 +4,16 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { encodeRequestErc20ApprovalIfNeeded } from '../../src';
 import { getProxyAddress, MAX_ALLOWANCE, revokeErc20Approval } from '../../src/payment/utils';
-import { AnyToERC20PaymentDetector, Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
+import { AnyToERC20PaymentDetector, Erc20PaymentNetwork } from '@huma-shan/payment-detection';
 import { currencyManager } from './shared';
 import { IPreparedTransaction } from '../../src/payment/prepared-transaction';
 import {
   erc20SwapToPayArtifact,
   erc20SwapConversionArtifact,
-} from '@requestnetwork/smart-contracts';
+} from '@huma-shan/smart-contractsde';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/await-thenable */

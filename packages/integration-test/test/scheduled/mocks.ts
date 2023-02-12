@@ -1,5 +1,5 @@
-import { AdvancedLogicTypes } from '@requestnetwork/types';
-import * as Extension from '@requestnetwork/types/src/extension-types';
+import { AdvancedLogicTypes } from '@huma-shan/types';
+import * as Extension from '@huma-shan/types/src/extension-types';
 
 const createAddPaymentAddressAction = jest.fn();
 const createAddRefundAddressAction = jest.fn();

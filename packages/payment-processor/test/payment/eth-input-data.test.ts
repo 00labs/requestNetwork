@@ -5,8 +5,8 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 
 import { _getEthPaymentUrl, payEthInputDataRequest } from '../../src/payment/eth-input-data';
 import { getRequestPaymentValues } from '../../src/payment/utils';

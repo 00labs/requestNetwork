@@ -1,9 +1,9 @@
-import { PaymentTypes } from '@requestnetwork/types';
-import { erc20EscrowToPayArtifact } from '@requestnetwork/smart-contracts';
+import { PaymentTypes } from '@huma-shan/types';
+import { erc20EscrowToPayArtifact } from '@huma-shan/smart-contractsde';
 import { BigNumber, ethers } from 'ethers';
 import { IEventRetriever } from '../types';
 import { makeGetDeploymentInformation, parseLogArgs } from '../utils';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@huma-shan/utils';
 
 const ESCROW_CONTRACT_ADDRESS_MAP = {
   ['0.1.0']: '0.1.0',

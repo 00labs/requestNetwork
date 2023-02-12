@@ -1,7 +1,7 @@
-import { IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import Role from './role';
-import { isValidAmount } from '@requestnetwork/utils';
+import { isValidAmount } from '@huma-shan/utils';
 
 /**
  * Module to manage a request

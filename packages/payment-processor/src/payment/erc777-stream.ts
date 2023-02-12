@@ -8,8 +8,8 @@ import {
   ethers,
 } from 'ethers';
 
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 import { getNetworkProvider, getProvider, getRequestPaymentValues, validateRequest } from './utils';
 import { Framework } from '@superfluid-finance/sdk-core';

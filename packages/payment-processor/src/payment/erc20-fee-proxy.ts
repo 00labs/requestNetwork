@@ -1,9 +1,9 @@
 import { constants, ContractTransaction, Signer, BigNumberish, providers, BigNumber } from 'ethers';
 
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
-import { ERC20FeeProxy__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { erc20FeeProxyArtifact } from '@huma-shan/smart-contractsde';
+import { ERC20FeeProxy__factory } from '@huma-shan/smart-contractsde/types';
+import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
+import { getPaymentNetworkExtension } from '@huma-shan/payment-detection';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {

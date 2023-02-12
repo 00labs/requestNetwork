@@ -1,6 +1,6 @@
-import { IdentityTypes, PaymentTypes, ExtensionTypes } from '@requestnetwork/types';
-import { RequestNetwork, Types } from '@requestnetwork/request-client.js';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
+import { IdentityTypes, PaymentTypes, ExtensionTypes } from '@huma-shan/types';
+import { RequestNetwork, Types } from '@huma-shan/request-client.js';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
 
 export const httpConfig = {
   getConfirmationDeferDelay: 1000,

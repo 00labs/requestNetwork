@@ -3,7 +3,7 @@ import Erc20AddressBasedPaymentNetwork from '../../../../src/extensions/payment-
 import * as DataERC20AddPaymentAddress from '../../../utils/payment-network/erc20/address-based-add-payment-address-data-generator';
 import * as DataERC20Create from '../../../utils/payment-network/erc20/address-based-create-data-generator';
 import * as TestData from '../../../utils/test-data-generator';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 const erc20AddressBasedPaymentNetwork = new Erc20AddressBasedPaymentNetwork();
 /* eslint-disable @typescript-eslint/no-unused-expressions */

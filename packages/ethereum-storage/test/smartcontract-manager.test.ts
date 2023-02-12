@@ -1,5 +1,5 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { StorageTypes } from '@requestnetwork/types';
+import * as SmartContracts from '@huma-shan/smart-contractsde';
+import { StorageTypes } from '@huma-shan/types';
 import EthereumBlocks from '../src/ethereum-blocks';
 import SmartContractManager from '../src/smart-contract-manager';
 

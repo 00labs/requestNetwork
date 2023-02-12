@@ -1,5 +1,5 @@
-import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
+import { CurrencyManager } from '@huma-shan/currency';
 import { BtcMainnetAddressBasedDetector } from '../src/btc';
 import {
   DeclarativePaymentDetector,

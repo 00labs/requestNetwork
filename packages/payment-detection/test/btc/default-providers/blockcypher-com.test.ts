@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import { BlockcypherComProvider } from '../../../src/btc/default-providers/blockcypher-com';
 
 import * as BlockCypherComData from './blockcypher-com-data';

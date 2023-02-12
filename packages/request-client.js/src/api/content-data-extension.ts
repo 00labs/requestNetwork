@@ -1,5 +1,5 @@
-import DataFormat from '@requestnetwork/data-format';
-import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import DataFormat from '@huma-shan/data-format';
+import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 
 // Extension ID for this class: content data
 const CONTENT_DATA_ID = ExtensionTypes.ID.CONTENT_DATA;

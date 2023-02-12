@@ -1,11 +1,11 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 
 import EthereumFeeProxyContract from '../../../../src/extensions/payment-network/ethereum/fee-proxy-contract';
 
 import * as DataEthFeeAddData from '../../../utils/payment-network/ethereum/fee-proxy-contract-add-data-generator';
 import * as DataEthFeeCreate from '../../../utils/payment-network/ethereum/fee-proxy-contract-create-data-generator';
 import * as TestData from '../../../utils/test-data-generator';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@huma-shan/utils';
 
 const ethFeeProxyContract = new EthereumFeeProxyContract();
 

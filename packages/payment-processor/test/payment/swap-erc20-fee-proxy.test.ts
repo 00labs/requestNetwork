@@ -5,14 +5,14 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 
 import { getErc20Balance } from '../../src/payment/erc20';
 import { approveErc20ForSwapToPayIfNeeded } from '../../src/payment/swap-erc20';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
 import { ISwapSettings, swapErc20FeeProxyRequest } from '../../src/payment/swap-erc20-fee-proxy';
-import { erc20SwapToPayArtifact } from '@requestnetwork/smart-contracts';
+import { erc20SwapToPayArtifact } from '@huma-shan/smart-contractsde';
 import { revokeErc20Approval } from '../../src/payment/utils';
 
 /* eslint-disable no-magic-numbers */

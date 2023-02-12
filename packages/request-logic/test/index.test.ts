@@ -1,13 +1,13 @@
 import { EventEmitter } from 'events';
 
-import MultiFormat from '@requestnetwork/multi-format';
-import { AdvancedLogicTypes, RequestLogicTypes, TransactionTypes } from '@requestnetwork/types';
+import MultiFormat from '@huma-shan/multi-formatt';
+import { AdvancedLogicTypes, RequestLogicTypes, TransactionTypes } from '@huma-shan/types';
 
 import { RequestLogic } from '../src/index';
 import * as TestData from './unit/utils/test-data-generator';
 
 import Version from '../src/version';
-import { normalizeKeccak256Hash, sign } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, sign } from '@huma-shan/utils';
 
 const CURRENT_VERSION = Version.currentVersion;
 

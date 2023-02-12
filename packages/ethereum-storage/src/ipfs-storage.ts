@@ -1,8 +1,8 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 
 import { getIpfsExpectedBootstrapNodes, getPinRequestConfig } from './config';
 import IpfsManager from './ipfs-manager';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@huma-shan/utils';
 
 export type IpfsStorageProps = {
   logger?: LogTypes.ILogger;

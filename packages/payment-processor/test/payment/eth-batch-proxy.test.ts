@@ -5,8 +5,8 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 
 import { payBatchProxyRequest, encodePayBatchRequest } from '../../src/payment/batch-proxy';
 import { getRequestPaymentValues } from '../../src/payment/utils';

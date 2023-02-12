@@ -1,6 +1,6 @@
 /* eslint-disable no-invalid-this */
 /* eslint-disable no-magic-numbers */
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@huma-shan/types';
 import ProxyERC20InfoRetriever from '../../src/erc20/proxy-info-retriever';
 import { ethers } from 'ethers';
 

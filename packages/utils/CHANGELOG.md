@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.36.0) (2022-11-04)
+# [0.36.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.36.0) (2022-11-04)
 
 ### Bug Fixes
 
@@ -20,7 +20,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - implementation of delegation in declarative pn ([#535](https://github.com/RequestNetwork/requestNetwork/issues/535)) ([cf4eac7](https://github.com/RequestNetwork/requestNetwork/commit/cf4eac7665f5d797e2768c888fc87f470fe4f8cf))
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.35.0) (2021-06-22)
+# [0.35.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.35.0) (2021-06-22)
 
 ### Bug Fixes
 
@@ -31,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.34.0) (2021-05-12)
+# [0.34.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.34.0) (2021-05-12)
 
 ### Bug Fixes
 
@@ -41,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.33.0) (2021-04-19)
+# [0.33.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.33.0) (2021-04-19)
 
 ### Bug Fixes
 
@@ -51,39 +51,39 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.32.0) (2021-03-25)
+# [0.32.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.32.0) (2021-03-25)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.31.0) (2021-03-15)
+# [0.31.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.31.0) (2021-03-15)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.30.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.30.0) (2021-03-03)
+# [0.30.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.30.0) (2021-03-03)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-# [0.29.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.29.0) (2021-02-22)
+# [0.29.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.29.0) (2021-02-22)
 
 ### Features
 
 - payment network any to erc20 smartcontracts ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([a2f30a8](https://github.com/RequestNetwork/requestNetwork/commit/a2f30a84689eaea0994e72944c417718c7aad20e))
 
-## [0.28.2](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.28.2) (2020-12-22)
+## [0.28.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.28.2) (2020-12-22)
 
-**Note:** Version bump only for package @requestnetwork/utils
+**Note:** Version bump only for package @huma-shan/utils
 
-## [0.28.1](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.28.0...@requestnetwork/utils@0.28.1) (2020-12-21)
+## [0.28.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.28.0...@huma-shan/utils@0.28.1) (2020-12-21)
 
-**Note:** Version bump only for package @requestnetwork/utils
+**Note:** Version bump only for package @huma-shan/utils
 
-# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.28.0) (2020-12-02)
+# [0.28.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.28.0) (2020-12-02)
 
 # 0.26.0 (2020-10-14)
 
@@ -115,7 +115,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.27.0) (2020-11-12)
+# [0.27.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.27.0) (2020-11-12)
 
 # 0.26.0 (2020-10-14)
 
@@ -147,7 +147,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.26.0) (2020-11-05)
+# [0.26.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.26.0) (2020-11-05)
 
 # 0.26.0 (2020-10-14)
 
@@ -179,7 +179,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.25.0) (2020-10-21)
+# [0.25.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.25.0) (2020-10-21)
 
 # 0.26.0 (2020-10-14)
 
@@ -211,7 +211,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.24.0) (2020-10-14)
+# [0.24.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.24.0) (2020-10-14)
 
 ### Features
 
@@ -241,7 +241,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.23.0) (2020-10-13)
+# [0.23.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.23.0) (2020-10-13)
 
 ### Features
 
@@ -271,7 +271,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.22.0) (2020-10-09)
+# [0.22.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.22.0) (2020-10-09)
 
 ### Features
 
@@ -301,7 +301,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.21.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.21.0) (2020-09-28)
+# [0.21.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.21.0) (2020-09-28)
 
 ### Features
 
@@ -331,7 +331,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.20.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.20.0) (2020-09-18)
+# [0.20.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.20.0) (2020-09-18)
 
 ### Features
 
@@ -361,7 +361,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.19.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.19.0) (2020-09-01)
+# [0.19.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.19.0) (2020-09-01)
 
 ### Features
 
@@ -391,7 +391,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.18.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.18.0) (2020-08-27)
+# [0.18.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.18.0) (2020-08-27)
 
 ### Features
 
@@ -421,7 +421,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.17.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.17.0) (2020-08-13)
+# [0.17.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.17.0) (2020-08-13)
 
 ### Features
 
@@ -451,7 +451,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.16.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.16.0) (2020-06-29)
+# [0.16.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.16.0) (2020-06-29)
 
 ### Features
 
@@ -481,7 +481,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.15.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.15.0) (2020-05-04)
+# [0.15.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.15.0) (2020-05-04)
 
 # 0.16.0 (2020-04-21)
 
@@ -505,7 +505,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.14.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.14.0) (2020-04-21)
+# [0.14.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.14.0) (2020-04-21)
 
 # 0.15.0 (2020-04-06)
 
@@ -527,7 +527,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.13.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.13.0) (2020-04-06)
+# [0.13.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.13.0) (2020-04-06)
 
 ### Bug Fixes
 
@@ -547,7 +547,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.12.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.12.0) (2020-03-23)
+# [0.12.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.12.0) (2020-03-23)
 
 # 0.13.0 (2020-02-20)
 
@@ -563,7 +563,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.11.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.11.0) (2020-02-20)
+# [0.11.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.11.0) (2020-02-20)
 
 ### Bug Fixes
 
@@ -577,7 +577,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.10.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.10.0) (2020-01-16)
+# [0.10.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.10.0) (2020-01-16)
 
 # 0.10.0 (2019-12-04)
 
@@ -585,7 +585,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.9.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.9.0) (2019-12-18)
+# [0.9.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.9.0) (2019-12-18)
 
 # 0.10.0 (2019-12-04)
 
@@ -593,13 +593,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.8.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.7.0...@requestnetwork/utils@0.8.0) (2019-12-04)
+# [0.8.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.7.0...@huma-shan/utils@0.8.0) (2019-12-04)
 
 ### Features
 
 - add ETH paymentNetwork to request-client ([#617](https://github.com/RequestNetwork/requestNetwork/issues/617)) ([84ed64e](https://github.com/RequestNetwork/requestNetwork/commit/84ed64ebf96a296155dc2d4d5e6c538344fb881b))
 
-# [0.7.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.6.2...@requestnetwork/utils@0.7.0) (2019-11-20)
+# [0.7.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.6.2...@huma-shan/utils@0.7.0) (2019-11-20)
 
 ### Bug Fixes
 
@@ -609,15 +609,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - ETH payement network in advanced-logic ([#589](https://github.com/RequestNetwork/requestNetwork/issues/589)) ([7b32ce8](https://github.com/RequestNetwork/requestNetwork/commit/7b32ce84c23ee723a143d752fb93786a6c5cc813))
 
-## [0.6.2](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.6.1...@requestnetwork/utils@0.6.2) (2019-10-21)
+## [0.6.2](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.6.1...@huma-shan/utils@0.6.2) (2019-10-21)
 
-**Note:** Version bump only for package @requestnetwork/utils
+**Note:** Version bump only for package @huma-shan/utils
 
-## [0.6.1](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.6.0...@requestnetwork/utils@0.6.1) (2019-09-16)
+## [0.6.1](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.6.0...@huma-shan/utils@0.6.1) (2019-09-16)
 
-**Note:** Version bump only for package @requestnetwork/utils
+**Note:** Version bump only for package @huma-shan/utils
 
-# [0.6.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.5.0...@requestnetwork/utils@0.6.0) (2019-09-05)
+# [0.6.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.5.0...@huma-shan/utils@0.6.0) (2019-09-05)
 
 ### Bug Fixes
 
@@ -627,7 +627,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - **transaction-manager:** decrypt channels ([#516](https://github.com/RequestNetwork/requestNetwork/issues/516)) ([8142c3d](https://github.com/RequestNetwork/requestNetwork/commit/8142c3d))
 
-# [0.5.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.4.0...@requestnetwork/utils@0.5.0) (2019-08-19)
+# [0.5.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.4.0...@huma-shan/utils@0.5.0) (2019-08-19)
 
 ### Features
 
@@ -637,7 +637,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - generate a cryptographically strong pseudo-random key ([#493](https://github.com/RequestNetwork/requestNetwork/issues/493)) ([cd49f81](https://github.com/RequestNetwork/requestNetwork/commit/cd49f81))
 - persist encrypted transaction in transaction manager ([#495](https://github.com/RequestNetwork/requestNetwork/issues/495)) ([7523f93](https://github.com/RequestNetwork/requestNetwork/commit/7523f93))
 
-# [0.3.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.1.1-alpha.4...@requestnetwork/utils@0.3.0) (2019-07-24)
+# [0.3.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.1.1-alpha.4...@huma-shan/utils@0.3.0) (2019-07-24)
 
 ### Bug Fixes
 
@@ -658,7 +658,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - faster initialization by factoring stat and read IPFS calls in one call ([#401](https://github.com/RequestNetwork/requestNetwork/issues/401)) ([184c14e](https://github.com/RequestNetwork/requestNetwork/commit/184c14e))
 
-## [0.2.1-alpha.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.1.1-alpha.4...@requestnetwork/utils@0.2.1-alpha.0) (2019-07-22)
+## [0.2.1-alpha.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.1.1-alpha.4...@huma-shan/utils@0.2.1-alpha.0) (2019-07-22)
 
 ### Bug Fixes
 
@@ -679,7 +679,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - faster initialization by factoring stat and read IPFS calls in one call ([#401](https://github.com/RequestNetwork/requestNetwork/issues/401)) ([184c14e](https://github.com/RequestNetwork/requestNetwork/commit/184c14e))
 
-# [0.2.0](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.1.1-alpha.4...@requestnetwork/utils@0.2.0) (2019-06-06)
+# [0.2.0](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.1.1-alpha.4...@huma-shan/utils@0.2.0) (2019-06-06)
 
 ### Bug Fixes
 
@@ -697,7 +697,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - faster initialization by factoring stat and read IPFS calls in one call ([#401](https://github.com/RequestNetwork/requestNetwork/issues/401)) ([184c14e](https://github.com/RequestNetwork/requestNetwork/commit/184c14e))
 
-## [0.1.1-alpha.12](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.1.1-alpha.4...@requestnetwork/utils@0.1.1-alpha.12) (2019-05-21)
+## [0.1.1-alpha.12](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.1.1-alpha.4...@huma-shan/utils@0.1.1-alpha.12) (2019-05-21)
 
 ### Bug Fixes
 
@@ -709,7 +709,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network declarative for any currency ([#315](https://github.com/RequestNetwork/requestNetwork/issues/315)) ([06fb561](https://github.com/RequestNetwork/requestNetwork/commit/06fb561))
 - Timestamp from storage to client ([#309](https://github.com/RequestNetwork/requestNetwork/issues/309)) ([bb0ac19](https://github.com/RequestNetwork/requestNetwork/commit/bb0ac19))
 
-## [0.1.1-alpha.11](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.1.1-alpha.4...@requestnetwork/utils@0.1.1-alpha.11) (2019-05-17)
+## [0.1.1-alpha.11](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.1.1-alpha.4...@huma-shan/utils@0.1.1-alpha.11) (2019-05-17)
 
 ### Bug Fixes
 
@@ -721,7 +721,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - payment network declarative for any currency ([#315](https://github.com/RequestNetwork/requestNetwork/issues/315)) ([06fb561](https://github.com/RequestNetwork/requestNetwork/commit/06fb561))
 - Timestamp from storage to client ([#309](https://github.com/RequestNetwork/requestNetwork/issues/309)) ([bb0ac19](https://github.com/RequestNetwork/requestNetwork/commit/bb0ac19))
 
-## [0.1.1-alpha.10](https://github.com/RequestNetwork/requestNetwork/compare/@requestnetwork/utils@0.1.1-alpha.4...@requestnetwork/utils@0.1.1-alpha.10) (2019-05-10)
+## [0.1.1-alpha.10](https://github.com/RequestNetwork/requestNetwork/compare/@huma-shan/utils@0.1.1-alpha.4...@huma-shan/utils@0.1.1-alpha.10) (2019-05-10)
 
 ### Bug Fixes
 

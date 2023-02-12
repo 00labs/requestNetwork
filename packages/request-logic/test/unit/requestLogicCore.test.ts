@@ -1,12 +1,12 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-formatt';
 import {
   AdvancedLogicTypes,
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
-import { deepCopy, normalizeKeccak256Hash } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy, normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import Version from '../../src/version';
 const CURRENT_VERSION = Version.currentVersion;

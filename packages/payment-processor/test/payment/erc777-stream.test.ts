@@ -6,8 +6,8 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 
 import {
   closeErc777StreamRequest,

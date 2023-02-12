@@ -8,9 +8,9 @@ import {
   ethers,
 } from 'ethers';
 
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import { ERC20TransferrableReceivable__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
+import { Erc20PaymentNetwork } from '@huma-shan/payment-detection';
+import { ERC20TransferrableReceivable__factory } from '@huma-shan/smart-contractsde/types';
+import { ClientTypes, ExtensionTypes } from '@huma-shan/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {
@@ -24,7 +24,7 @@ import {
 } from './utils';
 import { IPreparedTransaction } from './prepared-transaction';
 
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-formatt';
 
 // The ERC20 receivable smart contract ABI fragment
 const erc20TransferrableReceivableContractAbiFragment = [

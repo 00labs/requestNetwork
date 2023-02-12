@@ -1,6 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { TransactionTypes } from '@requestnetwork/types';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import MultiFormat from '@huma-shan/multi-formatt';
+import { TransactionTypes } from '@huma-shan/types';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 /**
  * Class representing a clear transaction

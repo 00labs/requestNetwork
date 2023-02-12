@@ -1,4 +1,4 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@huma-shan/types';
 import * as Bluebird from 'bluebird';
 import { EventEmitter } from 'events';
 import { getMaxConcurrency } from './config';
@@ -10,7 +10,7 @@ import SmartContractManager from './smart-contract-manager';
 
 import * as Keyv from 'keyv';
 import { BigNumber } from 'ethers';
-import { getCurrentTimestampInSecond, SimpleLogger } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, SimpleLogger } from '@huma-shan/utils';
 
 // time to wait before considering the web3 provider is not reachable
 const WEB3_PROVIDER_TIMEOUT = 10000;

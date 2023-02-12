@@ -1,6 +1,6 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { StorageTypes } from '@requestnetwork/types';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import * as SmartContracts from '@huma-shan/smart-contractsde';
+import { StorageTypes } from '@huma-shan/types';
+import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 import { EventEmitter } from 'events';
 
 import { EthereumStorage } from '../src/ethereum-storage';
@@ -351,7 +351,6 @@ describe('EthereumStorage', () => {
 
       if (!entries[0].meta.ethereum) {
         fail('entries[0].meta.ethereum does not exist');
-        return;
       }
       expect(entries[0].meta.ipfs).toMatchObject({
         size: realSize1,
@@ -367,7 +366,6 @@ describe('EthereumStorage', () => {
 
       if (!entries[1].meta.ethereum) {
         fail('entries[1].meta.ethereum does not exist');
-        return;
       }
       expect(entries[1].meta.ipfs).toMatchObject({
         size: realSize1,
@@ -383,7 +381,6 @@ describe('EthereumStorage', () => {
 
       if (!entries[2].meta.ethereum) {
         fail('entries[2].meta.ethereum does not exist');
-        return;
       }
 
       expect(entries[2].meta.ipfs).toMatchObject({
@@ -413,7 +410,6 @@ describe('EthereumStorage', () => {
 
       if (!entries[0].meta.ethereum) {
         fail('entries[0].meta.ethereum does not exist');
-        return;
       }
       expect(entries[0].meta.ipfs).toMatchObject({
         size: realSize1,
@@ -429,7 +425,6 @@ describe('EthereumStorage', () => {
 
       if (!entries[1].meta.ethereum) {
         fail('entries[1].meta.ethereum does not exist');
-        return;
       }
       expect(entries[1].meta.ipfs).toMatchObject({
         size: realSize1,
@@ -445,7 +440,6 @@ describe('EthereumStorage', () => {
 
       if (!entries[2].meta.ethereum) {
         fail('entries[2].meta.ethereum does not exist');
-        return;
       }
       expect(entries[2].meta.ipfs).toMatchObject({
         size: realSize2,
@@ -663,7 +657,6 @@ describe('EthereumStorage', () => {
             default:
               fail(`ipfsManager.read() unrocognized hash: ${hash}`);
           }
-          throw Error('expected error');
         });
 
       await ethereumStorage.getData();

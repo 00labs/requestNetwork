@@ -4,11 +4,11 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { encodeRequestApprovalAndPayment } from '../../src';
 import { IRequestPaymentOptions } from '../../src/payment/settings';
 import { currencyManager } from './shared';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20__factory } from '@huma-shan/smart-contractsde/types';
 import { MAX_ALLOWANCE } from '../../src/payment/utils';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */

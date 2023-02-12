@@ -1,11 +1,11 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-formatt';
 import {
   DataAccessTypes,
   DecryptionProviderTypes,
   EncryptionTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { normalizeKeccak256Hash } from '@huma-shan/utils';
 
 import { EventEmitter } from 'events';
 

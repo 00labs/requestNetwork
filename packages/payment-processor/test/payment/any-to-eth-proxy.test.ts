@@ -4,8 +4,8 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
 import { payAnyToEthProxyRequest } from '../../src/payment/any-to-eth-proxy';
 import { currencyManager } from './shared';
 import { IConversionPaymentSettings } from '../../src/index';

@@ -1,5 +1,5 @@
 import { BigNumber } from 'ethers';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@huma-shan/types';
 import {
   BalanceError,
   ExtensionMissingRequiredValue,

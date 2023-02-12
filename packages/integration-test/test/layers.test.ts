@@ -1,15 +1,15 @@
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@huma-shan/utils';
 
 const web3Eth = require('web3-eth');
 
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { DataAccess } from '@requestnetwork/data-access';
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { EthereumStorage, IpfsStorage } from '@requestnetwork/ethereum-storage';
-import MultiFormat from '@requestnetwork/multi-format';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { AdvancedLogic } from '@huma-shan/advanced-logic';
+import { DataAccess } from '@huma-shan/data-access';
+import { EthereumPrivateKeyDecryptionProvider } from '@huma-shan/epk-decryption';
+import { EthereumPrivateKeySignatureProvider } from '@huma-shan/epk-signature';
+import { EthereumStorage, IpfsStorage } from '@huma-shan/ethereum-storage';
+import MultiFormat from '@huma-shan/multi-formatt';
+import { RequestLogic } from '@huma-shan/request-logic';
+import { TransactionManager } from '@huma-shan/transaction-manager';
 import {
   AdvancedLogicTypes,
   DataAccessTypes,
@@ -18,7 +18,7 @@ import {
   RequestLogicTypes,
   SignatureTypes,
   StorageTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 
 let advancedLogic: AdvancedLogicTypes.IAdvancedLogic;
 let requestLogic: RequestLogicTypes.IRequestLogic;

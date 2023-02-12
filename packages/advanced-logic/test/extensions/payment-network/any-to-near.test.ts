@@ -8,11 +8,11 @@ import {
 } from '../../utils/payment-network/any/generator-data-create';
 import { AdvancedLogic } from '../../../src';
 import { arbitraryTimestamp, payeeRaw, payerRaw } from '../../utils/test-data-generator';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@huma-shan/types';
 import AnyToNearPaymentNetwork from '../../../src/extensions/payment-network/near/any-to-near';
 import AnyToNativeTokenPaymentNetwork from '../../../src/extensions/payment-network/any-to-native';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { deepCopy } from '@requestnetwork/utils';
+import { CurrencyManager } from '@huma-shan/currency';
+import { deepCopy } from '@huma-shan/utils';
 import AnyToNearTestnetPaymentNetwork from '../../../src/extensions/payment-network/near/any-to-near-testnet';
 
 const salt = arbitrarySalt;

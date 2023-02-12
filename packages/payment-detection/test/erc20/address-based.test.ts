@@ -3,11 +3,11 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@huma-shan/types';
 import { ERC20AddressBasedPaymentDetector } from '../../src/erc20';
 import { mockAdvancedLogicBase } from '../utils';
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { AdvancedLogic } from '@huma-shan/advanced-logic';
+import { CurrencyManager } from '@huma-shan/currency';
 
 jest.setTimeout(10000);
 

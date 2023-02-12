@@ -5,9 +5,9 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
+} from '@huma-shan/types';
+import { deepCopy } from '@huma-shan/utils';
+import { erc20FeeProxyArtifact } from '@huma-shan/smart-contractsde';
 
 import { approveErc20, getErc20Balance } from '../../src/payment/erc20';
 import {

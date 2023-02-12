@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@huma-shan/multi-formatt';
 import {
   ExtensionTypes,
   IdentityTypes,
@@ -7,8 +7,8 @@ import {
   SignatureProviderTypes,
   SignatureTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
-import { normalizeKeccak256Hash, sign } from '@requestnetwork/utils';
+} from '@huma-shan/types';
+import { normalizeKeccak256Hash, sign } from '@huma-shan/utils';
 import AxiosMockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import { Types } from '../src';

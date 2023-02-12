@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/request-logic",
-  "version": "0.26.10",
+  "name": "@huma-shan/request-logic",
+  "version": "0.30.0",
   "publishConfig": {
     "access": "public"
   },
@@ -40,10 +40,10 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/advanced-logic": "0.35.0",
-    "@requestnetwork/multi-format": "0.15.10",
-    "@requestnetwork/types": "0.36.0",
-    "@requestnetwork/utils": "0.36.0",
+    "@huma-shan/advanced-logic": "0.38.0",
+    "@huma-shan/multi-formatt": "0.18.0",
+    "@huma-shan/types": "0.39.0",
+    "@huma-shan/utils": "0.39.0",
     "semver": "5.6.0",
     "tslib": "2.5.0"
   },

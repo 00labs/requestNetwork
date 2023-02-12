@@ -1,6 +1,6 @@
-# @requestnetwork/request-logic
+# @huma-shan/request-logic
 
-`@requestnetwork/request-logic` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@huma-shan/request-logic` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is the default implementation of the Request Logic layer. This layer is responsible for the business logic: properties and actions of requests.
 
 Request logic creates actions, that are signed and sends them to the layer below, Transaction.
@@ -8,7 +8,7 @@ Request logic creates actions, that are signed and sends them to the layer below
 ## Installation
 
 ```bash
-npm install @requestnetwork/request-logic
+npm install @huma-shan/request-logic
 ```
 
 ## Usage

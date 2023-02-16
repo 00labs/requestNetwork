@@ -40,7 +40,11 @@
     "lint:check": "eslint .",
     "prepare": "yarn run build",
     "test": "jest",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "start-local": "ts-node workshop-local.ts",
+    "start-goerli": "ts-node workshop-goerli.ts",
+    "start-test": "ts-node test.ts",
+    "server": "ts-node api-server.ts"
   },
   "dependencies": {
     "@requestnetwork/advanced-logic": "0.35.0",
@@ -50,6 +54,7 @@
     "@requestnetwork/epk-signature": "0.5.35",
     "@requestnetwork/multi-format": "0.15.10",
     "@requestnetwork/payment-detection": "0.36.0",
+    "@requestnetwork/payment-processor": "0.38.0",
     "@requestnetwork/request-logic": "0.26.10",
     "@requestnetwork/smart-contracts": "0.29.0",
     "@requestnetwork/transaction-manager": "0.27.0",
@@ -57,7 +62,10 @@
     "@requestnetwork/utils": "0.36.0",
     "axios": "0.27.2",
     "ethers": "5.5.1",
-    "tslib": "2.5.0"
+    "tslib": "2.5.0",
+    "express": "4.18.2",
+    "dotenv": "16.0.3",
+    "cors": "2.8.5"
   },
   "devDependencies": {
     "@compodoc/compodoc": "1.1.11",

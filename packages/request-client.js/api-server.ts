@@ -34,8 +34,18 @@ const server = app.listen(port, () => {
 });
 server.setTimeout(timeout);
 
-app.get('/health', async function (req, res) {
-  res.status(200).send('ok');
+app.get('/health', async function (_req, res) {
+  const healthcheck = {
+    uptime: process.uptime(),
+    message: 'OK',
+    timestamp: Date.now(),
+  };
+  try {
+    res.send(healthcheck);
+  } catch (error) {
+    healthcheck.message = error;
+    res.status(503).send();
+  }
 });
 
 app.get('/receivableId', async function (req, res) {

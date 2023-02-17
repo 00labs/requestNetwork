@@ -34,6 +34,10 @@ const server = app.listen(port, () => {
 });
 server.setTimeout(timeout);
 
+app.get('/health', async function (req, res) {
+  res.status(200).send('ok');
+});
+
 app.get('/receivableId', async function (req, res) {
   const requestNetwork = new RequestNetwork.RequestNetwork({
     nodeConnectionConfig: { baseURL: nodeURL },

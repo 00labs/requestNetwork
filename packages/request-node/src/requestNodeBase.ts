@@ -102,7 +102,7 @@ export class RequestNodeBase {
     try {
       await this.dataAccess.initialize();
     } catch (error) {
-      this.logger.error(`Node failed to initialize`);
+      this.logger.error(`Node failed to initialize, ${JSON.stringify(error)}`);
       throw error;
     }
 

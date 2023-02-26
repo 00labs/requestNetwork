@@ -3,6 +3,122 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.27.0 (2023-02-26)
+
+### Bug Fixes
+
+- typescript lint for test files ([#778](https://github.com/RequestNetwork/requestNetwork/issues/778)) ([048e876](https://github.com/RequestNetwork/requestNetwork/commit/048e876a905516be0de8a31d446e4572eb74eccb))
+
+# 0.26.0 (2020-10-14)
+
+### Features
+
+- add the identity ethereumSmartContract to the request logic ([#218](https://github.com/RequestNetwork/requestNetwork/issues/218)) ([66d97e0](https://github.com/RequestNetwork/requestNetwork/commit/66d97e00dee7305088cb94a0edf542fe4d0bbd56))
+- amount are only number or string ([#223](https://github.com/RequestNetwork/requestNetwork/issues/223)) ([7a35bde](https://github.com/RequestNetwork/requestNetwork/commit/7a35bde63f78b9305819a80e97022fca7e9494d2))
+
+# 0.16.0 (2020-04-21)
+
+# 0.15.0 (2020-04-06)
+
+### Bug Fixes
+
+- check payee and payer identity format at the creation ([#187](https://github.com/RequestNetwork/requestNetwork/issues/187)) ([4a19b24](https://github.com/RequestNetwork/requestNetwork/commit/4a19b241fb057d153ac7693e85a7e1d3bb6cb9e0))
+
+### Features
+
+- add the confirmed events in the highest layers ([#141](https://github.com/RequestNetwork/requestNetwork/issues/141)) ([7f9b756](https://github.com/RequestNetwork/requestNetwork/commit/7f9b756d51b20fbd45971f4db3e9865b75f2d265))
+- emits "error" event when the confirmation fails ([#179](https://github.com/RequestNetwork/requestNetwork/issues/179)) ([73bfcfb](https://github.com/RequestNetwork/requestNetwork/commit/73bfcfb5f6a54d2036a47e09ce180a00c12a81ae))
+
+# 0.13.0 (2020-02-20)
+
+### Bug Fixes
+
+- ts-node configuration ([#138](https://github.com/RequestNetwork/requestNetwork/issues/138)) ([e2180d5](https://github.com/RequestNetwork/requestNetwork/commit/e2180d507bd87116fdeb3466690b6df0c5187976))
+
+### Features
+
+- confirmed & pending state in the highest layers ([#119](https://github.com/RequestNetwork/requestNetwork/issues/119)) ([9424dc0](https://github.com/RequestNetwork/requestNetwork/commit/9424dc0c9482208fdbe714f8d29f5deed68711de))
+
+### Reverts
+
+- bump semver from 5.6.0 to 7.1.1 ([dec266f](https://github.com/RequestNetwork/requestNetwork/commit/dec266f3e174e039d181be3d1a6e2961df072cc6))
+
+# 0.12.0 (2020-01-16)
+
+### Bug Fixes
+
+- backward compatibility issue + removing test failing for external reason ([#93](https://github.com/RequestNetwork/requestNetwork/issues/93)) ([9a405dc](https://github.com/RequestNetwork/requestNetwork/commit/9a405dcc66b36a9a4a4b885dea2cd50abaad2725))
+- fix old version id mismatch issue ([#98](https://github.com/RequestNetwork/requestNetwork/issues/98)) ([c4d3f29](https://github.com/RequestNetwork/requestNetwork/commit/c4d3f291b7667f426a4a95cac7d65db90d13921b))
+
+# 0.10.0 (2019-12-04)
+
+### Bug Fixes
+
+- guard from replay attack in request logic ([#255](https://github.com/RequestNetwork/requestNetwork/issues/255)) ([2dc1fd2](https://github.com/RequestNetwork/requestNetwork/commit/2dc1fd24f90f99a21dc599031a4e06dfae38f62c))
+- publish dist folder instead of src ([#254](https://github.com/RequestNetwork/requestNetwork/issues/254)) ([d6b5bd4](https://github.com/RequestNetwork/requestNetwork/commit/d6b5bd4899550ece7e182ee937aaacaea5413842))
+- request logic extensions apply ([#222](https://github.com/RequestNetwork/requestNetwork/issues/222)) ([ca81cd5](https://github.com/RequestNetwork/requestNetwork/commit/ca81cd5abafa92472a17eaaeb23e2087e1001161))
+- rollback legacy request currency renaming from DAI to SAI ([#622](https://github.com/RequestNetwork/requestNetwork/issues/622)) ([2882811](https://github.com/RequestNetwork/requestNetwork/commit/28828117f6490ada05180f2607098d3ebada681a))
+- throw when no encryption parameters is given to create an encrypted request ([#593](https://github.com/RequestNetwork/requestNetwork/issues/593)) ([d18a894](https://github.com/RequestNetwork/requestNetwork/commit/d18a8946085920f13a43e269814fba857f24039a))
+- type error in the return of getRequestById() ([#185](https://github.com/RequestNetwork/requestNetwork/issues/185)) ([979751e](https://github.com/RequestNetwork/requestNetwork/commit/979751ea348c2f6d8454897973f6609b132bf1c6))
+
+### Features
+
+- **request-logic:** check advanced logic when creating a request ([#607](https://github.com/RequestNetwork/requestNetwork/issues/607)) ([352d2a3](https://github.com/RequestNetwork/requestNetwork/commit/352d2a3ca90a57ad43e55737d2111b6da5137e75))
+- add ERC20 currency list ([#584](https://github.com/RequestNetwork/requestNetwork/issues/584)) ([6e0ed87](https://github.com/RequestNetwork/requestNetwork/commit/6e0ed8758ffd5edcd9a498028c2b6873c26d49ca))
+- add getChannelByTopic in data-access ([#305](https://github.com/RequestNetwork/requestNetwork/issues/305)) ([b345df8](https://github.com/RequestNetwork/requestNetwork/commit/b345df8216556674fc9f5125053508c675fa9227))
+- add the reason when ignoring a transactions ([#408](https://github.com/RequestNetwork/requestNetwork/issues/408)) ([8697a6e](https://github.com/RequestNetwork/requestNetwork/commit/8697a6ed906ceb0f243172d0c88c2c3fd8e879ef))
+- BREAKING CHANGE store the multiformat hash of the topics ([#452](https://github.com/RequestNetwork/requestNetwork/issues/452)) ([3173333](https://github.com/RequestNetwork/requestNetwork/commit/3173333577d48ad472162fc11a5b0bcbefc359e8))
+- compute the requestId before creation with computeRequestId ([#407](https://github.com/RequestNetwork/requestNetwork/issues/407)) ([c88c6f6](https://github.com/RequestNetwork/requestNetwork/commit/c88c6f69ce0a28c0cf1edd321db50b0288c48739))
+- Data access interface ([#161](https://github.com/RequestNetwork/requestNetwork/issues/161)) ([ccb4481](https://github.com/RequestNetwork/requestNetwork/commit/ccb448161607867f64929ae89e9189b1427067cd))
+- get requests by multiple topics or multiple identities ([#530](https://github.com/RequestNetwork/requestNetwork/issues/530)) ([8fe7d30](https://github.com/RequestNetwork/requestNetwork/commit/8fe7d300336eba1ba983a95122579b5adfddbc96))
+- getRequestsByIdentity include timestamp boundaries in request-clients ([#308](https://github.com/RequestNetwork/requestNetwork/issues/308)) ([1fd2df5](https://github.com/RequestNetwork/requestNetwork/commit/1fd2df572486c3af73a2a8cd55f2a7b1ee6d544e))
+- introduce channelIds to enhance the topics mechanism ([#297](https://github.com/RequestNetwork/requestNetwork/issues/297)) ([6072905](https://github.com/RequestNetwork/requestNetwork/commit/607290533b8a7c58bd01c803ba06c5f846eb6bf6))
+- mock storage for dev mode ([#192](https://github.com/RequestNetwork/requestNetwork/issues/192)) ([af0d580](https://github.com/RequestNetwork/requestNetwork/commit/af0d580d6eddabbdec38d9e38239de4f422e84e0))
+- payment network declarative for any currency ([#315](https://github.com/RequestNetwork/requestNetwork/issues/315)) ([06fb561](https://github.com/RequestNetwork/requestNetwork/commit/06fb561e93ba2f496157b97eb58a25b9550d8f35))
+- request logic add action reduceExpectedAmount ([#152](https://github.com/RequestNetwork/requestNetwork/issues/152)) ([7b59ede](https://github.com/RequestNetwork/requestNetwork/commit/7b59ede7fb0b117af866db888fd525dec55438ae))
+- request logic events implementation ([#155](https://github.com/RequestNetwork/requestNetwork/issues/155)) ([e42aa51](https://github.com/RequestNetwork/requestNetwork/commit/e42aa516634c63d01d99dc70a9c3dad275d9d91d))
+- request logic version 2.0.1: compute the request id takes in account the signature ([#511](https://github.com/RequestNetwork/requestNetwork/issues/511)) ([14643d8](https://github.com/RequestNetwork/requestNetwork/commit/14643d847947305133a674081472f4dd4e9448f0))
+- Request logic: create encrypted request ([#496](https://github.com/RequestNetwork/requestNetwork/issues/496)) ([9f1ebe6](https://github.com/RequestNetwork/requestNetwork/commit/9f1ebe67c19bacecd20b9288fd91ce85ad7baf28))
+- Timestamp from storage to client ([#309](https://github.com/RequestNetwork/requestNetwork/issues/309)) ([bb0ac19](https://github.com/RequestNetwork/requestNetwork/commit/bb0ac195077aa59b1547fb5b16169267a4173c3a))
+- Transaction-manager: ignore the wrong transactions of channels ([#514](https://github.com/RequestNetwork/requestNetwork/issues/514)) ([4ec82c6](https://github.com/RequestNetwork/requestNetwork/commit/4ec82c695536e028e17b9b16e76cf366bd9b7965))
+- translate currency string to object ([#581](https://github.com/RequestNetwork/requestNetwork/issues/581)) ([b220d20](https://github.com/RequestNetwork/requestNetwork/commit/b220d20ae1866e8db076718989726334b91c0f44))
+- validate role for increase & decrease ([#590](https://github.com/RequestNetwork/requestNetwork/issues/590)) ([4793782](https://github.com/RequestNetwork/requestNetwork/commit/47937828a0f42e912eda440be4e277f26aa51bdb))
+- Validation of accept, cancel and add extension data ([#599](https://github.com/RequestNetwork/requestNetwork/issues/599)) ([8f7798e](https://github.com/RequestNetwork/requestNetwork/commit/8f7798e6e71819e5201efaf73678ff5b71b52503))
+- **transaction-manager:** add transaction to an existing encrypted channel ([#524](https://github.com/RequestNetwork/requestNetwork/issues/524)) ([027a0f5](https://github.com/RequestNetwork/requestNetwork/commit/027a0f56c42790a3a5f5aa700383f0144dd1206e))
+- **transaction-manager:** decrypt channels ([#516](https://github.com/RequestNetwork/requestNetwork/issues/516)) ([8142c3d](https://github.com/RequestNetwork/requestNetwork/commit/8142c3dda149ad00513dae8c6d9f15a74aebf7b7))
+- **transaction-manager:** get encrypted channels by topic ([#519](https://github.com/RequestNetwork/requestNetwork/issues/519)) ([5f4a77e](https://github.com/RequestNetwork/requestNetwork/commit/5f4a77ed7f10de7cd1c6eb835727822b5d078d41))
+
+### Reverts
+
+- Revert "Simplify the types of request-logic" ([f7e0857](https://github.com/RequestNetwork/requestNetwork/commit/f7e08571c5287981f8b7307681421cc591c0077d))
+
+### BREAKING CHANGES
+
+- Topics are stored as multiformat hashes. Old formats of topics (raw strings) are not compatible.
+
+**Request-client.js**:
+
+- Topics are hashed and follow the multiformat
+- The hashes follow the multiformat
+
+**Utils**:
+
+- Add multiformat to the utils library
+
+**Ethereum-storage**:
+
+- Artifacts are updated to link to new contracts on Rinkeby
+- The hashes follow the multiformat
+
+**Data-access**:
+
+- The hashes follow the multiformat
+- Topics must be hashed and multi-formatted
+
+**Request-logic**:
+
+- The hashes follow the multiformat
+
 ## [0.26.10](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/request-logic@0.26.0...@frinkly/request-logic@0.26.10) (2022-11-04)
 
 ### Bug Fixes

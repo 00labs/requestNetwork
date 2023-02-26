@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/usage-examples",
-  "version": "0.23.10",
+  "version": "0.24.0",
   "private": true,
   "description": "Usage examples of Request Network.",
   "keywords": [
@@ -28,16 +28,16 @@
     "prepare": "yarn run build"
   },
   "dependencies": {
-    "@frinkly/data-access": "0.27.0",
-    "@frinkly/epk-decryption": "0.3.34",
-    "@frinkly/epk-signature": "0.5.35",
-    "@frinkly/multi-format": "0.15.11",
-    "@frinkly/payment-processor": "0.38.5",
-    "@frinkly/request-client.js": "0.40.7",
-    "@frinkly/request-logic": "0.26.11",
-    "@frinkly/transaction-manager": "0.27.1",
-    "@frinkly/types": "0.36.1",
-    "@frinkly/utils": "0.36.3",
+    "@frinkly/data-access": "0.28.0",
+    "@frinkly/epk-decryption": "0.4.0",
+    "@frinkly/epk-signature": "0.6.0",
+    "@frinkly/multi-format": "0.16.0",
+    "@frinkly/payment-processor": "0.39.0",
+    "@frinkly/request-client.js": "0.41.0",
+    "@frinkly/request-logic": "0.27.0",
+    "@frinkly/transaction-manager": "0.28.0",
+    "@frinkly/types": "0.37.0",
+    "@frinkly/utils": "0.37.0",
     "ethers": "5.5.1",
     "tslib": "2.5.0"
   },

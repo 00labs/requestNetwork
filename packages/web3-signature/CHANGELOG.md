@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.37 (2023-02-26)
+
+### Bug Fixes
+
+- invoice total types + upgrade ethers ([#514](https://github.com/RequestNetwork/requestNetwork/issues/514)) ([c2b98b2](https://github.com/RequestNetwork/requestNetwork/commit/c2b98b2bd3c93f063f340d58c6b95ad026fd9519))
+- typescript lint for test files ([#778](https://github.com/RequestNetwork/requestNetwork/issues/778)) ([048e876](https://github.com/RequestNetwork/requestNetwork/commit/048e876a905516be0de8a31d446e4572eb74eccb))
+- upgrade ethers to 5.2.0 ([#532](https://github.com/RequestNetwork/requestNetwork/issues/532)) ([6c7cf35](https://github.com/RequestNetwork/requestNetwork/commit/6c7cf350a04e280b77ce6fd758b6f065f28fd1cc))
+- webpack ts-loader build conf ([#779](https://github.com/RequestNetwork/requestNetwork/issues/779)) ([4288234](https://github.com/RequestNetwork/requestNetwork/commit/4288234726248ebabdc6d01e0fb3c6222e41f58a))
+
+# 0.29.0 (2020-11-10)
+
+# 0.26.0 (2020-10-14)
+
+# 0.24.0 (2020-10-09)
+
+# 0.16.0 (2020-04-21)
+
+# 0.15.0 (2020-04-06)
+
+# 0.13.0 (2020-02-20)
+
+### Bug Fixes
+
+- ts-node configuration ([#138](https://github.com/RequestNetwork/requestNetwork/issues/138)) ([e2180d5](https://github.com/RequestNetwork/requestNetwork/commit/e2180d507bd87116fdeb3466690b6df0c5187976))
+
+# 0.12.0 (2020-01-16)
+
+# 0.10.0 (2019-12-04)
+
 ## [0.4.36](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/web3-signature@0.4.26...@frinkly/web3-signature@0.4.36) (2022-11-04)
 
 ### Bug Fixes

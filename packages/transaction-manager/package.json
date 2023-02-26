@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/transaction-manager",
-  "version": "0.27.1",
+  "version": "0.28.0",
   "publishConfig": {
     "access": "public"
   },
@@ -39,9 +39,9 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@frinkly/multi-format": "0.15.11",
-    "@frinkly/types": "0.36.1",
-    "@frinkly/utils": "0.36.3",
+    "@frinkly/multi-format": "0.16.0",
+    "@frinkly/types": "0.37.0",
+    "@frinkly/utils": "0.37.0",
     "tslib": "2.5.0"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/ethereum-storage",
-  "version": "0.27.0",
+  "version": "0.28.0",
   "publishConfig": {
     "access": "public"
   },
@@ -40,9 +40,9 @@
     "init-ipfs": "node scripts/init-ipfs.js"
   },
   "dependencies": {
-    "@frinkly/smart-contracts": "0.29.0",
-    "@frinkly/types": "0.36.1",
-    "@frinkly/utils": "0.36.3",
+    "@frinkly/smart-contracts": "0.30.0",
+    "@frinkly/types": "0.37.0",
+    "@frinkly/utils": "0.37.0",
     "axios": "0.27.2",
     "bluebird": "3.7.2",
     "ethers": "5.5.1",

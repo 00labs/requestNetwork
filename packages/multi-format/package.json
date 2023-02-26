@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/multi-format",
-  "version": "0.15.11",
+  "version": "0.16.0",
   "publishConfig": {
     "access": "public"
   },
@@ -40,7 +40,7 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@frinkly/types": "0.36.1",
+    "@frinkly/types": "0.37.0",
     "tslib": "2.5.0"
   },
   "devDependencies": {

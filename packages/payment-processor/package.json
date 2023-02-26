@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/payment-processor",
-  "version": "0.38.5",
+  "version": "0.39.0",
   "publishConfig": {
     "access": "public"
   },
@@ -39,12 +39,12 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
+    "@frinkly/currency": "0.10.0",
+    "@frinkly/payment-detection": "0.37.0",
+    "@frinkly/smart-contracts": "0.30.0",
+    "@frinkly/types": "0.37.0",
+    "@frinkly/utils": "0.37.0",
     "@openzeppelin/contracts": "4.7.3",
-    "@frinkly/currency": "0.9.1",
-    "@frinkly/payment-detection": "0.36.7",
-    "@frinkly/smart-contracts": "0.29.0",
-    "@frinkly/types": "0.36.1",
-    "@frinkly/utils": "0.36.3",
     "@superfluid-finance/sdk-core": "0.3.2",
     "ethers": "5.5.1",
     "near-api-js": "1.1.0",

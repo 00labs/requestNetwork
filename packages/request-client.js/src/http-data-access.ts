@@ -199,6 +199,8 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
     retryConfig: {
       maxRetries?: number;
       retryDelay?: number;
+      exponentialBackoff?: boolean;
+      exponentialBackoffDelay?: number;
     } = {},
   ): Promise<any> {
     console.log(url);

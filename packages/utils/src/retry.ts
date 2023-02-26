@@ -7,6 +7,9 @@ const DEFAULT_RETRY_DELAY = 100;
 // Default exponential backoff delay increment
 const DEFAULT_EXPONENTIAL_BACKOFF_DELAY = 1000;
 
+// Maximum exponential backoff delay allowed
+const DEFAULT_MAX_EXPONENTIAL_BACKOFF_DELAY = 30000;
+
 /**
  * A method that retries a function a defined amount of times if it fails.
  *
@@ -24,12 +27,14 @@ const retry = <TParams extends unknown[], TReturn>(
     retryDelay = DEFAULT_RETRY_DELAY,
     exponentialBackoff = false,
     exponentialBackoffDelay = DEFAULT_EXPONENTIAL_BACKOFF_DELAY,
+    maxExponentialBackoffDelay = DEFAULT_MAX_EXPONENTIAL_BACKOFF_DELAY,
   }: {
     context?: ThisParameterType<(...params: TParams) => Promise<TReturn>>;
     maxRetries?: number;
     retryDelay?: number;
     exponentialBackoff?: boolean;
     exponentialBackoffDelay?: number;
+    maxExponentialBackoffDelay?: number;
   } = {},
 ): ((...params: TParams) => Promise<TReturn>) => {
   // If a context was passed in, bind it to to the target function
@@ -55,7 +60,10 @@ const retry = <TParams extends unknown[], TReturn>(
           await new Promise((resolve) =>
             setTimeout(
               resolve,
-              retryDelay + (exponentialBackoff ? exponentialBackoffDelay ** retry : 0),
+              retryDelay +
+                (exponentialBackoff
+                  ? Math.min(maxExponentialBackoffDelay, exponentialBackoffDelay * 2 ** retry)
+                  : 0),
             ),
           );
 

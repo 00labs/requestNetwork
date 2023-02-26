@@ -210,6 +210,7 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
     let fn;
     if (url === '/getConfirmedTransaction') {
       fn = async () => {
+        console.log('GET CONFIRMED TRANSACTION');
         throw new Error('test error');
       };
     } else {

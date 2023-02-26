@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/request-client.js",
-  "version": "0.41.3",
+  "version": "0.41.4",
   "publishConfig": {
     "access": "public"
   },

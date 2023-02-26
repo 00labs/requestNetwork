@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.1](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/smart-contracts@0.30.0...@frinkly/smart-contracts@0.30.1) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/smart-contracts
+
 # 0.30.0 (2023-02-26)
 
 ### Bug Fixes

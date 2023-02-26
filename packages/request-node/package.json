@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/request-node",
-  "version": "0.28.0",
+  "version": "0.28.1",
   "publishConfig": {
     "access": "public"
   },
@@ -42,12 +42,12 @@
   },
   "dependencies": {
     "@ethersproject/experimental": "5.5.0",
-    "@frinkly/data-access": "0.28.0",
-    "@frinkly/ethereum-storage": "0.28.0",
-    "@frinkly/smart-contracts": "0.30.0",
-    "@frinkly/thegraph-data-access": "0.35.3",
+    "@frinkly/data-access": "0.28.1",
+    "@frinkly/ethereum-storage": "0.28.1",
+    "@frinkly/smart-contracts": "0.30.1",
+    "@frinkly/thegraph-data-access": "0.35.4",
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "@truffle/hdwallet-provider": "1.2.3",
     "chalk": "4.1.0",
     "cors": "2.8.5",

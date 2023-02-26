@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.1](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/prototype-estimator@1.22.0...@frinkly/prototype-estimator@1.22.1) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/prototype-estimator
+
 # 1.22.0 (2023-02-26)
 
 ### Bug Fixes

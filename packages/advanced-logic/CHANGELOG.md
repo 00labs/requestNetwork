@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.36.1](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/advanced-logic@0.36.0...@frinkly/advanced-logic@0.36.1) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/advanced-logic
+
 # 0.36.0 (2023-02-26)
 
 ### Bug Fixes

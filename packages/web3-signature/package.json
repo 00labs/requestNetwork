@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/web3-signature",
-  "version": "0.4.37",
+  "version": "0.4.38",
   "publishConfig": {
     "access": "public"
   },
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "ethers": "5.5.1",
     "tslib": "2.5.0"
   },

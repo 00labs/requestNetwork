@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/request-client.js",
-  "version": "0.41.0",
+  "version": "0.41.1",
   "publishConfig": {
     "access": "public"
   },
@@ -47,19 +47,19 @@
     "server": "ts-node api-server.ts"
   },
   "dependencies": {
-    "@frinkly/advanced-logic": "0.36.0",
-    "@frinkly/currency": "0.10.0",
-    "@frinkly/data-access": "0.28.0",
+    "@frinkly/advanced-logic": "0.36.1",
+    "@frinkly/currency": "0.10.1",
+    "@frinkly/data-access": "0.28.1",
     "@frinkly/data-format": "0.11.0",
-    "@frinkly/epk-signature": "0.6.0",
+    "@frinkly/epk-signature": "0.6.1",
     "@frinkly/multi-format": "0.16.0",
-    "@frinkly/payment-detection": "0.37.0",
-    "@frinkly/payment-processor": "0.39.0",
-    "@frinkly/request-logic": "0.27.0",
-    "@frinkly/smart-contracts": "0.30.0",
-    "@frinkly/transaction-manager": "0.28.0",
+    "@frinkly/payment-detection": "0.37.1",
+    "@frinkly/payment-processor": "0.39.1",
+    "@frinkly/request-logic": "0.27.1",
+    "@frinkly/smart-contracts": "0.30.1",
+    "@frinkly/transaction-manager": "0.28.1",
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "axios": "0.27.2",
     "cors": "2.8.5",
     "dotenv": "16.0.3",

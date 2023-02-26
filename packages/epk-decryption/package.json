@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/epk-decryption",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "publishConfig": {
     "access": "public"
   },
@@ -43,7 +43,7 @@
   "dependencies": {
     "@frinkly/multi-format": "0.16.0",
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "tslib": "2.5.0"
   },
   "devDependencies": {

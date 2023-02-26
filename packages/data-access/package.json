@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/data-access",
-  "version": "0.28.0",
+  "version": "0.28.1",
   "publishConfig": {
     "access": "public"
   },
@@ -41,7 +41,7 @@
   "dependencies": {
     "@frinkly/multi-format": "0.16.0",
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "bluebird": "3.7.2",
     "keyv": "4.0.3",
     "tslib": "2.5.0"

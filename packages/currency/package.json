@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/currency",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "publishConfig": {
     "access": "public"
   },
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "@metamask/contract-metadata": "1.31.0",
     "multicoin-address-validator": "0.5.2",
     "node-dijkstra": "2.5.0",

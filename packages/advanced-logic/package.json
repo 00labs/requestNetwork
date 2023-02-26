@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/advanced-logic",
-  "version": "0.36.0",
+  "version": "0.36.1",
   "publishConfig": {
     "access": "public"
   },
@@ -39,9 +39,9 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@frinkly/currency": "0.10.0",
+    "@frinkly/currency": "0.10.1",
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "@types/node": "16.11.7",
     "lodash": "4.17.21",
     "tslib": "2.5.0"

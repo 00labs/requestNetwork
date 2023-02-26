@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.28.1](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/data-access@0.28.0...@frinkly/data-access@0.28.1) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/data-access
+
 # 0.28.0 (2023-02-26)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/thegraph-data-access",
-  "version": "0.35.3",
+  "version": "0.35.4",
   "publishConfig": {
     "access": "public"
   },
@@ -40,10 +40,10 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@frinkly/data-access": "0.28.0",
-    "@frinkly/smart-contracts": "0.30.0",
+    "@frinkly/data-access": "0.28.1",
+    "@frinkly/smart-contracts": "0.30.1",
     "@frinkly/types": "0.37.0",
-    "@frinkly/utils": "0.37.0",
+    "@frinkly/utils": "0.37.1",
     "ethers": "5.5.1",
     "graphql-request": "3.4.0",
     "tslib": "2.5.0",

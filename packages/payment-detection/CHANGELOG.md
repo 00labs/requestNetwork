@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.37.1](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/payment-detection@0.37.0...@frinkly/payment-detection@0.37.1) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/payment-detection
+
 # 0.37.0 (2023-02-26)
 
 ### Bug Fixes

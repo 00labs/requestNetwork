@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.41.5](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/request-client.js@0.41.4...@frinkly/request-client.js@0.41.5) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/request-client.js
+
 ## [0.41.4](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/request-client.js@0.41.3...@frinkly/request-client.js@0.41.4) (2023-02-26)
 
 **Note:** Version bump only for package @frinkly/request-client.js

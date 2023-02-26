@@ -4,9 +4,9 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 
-import { sign } from '@requestnetwork/utils';
+import { sign } from '@frinkly/utils';
 import Version from '../../../src/version';
 const CURRENT_VERSION = Version.currentVersion;
 

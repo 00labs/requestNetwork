@@ -2,7 +2,7 @@ import { ethers, network } from 'hardhat';
 import { BigNumber, Signer } from 'ethers';
 import { expect, use } from 'chai';
 import { solidity } from 'ethereum-waffle';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@frinkly/currency';
 import {
   TestERC20__factory,
   TestERC20,

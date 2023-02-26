@@ -1,5 +1,5 @@
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestNetwork, Types } from '@requestnetwork/request-client.js';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import { RequestNetwork, Types } from '@frinkly/request-client.js';
 
 import * as benchmark from 'benchmark';
 

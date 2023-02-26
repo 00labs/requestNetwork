@@ -1,4 +1,4 @@
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@frinkly/types';
 
 import * as Keyv from 'keyv';
 

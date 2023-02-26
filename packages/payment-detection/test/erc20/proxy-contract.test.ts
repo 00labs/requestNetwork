@@ -4,8 +4,8 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+} from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 import { ERC20ProxyPaymentDetector } from '../../src/erc20';
 import { getTheGraphClient } from '../../src';
 import { mockAdvancedLogicBase } from '../utils';

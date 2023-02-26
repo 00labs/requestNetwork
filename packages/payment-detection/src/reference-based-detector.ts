@@ -1,9 +1,9 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@requestnetwork/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes, TypesUtils } from '@frinkly/types';
+import { ICurrencyManager } from '@frinkly/currency';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 
 import { DeclarativePaymentDetectorBase } from './declarative';
-import { generate8randomBytes } from '@requestnetwork/utils';
+import { generate8randomBytes } from '@frinkly/utils';
 
 /**
  * Abstract class to extend to get the payment balance of reference based requests

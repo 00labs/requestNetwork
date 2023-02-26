@@ -1,4 +1,4 @@
-import { keccak256Hash } from '@requestnetwork/utils';
+import { keccak256Hash } from '@frinkly/utils';
 
 /**
  * Compute the payment reference

@@ -5,8 +5,8 @@ import {
   hasErc20Approval,
   hasSufficientFunds,
   payRequest,
-} from '@requestnetwork/payment-processor';
-import { RequestNetwork } from '@requestnetwork/request-client.js';
+} from '@frinkly/payment-processor';
+import { RequestNetwork } from '@frinkly/request-client.js';
 
 /* eslint-disable @typescript-eslint/no-floating-promises */
 

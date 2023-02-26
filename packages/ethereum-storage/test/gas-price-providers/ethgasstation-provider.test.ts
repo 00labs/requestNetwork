@@ -1,6 +1,6 @@
 /* eslint-disable no-magic-numbers */
 
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@frinkly/types';
 import EthGasStationProvider from '../../src/gas-price-providers/ethgasstation-provider';
 
 import Axios from 'axios';

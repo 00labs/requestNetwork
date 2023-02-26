@@ -1,6 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes, LogTypes, StorageTypes } from '@requestnetwork/types';
-import { deepCopy, getCurrentTimestampInSecond, SimpleLogger, unique } from '@requestnetwork/utils';
+import MultiFormat from '@frinkly/multi-format';
+import { DataAccessTypes, LogTypes, StorageTypes } from '@frinkly/types';
+import { deepCopy, getCurrentTimestampInSecond, SimpleLogger, unique } from '@frinkly/utils';
 
 import * as Bluebird from 'bluebird';
 import { EventEmitter } from 'events';

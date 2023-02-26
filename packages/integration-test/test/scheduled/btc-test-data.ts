@@ -1,4 +1,4 @@
-import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@frinkly/types';
 
 const arbitraryTimestamp = 1549953337;
 

@@ -1,8 +1,8 @@
 import { BigNumber } from 'ethers';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { ICurrencyManager } from '@frinkly/currency';
 import { ReferenceBasedDetector } from './reference-based-detector';
-import { generate8randomBytes } from '@requestnetwork/utils';
+import { generate8randomBytes } from '@frinkly/utils';
 
 /**
  * Abstract class to extend to get the payment balance of reference based requests

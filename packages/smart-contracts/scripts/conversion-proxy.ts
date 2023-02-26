@@ -7,8 +7,8 @@ import {
   ethConversionArtifact,
 } from '../src/lib';
 import { deployOne } from './deploy-one';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { RequestLogicTypes } from '@frinkly/types';
 
 export async function deployERC20ConversionProxy(
   args: {

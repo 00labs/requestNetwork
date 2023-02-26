@@ -1,5 +1,5 @@
 import { CurrencyManager } from '../src';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 
 const currencyManager = new CurrencyManager([
   ...CurrencyManager.getDefaultList(),

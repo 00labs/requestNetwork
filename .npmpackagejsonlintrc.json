@@ -30,7 +30,7 @@
     "scripts-type": "error",
     "version-type": "error",
     "valid-values-engines": ["error", [{ "node": ">=16.0.0" }]],
-    "valid-values-name-scope": ["error", ["@requestnetwork"]],
+    "valid-values-name-scope": ["error", ["@frinkly"]],
     "valid-values-author": ["error", ["Request Network"]],
     "valid-values-private": "off",
     "valid-values-license": ["error", ["private", "MIT"]],

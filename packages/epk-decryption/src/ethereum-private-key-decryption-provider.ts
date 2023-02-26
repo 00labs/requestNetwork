@@ -1,6 +1,6 @@
-import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
+import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@frinkly/types';
 
-import { decrypt, getAddressFromPrivateKey } from '@requestnetwork/utils';
+import { decrypt, getAddressFromPrivateKey } from '@frinkly/utils';
 
 /** Type of the dictionary of decryptionParameters (private keys) indexed by ethereum address */
 type IDecryptionParametersDictionary = Map<string, EncryptionTypes.IDecryptionParameters>;

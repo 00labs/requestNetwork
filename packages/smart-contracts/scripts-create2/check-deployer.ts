@@ -1,5 +1,5 @@
 import { HardhatRuntimeEnvironmentExtended } from './types';
-import { getCeloProvider, getDefaultProvider } from '@requestnetwork/utils';
+import { getCeloProvider, getDefaultProvider } from '@frinkly/utils';
 
 export const checkCreate2Deployer = async (
   hre: HardhatRuntimeEnvironmentExtended,

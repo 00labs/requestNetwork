@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes, PaymentTypes, ExtensionTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, PaymentTypes, ExtensionTypes } from '@frinkly/types';
 
 import { BtcAddressBasedDetector } from './address-based';
 

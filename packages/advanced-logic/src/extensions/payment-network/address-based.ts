@@ -1,6 +1,6 @@
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { areEqualIdentities, deepCopy } from '@requestnetwork/utils';
+import { CurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { areEqualIdentities, deepCopy } from '@frinkly/utils';
 import DeclarativePaymentNetwork from './declarative';
 
 /**

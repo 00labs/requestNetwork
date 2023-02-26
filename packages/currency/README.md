@@ -1,19 +1,19 @@
-# @requestnetwork/currency
+# @frinkly/currency
 
-`@requestnetwork/currency` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
-It is a collection of tools for the currencies shared between the @requestnetwork packages.
+`@frinkly/currency` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+It is a collection of tools for the currencies shared between the @frinkly packages.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/currency
+npm install @frinkly/currency
 ```
 
 ## Usage
 
 ```javascript
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { Currency, Token } from '@requestnetwork/currency';
+import { RequestLogicTypes } from '@frinkly/types';
+import { Currency, Token } from '@frinkly/currency';
 
 const decimals = new Currency({
   type: RequestLogicTypes.CURRENCY.ETH,

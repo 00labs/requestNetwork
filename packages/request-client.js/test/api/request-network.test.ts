@@ -1,12 +1,12 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes, SignatureTypes, TransactionTypes } from '@requestnetwork/types';
+import MultiFormat from '@frinkly/multi-format';
+import { DataAccessTypes, SignatureTypes, TransactionTypes } from '@frinkly/types';
 
 import RequestNetwork from '../../src/api/request-network';
 
 import Request from '../../src/api/request';
 
 import * as TestData from '../data-test';
-import { normalizeKeccak256Hash, sign } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, sign } from '@frinkly/utils';
 
 const mockDataAccess: DataAccessTypes.IDataAccess = {
   _getStatus: jest.fn(),

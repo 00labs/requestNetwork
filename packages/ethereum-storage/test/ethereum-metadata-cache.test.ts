@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@frinkly/types';
 import EthereumMetadataCache from '../src/ethereum-metadata-cache';
 
 let metadataCache: EthereumMetadataCache;

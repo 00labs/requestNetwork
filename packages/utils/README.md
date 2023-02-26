@@ -1,18 +1,18 @@
-# @requestnetwork/utils
+# @frinkly/utils
 
-`@requestnetwork/utils` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
-It is a collection of tools shared between the @requestnetwork packages.
+`@frinkly/utils` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+It is a collection of tools shared between the @frinkly packages.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/utils
+npm install @frinkly/utils
 ```
 
 ## Usage
 
 ```javascript
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@frinkly/utils';
 
 const hash = normalizeKeccak256Hash({ exampleData: true });
 ```

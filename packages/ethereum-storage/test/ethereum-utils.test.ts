@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@frinkly/types';
 import { getSafeGasPriceLimit } from '../src/config';
 import EthereumUtils from '../src/ethereum-utils';
 

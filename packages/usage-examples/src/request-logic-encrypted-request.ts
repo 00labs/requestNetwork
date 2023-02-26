@@ -1,8 +1,8 @@
-import { DataAccess } from '@requestnetwork/data-access';
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { DataAccess } from '@frinkly/data-access';
+import { EthereumPrivateKeyDecryptionProvider } from '@frinkly/epk-decryption';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import { RequestLogic } from '@frinkly/request-logic';
+import { TransactionManager } from '@frinkly/transaction-manager';
 import {
   DecryptionProviderTypes,
   EncryptionTypes,
@@ -11,7 +11,7 @@ import {
   SignatureProviderTypes,
   SignatureTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 
 import MockStorage from './mock/mock-storage';
 
@@ -46,14 +46,14 @@ const payerEncryptionParameters: EncryptionTypes.IEncryptionParameters = {
   method: EncryptionTypes.METHOD.ECIES,
 };
 
-// A signature provider, for example @requestnetwork/epk-signature
+// A signature provider, for example @frinkly/epk-signature
 const signatureProvider: SignatureProviderTypes.ISignatureProvider =
   new EthereumPrivateKeySignatureProvider({
     method: SignatureTypes.METHOD.ECDSA,
     privateKey: '0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3',
   });
 
-// A decryption provider, for example @requestnetwork/epk-decryption
+// A decryption provider, for example @frinkly/epk-decryption
 const decryptionProvider: DecryptionProviderTypes.IDecryptionProvider =
   new EthereumPrivateKeyDecryptionProvider(payeeDecryptionParameters);
 
@@ -63,7 +63,7 @@ const decryptionProvider: DecryptionProviderTypes.IDecryptionProvider =
   const dataAccess = new DataAccess(new MockStorage());
   await dataAccess.initialize();
 
-  // A transaction manager, for example @requestnetwork/transaction-manager
+  // A transaction manager, for example @frinkly/transaction-manager
   const transactionManager: TransactionTypes.ITransactionManager = new TransactionManager(
     dataAccess,
     decryptionProvider,

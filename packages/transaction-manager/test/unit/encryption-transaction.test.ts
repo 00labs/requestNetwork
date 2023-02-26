@@ -1,8 +1,8 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { EncryptionTypes } from '@requestnetwork/types';
+import MultiFormat from '@frinkly/multi-format';
+import { EncryptionTypes } from '@frinkly/types';
 
 import EncryptedTransaction from '../../src/encrypted-transaction';
-import { encrypt, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { encrypt, normalizeKeccak256Hash } from '@frinkly/utils';
 
 const data = '{ "what": "ever", "it": "is,", "this": "must", "work": true }';
 const hash = MultiFormat.serialize(normalizeKeccak256Hash(JSON.parse(data)));

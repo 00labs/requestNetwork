@@ -1,8 +1,8 @@
-import { CurrencyDefinition } from '@requestnetwork/currency';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyDefinition } from '@frinkly/currency';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { BigNumber, BigNumberish, Contract, errors, logger } from 'ethers';
 import { getAddress, keccak256, LogDescription } from 'ethers/lib/utils';
-import { ContractArtifact, DeploymentInformation } from '@requestnetwork/smart-contracts';
+import { ContractArtifact, DeploymentInformation } from '@frinkly/smart-contracts';
 import { NetworkNotSupported, VersionNotSupported } from './balance-error';
 import PaymentReferenceCalculator from './payment-reference-calculator';
 

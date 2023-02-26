@@ -1,5 +1,5 @@
-import { ExtensionTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ExtensionTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 
 import ContentData from '../../src/extensions/content-data';
 

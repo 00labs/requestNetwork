@@ -1,6 +1,6 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
+import { CurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
 
 import AnyToErc20Proxy from '../../../src/extensions/payment-network/any-to-erc20-proxy';
 import * as DataConversionERC20FeeAddData from '../../utils/payment-network/erc20/any-to-erc20-proxy-add-data-generator';

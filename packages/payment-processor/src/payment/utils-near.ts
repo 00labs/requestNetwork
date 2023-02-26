@@ -4,7 +4,7 @@ import { Near, WalletConnection } from 'near-api-js';
 import {
   NearNativeTokenPaymentDetector,
   NearConversionNativeTokenPaymentDetector,
-} from '@requestnetwork/payment-detection';
+} from '@frinkly/payment-detection';
 
 /**
  * Callback arguments for the Near web wallet.

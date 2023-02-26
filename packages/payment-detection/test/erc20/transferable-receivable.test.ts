@@ -1,4 +1,4 @@
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@frinkly/currency';
 import { TheGraphInfoRetriever } from '../../src/thegraph';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
 import { ERC20TransferableReceivablePaymentDetector } from '../../src/erc20';
@@ -8,7 +8,7 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 import { mockAdvancedLogicBase } from '../utils';
 import ProxyERC20InfoRetriever from '../../src/erc20/proxy-info-retriever';
 import { ethers, utils } from 'ethers';

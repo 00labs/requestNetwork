@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, RequestLogicTypes } from '@frinkly/types';
 import Action from './action';
 import Request from './request';
 
@@ -8,7 +8,7 @@ import CancelAction from './actions/cancel';
 import CreateAction from './actions/create';
 import IncreaseExpectedAmountAction from './actions/increaseExpectedAmount';
 import ReduceExpectedAmountAction from './actions/reduceExpectedAmount';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@frinkly/utils';
 
 /**
  * Implementation of Request Logic Core

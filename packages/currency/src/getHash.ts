@@ -1,5 +1,5 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { last20bytesOfNormalizedKeccak256Hash } from '@requestnetwork/utils';
+import { RequestLogicTypes } from '@frinkly/types';
+import { last20bytesOfNormalizedKeccak256Hash } from '@frinkly/utils';
 
 export const getHash = (curr: RequestLogicTypes.ICurrency): string => {
   return curr.type === RequestLogicTypes.CURRENCY.ERC20 ||

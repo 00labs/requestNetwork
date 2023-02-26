@@ -1,5 +1,5 @@
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { Request, RequestNetwork, Types } from '@requestnetwork/request-client.js';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import { Request, RequestNetwork, Types } from '@frinkly/request-client.js';
 import { AxiosRequestConfig } from 'axios';
 
 export default {

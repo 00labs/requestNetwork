@@ -2,6 +2,6 @@
 
 const types = require('../src');
 
-describe('@requestnetwork/types', () => {
+describe('@frinkly/types', () => {
   it('needs tests');
 });

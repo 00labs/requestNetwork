@@ -1,11 +1,6 @@
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 import { Wallet, providers, BigNumber } from 'ethers';
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
+import { erc20FeeProxyArtifact } from '@frinkly/smart-contracts';
 import {
   _getErc20PaymentUrl,
   approveErc20,
@@ -14,7 +9,7 @@ import {
   checkErc20Allowance,
 } from '../../src/payment/erc20';
 import { getProxyAddress, revokeErc20Approval } from '../../src/payment/utils';
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
+import { Erc20PaymentNetwork } from '@frinkly/payment-detection';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 

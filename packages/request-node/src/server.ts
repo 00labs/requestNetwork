@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@frinkly/types';
 import * as yargs from 'yargs';
 import * as config from './config';
 import { Logger } from './logger';

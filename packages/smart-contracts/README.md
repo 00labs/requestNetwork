@@ -1,12 +1,12 @@
-# @requestnetwork/smart-contracs
+# @frinkly/smart-contracs
 
-`@requestnetwork/smart-contracts` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@frinkly/smart-contracts` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 The package stores the sources and artifacts of the smart contracts deployed on Ethereum. It also exposes a library to get information about the artifacts.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/smart-contracts
+npm install @frinkly/smart-contracts
 ```
 
 You may need some environment variables.
@@ -32,8 +32,8 @@ NETWORK=...                 # List of network to deploy contracts on with the re
 Library usage:
 
 ```js
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
+import * as SmartContracts from '@frinkly/smart-contracts';
+import { erc20FeeProxyArtifact } from '@frinkly/smart-contracts';
 import { providers } from 'ethers';
 
 const requestHashStorageMainnetAddress =

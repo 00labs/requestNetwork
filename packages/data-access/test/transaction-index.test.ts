@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/await-thenable */
 /* eslint-disable no-magic-numbers */
 
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@frinkly/types';
 
 import TransactionIndex from '../src/transaction-index/index';
 import TimestampByLocation from '../src/transaction-index/timestamp-by-location';

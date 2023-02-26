@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@frinkly/types';
 
 import { DefaultBitcoinDetectionProvider } from '../../src/btc/default-bitcoin-detection-provider';
 

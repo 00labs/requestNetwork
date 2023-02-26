@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@frinkly/types';
 
 import * as Keyv from 'keyv';
 

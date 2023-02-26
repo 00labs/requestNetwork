@@ -1,12 +1,7 @@
 import { ContractTransaction, Signer, providers, BigNumber, constants } from 'ethers';
-import { batchConversionPaymentsArtifact } from '@requestnetwork/smart-contracts';
-import { BatchConversionPayments__factory } from '@requestnetwork/smart-contracts/types';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { batchConversionPaymentsArtifact } from '@frinkly/smart-contracts';
+import { BatchConversionPayments__factory } from '@frinkly/smart-contracts/types';
+import { ClientTypes, ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { ITransactionOverrides } from './transaction-overrides';
 import {
   comparePnTypeAndVersion,
@@ -19,16 +14,13 @@ import {
   MAX_ALLOWANCE,
   validateErc20FeeProxyRequest,
 } from './utils';
-import {
-  padAmountForChainlink,
-  getPaymentNetworkExtension,
-} from '@requestnetwork/payment-detection';
+import { padAmountForChainlink, getPaymentNetworkExtension } from '@frinkly/payment-detection';
 import { IPreparedTransaction } from './prepared-transaction';
 import { EnrichedRequest, IConversionPaymentSettings } from './index';
 import { checkRequestAndGetPathAndCurrency } from './any-to-erc20-proxy';
 import { checkErc20Allowance, encodeApproveAnyErc20 } from './erc20';
 import { IState } from 'types/dist/extension-types';
-import { CurrencyDefinition, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyDefinition, ICurrencyManager } from '@frinkly/currency';
 import { IConversionSettings, IRequestPaymentOptions } from './settings';
 
 const CURRENCY = RequestLogicTypes.CURRENCY;

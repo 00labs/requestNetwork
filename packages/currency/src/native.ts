@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 import { NativeCurrency, NativeCurrencyType } from './types';
 
 export const nativeCurrencies: Record<NativeCurrencyType, (NativeCurrency & { name: string })[]> = {

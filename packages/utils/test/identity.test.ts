@@ -1,4 +1,4 @@
-import { IdentityTypes } from '@requestnetwork/types';
+import { IdentityTypes } from '@frinkly/types';
 import { areEqualIdentities, normalizeIdentityValue } from '../src';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */

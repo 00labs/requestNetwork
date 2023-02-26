@@ -1,5 +1,5 @@
-import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { AdvancedLogicTypes, ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 import { BtcMainnetAddressBasedDetector } from '../src/btc';
 import {
   DeclarativePaymentDetector,

@@ -1,6 +1,6 @@
-# @requestnetwork/toolbox
+# @frinkly/toolbox
 
-`@requestnetwork/toolbox` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@frinkly/toolbox` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It is a collection of miscellaneous tools.
 This package can use other package of the monorepo, but the other packages cannot use toolbox.
 
@@ -18,7 +18,7 @@ Create a request. Only the amount can be specified, optionally.
 #### As a package
 
 ```javascript
-import { CreateRequest } from '@requestnetwork/toolbox';
+import { CreateRequest } from '@frinkly/toolbox';
 
 CreateRequest.createTestRequest();
 CreateRequest.createTestRequest(12);
@@ -72,7 +72,7 @@ git commit ...
 #### Getting conversion paths
 
 Returns all the aggregators used for the any-to-erc20 proxy.
-It can be used to populate the [currency pair](https://github.com/RequestNetwork/requestNetwork/blob/master/packages/currency/src/chainlink-path-aggregators.ts#L9) (in @requestnetwork/currency) when we add a new aggregator to [ChainlinkConversionPath.sol](https://github.com/RequestNetwork/requestNetwork/blob/master/packages/smart-contracts/src/contracts/ChainlinkConversionPath.sol) on any network.
+It can be used to populate the [currency pair](https://github.com/RequestNetwork/requestNetwork/blob/master/packages/currency/src/chainlink-path-aggregators.ts#L9) (in @frinkly/currency) when we add a new aggregator to [ChainlinkConversionPath.sol](https://github.com/RequestNetwork/requestNetwork/blob/master/packages/smart-contracts/src/contracts/ChainlinkConversionPath.sol) on any network.
 
 ```bash
 yarn chainlinkPath
@@ -89,7 +89,7 @@ yarn chainlinkPath
 #   }
 #   ...
 # }
-# All aggregators nodes for the currency pairs graph: (Used to populate @requestnetwork/currency)
+# All aggregators nodes for the currency pairs graph: (Used to populate @frinkly/currency)
 # {
 #   network: {
 #      "currencyIn": {

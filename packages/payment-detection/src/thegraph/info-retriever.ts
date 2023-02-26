@@ -1,5 +1,5 @@
-import { PaymentTypes } from '@requestnetwork/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { PaymentTypes } from '@frinkly/types';
+import { ICurrencyManager } from '@frinkly/currency';
 import { utils } from 'ethers';
 import { pick, mapValues } from 'lodash';
 import type { TheGraphClient } from '.';

@@ -1,5 +1,5 @@
-import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 import AcceptAction from '../../../src/actions/accept';
 
 import Version from '../../../src/version';

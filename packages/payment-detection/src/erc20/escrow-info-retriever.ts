@@ -1,9 +1,9 @@
-import { PaymentTypes } from '@requestnetwork/types';
-import { erc20EscrowToPayArtifact } from '@requestnetwork/smart-contracts';
+import { PaymentTypes } from '@frinkly/types';
+import { erc20EscrowToPayArtifact } from '@frinkly/smart-contracts';
 import { BigNumber, ethers } from 'ethers';
 import { IEventRetriever } from '../types';
 import { makeGetDeploymentInformation, parseLogArgs } from '../utils';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@frinkly/utils';
 
 const ESCROW_CONTRACT_ADDRESS_MAP = {
   ['0.1.0']: '0.1.0',

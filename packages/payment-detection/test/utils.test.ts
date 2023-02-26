@@ -1,5 +1,5 @@
-import { CurrencyManager } from '@requestnetwork/currency';
-import { ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { ExtensionTypes, PaymentTypes } from '@frinkly/types';
 import {
   padAmountForChainlink,
   unpadAmountFromChainlink,

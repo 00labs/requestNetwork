@@ -1,5 +1,5 @@
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { addAmount, areEqualIdentities, deepCopy, isValidAmount } from '@requestnetwork/utils';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { addAmount, areEqualIdentities, deepCopy, isValidAmount } from '@frinkly/utils';
 import { AbstractExtension } from '../abstract-extension';
 
 const CURRENT_VERSION = '0.1.0';

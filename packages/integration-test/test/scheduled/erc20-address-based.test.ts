@@ -1,9 +1,9 @@
 /* eslint-disable no-magic-numbers */
 /* eslint-disable no-invalid-this */
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import ERC20AddressBasedInfoRetriever from '@requestnetwork/payment-detection/src/erc20/address-based-info-retriever';
+import { Erc20PaymentNetwork } from '@frinkly/payment-detection';
+import ERC20AddressBasedInfoRetriever from '@frinkly/payment-detection/src/erc20/address-based-info-retriever';
 
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { account, tokens } from './erc20-mainnet-test-data';
 import { mockAdvancedLogic } from './mocks';
 

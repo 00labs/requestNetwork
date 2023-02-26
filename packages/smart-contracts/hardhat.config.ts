@@ -14,7 +14,7 @@ import { computeCreate2DeploymentAddressesFromList } from './scripts-create2/com
 import { VerifyCreate2FromList } from './scripts-create2/verify';
 import { deployWithCreate2FromList } from './scripts-create2/deploy';
 import { NUMBER_ERRORS } from './scripts/utils';
-import { networkRpcs } from '@requestnetwork/utils';
+import { networkRpcs } from '@frinkly/utils';
 
 config();
 

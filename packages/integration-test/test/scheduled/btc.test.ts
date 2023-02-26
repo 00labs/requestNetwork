@@ -1,6 +1,6 @@
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestNetwork } from '@requestnetwork/request-client.js';
-import { PaymentTypes, SignatureTypes, ExtensionTypes } from '@requestnetwork/types';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import { RequestNetwork } from '@frinkly/request-client.js';
+import { PaymentTypes, SignatureTypes, ExtensionTypes } from '@frinkly/types';
 import { payee, requestData, testnetRequestData } from './btc-test-data';
 
 const signatureProvider = new EthereumPrivateKeySignatureProvider({

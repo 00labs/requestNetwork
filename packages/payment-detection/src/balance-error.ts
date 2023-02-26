@@ -1,4 +1,4 @@
-import { PaymentTypes, ExtensionTypes } from '@requestnetwork/types';
+import { PaymentTypes, ExtensionTypes } from '@frinkly/types';
 
 export class BalanceError extends Error {
   constructor(message: string, public readonly code: PaymentTypes.BALANCE_ERROR_CODE) {

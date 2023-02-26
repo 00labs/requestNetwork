@@ -1,11 +1,6 @@
 import { Wallet, providers } from 'ethers';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 import {
   encodePayEthFeeProxyRequest,
   payEthFeeProxyRequest,

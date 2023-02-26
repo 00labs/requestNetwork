@@ -1,7 +1,7 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { StorageTypes } from '@requestnetwork/types';
+import MultiFormat from '@frinkly/multi-format';
+import { StorageTypes } from '@frinkly/types';
 import { EventEmitter } from 'events';
-import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@frinkly/utils';
 
 /**
  * Storage layer implemented with in-memory hashmap, to be used for testing.

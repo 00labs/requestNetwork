@@ -1,5 +1,5 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { UnsupportedCurrencyError } from '@frinkly/currency';
 import { NearConversionInfoRetriever } from './retrievers/near-conversion-info-retriever';
 import { AnyToNativeDetector } from '../any-to-native-detector';
 import { NetworkNotSupported } from '../balance-error';

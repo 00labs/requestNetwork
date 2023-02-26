@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@frinkly/types';
 
 import { BlockStreamInfoProvider } from '../../../src/btc/default-providers/blockstream-info';
 

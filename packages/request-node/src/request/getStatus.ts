@@ -1,4 +1,4 @@
-import { DataAccessTypes, LogTypes } from '@requestnetwork/types';
+import { DataAccessTypes, LogTypes } from '@frinkly/types';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import * as config from '../config';

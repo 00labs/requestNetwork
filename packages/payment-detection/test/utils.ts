@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes } from '@frinkly/types';
 
 export const mockAdvancedLogicBase: AdvancedLogicTypes.IAdvancedLogic = {
   applyActionToExtensions: jest.fn(),

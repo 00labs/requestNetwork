@@ -1,4 +1,4 @@
-import { IdentityTypes, MultiFormatTypes } from '@requestnetwork/types';
+import { IdentityTypes, MultiFormatTypes } from '@frinkly/types';
 
 import EthereumAddressFormat from '../../src/identity/ethereum-address-format';
 

@@ -5,9 +5,9 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+} from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { ERC20__factory } from '@frinkly/smart-contracts/types';
 import { AnyToERC20PaymentDetector } from '../../src/any/any-to-erc20-proxy';
 import { getTheGraphClient } from '../../src/thegraph';
 import { mocked } from 'ts-jest/utils';

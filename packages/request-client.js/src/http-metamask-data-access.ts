@@ -1,11 +1,11 @@
-import { Block } from '@requestnetwork/data-access';
-import { requestHashSubmitterArtifact } from '@requestnetwork/smart-contracts';
-import { ClientTypes, DataAccessTypes, StorageTypes } from '@requestnetwork/types';
+import { Block } from '@frinkly/data-access';
+import { requestHashSubmitterArtifact } from '@frinkly/smart-contracts';
+import { ClientTypes, DataAccessTypes, StorageTypes } from '@frinkly/types';
 import axios, { AxiosRequestConfig } from 'axios';
 import { ethers } from 'ethers';
 import { EventEmitter } from 'events';
 import HttpDataAccess from './http-data-access';
-import { retry } from '@requestnetwork/utils';
+import { retry } from '@frinkly/utils';
 
 /**
  * Exposes a Data-Access module over HTTP

@@ -1,4 +1,4 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@frinkly/types';
 import * as yargs from 'yargs';
 import { modeType } from './logger';
 import { config } from 'dotenv';

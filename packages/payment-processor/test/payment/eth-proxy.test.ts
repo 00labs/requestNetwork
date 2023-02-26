@@ -1,12 +1,7 @@
 import { Wallet, BigNumber, providers } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 
 import {
   encodePayEthProxyRequest,
@@ -14,7 +9,7 @@ import {
   prepareEthProxyPaymentTransaction,
 } from '../../src/payment/eth-proxy';
 import { getRequestPaymentValues } from '../../src/payment/utils';
-import { ethereumProxyArtifact } from '@requestnetwork/smart-contracts';
+import { ethereumProxyArtifact } from '@frinkly/smart-contracts';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/await-thenable */

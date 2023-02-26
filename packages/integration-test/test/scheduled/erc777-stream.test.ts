@@ -1,11 +1,6 @@
-import { SuperFluidPaymentDetector } from '@requestnetwork/payment-detection';
-import {
-  ExtensionTypes,
-  IdentityTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { SuperFluidPaymentDetector } from '@frinkly/payment-detection';
+import { ExtensionTypes, IdentityTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 
 import { mockAdvancedLogic } from './mocks';
 

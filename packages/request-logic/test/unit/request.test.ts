@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 
 import Request from '../../src/request';
 import * as TestData from './utils/test-data-generator';

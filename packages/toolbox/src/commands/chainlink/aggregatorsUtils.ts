@@ -1,6 +1,6 @@
-import { CurrencyManager, CurrencyInput, AggregatorsMap } from '@requestnetwork/currency';
+import { CurrencyManager, CurrencyInput, AggregatorsMap } from '@frinkly/currency';
 import axios from 'axios';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 
 type Proxy = {
   pair: string;

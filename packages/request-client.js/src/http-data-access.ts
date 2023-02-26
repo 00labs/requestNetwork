@@ -1,9 +1,9 @@
-import { ClientTypes, DataAccessTypes } from '@requestnetwork/types';
+import { ClientTypes, DataAccessTypes } from '@frinkly/types';
 import axios, { AxiosRequestConfig } from 'axios';
 
 import { EventEmitter } from 'events';
 import httpConfigDefaults from './http-config-defaults';
-import { normalizeKeccak256Hash, retry } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, retry } from '@frinkly/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../package.json');
@@ -201,10 +201,15 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
       retryDelay?: number;
     } = {},
   ): Promise<any> {
+    console.log(url);
+    console.log(params);
     retryConfig.maxRetries = retryConfig.maxRetries ?? this.httpConfig.httpRequestMaxRetry;
     retryConfig.retryDelay = retryConfig.retryDelay ?? this.httpConfig.httpRequestRetryDelay;
     const { data } = await retry(
-      async () => axios.get(url, { ...this.axiosConfig, params }),
+      async () => {
+        throw new Error('test error');
+      },
+      // async () => axios.get(url, { ...this.axiosConfig, params }),
       retryConfig,
     )();
 

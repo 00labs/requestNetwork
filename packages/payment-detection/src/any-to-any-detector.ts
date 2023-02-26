@@ -1,7 +1,7 @@
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@frinkly/types';
 import { FeeReferenceBasedDetector } from './fee-reference-based-detector';
-import { ICurrencyManager } from '@requestnetwork/currency';
-import { generate8randomBytes } from '@requestnetwork/utils';
+import { ICurrencyManager } from '@frinkly/currency';
+import { generate8randomBytes } from '@frinkly/utils';
 
 /**
  * Abstract class to extend to get the payment balance of conversion requests

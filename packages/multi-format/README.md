@@ -1,18 +1,18 @@
-# @requestnetwork/multi-format
+# @frinkly/multi-format
 
-`@requestnetwork/multi-format` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@frinkly/multi-format` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It allows to serialize and deserialize object in the Request Network protocol.
 
 ## Installation
 
 ```bash
-npm install @requestnetwork/multi-format
+npm install @frinkly/multi-format
 ```
 
 ## Usage
 
 ```javascript
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@frinkly/multi-format';
 ```
 
 ## Contributing

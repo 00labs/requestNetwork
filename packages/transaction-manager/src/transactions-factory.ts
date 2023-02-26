@@ -1,10 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
-import {
-  encrypt,
-  generate32BufferKey,
-  getIdentityFromEncryptionParams,
-} from '@requestnetwork/utils';
+import MultiFormat from '@frinkly/multi-format';
+import { EncryptionTypes, TransactionTypes } from '@frinkly/types';
+import { encrypt, generate32BufferKey, getIdentityFromEncryptionParams } from '@frinkly/utils';
 
 /**
  * Class to create transactions (clear and encrypted)

@@ -1,5 +1,5 @@
 {
-  "name": "@requestnetwork/epk-signature",
+  "name": "@frinkly/epk-signature",
   "version": "0.5.35",
   "publishConfig": {
     "access": "public"
@@ -41,8 +41,8 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/types": "0.36.0",
-    "@requestnetwork/utils": "0.36.0",
+    "@frinkly/types": "0.36.1",
+    "@frinkly/utils": "0.36.3",
     "tslib": "2.5.0"
   },
   "devDependencies": {

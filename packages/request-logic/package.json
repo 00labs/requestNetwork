@@ -1,6 +1,6 @@
 {
-  "name": "@requestnetwork/request-logic",
-  "version": "0.26.10",
+  "name": "@frinkly/request-logic",
+  "version": "0.26.11",
   "publishConfig": {
     "access": "public"
   },
@@ -40,10 +40,10 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/advanced-logic": "0.35.0",
-    "@requestnetwork/multi-format": "0.15.10",
-    "@requestnetwork/types": "0.36.0",
-    "@requestnetwork/utils": "0.36.0",
+    "@frinkly/advanced-logic": "0.35.2",
+    "@frinkly/multi-format": "0.15.11",
+    "@frinkly/types": "0.36.1",
+    "@frinkly/utils": "0.36.3",
     "semver": "5.6.0",
     "tslib": "2.5.0"
   },

@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 
 const getSymbolAndNetwork = (
   symbolWithNetwork: string | Omit<RequestLogicTypes.ICurrency, 'type'>,

@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@frinkly/types';
 
 /**
  * Class to serialize and deserialize multi-format data

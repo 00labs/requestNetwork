@@ -1,5 +1,5 @@
-import { PaymentTypes } from '@requestnetwork/types';
-import { CurrencyDefinition } from '@requestnetwork/currency';
+import { PaymentTypes } from '@frinkly/types';
+import { CurrencyDefinition } from '@frinkly/currency';
 import { NearInfoRetriever } from './near-info-retriever';
 
 // FIXME#1: when Near subgraphes can retrieve a txHash, replace the custom IPaymentNetworkEvent with PaymentTypes.ETHPaymentNetworkEvent

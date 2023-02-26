@@ -3,13 +3,13 @@ import TypedEmitter from 'typed-emitter';
 
 import { BigNumber } from 'ethers';
 
-import { getCurrentTimestampInSecond, retry, SimpleLogger } from '@requestnetwork/utils';
-import { Block } from '@requestnetwork/data-access';
-import { DataAccessTypes, LogTypes, StorageTypes } from '@requestnetwork/types';
+import { getCurrentTimestampInSecond, retry, SimpleLogger } from '@frinkly/utils';
+import { Block } from '@frinkly/data-access';
+import { DataAccessTypes, LogTypes, StorageTypes } from '@frinkly/types';
 
 import { Transaction } from './queries';
 import { SubgraphClient } from './subgraph-client';
-import { CombinedDataAccess } from '@requestnetwork/data-access';
+import { CombinedDataAccess } from '@frinkly/data-access';
 import { PendingStore } from './pending-store';
 import { RequestInit } from 'graphql-request/dist/types.dom';
 

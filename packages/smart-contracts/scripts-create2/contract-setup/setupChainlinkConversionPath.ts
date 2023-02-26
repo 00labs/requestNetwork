@@ -1,5 +1,5 @@
-import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { RequestLogicTypes } from '@frinkly/types';
 import { chainlinkConversionPath } from '../../src/lib';
 import { HardhatRuntimeEnvironmentExtended } from '../types';
 import { getSignerAndGasFees, updateNativeTokenHash } from './adminTasks';

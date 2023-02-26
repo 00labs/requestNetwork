@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@frinkly/types';
 import { IPaymentRetriever } from '../types';
 import { MultichainExplorerApiProvider } from './multichainExplorerApiProvider';
 

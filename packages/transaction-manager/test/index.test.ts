@@ -1,9 +1,9 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import MultiFormat from '@frinkly/multi-format';
+import { normalizeKeccak256Hash } from '@frinkly/utils';
 
 import { EventEmitter } from 'events';
 
-import { DataAccessTypes, EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
+import { DataAccessTypes, EncryptionTypes, TransactionTypes } from '@frinkly/types';
 
 import { TransactionManager } from '../src/index';
 import TransactionsFactory from '../src/transactions-factory';

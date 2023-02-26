@@ -1,5 +1,5 @@
-import { IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { areEqualIdentities } from '@requestnetwork/utils';
+import { IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { areEqualIdentities } from '@frinkly/utils';
 
 /**
  * Function to manage Request Logic Role

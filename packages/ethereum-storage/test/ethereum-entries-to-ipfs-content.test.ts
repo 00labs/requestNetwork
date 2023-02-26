@@ -1,5 +1,5 @@
-import { StorageTypes } from '@requestnetwork/types';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { StorageTypes } from '@frinkly/types';
+import { SimpleLogger } from '@frinkly/utils';
 
 import ethereumEntriesToIpfsContent from '../src/ethereum-entries-to-ipfs-content';
 import IgnoredDataIndex from '../src/ignored-dataIds';

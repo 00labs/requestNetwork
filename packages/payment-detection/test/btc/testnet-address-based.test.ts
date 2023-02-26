@@ -1,4 +1,4 @@
-import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 
 import { BtcTestnetAddressBasedDetector } from '../../src/btc/testnet-address-based';
 import { mockAdvancedLogicBase } from '../utils';

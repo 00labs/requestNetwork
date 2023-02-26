@@ -1,6 +1,6 @@
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { CurrencyDefinition, ICurrencyManager } from '@requestnetwork/currency';
+import { erc20FeeProxyArtifact } from '@frinkly/smart-contracts';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { CurrencyDefinition, ICurrencyManager } from '@frinkly/currency';
 import ProxyInfoRetriever from './proxy-info-retriever';
 
 import { loadCurrencyFromContract } from './currency';

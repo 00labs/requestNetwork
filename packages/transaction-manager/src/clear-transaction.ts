@@ -1,6 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { TransactionTypes } from '@requestnetwork/types';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import MultiFormat from '@frinkly/multi-format';
+import { TransactionTypes } from '@frinkly/types';
+import { normalizeKeccak256Hash } from '@frinkly/utils';
 
 /**
  * Class representing a clear transaction

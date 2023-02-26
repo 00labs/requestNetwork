@@ -6,7 +6,7 @@ import {
   PaymentTypes,
   RequestLogicTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 import { ethers } from 'ethers';
 
 import AxiosMockAdapter from 'axios-mock-adapter';
@@ -17,10 +17,10 @@ import {
   PaymentReferenceCalculator,
   getPaymentReference,
   getPaymentNetworkExtension,
-} from '@requestnetwork/payment-detection';
+} from '@frinkly/payment-detection';
 import { IRequestDataWithEvents } from '../src/types';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { sign } from '@requestnetwork/utils';
+import { CurrencyManager } from '@frinkly/currency';
+import { sign } from '@frinkly/utils';
 
 const httpConfig: Partial<ClientTypes.IHttpDataAccessConfig> = {
   getConfirmationDeferDelay: 0,

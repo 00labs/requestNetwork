@@ -3,11 +3,11 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 import { ERC20AddressBasedPaymentDetector } from '../../src/erc20';
 import { mockAdvancedLogicBase } from '../utils';
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
+import { CurrencyManager } from '@frinkly/currency';
 
 jest.setTimeout(10000);
 

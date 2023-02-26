@@ -1,11 +1,11 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@frinkly/types';
 import { FlowUpdatedEvent, SentEvent } from '../thegraph/generated/graphql-superfluid';
 import {
   getTheGraphSuperfluidClient,
   TheGraphSuperfluidClient,
   TheGraphClientOptions,
 } from '../thegraph/superfluid';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@frinkly/utils';
 
 /** Parameters for getting payment events from theGraph */
 type GraphPaymentQueryParams = {

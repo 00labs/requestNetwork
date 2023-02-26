@@ -1,8 +1,8 @@
-import { IdentityTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureTypes } from '@frinkly/types';
 
 import Web3SignatureProvider from '../src/web3-signature-provider';
 
-import { ecSign, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { ecSign, normalizeKeccak256Hash } from '@frinkly/utils';
 
 const id1Raw = {
   identity: {

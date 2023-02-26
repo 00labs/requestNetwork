@@ -1,6 +1,6 @@
-import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@frinkly/types';
 
-import { ecSign, getAddressFromPrivateKey, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { ecSign, getAddressFromPrivateKey, normalizeKeccak256Hash } from '@frinkly/utils';
 
 /** Type of the dictionary of signatureParameters (private keys) indexed by ethereum address */
 type ISignatureParametersDictionary = Map<string, SignatureTypes.ISignatureParameters>;

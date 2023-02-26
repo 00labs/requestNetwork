@@ -12,7 +12,7 @@ import {
   ChainlinkConversionPath,
 } from '../../src/types';
 import { chainlinkConversionPath } from '../../src/lib';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@frinkly/currency';
 import { RequestDetail } from 'types/dist/payment-types';
 
 const logGasInfos = false;

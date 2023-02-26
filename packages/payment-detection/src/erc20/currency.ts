@@ -3,11 +3,11 @@ import {
   CurrencyManager,
   getCurrencyHash,
   StorageCurrency,
-} from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
+} from '@frinkly/currency';
+import { RequestLogicTypes } from '@frinkly/types';
+import { ERC20__factory } from '@frinkly/smart-contracts/types';
 import { isAddress } from 'ethers/lib/utils';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@frinkly/utils';
 
 export const loadCurrencyFromContract = async (
   currency: StorageCurrency,

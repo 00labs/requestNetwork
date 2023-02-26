@@ -1,6 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
-import { decrypt, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import MultiFormat from '@frinkly/multi-format';
+import { EncryptionTypes, TransactionTypes } from '@frinkly/types';
+import { decrypt, normalizeKeccak256Hash } from '@frinkly/utils';
 
 /**
  * Class representing an encrypted transaction

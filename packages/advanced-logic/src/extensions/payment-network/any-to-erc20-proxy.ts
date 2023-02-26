@@ -2,8 +2,8 @@ import {
   conversionSupportedNetworks,
   ICurrencyManager,
   UnsupportedCurrencyError,
-} from '@requestnetwork/currency';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+} from '@frinkly/currency';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 import Erc20FeeProxyPaymentNetwork from './erc20/fee-proxy-contract';
 
 const CURRENT_VERSION = '0.1.0';

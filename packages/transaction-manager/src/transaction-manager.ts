@@ -1,11 +1,11 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@frinkly/multi-format';
 import {
   DataAccessTypes,
   DecryptionProviderTypes,
   EncryptionTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+} from '@frinkly/types';
+import { normalizeKeccak256Hash } from '@frinkly/utils';
 
 import { EventEmitter } from 'events';
 

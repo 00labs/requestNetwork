@@ -1,6 +1,6 @@
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
+import { CurrencyManager } from '@frinkly/currency';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 import { StaticJsonRpcProvider } from '@ethersproject/providers';
 import { AnyToEthFeeProxyPaymentDetector } from '../../src/any';
 import { getTheGraphClient } from '../../src/thegraph';

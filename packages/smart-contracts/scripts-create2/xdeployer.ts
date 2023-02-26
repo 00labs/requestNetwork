@@ -6,7 +6,7 @@ import {
   getCeloProvider,
   getDefaultProvider,
   isEip1559Supported,
-} from '@requestnetwork/utils';
+} from '@frinkly/utils';
 
 const ZERO_ETH_INPUT = 0;
 

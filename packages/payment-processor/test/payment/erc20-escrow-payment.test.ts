@@ -1,15 +1,10 @@
 import { Wallet, providers, BigNumber } from 'ethers';
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 import { Escrow } from '../../src/';
 import { getRequestPaymentValues, getSigner } from '../../src/payment/utils';
 
-import { erc20EscrowToPayArtifact } from '@requestnetwork/smart-contracts';
+import { erc20EscrowToPayArtifact } from '@frinkly/smart-contracts';
 import { getErc20Balance } from '../../src/payment/erc20';
 
 /* eslint-disable no-magic-numbers */

@@ -1,11 +1,11 @@
-import { erc20ConversionProxy } from '@requestnetwork/smart-contracts';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { erc20ConversionProxy } from '@frinkly/smart-contracts';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { ERC20FeeProxyPaymentDetectorBase } from '../erc20/fee-proxy-contract';
 import { AnyToErc20InfoRetriever } from './retrievers/any-to-erc20-proxy';
 import { TheGraphInfoRetriever } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';
 import { PaymentNetworkOptions, ReferenceBasedDetectorOptions } from '../types';
-import { generate8randomBytes } from '@requestnetwork/utils';
+import { generate8randomBytes } from '@frinkly/utils';
 
 const PROXY_CONTRACT_ADDRESS_MAP = {
   ['0.1.0']: '0.1.0',

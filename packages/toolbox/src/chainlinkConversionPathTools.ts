@@ -1,14 +1,14 @@
 import { ethers, providers } from 'ethers';
-import { chainlinkConversionPath } from '@requestnetwork/smart-contracts';
-import { getDefaultProvider, parseLogArgs } from '@requestnetwork/payment-detection';
+import { chainlinkConversionPath } from '@frinkly/smart-contracts';
+import { getDefaultProvider, parseLogArgs } from '@frinkly/payment-detection';
 import {
   ChainlinkConversionPath__factory,
   ChainlinkConversionPath,
-} from '@requestnetwork/smart-contracts/types';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+} from '@frinkly/smart-contracts/types';
+import { CurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
 import Bluebird from 'bluebird';
 import chunk from 'lodash/chunk';
-import { retry } from '@requestnetwork/utils';
+import { retry } from '@frinkly/utils';
 
 export interface IOptions {
   network?: string;

@@ -1,6 +1,6 @@
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import * as RequestNetwork from '@requestnetwork/request-client.js';
+import { EthereumPrivateKeyDecryptionProvider } from '@frinkly/epk-decryption';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import * as RequestNetwork from '@frinkly/request-client.js';
 
 // payee information
 const payeeSignatureInfo = {
@@ -33,7 +33,7 @@ const payerEncryptionParameters: RequestNetwork.Types.Encryption.IEncryptionPara
 // Signature providers
 const signatureProvider = new EthereumPrivateKeySignatureProvider(payeeSignatureInfo);
 
-// A decryption provider, for example @requestnetwork/epk-decryption
+// A decryption provider, for example @frinkly/epk-decryption
 const decryptionProvider: RequestNetwork.Types.DecryptionProvider.IDecryptionProvider =
   new EthereumPrivateKeyDecryptionProvider(payeeDecryptionParameters);
 

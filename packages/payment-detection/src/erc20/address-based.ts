@@ -3,7 +3,7 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 import Erc20InfoRetriever from './address-based-info-retriever';
 
 import { PaymentDetectorBase } from '../payment-detector-base';

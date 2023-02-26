@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@frinkly/currency';
 import { ethers, network } from 'hardhat';
 import '@nomiclabs/hardhat-ethers';
 import { chainlinkConversionPath as chainlinkConvArtifact } from '../../src/lib';

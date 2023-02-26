@@ -1,5 +1,5 @@
 import BitcoinAddressBasedPaymentNetwork from './mainnet-address-based';
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@frinkly/types';
 
 const BITCOIN_NETWORK = 'testnet';
 

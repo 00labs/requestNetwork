@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 
 const arbitraryTimestamp = 1544426030;
 const arbitrarySalt = 'ea3bc7caf64110ca';

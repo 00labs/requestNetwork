@@ -1,7 +1,7 @@
 import { BigNumberish, ContractTransaction, providers, Signer } from 'ethers';
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
-import { EthInputDataPaymentDetector } from '@requestnetwork/payment-detection';
-import { EthereumProxy__factory } from '@requestnetwork/smart-contracts/types';
+import { ClientTypes, ExtensionTypes } from '@frinkly/types';
+import { EthInputDataPaymentDetector } from '@frinkly/payment-detection';
+import { EthereumProxy__factory } from '@frinkly/smart-contracts/types';
 import { ITransactionOverrides } from './transaction-overrides';
 import {
   getAmountToPay,

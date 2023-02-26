@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { DefaultBitcoinDetectionProvider } from './default-bitcoin-detection-provider';
 import { PaymentDetectorBase } from '../payment-detector-base';
 

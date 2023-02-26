@@ -1,7 +1,7 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import * as SmartContracts from '@frinkly/smart-contracts';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 
-import { UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { UnsupportedCurrencyError } from '@frinkly/currency';
 
 import { AnyToEthInfoRetriever } from './retrievers/any-to-eth-proxy';
 import { AnyToAnyDetector } from '../any-to-any-detector';

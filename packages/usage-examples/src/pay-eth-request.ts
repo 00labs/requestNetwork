@@ -1,5 +1,5 @@
-import { hasSufficientFunds, payRequest } from '@requestnetwork/payment-processor';
-import { RequestNetwork } from '@requestnetwork/request-client.js';
+import { hasSufficientFunds, payRequest } from '@frinkly/payment-processor';
+import { RequestNetwork } from '@frinkly/request-client.js';
 import { Wallet } from 'ethers';
 
 /* eslint-disable @typescript-eslint/no-floating-promises */

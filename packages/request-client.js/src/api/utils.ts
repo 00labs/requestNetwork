@@ -1,5 +1,5 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { RequestLogicTypes } from '@frinkly/types';
+import { getCurrentTimestampInSecond } from '@frinkly/utils';
 /**
  * Collection of utils functions related to the library, meant to simplify its use.
  */

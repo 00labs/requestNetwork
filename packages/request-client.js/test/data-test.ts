@@ -1,4 +1,4 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@frinkly/multi-format';
 import {
   ExtensionTypes,
   IdentityTypes,
@@ -7,8 +7,8 @@ import {
   SignatureProviderTypes,
   SignatureTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
-import { normalizeKeccak256Hash, sign } from '@requestnetwork/utils';
+} from '@frinkly/types';
+import { normalizeKeccak256Hash, sign } from '@frinkly/utils';
 import AxiosMockAdapter from 'axios-mock-adapter';
 import axios from 'axios';
 import { Types } from '../src';

@@ -1,4 +1,4 @@
-import { EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
+import { EncryptionTypes, IdentityTypes } from '@frinkly/types';
 import {
   decryptWithAes256cbc,
   decryptWithAes256gcm,

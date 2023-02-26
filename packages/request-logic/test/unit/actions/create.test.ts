@@ -1,7 +1,7 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import MultiFormat from '@frinkly/multi-format';
+import { IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@frinkly/utils';
 
 import CreateAction from '../../../src/actions/create';
 

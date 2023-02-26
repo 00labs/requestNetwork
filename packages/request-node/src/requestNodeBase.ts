@@ -1,5 +1,5 @@
-import { DataAccessTypes, LogTypes, StorageTypes } from '@requestnetwork/types';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { DataAccessTypes, LogTypes, StorageTypes } from '@frinkly/types';
+import { SimpleLogger } from '@frinkly/utils';
 import cors from 'cors';
 import { Server } from 'http';
 import express, { NextFunction, Request, Response } from 'express';

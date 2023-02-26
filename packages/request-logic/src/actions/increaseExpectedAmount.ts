@@ -1,9 +1,9 @@
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@frinkly/types';
 
 import Action from '../action';
 import Request from '../request';
 import Version from '../version';
-import { addAmount, deepCopy, isValidAmount } from '@requestnetwork/utils';
+import { addAmount, deepCopy, isValidAmount } from '@frinkly/utils';
 
 /**
  * Implementation of the action increaseExpectedAmount from request logic specification

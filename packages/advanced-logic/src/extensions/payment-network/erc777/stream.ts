@@ -1,6 +1,6 @@
-import { ExtensionTypes, RequestLogicTypes, TypesUtils } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes, TypesUtils } from '@frinkly/types';
 import ReferenceBasedPaymentNetwork from '../reference-based';
-import { isValidAmount } from '@requestnetwork/utils';
+import { isValidAmount } from '@frinkly/utils';
 const CURRENT_VERSION = '0.1.0';
 
 /**

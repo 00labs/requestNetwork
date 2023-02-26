@@ -1,4 +1,4 @@
-import { LogTypes } from '@requestnetwork/types';
+import { LogTypes } from '@frinkly/types';
 
 import IntervalTimer from '../src/interval-timer';
 

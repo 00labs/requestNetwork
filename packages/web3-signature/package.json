@@ -1,5 +1,5 @@
 {
-  "name": "@requestnetwork/web3-signature",
+  "name": "@frinkly/web3-signature",
   "version": "0.4.36",
   "publishConfig": {
     "access": "public"
@@ -41,8 +41,8 @@
     "test:watch": "yarn test --watch"
   },
   "dependencies": {
-    "@requestnetwork/types": "0.36.0",
-    "@requestnetwork/utils": "0.36.0",
+    "@frinkly/types": "0.36.1",
+    "@frinkly/utils": "0.36.3",
     "ethers": "5.5.1",
     "tslib": "2.5.0"
   },

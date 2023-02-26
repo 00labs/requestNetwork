@@ -1,7 +1,7 @@
 import PnAnyDeclarative from '../../../src/extensions/payment-network/declarative';
 
-import { deepCopy } from '@requestnetwork/utils';
-import { ExtensionTypes } from '@requestnetwork/types';
+import { deepCopy } from '@frinkly/utils';
+import { ExtensionTypes } from '@frinkly/types';
 
 import * as TestDataDeclarative from '../../utils/payment-network/any/generator-data-create';
 import * as TestData from '../../utils/test-data-generator';

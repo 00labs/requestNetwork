@@ -1,9 +1,9 @@
-import { EthInputDataPaymentDetector } from '@requestnetwork/payment-detection';
-import { RequestLogicTypes } from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { EthInputDataPaymentDetector } from '@frinkly/payment-detection';
+import { RequestLogicTypes } from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 
 import { mockAdvancedLogic } from './mocks';
-import { Types, Utils } from '@requestnetwork/request-client.js';
+import { Types, Utils } from '@frinkly/request-client.js';
 import {
   ethInputDataCreationHash,
   localEthInputDataPaymentNetworkParams,

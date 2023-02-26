@@ -1,12 +1,12 @@
-import { CurrencyInput, CurrencyManager, ICurrencyManager } from '@requestnetwork/currency';
+import { CurrencyInput, CurrencyManager, ICurrencyManager } from '@frinkly/currency';
 import {
   ClientTypes,
   DataAccessTypes,
   DecryptionProviderTypes,
   SignatureProviderTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 import { AxiosRequestConfig } from 'axios';
-import { PaymentNetworkOptions } from '@requestnetwork/payment-detection';
+import { PaymentNetworkOptions } from '@frinkly/payment-detection';
 import RequestNetwork from './api/request-network';
 import HttpDataAccess from './http-data-access';
 import MockDataAccess from './mock-data-access';

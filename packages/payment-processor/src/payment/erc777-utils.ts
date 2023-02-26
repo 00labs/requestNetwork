@@ -1,7 +1,7 @@
 import { ContractTransaction, Signer, providers, BigNumberish, BigNumber } from 'ethers';
 
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { ClientTypes, ExtensionTypes } from '@frinkly/types';
+import { getPaymentNetworkExtension } from '@frinkly/payment-detection';
 
 import {
   getNetworkProvider,

@@ -1,5 +1,5 @@
-import { CurrencyManager } from '@requestnetwork/currency';
-import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { AdvancedLogicTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { EthFeeProxyPaymentDetector } from '../../src';
 import { mockAdvancedLogicBase } from '../utils';
 

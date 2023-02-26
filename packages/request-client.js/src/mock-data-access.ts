@@ -1,5 +1,5 @@
-import { DataAccess } from '@requestnetwork/data-access';
-import { StorageTypes } from '@requestnetwork/types';
+import { DataAccess } from '@frinkly/data-access';
+import { StorageTypes } from '@frinkly/types';
 
 /**
  * Mock Data access that bypasses the initialization.

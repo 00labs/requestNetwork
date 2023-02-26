@@ -1,4 +1,4 @@
-import { StorageTypes } from '@requestnetwork/types';
+import { StorageTypes } from '@frinkly/types';
 import * as config from './config';
 
 import { BigNumber } from 'ethers';

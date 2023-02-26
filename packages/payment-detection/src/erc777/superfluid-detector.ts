@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { SuperFluidInfoRetriever } from './superfluid-retriever';
 import { ReferenceBasedDetector } from '../reference-based-detector';
 import PaymentReferenceCalculator from '../payment-reference-calculator';

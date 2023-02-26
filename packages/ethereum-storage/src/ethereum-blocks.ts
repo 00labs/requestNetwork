@@ -1,5 +1,5 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
-import { cachedThrottle, retry, SimpleLogger } from '@requestnetwork/utils';
+import { LogTypes, StorageTypes } from '@frinkly/types';
+import { cachedThrottle, retry, SimpleLogger } from '@frinkly/utils';
 
 /**
  * Manages every info linked to the ethereum blocks (blockNumber, blockTimestamp, confirmations ... )

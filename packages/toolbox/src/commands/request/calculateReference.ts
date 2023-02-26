@@ -1,4 +1,4 @@
-import { PaymentReferenceCalculator } from '@requestnetwork/payment-detection';
+import { PaymentReferenceCalculator } from '@frinkly/payment-detection';
 import * as yargs from 'yargs';
 import { utils } from 'ethers';
 interface IReqOptions {

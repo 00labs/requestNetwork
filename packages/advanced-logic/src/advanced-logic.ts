@@ -3,8 +3,8 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager, ICurrencyManager } from '@requestnetwork/currency';
+} from '@frinkly/types';
+import { CurrencyManager, ICurrencyManager } from '@frinkly/currency';
 
 import ContentData from './extensions/content-data';
 import AddressBasedBtc from './extensions/payment-network/bitcoin/mainnet-address-based';

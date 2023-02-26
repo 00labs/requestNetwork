@@ -1,4 +1,4 @@
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@frinkly/types';
 import AddressBasedPaymentNetwork from './address-based';
 
 // Regex for "at least 16 hexadecimal numbers". Used to validate the salt

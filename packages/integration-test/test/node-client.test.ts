@@ -1,18 +1,10 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import MultiFormat from '@requestnetwork/multi-format';
-import { Request, RequestNetwork, Types } from '@requestnetwork/request-client.js';
-import {
-  IdentityTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-  ExtensionTypes,
-} from '@requestnetwork/types';
-import {
-  payRequest,
-  approveErc20ForProxyConversionIfNeeded,
-} from '@requestnetwork/payment-processor';
-import { CurrencyInput, CurrencyManager } from '@requestnetwork/currency';
+import { EthereumPrivateKeyDecryptionProvider } from '@frinkly/epk-decryption';
+import MultiFormat from '@frinkly/multi-format';
+import { Request, RequestNetwork, Types } from '@frinkly/request-client.js';
+import { IdentityTypes, PaymentTypes, RequestLogicTypes, ExtensionTypes } from '@frinkly/types';
+import { payRequest, approveErc20ForProxyConversionIfNeeded } from '@frinkly/payment-processor';
+import { CurrencyInput, CurrencyManager } from '@frinkly/currency';
 
 import { Wallet, providers, BigNumber } from 'ethers';
 import {
@@ -23,7 +15,7 @@ import {
   requestNetwork,
   signatureProvider,
 } from './scheduled/fixtures';
-import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, normalizeKeccak256Hash } from '@frinkly/utils';
 
 const mnemonic = 'candy maple cake sugar pudding cream honey rich smooth crumble sweet treat';
 const provider = new providers.JsonRpcProvider('http://localhost:8545');

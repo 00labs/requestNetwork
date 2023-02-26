@@ -1,7 +1,7 @@
 import { ContractTransaction, providers, Signer, BigNumberish, BigNumber } from 'ethers';
 
-import { erc20SwapConversionArtifact } from '@requestnetwork/smart-contracts';
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
+import { erc20SwapConversionArtifact } from '@frinkly/smart-contracts';
+import { ClientTypes, ExtensionTypes } from '@frinkly/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import { getProvider, getSigner } from './utils';

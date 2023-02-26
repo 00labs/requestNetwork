@@ -1,9 +1,9 @@
 import { constants, ContractTransaction, Signer, BigNumber, providers } from 'ethers';
 
-import { AnyToERC20PaymentDetector } from '@requestnetwork/payment-detection';
-import { erc20SwapConversionArtifact } from '@requestnetwork/smart-contracts';
-import { ERC20SwapToConversion__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
+import { AnyToERC20PaymentDetector } from '@frinkly/payment-detection';
+import { erc20SwapConversionArtifact } from '@frinkly/smart-contracts';
+import { ERC20SwapToConversion__factory } from '@frinkly/smart-contracts/types';
+import { ClientTypes, ExtensionTypes } from '@frinkly/types';
 
 import {
   getAmountToPay,
@@ -13,7 +13,7 @@ import {
   getSigner,
   validateConversionFeeProxyRequest,
 } from './utils';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { CurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
 import { IRequestPaymentOptions } from './settings';
 import { IPreparedTransaction } from './prepared-transaction';
 

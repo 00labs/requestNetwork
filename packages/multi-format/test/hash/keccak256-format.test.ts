@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@frinkly/types';
 
 import Keccak256Format from '../../src/hash/keccak256-format';
 

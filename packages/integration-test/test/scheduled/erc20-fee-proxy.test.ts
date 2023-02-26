@@ -1,9 +1,9 @@
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import { PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { Erc20PaymentNetwork } from '@frinkly/payment-detection';
+import { PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 
 import { mockAdvancedLogic } from './mocks';
-import { Types, Utils } from '@requestnetwork/request-client.js';
+import { Types, Utils } from '@frinkly/request-client.js';
 import {
   erc20requestCreationHash,
   localErc20PaymentNetworkParams,

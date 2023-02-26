@@ -1,6 +1,6 @@
-# @requestnetwork/payment-processor
+# @frinkly/payment-processor
 
-`@requestnetwork/payment-processor` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@frinkly/payment-processor` is a typescript library part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It contains client-side payment methods for:
 
 - ERC20 proxy contract

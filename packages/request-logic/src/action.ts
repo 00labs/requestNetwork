@@ -1,9 +1,9 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import MultiFormat from '@frinkly/multi-format';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@frinkly/types';
 import * as Semver from 'semver';
 import Role from './role';
 import Version from './version';
-import { normalizeKeccak256Hash, recoverSigner } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, recoverSigner } from '@frinkly/utils';
 
 /**
  * Function to manage Request logic action (object that will be interpreted to create or modify a request)

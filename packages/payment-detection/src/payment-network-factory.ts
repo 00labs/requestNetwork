@@ -3,8 +3,8 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { ICurrencyManager } from '@requestnetwork/currency';
+} from '@frinkly/types';
+import { ICurrencyManager } from '@frinkly/currency';
 import {
   ContractBasedDetector,
   IPaymentNetworkModuleByType,

@@ -1,7 +1,7 @@
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { PaymentNetworkFactory, PaymentNetworkOptions } from '@requestnetwork/payment-detection';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
+import { PaymentNetworkFactory, PaymentNetworkOptions } from '@frinkly/payment-detection';
+import { RequestLogic } from '@frinkly/request-logic';
+import { TransactionManager } from '@frinkly/transaction-manager';
 import {
   AdvancedLogicTypes,
   DataAccessTypes,
@@ -12,13 +12,9 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   TransactionTypes,
-} from '@requestnetwork/types';
-import { deepCopy, supportedIdentities } from '@requestnetwork/utils';
-import {
-  CurrencyManager,
-  ICurrencyManager,
-  UnsupportedCurrencyError,
-} from '@requestnetwork/currency';
+} from '@frinkly/types';
+import { deepCopy, supportedIdentities } from '@frinkly/utils';
+import { CurrencyManager, ICurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
 import * as Types from '../types';
 import ContentDataExtension from './content-data-extension';
 import Request from './request';

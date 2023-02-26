@@ -5,11 +5,11 @@ const cors = require('cors');
 
 import * as RequestNetwork from './dist';
 import { ethers, BigNumber as BN, BigNumber } from 'ethers';
-import { getReceivableTokenIdForRequest } from '@requestnetwork/payment-processor';
+import { getReceivableTokenIdForRequest } from '@frinkly/payment-processor';
 import {
   ERC20TransferableReceivable__factory,
   IERC20Metadata__factory,
-} from '@requestnetwork/smart-contracts/types';
+} from '@frinkly/smart-contracts/types';
 
 dotenv.config();
 const app = express();

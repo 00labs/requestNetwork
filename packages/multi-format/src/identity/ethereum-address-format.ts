@@ -1,4 +1,4 @@
-import { IdentityTypes, MultiFormatTypes } from '@requestnetwork/types';
+import { IdentityTypes, MultiFormatTypes } from '@frinkly/types';
 
 import HexadecimalSerializableMultiFormat from '../hexadecimal-serializable-multi-format';
 

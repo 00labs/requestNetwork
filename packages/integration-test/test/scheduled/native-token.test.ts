@@ -1,8 +1,8 @@
-import { PaymentNetworkFactory } from '@requestnetwork/payment-detection';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { PnReferenceBased } from '@requestnetwork/types/dist/extension-types';
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { PaymentNetworkFactory } from '@frinkly/payment-detection';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
+import { PnReferenceBased } from '@frinkly/types/dist/extension-types';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
+import { CurrencyManager } from '@frinkly/currency';
 import { omit } from 'lodash';
 
 const advancedLogic = new AdvancedLogic();

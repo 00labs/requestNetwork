@@ -1,5 +1,5 @@
-import { ICurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ICurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 import EthereumFeeProxyPaymentNetwork from './ethereum/fee-proxy-contract';
 
 const CURRENT_VERSION = '0.2.0';

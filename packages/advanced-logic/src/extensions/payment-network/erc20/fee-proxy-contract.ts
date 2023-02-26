@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 import { FeeReferenceBasedPaymentNetwork } from '../fee-reference-based';
 
 const CURRENT_VERSION = '0.2.0';

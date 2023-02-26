@@ -1,5 +1,5 @@
-import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
-import { decrypt } from '@requestnetwork/utils';
+import { DecryptionProviderTypes, EncryptionTypes, IdentityTypes } from '@frinkly/types';
+import { decrypt } from '@frinkly/utils';
 
 export const idRaw1 = {
   address: '0xaf083f77f1ffd54218d91491afd06c9296eac3ce',

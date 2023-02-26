@@ -1,9 +1,9 @@
-import { AdvancedLogicTypes } from '@requestnetwork/types';
+import { AdvancedLogicTypes } from '@frinkly/types';
 
 import ContentDataExtension from '../../src/api/content-data-extension';
 
 import * as TestData from './data-for-content-data-extension';
-import { IAdvancedLogicExtensions } from '@requestnetwork/types/src/advanced-logic-types';
+import { IAdvancedLogicExtensions } from '@frinkly/types/src/advanced-logic-types';
 
 const mockAdvancedLogic: AdvancedLogicTypes.IAdvancedLogic = {
   applyActionToExtensions: jest.fn(),

@@ -7,8 +7,8 @@ import {
   updateNativeAndUSDAddress,
   getSignerAndGasFees,
 } from './adminTasks';
-import { CurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { RequestLogicTypes } from '@frinkly/types';
 
 /**
  * Updates the values of the batch fees of the BatchConversionPayments contract, if needed.

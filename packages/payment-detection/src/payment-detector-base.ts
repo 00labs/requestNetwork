@@ -1,5 +1,5 @@
 import { BigNumber } from 'ethers';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import {
   BalanceError,
   ExtensionMissingRequiredValue,

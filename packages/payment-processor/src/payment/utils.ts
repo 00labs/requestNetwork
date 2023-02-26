@@ -1,10 +1,10 @@
 import { ethers, Signer, providers, BigNumber, BigNumberish, ContractTransaction } from 'ethers';
 
-import { getDefaultProvider, getPaymentReference } from '@requestnetwork/payment-detection';
-import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { getCurrencyHash } from '@requestnetwork/currency';
-import { ERC20__factory } from '@requestnetwork/smart-contracts/types';
-import { getPaymentNetworkExtension } from '@requestnetwork/payment-detection';
+import { getDefaultProvider, getPaymentReference } from '@frinkly/payment-detection';
+import { ClientTypes, ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
+import { getCurrencyHash } from '@frinkly/currency';
+import { ERC20__factory } from '@frinkly/smart-contracts/types';
+import { getPaymentNetworkExtension } from '@frinkly/payment-detection';
 import { getReceivableTokenIdForRequest } from './erc20-transferable-receivable';
 
 /** @constant MAX_ALLOWANCE set to the max uint256 value */

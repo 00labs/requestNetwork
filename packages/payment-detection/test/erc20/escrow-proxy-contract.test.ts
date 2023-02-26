@@ -4,8 +4,8 @@ import {
   IdentityTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+} from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 import { Erc20PaymentNetwork } from '../../src';
 import { mockAdvancedLogicBase } from '../utils';
 

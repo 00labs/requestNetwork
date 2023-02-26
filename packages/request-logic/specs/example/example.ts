@@ -5,10 +5,10 @@ import {
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 
 import RequestLogic from '../../src/requestLogicCore';
-import { sign } from '@requestnetwork/utils';
+import { sign } from '@frinkly/utils';
 
 async function foo(): Promise<void> {
   // Bob (the payee)

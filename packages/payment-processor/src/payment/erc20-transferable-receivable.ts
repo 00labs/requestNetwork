@@ -11,9 +11,9 @@ import {
 import {
   Erc20PaymentNetwork,
   ERC20TransferableReceivablePaymentDetector,
-} from '@requestnetwork/payment-detection';
-import { ERC20TransferableReceivable__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes } from '@requestnetwork/types';
+} from '@frinkly/payment-detection';
+import { ERC20TransferableReceivable__factory } from '@frinkly/smart-contracts/types';
+import { ClientTypes } from '@frinkly/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {

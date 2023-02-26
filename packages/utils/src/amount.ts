@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 import { isString } from './utils';
 
 import { BigNumber } from 'ethers';

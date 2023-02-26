@@ -1,13 +1,13 @@
 import { EventEmitter } from 'events';
 
-import MultiFormat from '@requestnetwork/multi-format';
-import { AdvancedLogicTypes, RequestLogicTypes, TransactionTypes } from '@requestnetwork/types';
+import MultiFormat from '@frinkly/multi-format';
+import { AdvancedLogicTypes, RequestLogicTypes, TransactionTypes } from '@frinkly/types';
 
 import { RequestLogic } from '../src/index';
 import * as TestData from './unit/utils/test-data-generator';
 
 import Version from '../src/version';
-import { normalizeKeccak256Hash, sign } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash, sign } from '@frinkly/utils';
 
 const CURRENT_VERSION = Version.currentVersion;
 

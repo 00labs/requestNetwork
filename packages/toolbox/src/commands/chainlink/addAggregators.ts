@@ -2,7 +2,7 @@ import * as yargs from 'yargs';
 import inquirer from 'inquirer';
 import { runUpdate } from './contractUtils';
 import { Aggregator, getAvailableAggregators, getCurrencyManager } from './aggregatorsUtils';
-import { conversionSupportedNetworks } from '@requestnetwork/currency';
+import { conversionSupportedNetworks } from '@frinkly/currency';
 
 type Options = {
   dryRun: boolean;

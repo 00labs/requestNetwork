@@ -1,6 +1,6 @@
-# @requestnetwork/usage-example
+# @frinkly/usage-example
 
-`@requestnetwork/usage-example` is a typescript package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@frinkly/usage-example` is a typescript package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 This package is meant to show example of usage of other packages of the project. The examples are built, lint and executed to ensure they work and they can be used as reliable examples.
 
 ## Usage

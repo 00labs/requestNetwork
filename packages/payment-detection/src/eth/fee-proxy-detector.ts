@@ -1,5 +1,5 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import * as SmartContracts from '@frinkly/smart-contracts';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 
 import { EthProxyInfoRetriever } from './proxy-info-retriever';
 import { FeeReferenceBasedDetector } from '../fee-reference-based-detector';

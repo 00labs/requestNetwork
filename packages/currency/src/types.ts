@@ -1,4 +1,4 @@
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { RequestLogicTypes } from '@frinkly/types';
 
 /**
  * A native blockchain token (ETH, MATIC, ETH-rinkeby...)

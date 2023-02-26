@@ -1,4 +1,4 @@
-import { IdentityTypes } from '@requestnetwork/types';
+import { IdentityTypes } from '@frinkly/types';
 
 const supportedIdentities: IdentityTypes.TYPE[] = [
   IdentityTypes.TYPE.ETHEREUM_ADDRESS,

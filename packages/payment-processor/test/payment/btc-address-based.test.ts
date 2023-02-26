@@ -1,11 +1,6 @@
 import { Wallet } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 
 import { getBtcPaymentUrl } from '../../src/payment/btc-address-based';
 /* eslint-disable @typescript-eslint/no-unused-expressions */

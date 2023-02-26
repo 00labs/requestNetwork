@@ -2,7 +2,7 @@ import * as TestDataCreate from './generator-data-create';
 
 import * as TestData from '../../test-data-generator';
 
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 
 export const arbitraryTimestamp = 1544426030;
 

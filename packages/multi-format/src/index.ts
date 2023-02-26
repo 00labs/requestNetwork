@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@frinkly/types';
 
 import encryptionFormats from './encryption/encryption-format';
 import GroupMultiFormat from './group-multi-format';

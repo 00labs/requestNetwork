@@ -1,5 +1,5 @@
-import { UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { UnsupportedCurrencyError } from '@frinkly/currency';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 import AddressBasedPaymentNetwork from '../../../src/extensions/payment-network/address-based';
 
 describe('extensions/payment-network/address-based', () => {

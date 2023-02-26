@@ -1,15 +1,15 @@
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond } from '@frinkly/utils';
 
 const web3Eth = require('web3-eth');
 
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { DataAccess } from '@requestnetwork/data-access';
-import { EthereumPrivateKeyDecryptionProvider } from '@requestnetwork/epk-decryption';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { EthereumStorage, IpfsStorage } from '@requestnetwork/ethereum-storage';
-import MultiFormat from '@requestnetwork/multi-format';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
+import { DataAccess } from '@frinkly/data-access';
+import { EthereumPrivateKeyDecryptionProvider } from '@frinkly/epk-decryption';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import { EthereumStorage, IpfsStorage } from '@frinkly/ethereum-storage';
+import MultiFormat from '@frinkly/multi-format';
+import { RequestLogic } from '@frinkly/request-logic';
+import { TransactionManager } from '@frinkly/transaction-manager';
 import {
   AdvancedLogicTypes,
   DataAccessTypes,
@@ -18,7 +18,7 @@ import {
   RequestLogicTypes,
   SignatureTypes,
   StorageTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 
 let advancedLogic: AdvancedLogicTypes.IAdvancedLogic;
 let requestLogic: RequestLogicTypes.IRequestLogic;

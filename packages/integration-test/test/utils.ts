@@ -1,4 +1,4 @@
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 
 export const createMockErc20FeeRequest = ({
   network,

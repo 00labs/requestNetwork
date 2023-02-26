@@ -1,9 +1,9 @@
-import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes, SignatureProviderTypes } from '@frinkly/types';
 
 import Action from '../action';
 import Request from '../request';
 import Version from '../version';
-import { deepCopy } from '@requestnetwork/utils';
+import { deepCopy } from '@frinkly/utils';
 
 /**
  * Implementation of the action cancel from request logic specification

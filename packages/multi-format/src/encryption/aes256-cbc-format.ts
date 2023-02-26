@@ -1,4 +1,4 @@
-import { EncryptionTypes, MultiFormatTypes } from '@requestnetwork/types';
+import { EncryptionTypes, MultiFormatTypes } from '@frinkly/types';
 
 import SerializableMultiFormat from '../serializable-multi-format';
 

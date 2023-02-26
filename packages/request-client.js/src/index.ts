@@ -1,4 +1,4 @@
-import { PaymentReferenceCalculator } from '@requestnetwork/payment-detection';
+import { PaymentReferenceCalculator } from '@frinkly/payment-detection';
 
 import Request from './api/request';
 import Utils from './api/utils';

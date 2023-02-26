@@ -1,5 +1,5 @@
 import '@nomiclabs/hardhat-ethers';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@frinkly/currency';
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
 import { deployERC20ConversionProxy, deployEthConversionProxy } from './conversion-proxy';
 import { deploySwapConversion } from './erc20-swap-to-conversion';

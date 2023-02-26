@@ -1,4 +1,4 @@
-import { MultiFormatTypes } from '@requestnetwork/types';
+import { MultiFormatTypes } from '@frinkly/types';
 
 import PlainTextFormat from '../../src/plain/plain-text-format';
 

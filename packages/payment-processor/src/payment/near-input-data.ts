@@ -1,7 +1,7 @@
 import { BigNumberish } from 'ethers';
 import { WalletConnection } from 'near-api-js';
 
-import { ClientTypes, ExtensionTypes } from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes } from '@frinkly/types';
 
 import {
   getRequestPaymentValues,

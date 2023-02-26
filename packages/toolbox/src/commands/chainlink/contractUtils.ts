@@ -1,9 +1,9 @@
 import { Overrides, Wallet } from 'ethers';
 import inquirer from 'inquirer';
-import { getDefaultProvider } from '@requestnetwork/payment-detection';
-import { chainlinkConversionPath } from '@requestnetwork/smart-contracts';
-import { GasFeeDefiner } from '@requestnetwork/ethereum-storage';
-import { ChainlinkConversionPath } from '@requestnetwork/smart-contracts/types';
+import { getDefaultProvider } from '@frinkly/payment-detection';
+import { chainlinkConversionPath } from '@frinkly/smart-contracts';
+import { GasFeeDefiner } from '@frinkly/ethereum-storage';
+import { ChainlinkConversionPath } from '@frinkly/smart-contracts/types';
 
 export const runUpdate = async <T extends 'updateAggregator' | 'updateAggregatorsList'>(
   method: T,

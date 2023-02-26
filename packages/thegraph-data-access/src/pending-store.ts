@@ -1,4 +1,4 @@
-import { DataAccessTypes, StorageTypes } from '@requestnetwork/types';
+import { DataAccessTypes, StorageTypes } from '@frinkly/types';
 
 type PendingItem = {
   transaction: DataAccessTypes.ITransaction;

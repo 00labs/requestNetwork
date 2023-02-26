@@ -1,11 +1,11 @@
-import MultiFormat from '@requestnetwork/multi-format';
+import MultiFormat from '@frinkly/multi-format';
 import {
   IdentityTypes,
   RequestLogicTypes,
   SignatureProviderTypes,
   SignatureTypes,
-} from '@requestnetwork/types';
-import { deepCopy, normalizeKeccak256Hash } from '@requestnetwork/utils';
+} from '@frinkly/types';
+import { deepCopy, normalizeKeccak256Hash } from '@frinkly/utils';
 
 import Action from '../../src/action';
 import CreateAction from '../../src/actions/create';

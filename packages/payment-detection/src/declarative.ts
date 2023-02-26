@@ -3,9 +3,9 @@ import {
   ExtensionTypes,
   PaymentTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
+} from '@frinkly/types';
 import { PaymentDetectorBase } from './payment-detector-base';
-import { notNull } from '@requestnetwork/utils';
+import { notNull } from '@frinkly/utils';
 
 /**
  * Handles payment detection for a declarative request, or derived.

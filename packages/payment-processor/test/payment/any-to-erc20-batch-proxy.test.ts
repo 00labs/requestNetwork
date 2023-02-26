@@ -1,17 +1,12 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 import { getErc20Balance } from '../../src/payment/erc20';
-import { deepCopy } from '@requestnetwork/utils';
-import { revokeErc20Approval } from '@requestnetwork/payment-processor/src/payment/utils';
+import { deepCopy } from '@frinkly/utils';
+import { revokeErc20Approval } from '@frinkly/payment-processor/src/payment/utils';
 import { EnrichedRequest, IConversionPaymentSettings } from '../../src/index';
-import { batchConversionPaymentsArtifact } from '@requestnetwork/smart-contracts';
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
+import { batchConversionPaymentsArtifact } from '@frinkly/smart-contracts';
+import { CurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
 import {
   approveErc20BatchConversionIfNeeded,
   getBatchConversionProxyAddress,

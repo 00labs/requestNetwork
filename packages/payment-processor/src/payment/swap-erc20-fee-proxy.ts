@@ -1,8 +1,8 @@
 import { constants, ContractTransaction, Signer, BigNumber, BigNumberish, providers } from 'ethers';
 
-import { erc20FeeProxyArtifact, erc20SwapToPayArtifact } from '@requestnetwork/smart-contracts';
-import { ERC20SwapToPay__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes } from '@requestnetwork/types';
+import { erc20FeeProxyArtifact, erc20SwapToPayArtifact } from '@frinkly/smart-contracts';
+import { ERC20SwapToPay__factory } from '@frinkly/smart-contracts/types';
+import { ClientTypes } from '@frinkly/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import {
@@ -14,7 +14,7 @@ import {
   validateErc20FeeProxyRequest,
 } from './utils';
 import { IPreparedTransaction } from './prepared-transaction';
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
+import { Erc20PaymentNetwork } from '@frinkly/payment-detection';
 
 /**
  * Details required for a token swap:

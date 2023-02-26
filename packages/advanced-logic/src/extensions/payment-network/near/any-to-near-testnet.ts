@@ -1,4 +1,4 @@
-import { ICurrencyManager } from '@requestnetwork/currency';
+import { ICurrencyManager } from '@frinkly/currency';
 import AnyToNearPaymentNetwork from './any-to-near';
 
 export default class AnyToNearTestnetPaymentNetwork extends AnyToNearPaymentNetwork {

@@ -1,6 +1,6 @@
-import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureProviderTypes, SignatureTypes } from '@frinkly/types';
 
-import { areEqualIdentities, normalize, recoverSigner } from '@requestnetwork/utils';
+import { areEqualIdentities, normalize, recoverSigner } from '@frinkly/utils';
 
 import { providers } from 'ethers';
 

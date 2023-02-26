@@ -1,5 +1,5 @@
-import { EthereumStorage, IpfsStorage } from '@requestnetwork/ethereum-storage';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { EthereumStorage, IpfsStorage } from '@frinkly/ethereum-storage';
+import { LogTypes, StorageTypes } from '@frinkly/types';
 import * as config from './config';
 
 import Keyv from 'keyv';

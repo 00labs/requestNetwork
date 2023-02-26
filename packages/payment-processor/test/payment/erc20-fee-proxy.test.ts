@@ -1,13 +1,8 @@
 import { Wallet, BigNumber, providers } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
-import { erc20FeeProxyArtifact } from '@requestnetwork/smart-contracts';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
+import { erc20FeeProxyArtifact } from '@frinkly/smart-contracts';
 
 import { approveErc20, getErc20Balance } from '../../src/payment/erc20';
 import {

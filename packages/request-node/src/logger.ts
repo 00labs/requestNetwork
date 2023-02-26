@@ -1,5 +1,5 @@
-import { LogTypes } from '@requestnetwork/types';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { LogTypes } from '@frinkly/types';
+import { SimpleLogger } from '@frinkly/utils';
 import chalk from 'chalk';
 
 /** The different logging modes supported by this logger */

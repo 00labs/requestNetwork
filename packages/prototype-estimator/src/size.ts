@@ -1,9 +1,9 @@
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
-import { DataAccess } from '@requestnetwork/data-access';
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
-import { RequestLogic } from '@requestnetwork/request-logic';
-import { TransactionManager } from '@requestnetwork/transaction-manager';
-import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@requestnetwork/types';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
+import { DataAccess } from '@frinkly/data-access';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
+import { RequestLogic } from '@frinkly/request-logic';
+import { TransactionManager } from '@frinkly/transaction-manager';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes } from '@frinkly/types';
 import MockStorage from './mock-storage';
 
 const signatureInfo: SignatureTypes.ISignatureParameters = {

@@ -1,9 +1,4 @@
-import {
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-  SignatureTypes,
-} from '@requestnetwork/types';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes, SignatureTypes } from '@frinkly/types';
 
 // payee id
 export const payeeRaw = {

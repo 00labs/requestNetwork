@@ -1,5 +1,5 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 
 import Erc777StreamPaymentNetwork from '../../../../src/extensions/payment-network/erc777/stream';
 

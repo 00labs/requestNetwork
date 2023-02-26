@@ -1,4 +1,4 @@
-import { PaymentTypes } from '@requestnetwork/types';
+import { PaymentTypes } from '@frinkly/types';
 import { BlockchainInfoProvider } from '../../../src/btc/default-providers/blockchain-info';
 
 import * as BlockchainInfoData from './blockchain-info-data';

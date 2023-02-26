@@ -1,4 +1,4 @@
-import { EncryptionTypes, MultiFormatTypes } from '@requestnetwork/types';
+import { EncryptionTypes, MultiFormatTypes } from '@frinkly/types';
 
 import Aes256CbcFormat from '../../src/encryption/aes256-cbc-format';
 let aes256CbcFormat: Aes256CbcFormat;

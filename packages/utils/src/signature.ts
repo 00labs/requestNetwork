@@ -1,4 +1,4 @@
-import { IdentityTypes, SignatureTypes } from '@requestnetwork/types';
+import { IdentityTypes, SignatureTypes } from '@frinkly/types';
 import { ethers } from 'ethers';
 import {
   ecRecover,

@@ -1,4 +1,4 @@
-import { DataAccessTypes } from '@requestnetwork/types';
+import { DataAccessTypes } from '@frinkly/types';
 
 export abstract class CombinedDataAccess implements DataAccessTypes.IDataAccess {
   constructor(

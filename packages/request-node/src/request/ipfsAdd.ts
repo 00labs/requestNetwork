@@ -1,5 +1,5 @@
-import { Block } from '@requestnetwork/data-access';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { Block } from '@frinkly/data-access';
+import { LogTypes, StorageTypes } from '@frinkly/types';
 import { Request, Response } from 'express';
 
 import { StatusCodes } from 'http-status-codes';

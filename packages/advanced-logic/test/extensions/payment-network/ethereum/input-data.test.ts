@@ -1,5 +1,5 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 
 import EthereumInputDataPaymentNetwork from '../../../../src/extensions/payment-network/ethereum/input-data';
 

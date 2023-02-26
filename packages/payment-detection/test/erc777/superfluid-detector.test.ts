@@ -3,8 +3,8 @@ import {
   ExtensionTypes,
   IdentityTypes,
   RequestLogicTypes,
-} from '@requestnetwork/types';
-import { CurrencyManager } from '@requestnetwork/currency';
+} from '@frinkly/types';
+import { CurrencyManager } from '@frinkly/currency';
 import { SuperFluidPaymentDetector } from '../../src/erc777/superfluid-detector';
 import { genTransferEventsByMonth } from './mocks';
 import { mockAdvancedLogicBase } from '../utils';

@@ -1,6 +1,6 @@
-import { DataAccessTypes, TransactionTypes } from '@requestnetwork/types';
+import { DataAccessTypes, TransactionTypes } from '@frinkly/types';
 
-import { Block } from '@requestnetwork/data-access';
+import { Block } from '@frinkly/data-access';
 
 import HttpMetamaskDataAccess from '../src/http-metamask-data-access';
 

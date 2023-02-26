@@ -1,5 +1,5 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { CurrencyDefinition, CurrencyManager } from '@requestnetwork/currency';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { CurrencyDefinition, CurrencyManager } from '@frinkly/currency';
 import { PaymentNetworkFactory } from '../../src/payment-network-factory';
 import PaymentReferenceCalculator from '../../src/payment-reference-calculator';
 import {
@@ -9,7 +9,7 @@ import {
 import { deepCopy } from 'ethers/lib/utils';
 import { GraphQLClient } from 'graphql-request';
 import { mocked } from 'ts-jest/utils';
-import { AdvancedLogic } from '@requestnetwork/advanced-logic';
+import { AdvancedLogic } from '@frinkly/advanced-logic';
 
 jest.mock('graphql-request');
 const graphql = mocked(GraphQLClient.prototype);

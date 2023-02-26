@@ -1,10 +1,5 @@
-import {
-  IdentityTypes,
-  RequestLogicTypes,
-  SignatureTypes,
-  TransactionTypes,
-} from '@requestnetwork/types';
-import { sign } from '@requestnetwork/utils';
+import { IdentityTypes, RequestLogicTypes, SignatureTypes, TransactionTypes } from '@frinkly/types';
+import { sign } from '@frinkly/utils';
 
 const payee = {
   identity: {

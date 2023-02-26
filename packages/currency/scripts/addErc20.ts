@@ -3,7 +3,7 @@
 import { ethers } from 'ethers';
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import { getDefaultProvider } from '@requestnetwork/payment-detection';
+import { getDefaultProvider } from '@frinkly/payment-detection';
 import ora from 'ora';
 import yargs from 'yargs';
 

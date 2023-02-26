@@ -1,5 +1,5 @@
-import { ICurrencyManager } from '@requestnetwork/currency';
-import { RequestLogicTypes } from '@requestnetwork/types';
+import { ICurrencyManager } from '@frinkly/currency';
+import { RequestLogicTypes } from '@frinkly/types';
 import { BigNumber, BigNumberish } from 'ethers';
 import { ITransactionOverrides } from './transaction-overrides';
 

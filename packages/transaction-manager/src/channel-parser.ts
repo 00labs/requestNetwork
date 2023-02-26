@@ -1,4 +1,4 @@
-import { DecryptionProviderTypes, EncryptionTypes, TransactionTypes } from '@requestnetwork/types';
+import { DecryptionProviderTypes, EncryptionTypes, TransactionTypes } from '@frinkly/types';
 
 import TransactionsParser from './transactions-parser';
 

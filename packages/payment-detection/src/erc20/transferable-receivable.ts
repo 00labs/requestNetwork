@@ -1,7 +1,7 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 
 import { TheGraphInfoRetriever } from '../thegraph';
-import { erc20TransferableReceivableArtifact } from '@requestnetwork/smart-contracts';
+import { erc20TransferableReceivableArtifact } from '@frinkly/smart-contracts';
 import { makeGetDeploymentInformation } from '../utils';
 import { PaymentNetworkOptions, ReferenceBasedDetectorOptions } from '../types';
 import { FeeReferenceBasedDetector } from '../fee-reference-based-detector';

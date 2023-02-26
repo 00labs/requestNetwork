@@ -1,6 +1,6 @@
-import MultiFormat from '@requestnetwork/multi-format';
-import { DataAccessTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import MultiFormat from '@frinkly/multi-format';
+import { DataAccessTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 
 /**
  * Module to manage a block in the data access-layer

@@ -1,8 +1,8 @@
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
+import { LogTypes, StorageTypes } from '@frinkly/types';
 
 import { getIpfsExpectedBootstrapNodes, getPinRequestConfig } from './config';
 import IpfsManager from './ipfs-manager';
-import { SimpleLogger } from '@requestnetwork/utils';
+import { SimpleLogger } from '@frinkly/utils';
 
 export type IpfsStorageProps = {
   logger?: LogTypes.ILogger;

@@ -15,7 +15,7 @@ import {
 import { BigNumber, Signer } from 'ethers';
 import { expect, use } from 'chai';
 import { solidity } from 'ethereum-waffle';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { CurrencyManager } from '@frinkly/currency';
 import { chainlinkConversionPath } from '../../src/lib';
 import { HttpNetworkConfig } from 'hardhat/types';
 

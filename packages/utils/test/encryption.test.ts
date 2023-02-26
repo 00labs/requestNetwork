@@ -1,4 +1,4 @@
-import { EncryptionTypes, IdentityTypes } from '@requestnetwork/types';
+import { EncryptionTypes, IdentityTypes } from '@frinkly/types';
 import { getIdentityFromEncryptionParams, encrypt, decrypt } from '../src';
 
 const otherIdRaw = {

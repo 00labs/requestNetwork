@@ -1,11 +1,6 @@
 import { Wallet, providers, Contract, BigNumber } from 'ethers';
 
-import {
-  ClientTypes,
-  ExtensionTypes,
-  IdentityTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { ClientTypes, ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 
 import {
   approveUnderlyingToken,

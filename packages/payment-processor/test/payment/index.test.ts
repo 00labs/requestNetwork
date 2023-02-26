@@ -1,6 +1,6 @@
 import { Wallet, providers, BigNumber } from 'ethers';
 
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 
 import {
   _getPaymentUrl,

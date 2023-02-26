@@ -1,5 +1,5 @@
-import { Erc20PaymentNetwork } from '@requestnetwork/payment-detection';
-import { CurrencyManager } from '@requestnetwork/currency';
+import { Erc20PaymentNetwork } from '@frinkly/payment-detection';
+import { CurrencyManager } from '@frinkly/currency';
 import { createMockErc20FeeRequest } from '../utils';
 import { mockAdvancedLogic } from './mocks';
 

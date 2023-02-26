@@ -1,9 +1,9 @@
-import { CurrencyDefinition } from '@requestnetwork/currency';
-import { PaymentTypes } from '@requestnetwork/types';
+import { CurrencyDefinition } from '@frinkly/currency';
+import { PaymentTypes } from '@frinkly/types';
 import { BigNumber, ethers } from 'ethers';
 import { parseLogArgs, unpadAmountFromChainlink } from '../../utils';
 import type { JsonFragment } from '@ethersproject/abi';
-import { getDefaultProvider } from '@requestnetwork/utils';
+import { getDefaultProvider } from '@frinkly/utils';
 
 /** TransferWithConversionAndReference event */
 type TransferWithConversionAndReferenceArgs = {

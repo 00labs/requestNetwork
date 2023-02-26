@@ -1,5 +1,5 @@
 {
-  "name": "@requestnetwork/request-network-monorepo",
+  "name": "@frinkly/request-network-monorepo",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://github.com/RequestNetwork/requestNetwork",

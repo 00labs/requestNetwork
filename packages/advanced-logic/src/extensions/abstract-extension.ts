@@ -1,5 +1,5 @@
-import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { deepCopy } from '@requestnetwork/utils';
+import { ExtensionTypes, IdentityTypes, RequestLogicTypes } from '@frinkly/types';
+import { deepCopy } from '@frinkly/utils';
 
 /**
  * Abstract class to create extension

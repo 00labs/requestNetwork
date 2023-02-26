@@ -1,13 +1,13 @@
 import { constants, ContractTransaction, Signer, providers, BigNumberish, BigNumber } from 'ethers';
 
-import { CurrencyManager, UnsupportedCurrencyError } from '@requestnetwork/currency';
-import { AnyToEthFeeProxyPaymentDetector } from '@requestnetwork/payment-detection';
-import { EthConversionProxy__factory } from '@requestnetwork/smart-contracts/types';
-import { ClientTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { CurrencyManager, UnsupportedCurrencyError } from '@frinkly/currency';
+import { AnyToEthFeeProxyPaymentDetector } from '@frinkly/payment-detection';
+import { EthConversionProxy__factory } from '@frinkly/smart-contracts/types';
+import { ClientTypes, RequestLogicTypes } from '@frinkly/types';
 
 import { ITransactionOverrides } from './transaction-overrides';
 import { getAmountToPay, getProvider, getRequestPaymentValues, getSigner } from './utils';
-import { padAmountForChainlink } from '@requestnetwork/payment-detection';
+import { padAmountForChainlink } from '@frinkly/payment-detection';
 import { IPreparedTransaction } from './prepared-transaction';
 import { IConversionPaymentSettings } from './index';
 import { getProxyAddress } from './utils';

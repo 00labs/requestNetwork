@@ -1,4 +1,4 @@
-import { ExtensionTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, RequestLogicTypes } from '@frinkly/types';
 import { InvalidPaymentAddressError, UnsupportedNetworkError } from './address-based';
 
 import ReferenceBasedPaymentNetwork from './reference-based';

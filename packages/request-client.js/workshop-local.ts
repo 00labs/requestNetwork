@@ -1,7 +1,7 @@
 // RequestNetwork is the interface we will use to interact with the Request network
 import * as RequestNetwork from './dist';
 // The signature provider allows us to sign the request
-import { EthereumPrivateKeySignatureProvider } from '@requestnetwork/epk-signature';
+import { EthereumPrivateKeySignatureProvider } from '@frinkly/epk-signature';
 // The payment methods are in a separate package
 import {
   payRequest,
@@ -9,14 +9,14 @@ import {
   mintErc20TransferableReceivable,
   getReceivableTokenIdForRequest,
   hasReceivableForRequest,
-} from '@requestnetwork/payment-processor';
+} from '@frinkly/payment-processor';
 
 // The smart-contract package contains exports some standard Contracts and all of Request contracts
-import { TestERC20__factory } from '@requestnetwork/smart-contracts/types';
+import { TestERC20__factory } from '@frinkly/smart-contracts/types';
 
-import { ERC20TransferableReceivable__factory } from '@requestnetwork/smart-contracts/types';
+import { ERC20TransferableReceivable__factory } from '@frinkly/smart-contracts/types';
 
-import { ExtensionTypes } from '@requestnetwork/types';
+import { ExtensionTypes } from '@frinkly/types';
 
 import { ContractTransaction, ethers, Wallet } from 'ethers';
 

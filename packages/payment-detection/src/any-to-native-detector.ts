@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes } from '@frinkly/types';
 
 import { AnyToAnyDetector } from './any-to-any-detector';
 import { NativeDetectorOptions } from './types';

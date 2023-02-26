@@ -1,10 +1,10 @@
-import { LogTypes, MultiFormatTypes, DataAccessTypes } from '@requestnetwork/types';
+import { LogTypes, MultiFormatTypes, DataAccessTypes } from '@frinkly/types';
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { getPersistTransactionTimeout } from '../config';
 
 import ConfirmedTransactionStore from './confirmedTransactionStore';
-import { normalizeKeccak256Hash } from '@requestnetwork/utils';
+import { normalizeKeccak256Hash } from '@frinkly/utils';
 
 /**
  * Class to persist transactions though the data-access layer

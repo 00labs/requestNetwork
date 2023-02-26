@@ -1,10 +1,10 @@
 import { EventEmitter } from 'events';
 import { BigNumber, ContractReceipt, providers, Signer } from 'ethers';
 import TypedEmitter from 'typed-emitter';
-import { LogTypes, StorageTypes } from '@requestnetwork/types';
-import { requestHashSubmitterArtifact } from '@requestnetwork/smart-contracts';
+import { LogTypes, StorageTypes } from '@frinkly/types';
+import { requestHashSubmitterArtifact } from '@frinkly/smart-contracts';
 import { EthereumTransactionSubmitter } from './ethereum-tx-submitter';
-import { getCurrentTimestampInSecond, SimpleLogger } from '@requestnetwork/utils';
+import { getCurrentTimestampInSecond, SimpleLogger } from '@frinkly/utils';
 
 export type GasDefinerProps = {
   gasPriceMin?: BigNumber;

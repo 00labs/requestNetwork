@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.35.1 (2022-11-04)
 
-**Note:** Version bump only for package @requestnetwork/thegraph-data-access
+**Note:** Version bump only for package @frinkly/thegraph-data-access

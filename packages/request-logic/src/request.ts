@@ -1,7 +1,7 @@
-import { IdentityTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { IdentityTypes, RequestLogicTypes } from '@frinkly/types';
 
 import Role from './role';
-import { isValidAmount } from '@requestnetwork/utils';
+import { isValidAmount } from '@frinkly/utils';
 
 /**
  * Module to manage a request

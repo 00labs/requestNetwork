@@ -1,4 +1,4 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 import { NearInfoRetriever } from './retrievers/near-info-retriever';
 import { NativeTokenPaymentDetector } from '../native-token-detector';
 import { NetworkNotSupported } from '../balance-error';

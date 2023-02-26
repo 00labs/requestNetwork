@@ -1,14 +1,14 @@
-# @requestnetwork/integration-test
+# @frinkly/integration-test
 
-`@requestnetwork/integration-test` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
+`@frinkly/integration-test` is a package part of the [Request Network protocol](https://github.com/RequestNetwork/requestNetwork).
 It tests that the layers on the Request Network system work together:
 
-- @requestnetwork/advanced-logic
-- @requestnetwork/request-logic
-- @requestnetwork/transaction-manager
-- @requestnetwork/data-access
-- @requestnetwork/ethereum-storage
-- @requestnetwork/types
+- @frinkly/advanced-logic
+- @frinkly/request-logic
+- @frinkly/transaction-manager
+- @frinkly/data-access
+- @frinkly/ethereum-storage
+- @frinkly/types
 
 ## Usage
 
@@ -24,12 +24,12 @@ npm run test
 
 It tests the direct integration of the layers:
 
-- @requestnetwork/advanced-logic
-- @requestnetwork/data-access
-- @requestnetwork/epk-signature
-- @requestnetwork/ethereum-storage
-- @requestnetwork/request-logic
-- @requestnetwork/transaction-manager
+- @frinkly/advanced-logic
+- @frinkly/data-access
+- @frinkly/epk-signature
+- @frinkly/ethereum-storage
+- @frinkly/request-logic
+- @frinkly/transaction-manager
 
 ```bash
 npm run test:layers
@@ -39,8 +39,8 @@ npm run test:layers
 
 It tests the integration of the Request node and the client side library:
 
-- @requestnetwork/request-client.js
-- @requestnetwork/request-node
+- @frinkly/request-client.js
+- @frinkly/request-node
 
 ```bash
 npm run test:node

@@ -1,6 +1,6 @@
-import * as SmartContracts from '@requestnetwork/smart-contracts';
-import { StorageTypes } from '@requestnetwork/types';
-import { getCurrentTimestampInSecond } from '@requestnetwork/utils';
+import * as SmartContracts from '@frinkly/smart-contracts';
+import { StorageTypes } from '@frinkly/types';
+import { getCurrentTimestampInSecond } from '@frinkly/utils';
 import { EventEmitter } from 'events';
 
 import { EthereumStorage } from '../src/ethereum-storage';

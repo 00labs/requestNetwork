@@ -1,5 +1,5 @@
-import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@requestnetwork/types';
-import { erc20ProxyArtifact } from '@requestnetwork/smart-contracts';
+import { ExtensionTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
+import { erc20ProxyArtifact } from '@frinkly/smart-contracts';
 import ProxyInfoRetriever from './proxy-info-retriever';
 import { TheGraphInfoRetriever } from '../thegraph';
 import { makeGetDeploymentInformation } from '../utils';

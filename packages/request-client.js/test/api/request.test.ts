@@ -1,10 +1,5 @@
-import { CurrencyManager } from '@requestnetwork/currency';
-import {
-  ExtensionTypes,
-  IdentityTypes,
-  PaymentTypes,
-  RequestLogicTypes,
-} from '@requestnetwork/types';
+import { CurrencyManager } from '@frinkly/currency';
+import { ExtensionTypes, IdentityTypes, PaymentTypes, RequestLogicTypes } from '@frinkly/types';
 
 import { EventEmitter } from 'events';
 

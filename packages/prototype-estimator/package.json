@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/prototype-estimator",
-  "version": "1.22.1",
+  "version": "1.22.2",
   "private": true,
   "description": "Tool to estimate size and throughput of v2 system.",
   "keywords": [
@@ -32,7 +32,7 @@
     "@frinkly/epk-signature": "0.6.1",
     "@frinkly/ethereum-storage": "0.28.1",
     "@frinkly/multi-format": "0.16.0",
-    "@frinkly/request-client.js": "0.41.1",
+    "@frinkly/request-client.js": "0.41.2",
     "@frinkly/request-logic": "0.27.1",
     "@frinkly/request-node": "0.28.1",
     "@frinkly/transaction-manager": "0.28.1",

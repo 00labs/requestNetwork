@@ -119,6 +119,7 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
           {
             maxRetries: this.httpConfig.getConfirmationMaxRetry,
             retryDelay: this.httpConfig.getConfirmationRetryDelay,
+            exponentialBackoff: true,
           },
         );
         // when found, emit the event 'confirmed'
@@ -200,20 +201,21 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
       maxRetries?: number;
       retryDelay?: number;
       exponentialBackoff?: boolean;
-      exponentialBackoffDelay?: number;
     } = {},
   ): Promise<any> {
     console.log(url);
     console.log(params);
     retryConfig.maxRetries = retryConfig.maxRetries ?? this.httpConfig.httpRequestMaxRetry;
     retryConfig.retryDelay = retryConfig.retryDelay ?? this.httpConfig.httpRequestRetryDelay;
-    const { data } = await retry(
-      async () => {
+    let fn;
+    if (url === 'getConfirmedTransaction') {
+      fn = async () => {
         throw new Error('test error');
-      },
-      // async () => axios.get(url, { ...this.axiosConfig, params }),
-      retryConfig,
-    )();
+      };
+    } else {
+      fn = async () => axios.get(url, { ...this.axiosConfig, params });
+    }
+    const { data } = await retry(fn, retryConfig)();
 
     return data;
   }

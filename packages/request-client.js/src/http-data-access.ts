@@ -203,20 +203,12 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
       exponentialBackoff?: boolean;
     } = {},
   ): Promise<any> {
-    console.log(url);
-    console.log(params);
     retryConfig.maxRetries = retryConfig.maxRetries ?? this.httpConfig.httpRequestMaxRetry;
     retryConfig.retryDelay = retryConfig.retryDelay ?? this.httpConfig.httpRequestRetryDelay;
-    let fn;
-    if (url === '/getConfirmedTransaction') {
-      fn = async () => {
-        console.log('GET CONFIRMED TRANSACTION');
-        throw new Error('test error');
-      };
-    } else {
-      fn = async () => axios.get(url, { ...this.axiosConfig, params });
-    }
-    const { data } = await retry(fn, retryConfig)();
+    const { data } = await retry(
+      async () => axios.get(url, { ...this.axiosConfig, params }),
+      retryConfig,
+    )();
 
     return data;
   }

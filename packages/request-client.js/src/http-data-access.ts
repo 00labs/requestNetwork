@@ -208,7 +208,7 @@ export default class HttpDataAccess implements DataAccessTypes.IDataAccess {
     retryConfig.maxRetries = retryConfig.maxRetries ?? this.httpConfig.httpRequestMaxRetry;
     retryConfig.retryDelay = retryConfig.retryDelay ?? this.httpConfig.httpRequestRetryDelay;
     let fn;
-    if (url === 'getConfirmedTransaction') {
+    if (url === '/getConfirmedTransaction') {
       fn = async () => {
         throw new Error('test error');
       };

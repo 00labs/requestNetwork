@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/usage-examples",
-  "version": "0.24.2",
+  "version": "0.24.3",
   "private": true,
   "description": "Usage examples of Request Network.",
   "keywords": [
@@ -33,7 +33,7 @@
     "@frinkly/epk-signature": "0.6.1",
     "@frinkly/multi-format": "0.16.0",
     "@frinkly/payment-processor": "0.39.1",
-    "@frinkly/request-client.js": "0.41.2",
+    "@frinkly/request-client.js": "0.41.3",
     "@frinkly/request-logic": "0.27.1",
     "@frinkly/transaction-manager": "0.28.1",
     "@frinkly/types": "0.37.0",

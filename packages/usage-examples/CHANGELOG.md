@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.3](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/usage-examples@0.24.2...@frinkly/usage-examples@0.24.3) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/usage-examples
+
 ## [0.24.2](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/usage-examples@0.24.1...@frinkly/usage-examples@0.24.2) (2023-02-26)
 
 **Note:** Version bump only for package @frinkly/usage-examples

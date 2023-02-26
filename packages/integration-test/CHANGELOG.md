@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.30.3](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/integration-test@0.30.2...@frinkly/integration-test@0.30.3) (2023-02-26)
+
+**Note:** Version bump only for package @frinkly/integration-test
+
 ## [0.30.2](https://github.com/RequestNetwork/requestNetwork/compare/@frinkly/integration-test@0.30.1...@frinkly/integration-test@0.30.2) (2023-02-26)
 
 **Note:** Version bump only for package @frinkly/integration-test

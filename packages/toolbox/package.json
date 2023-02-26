@@ -1,6 +1,6 @@
 {
   "name": "@frinkly/toolbox",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "private": true,
   "description": "Toolbox for Request Network.",
   "keywords": [
@@ -46,7 +46,7 @@
     "@frinkly/epk-signature": "0.6.1",
     "@frinkly/ethereum-storage": "0.28.1",
     "@frinkly/payment-detection": "0.37.1",
-    "@frinkly/request-client.js": "0.41.2",
+    "@frinkly/request-client.js": "0.41.3",
     "@frinkly/smart-contracts": "0.30.1",
     "@frinkly/types": "0.37.0",
     "@frinkly/utils": "0.37.1",

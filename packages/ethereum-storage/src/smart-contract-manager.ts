@@ -374,7 +374,7 @@ export default class SmartContractManager {
               nonce,
             });
             this.logger.error(`Failed transaction: ${logObject}`);
-            reject(Error(`Ethereum transaction error:  ${transactionError}`));
+            reject(Error(`Ethereum transaction error:  ${JSON.stringify(transactionError)}`));
           }
         })
         .on('confirmation', (confirmationNumber: number, receiptAfterConfirmation: any) => {

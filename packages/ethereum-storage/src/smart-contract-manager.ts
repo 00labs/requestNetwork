@@ -82,6 +82,9 @@ export default class SmartContractManager {
    */
   private retryDelay: number | undefined;
 
+  private maxFeePerGas: BigNumber;
+  private maxPriorityFeePerGas: BigNumber;
+
   /**
    * Handler to get gas price
    */
@@ -178,6 +181,9 @@ export default class SmartContractManager {
     );
 
     this.gasPriceDefiner = new GasPriceDefiner({ logger, gasPriceMin });
+
+    this.maxFeePerGas = config.getDefaultEthereumGasPrice();
+    this.maxPriorityFeePerGas = config.getDefaultEthereumGasPriorityPrice();
   }
 
   /**
@@ -308,7 +314,8 @@ export default class SmartContractManager {
       const transactionParameters = {
         from: account,
         gas: '100000',
-        gasPrice: gasPriceToUse,
+        maxFeePerGas: this.maxFeePerGas,
+        maxPriorityFeePerGas: this.maxPriorityFeePerGas,
         nonce,
         value: fee,
       };

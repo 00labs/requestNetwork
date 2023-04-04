@@ -24,7 +24,7 @@ contract ERC20TransferableReceivable is ERC721 {
   Counters.Counter private _receivableTokenId;
 
   /**
-   * @dev Struct for storing receivable information
+   * @dev Struct for storing information about a receivable
    */
   struct ReceivableInfo {
     address tokenAddress;
@@ -39,7 +39,7 @@ contract ERC20TransferableReceivable is ERC721 {
   mapping(bytes32 => uint256) public receivableTokenIdMapping;
 
   /**
-   * @notice Mapping for storing receivable information
+   * @notice Mapping for looking up information about a receivable given a receivableTokenId
    */
   mapping(uint256 => ReceivableInfo) public receivableInfoMapping;
 
@@ -106,8 +106,8 @@ contract ERC20TransferableReceivable is ERC721 {
    * @notice Pay the owner of the specified receivable with the provided amount of ERC20 tokens.
    * @param receivableTokenId The ID of the receivable token to pay.
    * @param amount The amount of ERC20 tokens to pay the owner.
-   * @param paymentReference A reference for the payment.
-   * @param feeAmount The amount of ERC20 tokens to be paid as a fee for the transaction.
+   * @param paymentReference The reference for the payment.
+   * @param feeAmount The amount of ERC20 tokens to be paid as a fee.
    * @param feeAddress The address to which the fee should be paid.
    * @dev This function uses delegatecall to call on a contract which emits
           a TransferWithReferenceAndFee event.
@@ -154,12 +154,12 @@ contract ERC20TransferableReceivable is ERC721 {
 
   /**
    * @notice Mint a new transferable receivable.
-   * @param owner The address of the owner of the receivable token to be minted.
+   * @param owner The address to whom the receivable token will be minted.
    * @param paymentReference A reference for the payment.
    * @param amount The amount of ERC20 tokens to be paid.
    * @param erc20Addr The address of the ERC20 token to be used as payment.
    * @param requestID The ID of the request associated with the receivable.
-   *                  Useful for retrieving details of the request from the Request Network.
+   *                  Can be used to retrieve details of the request from Request Network protocol.
    * @dev Anyone can pay for the mint of a receivable on behalf of a user
    */
   function mint(
@@ -171,6 +171,7 @@ contract ERC20TransferableReceivable is ERC721 {
   ) external {
     require(paymentReference.length > 0, 'Zero paymentReference provided');
     require(amount > 0, 'Zero amount provided');
+    require(owner != address(0), 'Zero address provided for owner');
     require(erc20Addr != address(0), 'Zero address provided');
     bytes32 idKey = keccak256(abi.encodePacked(owner, paymentReference));
     require(

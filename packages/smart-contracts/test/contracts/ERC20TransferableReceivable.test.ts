@@ -94,6 +94,16 @@ describe('contract: ERC20TransferableReceivable', () => {
           testToken.address,
           '0x744383081b5ce5d256b385c914e51a2a5b3dde687d65ea163bc8b76f3f0bf40f',
         );
+    });
+
+    it('revert with empty owner address', async function () {
+      await expect(
+        receivable.mint(ethers.constants.AddressZero, '0x01', 1, testToken.address, ''),
+      ).to.be.revertedWith('Zero address provided for owner');
+    });
+
+    it('revert with duplicated receivableId', async function () {
+      await receivable.connect(user1).mint(user1Addr, '0x01', 1, testToken.address, '');
       await expect(
         receivable
           .connect(user1)
@@ -263,6 +273,15 @@ describe('contract: ERC20TransferableReceivable', () => {
           '0x744383081b5ce5d256b385c914e51a2a5b3dde687d65ea163bc8b76f3f0bf40f',
         );
       const key = ethers.utils.solidityKeccak256(['address', 'bytes'], [user1Addr, paymentRef]);
+      expect(await receivable.receivableTokenIdMapping(key)).to.equals(tokenId);
+    });
+
+    it('allows user to mint on behalf of another user', async function () {
+      paymentRef = '0x02' as BytesLike;
+      await receivable.connect(user1).mint(user2Addr, paymentRef, amount, testToken.address, '1');
+      const key = ethers.utils.solidityKeccak256(['address', 'bytes'], [user2Addr, paymentRef]);
+      const ids = await receivable.getTokenIds(user2Addr);
+      tokenId = ids[0];
       expect(await receivable.receivableTokenIdMapping(key)).to.equals(tokenId);
     });
 
